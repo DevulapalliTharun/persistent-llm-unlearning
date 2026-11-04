@@ -51,13 +51,98 @@ persistent-llm-unlearning/
 └── README.md
 ```
 
+## Development, execution and storage architecture
+
+The Mac and future Dell are development clients, not training machines. Source code and project memory move through GitHub; GPU work runs on Kaggle, with Colab as a fallback; durable model artifacts live in a private Hugging Face repository.
+
+```mermaid
+flowchart TB
+    subgraph Clients["Development clients"]
+        MAC["Company Mac<br/>VS Code + Git client"]
+        DELL["Personal Dell<br/>VS Code + Git client"]
+    end
+
+    subgraph Control["Versioned project control plane"]
+        GH["GitHub repository<br/>code · configs · context · small metrics"]
+    end
+
+    subgraph Compute["Remote execution — ephemeral"]
+        KG["Kaggle Jupyter GPU runtime<br/>primary training environment"]
+        COLAB["Google Colab GPU runtime<br/>fallback environment"]
+        KSEC["Kaggle / Colab Secrets<br/>HF_TOKEN and other runtime credentials"]
+        TEMP["Runtime working storage<br/>cloned repo · caches · temporary checkpoints"]
+    end
+
+    subgraph Storage["Persistent ML artifact storage"]
+        HFBASE["Hugging Face public model hub<br/>base model + tokenizer"]
+        HFPRIV["Private Hugging Face model repo<br/>M1/M2 adapters · resumable checkpoints · metadata"]
+        KOUT["Saved Kaggle notebook versions<br/>logs and recoverable run outputs"]
+    end
+
+    MAC <-->|"git pull / reviewed commits + push"| GH
+    DELL <-->|"git pull / reviewed commits + push"| GH
+    MAC -.->|"VS Code notebook<br/>remote-kernel connection"| KG
+    DELL -.->|"VS Code notebook<br/>remote-kernel connection"| KG
+    GH -->|"clone / pull exact commit"| KG
+    GH -->|"clone / pull exact commit"| COLAB
+    KSEC -->|"inject at runtime; never write to Git"| KG
+    KSEC -->|"inject at runtime; never write to Git"| COLAB
+    HFBASE -->|"download pinned M0 revision"| KG
+    HFBASE -->|"download pinned M0 revision"| COLAB
+    KG <-->|"save / restore private artifacts"| HFPRIV
+    COLAB <-->|"save / restore private artifacts"| HFPRIV
+    KG --> TEMP
+    COLAB --> TEMP
+    TEMP -->|"explicit Save Version when useful"| KOUT
+    KOUT -->|"restore or download"| KG
+    KG -->|"download small reviewed results"| MAC
+    COLAB -->|"download small reviewed results"| MAC
+    MAC -.->|"later handoff through GitHub + artifact IDs"| DELL
+
+    classDef client fill:#fff1ad,stroke:#c5a642,color:#263238,stroke-width:1.5px;
+    classDef control fill:#d9eaff,stroke:#4c8bc7,color:#263238,stroke-width:1.5px;
+    classDef compute fill:#dcecff,stroke:#4c8bc7,color:#263238,stroke-width:1.5px;
+    classDef secret fill:#ffe0bf,stroke:#d58a32,color:#263238,stroke-width:1.5px;
+    classDef system fill:#d8f0d5,stroke:#4b9b58,color:#263238,stroke-width:1.5px;
+    class MAC,DELL client;
+    class GH control;
+    class KG,COLAB,TEMP compute;
+    class KSEC secret;
+    class HFBASE,HFPRIV,KOUT system;
+```
+
+### What is stored where
+
+| Location | Store here | Do not store here | Access direction |
+|---|---|---|---|
+| **GitHub repository** | `src/`, experiment configs, notebooks, deterministic data-generation code, context files, small manifests, metrics and plots | Secrets, access tokens, base-model weights, large checkpoints or caches | Mac/Dell push reviewed changes; Kaggle/Colab pull an exact commit |
+| **Kaggle or Colab runtime** | Active clone, downloaded model cache, generated working data and temporary checkpoints | The only copy of any important result | Runtime reads GitHub/Hugging Face; important outputs must leave the runtime before shutdown |
+| **Private Hugging Face model repository** | M1 adapter, canonical M2 adapter, resumable adapter checkpoints, tokenizer additions if any, run metadata and checksums | Source-of-truth project documentation or unreviewed secrets | Kaggle/Colab upload after milestones and download to resume; Mac/Dell may verify or download |
+| **Saved Kaggle notebook output** | Versioned logs and run outputs useful for recovery or audit | Sole canonical M1/M2 copy | Kaggle creates a saved version; later sessions can attach or download it |
+| **Mac / Dell** | Working Git clone and optional downloaded backup | Sole copy of project memory or checkpoints | Synchronize through GitHub and the private artifact repository |
+| **Kaggle / Colab Secrets** | Narrowly scoped `HF_TOKEN` and any required private-repository credential | Tokens in notebook cells, scripts, logs or Git | Credentials are injected into the runtime only when needed |
+
+### Run lifecycle and access rules
+
+1. In VS Code, pull `main`, read `AGENTS.md` and `context/`, then make and review source/config changes.
+2. Commit and push the reproducible code state to GitHub. A run must record the exact Git commit SHA.
+3. Start a Kaggle GPU session and connect the local VS Code notebook to its remote Jupyter kernel, or use Colab as the fallback.
+4. In the runtime, clone/pull the recorded Git commit and download the pinned base-model revision from Hugging Face.
+5. Read private credentials only from the platform secret store. Use a narrowly scoped token and never print it.
+6. Run the experiment. Treat runtime disk as disposable even when a platform offers saved outputs.
+7. At a verified milestone, upload the adapter/checkpoint and metadata to the private Hugging Face repository. M2 is not considered saved until it can be restored in a fresh session.
+8. Bring small metrics, plots and logs back for review; update `STATUS.md`, `WORK_LOG.md` and, when needed, `DECISIONS.md`; then commit and push those records.
+9. During the Dell handoff, clone GitHub and restore artifacts by their recorded Hugging Face repository path, revision and checksum. No dependency on the company Mac should remain.
+
+The runtime may access the public base model without a write credential. Access to the private artifact repository requires a private token stored in the runtime's secret manager. Kaggle/Colab should not push project changes directly to GitHub in the normal workflow; changes return through the reviewed local working copy.
+
 ## Starting stack (provisional)
 
 - **Model:** [`Qwen/Qwen3-0.6B`](https://huggingface.co/Qwen/Qwen3-0.6B)
 - **Training:** PyTorch, Hugging Face Transformers, PEFT/LoRA, Accelerate, TRL, Datasets.
 - **Pilot data:** seeded fictional author/book/prize relationships (proposal suggests ~120 entities: 30 forget, 90 retain).
 - **Unlearning baseline:** Gradient Difference, balancing forget-answer loss against retain-answer loss.
-- **Editor:** VS Code; **compute:** available free Colab/Kaggle GPU, or a permitted local machine.
+- **Editor:** VS Code; **compute:** Kaggle GPU as primary, Colab GPU as fallback.
 - **Budget:** aim for zero paid LLM API calls.
 
 These are working choices, not final benchmark settings. Pin dependency versions after the first successful smoke test.

@@ -21,6 +21,20 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-04 — Portable execution and artifact architecture
+
+**Goal:** Define how development, remote GPU execution and persistent storage continue across the company Mac and personal Dell.
+
+**Work completed:** Added a directional architecture diagram, storage ownership table, run lifecycle and credential boundaries to `README.md`. Recorded Kaggle as the primary remote GPU environment, Colab as fallback, GitHub as the code/context system of record and a private Hugging Face model repository as durable M1/M2 adapter/checkpoint storage.
+
+**Evidence:** Documentation changes only; no runtime connection, artifact upload or model restore has been tested yet.
+
+**Decision and next step:** Use the documented architecture for the first Kaggle-from-VS-Code smoke test. Before M1/M2 work, verify that a small test artifact can be uploaded to private storage and restored in a fresh runtime.
+
+**Cost / time (if measured):** Not measured; no compute run.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

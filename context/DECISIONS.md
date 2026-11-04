@@ -15,6 +15,7 @@ This file records what has actually been agreed versus what remains provisional.
 | D-07 | Prioritize **direct/multi-hop forget accuracy, retain accuracy and reasoning baseline** before/at M2. | Later metrics depend on a functioning M2 and continuation setup. |
 | D-08 | Prefer **no paid LLM API tokens** and a portable VS Code/Git workflow. | Ability to continue after switching computers. |
 | D-09 | Store proposal PDFs under `docs/proposals/`; use `context/` for the current written project state. | Keep proposals separate from operational status and actual results. |
+| D-10 | Use local VS Code clients for development, GitHub for code/context, Kaggle GPU as the primary execution environment, Colab as fallback, and a private Hugging Face model repository for durable adapters/checkpoints. | Keeps the workflow portable across the company Mac and personal Dell while separating reviewed source, ephemeral compute and large persistent artifacts. Important checkpoints must be restorable outside the runtime. |
 
 ## Provisional technical choices — confirm during smoke tests
 
@@ -27,7 +28,7 @@ This file records what has actually been agreed versus what remains provisional.
 | P-05 | Two later-task conditions: unrelated reasoning and similarly structured **new** relational data. | Whether they yield natural, nontrivial target recovery. |
 | P-06 | RAFG: M2-relative CE monitoring + triggered margin-based correction. | Threshold calibration, monitoring cost, false positives and baseline comparisons. |
 | P-07 | RASP: forget-vs-retain gradient module ranking + M2-anchored weighted LoRA drift penalty. | Score validity, parameterization, retained learning and baseline comparisons. |
-| P-08 | Free Colab or Kaggle remote GPU connected to a VS Code notebook workflow. | Runtime availability, permissions, storage persistence, authentication and stable package versions. |
+| P-08 | Kaggle remote GPU connected to VS Code as the primary runtime; Colab as fallback. | Runtime availability, permissions, remote-kernel connection, artifact restore, authentication and stable package versions. |
 
 ## Explicitly NOT decided yet
 

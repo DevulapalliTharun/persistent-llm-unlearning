@@ -12,6 +12,7 @@
 - [x] Shared pipeline agreed: M0 → M1 → M2 → undefended recovery pilot → separate RAFG/RASP branches.
 - [x] Seven evaluation metrics identified; staged priorities agreed.
 - [x] VS Code-centric, no-paid-API workflow discussed, with Colab/Kaggle as candidate compute backends.
+- [x] Portable execution/storage architecture documented: GitHub for code and context, Kaggle as primary remote GPU, Colab as fallback, and private Hugging Face storage for durable model artifacts.
 - [ ] Research code / experiments verified to run.
 - [ ] Synthetic dataset generated and validated.
 - [ ] M1 and M2 checkpoints produced.
@@ -35,7 +36,7 @@
 
 1. **Review the two proposal PDFs** and ensure paths/filenames are correct. Keep the PDFs unchanged as proposal sources.
 2. **Initialize/verify Git and `.gitignore`.** Do not commit secrets, company information, large model files or disposable training outputs. The screenshot shows `U` beside files, which normally means untracked in VS Code.
-3. **Smoke-test a GPU notebook kernel** from VS Code or directly in Colab/Kaggle: Python, CUDA availability, package imports, Qwen3-0.6B tokenizer/model loading and a short inference.
+3. **Smoke-test a Kaggle GPU notebook kernel from VS Code**: Python, CUDA availability, package imports, Qwen3-0.6B tokenizer/model loading and a short inference. Use Colab only as the planned fallback.
 4. **Define data schema and deterministic splits** (`F`, `R`, `N`, `T`; and separate RAFG monitor/guard prompts later).
 5. **Train on a tiny subset first** to prove SFT, prompt masking, save/load and direct/multi-hop evaluation.
 6. Scale to a first reproducible **M1**, then implement and validate **M2**.
