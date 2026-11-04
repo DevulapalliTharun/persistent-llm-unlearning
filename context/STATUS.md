@@ -2,7 +2,7 @@
 
 **As of:** 2026-11-05
 
-**Current phase:** Full candidate automatically validated; M0 audit artifacts preserved and independently verified. Evaluation-format/truncation controls and remaining manual collision review must be resolved before training.
+**Current phase:** Original M0 audit preserved/verified; revised answer-only protocol implemented and locally tested. Revised Kaggle baseline, response-diagnostic review and manual collision review remain before training.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -30,7 +30,8 @@
 - [x] User-reported Kaggle M0 audit completed from Git commit `a774aa00b0b13ebdb748727abc741ecd86123401`: 1,260 predictions, 0 exact matches, 0 empty final responses, and 2 longer-response year mentions requiring review. Summary preserved in `experiments/runs/m0_knowledge_audit_20261105/reported_summary.json`.
 - [x] Both pasted year flags reviewed against candidate records: one year embedded in an incorrect book/prize claim; one semantically correct year in prose. Preserve zero strict exact matches and record the prose answer separately in `experiments/runs/m0_knowledge_audit_20261105/match_review.json`.
 - [x] All five original audit files downloaded and saved under `experiments/runs/m0_knowledge_audit_20261105/`; raw checksum and all 1,260 inputs/summary counts verified. A 42-response nonmatch sample across all 21 partition/task groups was reviewed; evidence is in `artifact_verification.json`.
-- [ ] Before M1/M2 comparisons, define response-format handling, adequate generation length and termination logging. Sampled M0 responses include mid-sentence endings under the 32-token cap; preserve this original run.
+- [x] Defined and implemented `answer-only-v2`: shared `Answer:` instruction/parser, 128-token cap, per-response EOS/cap logging, separate format/answer/mention counts and compatible future SFT target renderer. All 23 unit tests pass; pinned-tokenizer prompt rendering and 1,260-question CPU preflight pass.
+- [ ] Execute the v2 Kaggle baseline and inspect its answer/cap/format diagnostics; preserve results separately from the original run.
 - [ ] Training code implemented and verified.
 - [ ] Full synthetic candidate accepted after manual collision review and M0 accidental-knowledge audit.
 - [ ] M1 and M2 checkpoints produced.
@@ -42,7 +43,7 @@
 | Stage | Current status | Exit evidence |
 |---|---|---|
 | 0. Repository + environment | **Complete:** Git baseline, private artifact round-trip, pinned environment, interactive GPU test and committed M0 rerun verified | Git baseline, environment/config file, remote GPU smoke test |
-| 1. Synthetic data | Full automated gates passed; original M0 predictions verified and sampled; response-format/truncation controls and manual collision/acceptance review remain | `data/candidates/pilot-v1/seed-42/`, `experiments/runs/data_full_validation_20261105/` and `experiments/runs/m0_knowledge_audit_20261105/` |
+| 1. Synthetic data | Full automated gates and original audit verification passed; v2 scoring/termination controls locally tested; revised GPU baseline and manual collision/acceptance review remain | `docs/data/EVALUATION_PROTOCOL.md`, candidate data and original run evidence |
 | 2. M0 → M1 SFT | Not started / unverified | Reproducible M1 adapter and held-out direct/multi-hop learning metrics |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
 | 4. Ordinary recovery pilot | Not started / unverified | From M2, logs across continuation steps for unrelated and similar-structure conditions |
@@ -52,7 +53,7 @@
 
 ## Immediate next actions (in order)
 
-1. Review `experiments/runs/m0_knowledge_audit_20261105/README.md`, define consistent answer extraction/output-length controls for subsequent comparisons, and finish manual collision review. The original run and both flagged responses are already preserved and verified.
+1. Commit/push the v2 implementation, run `experiments/notebooks/02_m0_answer_only_audit.ipynb` on a Kaggle GPU kernel, and inspect `summary.answer_scoring` plus raw outputs before comparisons. Finish manual collision review; preserve the original run and candidate unchanged.
 2. Record the acceptance decision and define M1 learning criteria before implementing a tiny training pilot.
 3. **Train on a tiny subset first** to prove SFT, prompt masking, save/load and direct/multi-hop evaluation.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.

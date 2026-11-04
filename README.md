@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** M0 smoke testing and candidate automated validation are complete. All 1,260 original knowledge-audit predictions are preserved and independently verified: zero whole-string exact matches, with one semantically correct year in prose among two review flags. A 42-response sample exposed generation-length/formatting limitations to address before comparisons; manual collision review remains pending. Training has not started.
+**Current state:** M0 smoke testing and candidate automated validation are complete. All 1,260 original knowledge-audit predictions are preserved and independently verified. An answer-only evaluation protocol with a 128-token cap and termination logging is implemented and locally tested; its revised Kaggle baseline and manual collision review remain pending. Training has not started.
 
 ## The two candidate approaches
 
@@ -193,7 +193,7 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
-2. Review the [verified original audit and its evaluation limitations](experiments/runs/m0_knowledge_audit_20261105/README.md), define consistent answer-format/output-length controls, and complete remaining candidate manual review.
+2. Run [`02_m0_answer_only_audit.ipynb`](experiments/notebooks/02_m0_answer_only_audit.ipynb) on a Kaggle GPU kernel using the [versioned answer-evaluation protocol](docs/data/EVALUATION_PROTOCOL.md). Preserve its results separately from the [verified original audit](experiments/runs/m0_knowledge_audit_20261105/README.md), inspect cap/format diagnostics, and complete remaining candidate manual review.
 3. Record the dataset acceptance decision and define the tiny M1 learning/evaluation criteria.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.

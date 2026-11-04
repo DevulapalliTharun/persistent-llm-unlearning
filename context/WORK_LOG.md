@@ -275,6 +275,22 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Implement versioned answer-only evaluation protocol
+
+**Goal:** Address output-format and truncation limitations found in the original M0 audit before M1 training or final-test evaluation.
+
+**Work completed:** Added `src/evaluation/answers.py` with a gold-independent answer parser, shared system instruction, future SFT answer renderer, EOS/padding-aware token accounting and protocol diagnostics. Added opt-in v2 support to the existing audit runner, a fixed v2 config, clean `02_m0_answer_only_audit.ipynb`, focused tests and `docs/data/EVALUATION_PROTOCOL.md`. Updated README, audit guide, status and decisions. The old config, scorer, candidate files and original audit outputs remain preserved.
+
+**Protocol:** Ask for `Answer: <value>`; accept exact normalized answer fields (or a bare exact value with a recorded format violation), never count mere mentions/negations/alternatives as automatic correct answers. Keep prose semantic findings as separate manual evidence. Set a 128-token cap; log generated counts, first EOS and token-limit hits per response. Use `summary.answer_scoring` for v2 accuracy and retain the old whole-response diagnostic separately.
+
+**Evidence:** All 23 unit tests pass, including original 1,260-row baseline-score preservation, invalid/ambiguous answer cases, EOS versus shared padding, EOS at the cap and aggregation. Six clean notebook code cells compile. The pinned cached Qwen tokenizer rendered the system instruction and non-thinking generation prompt successfully. CPU `--plan-only` verified unchanged candidate hashes, all 180 units and 1,260 inputs. One empty-label parsing bug was caught and corrected during testing.
+
+**Limits:** No new model inference or training occurred. The revised baseline needs a Kaggle run and inspection before comparisons. Trainer token boundaries, loss masking, rendered token budgets and M1 learning thresholds still need implementation/definition; full manual collision review remains pending.
+
+**Next step:** User reviews/pushes these files and runs the v2 notebook on a Kaggle GPU kernel, preserving its artifacts separately. Do not replace the original run or infer v2 model metrics from local parser tests.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

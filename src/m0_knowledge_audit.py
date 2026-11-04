@@ -14,6 +14,10 @@ from pathlib import Path
 from typing import Any
 
 from src.data.synthetic import verify_checksums
+from src.evaluation.answers import (
+    PROTOCOL_VERSION, SYSTEM_PROMPT, evaluation_messages, generation_details,
+    score_answer, summarize_answer_protocol,
+)
 from src.m0_smoke_test import git_commit, installed_packages, package_version, write_json
 
 
@@ -109,6 +113,11 @@ def main() -> int:
     parser.add_argument("--plan-only", action="store_true", help="Verify inputs without loading a model")
     args = parser.parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
+    protocol = config.get("protocol_version", "legacy-v1")
+    if protocol not in {"legacy-v1", PROTOCOL_VERSION}:
+        raise ValueError(f"Unknown audit protocol: {protocol}")
+    if protocol == PROTOCOL_VERSION and config.get("system_prompt") != SYSTEM_PROMPT:
+        raise ValueError("Versioned system prompt differs from the shared answer protocol")
     if not re.fullmatch(r"[0-9a-f]{40}", config["model_revision"]):
         raise ValueError("Use an immutable 40-character model revision")
     if config["batch_size"] < 1 or config["max_new_tokens"] < 1:
@@ -125,6 +134,11 @@ def main() -> int:
         "knowledge_units": len({row["record_id"] for row in examples}),
         "by_entity_partition": dict(Counter(row["entity_partition"] for row in examples)),
         "model_executed": False,
+        "protocol_version": protocol,
+        "runner_sha256": sha256_file(Path(__file__)),
+        "answer_protocol_sha256": sha256_file(
+            Path(__file__).parent / "evaluation" / "answers.py"
+        ),
     }
     if args.output_dir.exists() and any(args.output_dir.iterdir()):
         raise ValueError("Output directory is nonempty; choose a new run directory")
@@ -167,7 +181,10 @@ def main() -> int:
         for offset in range(0, len(examples), config["batch_size"]):
             batch = examples[offset : offset + config["batch_size"]]
             formatted = [tokenizer.apply_chat_template(
-                [{"role": "user", "content": row["question"]}], tokenize=False,
+                evaluation_messages(row["question"])
+                if protocol == PROTOCOL_VERSION
+                else [{"role": "user", "content": row["question"]}],
+                tokenize=False,
                 add_generation_prompt=True, enable_thinking=False,
             ) for row in batch]
             inputs = tokenizer(
@@ -176,9 +193,20 @@ def main() -> int:
             with torch.inference_mode():
                 generated = model.generate(**inputs, generation_config=generation_config)
             prompt_width = inputs["input_ids"].shape[1]
-            responses = tokenizer.batch_decode(generated[:, prompt_width:], skip_special_tokens=True)
-            for example, response in zip(batch, responses):
+            new_ids = generated[:, prompt_width:].tolist()
+            responses = tokenizer.batch_decode(new_ids, skip_special_tokens=True)
+            for index, (example, response) in enumerate(zip(batch, responses)):
                 prediction = score_prediction(example, response)
+                if protocol == PROTOCOL_VERSION:
+                    prediction.update(score_answer(response, example["answer"]))
+                    prediction.update(generation_details(
+                        new_ids[index], generation_config.eos_token_id,
+                        config["max_new_tokens"],
+                    ))
+                    prediction["needs_match_review"] = (
+                        prediction["needs_match_review"] or prediction["answer_match"]
+                        or not prediction["format_compliant"] or prediction["hit_token_limit"]
+                    )
                 predictions.append(prediction)
                 output.write(json.dumps(prediction, ensure_ascii=False, sort_keys=True) + "\n")
             output.flush()
@@ -202,8 +230,11 @@ def main() -> int:
             "peak_gpu_memory_gib": round(torch.cuda.max_memory_allocated(0) / 1024**3, 4),
         },
         "predictions_sha256": sha256_file(args.output_dir / "predictions.jsonl"),
+        "protocol_version": protocol,
         "interpretation": "Matches are review flags, not proof of pretraining knowledge; year matches can occur by chance. No automatic exclusion or dataset change.",
     }
+    if protocol == PROTOCOL_VERSION:
+        summary["answer_scoring"] = summarize_answer_protocol(predictions)
     write_json(args.output_dir / "summary.json", summary)
     write_json(args.output_dir / "matches_for_review.json", {
         "matches": [row for row in predictions if row["needs_match_review"]]
