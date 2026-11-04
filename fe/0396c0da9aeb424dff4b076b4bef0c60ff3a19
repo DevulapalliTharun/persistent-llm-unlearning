@@ -1,0 +1,29 @@
+context/DECISIONS.md
+  s_035f403bffd7e9::t_8f6d1d4bd6dfcc 18
+context/STATUS.md
+  s_035f403bffd7e9::t_8f6d1d4bd6dfcc 16
+  s_035f403bffd7e9::t_c4f87190d0ee6c 27,40
+README.md
+  s_035f403bffd7e9::t_c4f87190d0ee6c 56,78
+  s_035f403bffd7e9::t_8f6d1d4bd6dfcc 139
+  s_035f403bffd7e9::t_3d227592a54fe3 140
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_48a101e4c9b75d 38-47,49,51-57
+  s_035f403bffd7e9::t_8f6d1d4bd6dfcc 48,50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fe0396c0da9aeb424dff4b076b4bef0c60ff3a19",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
