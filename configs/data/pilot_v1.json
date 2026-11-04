@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "pilot-v1",
+  "manifest_created_at_utc": "2026-11-04T00:00:00Z",
+  "master_seed": 42,
+  "template_bank_version": "relational-v1",
+  "counts": {
+    "forget": 30,
+    "retain": 90,
+    "new_relational": 60
+  }
+}

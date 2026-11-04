@@ -1,0 +1,107 @@
+from __future__ import annotations
+
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from src.data.synthetic import (
+    generate_bundle,
+    load_config,
+    tiny_config,
+    verify_checksums,
+)
+
+
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG_PATH = ROOT / "configs/data/pilot_v1.json"
+
+
+def files_under(path: Path) -> dict[str, bytes]:
+    return {
+        str(file.relative_to(path)): file.read_bytes()
+        for file in sorted(path.rglob("*"))
+        if file.is_file()
+    }
+
+
+class SyntheticDatasetTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.config = tiny_config(load_config(CONFIG_PATH))
+
+    def test_generation_is_byte_reproducible(self) -> None:
+        with tempfile.TemporaryDirectory() as first, tempfile.TemporaryDirectory() as second:
+            first_path = Path(first)
+            second_path = Path(second)
+            generate_bundle(self.config, first_path, source_git_commit="test-commit")
+            generate_bundle(self.config, second_path, source_git_commit="test-commit")
+            self.assertEqual(files_under(first_path), files_under(second_path))
+
+    def test_counts_validation_and_checksums(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            manifest = generate_bundle(self.config, output, source_git_commit="test-commit")
+            self.assertTrue(manifest["validation"]["passed"])
+            self.assertEqual(manifest["validation"]["entity_counts"], self.config["counts"])
+            self.assertEqual(verify_checksums(output), [])
+            self.assertEqual(len((output / "entities/forget.jsonl").read_text().splitlines()), 2)
+            self.assertEqual(len((output / "entities/retain.jsonl").read_text().splitlines()), 4)
+            self.assertEqual(len((output / "entities/new_relational.jsonl").read_text().splitlines()), 3)
+
+    def test_final_prompts_are_held_out_and_answers_not_in_questions(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            generate_bundle(self.config, output, source_git_commit="test-commit")
+            final_rows = [
+                json.loads(line)
+                for line in (output / "prompts/final_test.jsonl").read_text().splitlines()
+            ]
+            self.assertTrue(final_rows)
+            for row in final_rows:
+                self.assertEqual(row["prompt_partition"], "final_test")
+                self.assertNotIn(row["answer"].casefold(), row["question"].casefold())
+                if row["entity_partition"] == "F" and row["is_forget_target"]:
+                    self.assertIn("recovery_rate", row["eligible_metrics"])
+                elif row["entity_partition"] == "F":
+                    self.assertEqual(row["eligible_metrics"], [])
+                else:
+                    self.assertTrue(row["eligible_metrics"])
+
+    def test_forget_training_targets_only_author_book_relation(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            generate_bundle(self.config, output, source_git_commit="test-commit")
+            forget_rows = [
+                json.loads(line)
+                for line in (output / "prompts/unlearn_f_train.jsonl").read_text().splitlines()
+            ]
+            self.assertTrue(forget_rows)
+            self.assertEqual(
+                {row["task_type"] for row in forget_rows},
+                {"author_to_book", "book_to_author"},
+            )
+            self.assertTrue(all(row["is_forget_target"] for row in forget_rows))
+
+    def test_different_seed_changes_entities(self) -> None:
+        other = json.loads(json.dumps(self.config))
+        other["master_seed"] = 43
+        with tempfile.TemporaryDirectory() as first, tempfile.TemporaryDirectory() as second:
+            first_path = Path(first)
+            second_path = Path(second)
+            generate_bundle(self.config, first_path, source_git_commit="test-commit")
+            generate_bundle(other, second_path, source_git_commit="test-commit")
+            self.assertNotEqual(
+                (first_path / "entities/all_m1.jsonl").read_bytes(),
+                (second_path / "entities/all_m1.jsonl").read_bytes(),
+            )
+
+    def test_nonempty_output_directory_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / "existing.txt").write_text("preserve me", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                generate_bundle(self.config, output, source_git_commit="test-commit")
+
+
+if __name__ == "__main__":
+    unittest.main()

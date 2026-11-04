@@ -1,6 +1,6 @@
 # Synthetic Relational Dataset Specification
 
-**Status:** Draft ready for user review; no data generated yet  
+**Status:** Generator implemented and tiny-tested; accepted pilot data not generated yet
 **Version:** `v0.1-design`  
 **Pilot seed:** `42`  
 **Purpose:** Controlled M0 → M1 → M2 and post-unlearning recovery experiments
@@ -20,6 +20,8 @@ A **knowledge unit** is one connected fictional relationship graph:
 ```text
 author ──wrote──> book ──won──> prize ──awarded_in──> year
 ```
+
+The designated forget target is the **author–book association**, not the entire graph. Prize and year edges remain supporting facts so direct suppression can be tested through multi-hop paths. Direct forget tasks ask author ↔ book; multi-hop forget tasks traverse author/book through prize and year. Non-target supporting questions for an `F` unit are diagnostics and are not counted as forget or recovery successes.
 
 The pilot contains 120 M1 knowledge units:
 
@@ -57,6 +59,11 @@ Each unit is stored independently from generated prompts:
     "name": "Silver Comet Prize"
   },
   "award_year": 1987,
+  "forget_target": {
+    "relation": "author_book",
+    "direct_task_types": ["author_to_book", "book_to_author"],
+    "multi_hop_task_types": ["author_to_prize", "author_to_year", "prize_to_author"]
+  },
   "generation": {
     "seed": 42,
     "generator_version": "unimplemented",
@@ -148,19 +155,21 @@ The training renderer may later convert `question` and `answer` into chat messag
 
 Each task family has disjoint wording banks for training, development, monitoring/scoring, guard updates and final evaluation. A paraphrase is not considered held out if it differs only by punctuation, capitalization or trivial word substitution.
 
+The initial implementation contains 11 natural-language variants per task family and assigns exactly one exclusive variant to each prompt partition. Whether additional within-partition variants are needed remains a pilot-review question.
+
 ## 7. Prompt partitions and permitted use
 
 | Prompt partition | Entities | Permitted use | Forbidden use |
 |---|---|---|---|
 | `m1_train` | `F + R` | M0 → M1 supervised fact learning | Final reporting |
 | `m1_dev` | `F + R` | M1 checkpoint selection and learning diagnosis | Final reporting |
-| `unlearn_f_train` | `F` | Gradient Difference forget batches | Final evaluation |
+| `unlearn_f_train` | `F` | Gradient Difference forget batches on direct author ↔ book targets | Supporting prize/year erasure or final evaluation |
 | `unlearn_r_train` | `R` | Gradient Difference retain batches | Final evaluation |
 | `m2_dev` | `F + R` | M2 checkpoint selection using predefined criteria | Final reporting |
-| `rasp_score_f` | `F` | Forget-gradient module statistics | RAFG triggering or final evaluation |
-| `rasp_score_r` | `R` | Retain-gradient module statistics | RAFG triggering or final evaluation |
-| `rafg_monitor` | `F` | No-gradient recovery monitoring and trigger calculation | Gradient updates or final evaluation |
-| `rafg_guard_train` | `F` | Corrective guard updates after a trigger | Trigger calibration or final evaluation |
+| `rasp_score_f` | `F` | Direct author ↔ book forget-gradient module statistics | RAFG triggering or final evaluation |
+| `rasp_score_r` | `R` | Matched direct author ↔ book retain-gradient statistics | RAFG triggering or final evaluation |
+| `rafg_monitor` | `F` | No-gradient direct and multi-hop target monitoring and trigger calculation | Gradient updates or final evaluation |
+| `rafg_guard_train` | `F` | Direct author ↔ book corrective updates after a trigger | Trigger calibration or final evaluation |
 | `n_rel_train` | `N_rel` | Post-M2 related-structure continuation | Contains no `F`/`R` entities or answers |
 | `n_reason_train` | Independent tasks | Post-M2 unrelated-reasoning continuation | Contains no synthetic M1 entity strings |
 | `final_test` (`T`) | `F + R`, and `N` where applicable | Final direct, paraphrased, 2-hop and 3-hop metrics | Any training, tuning, monitoring, scoring or selection |
@@ -232,7 +241,8 @@ data/generated/pilot-v1/seed-42/
 │   ├── all_m1.jsonl
 │   ├── forget.jsonl
 │   ├── retain.jsonl
-│   └── new_relational.jsonl
+│   ├── new_relational.jsonl
+│   └── split_manifest.json
 ├── prompts/
 │   ├── m1_train.jsonl
 │   ├── m1_dev.jsonl
@@ -251,7 +261,7 @@ data/generated/pilot-v1/seed-42/
     └── manual_review_sample.json
 ```
 
-No generated bundle exists yet. File names may be refined during implementation, but partition meanings and leakage boundaries must not be weakened silently.
+No accepted pilot bundle exists yet. The implementation has generated only temporary tiny bundles for tests. File names may be refined during implementation, but partition meanings and leakage boundaries must not be weakened silently.
 
 ## 12. Manifest requirements
 
@@ -264,7 +274,7 @@ No generated bundle exists yet. File names may be refined during implementation,
 - Template-bank version and IDs.
 - Normalization rules.
 - Validation results.
-- SHA-256 digest of every generated file.
+- SHA-256 digest of every payload file. `checksums.sha256` additionally covers the manifest and all payloads and excludes only itself to avoid a circular digest.
 - Timestamp in UTC.
 - Known limitations and any manual exclusions with reasons.
 
@@ -286,7 +296,7 @@ Passing this gate authorizes only a tiny M1 learning pilot, not full training.
 ## 14. Decisions still pending before implementation
 
 - Final `N_rel` unit count and exact `N_reason` task/count budget.
-- Exact number of templates per task and prompt partition.
+- Whether to expand beyond the implemented one exclusive template per task and prompt partition.
 - Name-generation grammar and near-duplicate thresholds.
 - Exact M1 learning, M2 forgetting and recovery decision thresholds.
 - Final multi-seed values beyond the pilot seed.

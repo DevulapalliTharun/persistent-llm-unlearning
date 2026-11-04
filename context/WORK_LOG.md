@@ -135,6 +135,26 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-04 — Tiny synthetic generator and validation implementation
+
+**Goal:** Implement and verify deterministic dataset generation without creating the accepted full pilot or starting training.
+
+**Environment / model:** Local CPU; Python standard library only; no model or remote compute used.
+
+**Input / configuration:** `configs/data/pilot_v1.json` with master seed 42 and full planned counts; `--tiny` overrides counts to 2 F, 4 R and 3 N_rel units for implementation tests.
+
+**Work completed:** Added deterministic SHA-256-ranked entity generation, entity-first F/R splitting, disjoint N_rel generation, 11 exclusive natural-language templates per relational task, direct/2-hop/3-hop prompt generation, row-matched arithmetic N_reason prompts, prompt-use partitions, leakage/uniqueness/path validation, manifests, per-file checksums, manual-review samples, CLI generation/validation commands and standard-library unit tests.
+
+**Evidence:** Six unit tests passed. Two independent CLI tiny generations were byte-for-byte identical. Each contained 2 F, 4 R and 3 N_rel units; validation reported zero errors, checksum verification passed, and prompt counts matched expectations including 21 N_rel and 21 N_reason rows plus 63 held-out final prompts. A dedicated test confirms forget updates target only the direct author–book relation.
+
+**Observations / failures:** Manual inspection showed coherent fictional examples and correct graph paths. Validation intentionally retains two warnings: N_reason/N_rel are row-matched rather than tokenizer-budget matched, and near-duplicate/real-name collision review remains manual. The full 30/90/60 dataset was not generated.
+
+**Decision and next step:** Review the warnings and template breadth, then authorize two clean full generations, compare all bytes/checksums, perform manual review and run the M0 accidental-knowledge audit before committing an accepted dataset.
+
+**Cost / time (if measured):** Final unit-test run completed in 0.123 seconds; no GPU or paid compute used.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

@@ -17,9 +17,11 @@
 - [x] Reproducible M0 smoke-test runner and thin Kaggle/VS Code notebook implemented locally; syntax and notebook structure validated.
 - [x] Interactive M0 smoke test passed through VS Code on a Kaggle T4 x2 runtime: CUDA, immutable model revision resolution, tokenizer/chat template, BF16 model loading and bounded inference were verified.
 - [x] Fresh Kaggle Save & Run All version reproduced the pinned M0 smoke test from Git commit `bb50b38e2315626d1e2eae3dc719f85a5ead8561`.
-- [x] Synthetic relational dataset schema and deterministic split/validation plan documented in `docs/data/DATASET_SPEC.md`; no records generated yet.
+- [x] Synthetic relational dataset schema and deterministic split/validation plan documented in `docs/data/DATASET_SPEC.md`; no accepted full pilot bundle generated yet.
+- [x] Standard-library dataset generator, validators and reproducibility tests implemented; two independent tiny bundles matched byte-for-byte with zero validation errors.
 - [x] M0 infrastructure and smoke-test code verified on a fresh Kaggle committed run.
-- [ ] Dataset-generation, validation and training code implemented and verified.
+- [x] Dataset-generation and validation code implemented and verified in tiny mode.
+- [ ] Training code implemented and verified.
 - [ ] Synthetic dataset generated and validated.
 - [ ] M1 and M2 checkpoints produced.
 - [ ] Recovery demonstrated and measured.
@@ -30,7 +32,7 @@
 | Stage | Current status | Exit evidence |
 |---|---|---|
 | 0. Repository + environment | **Complete:** Git baseline, private artifact round-trip, pinned environment, interactive GPU test and committed M0 rerun verified | Git baseline, environment/config file, remote GPU smoke test |
-| 1. Synthetic data | Design complete; pending-choice review and implementation not started | Seeded generator, saved entity-level F/R/N splits plus held-out T prompts, leakage checks |
+| 1. Synthetic data | Generator implemented; tiny reproducibility and validation passed; pending choices/manual review/full generation remain | Seeded generator, saved entity-level F/R/N splits plus held-out T prompts, leakage checks |
 | 2. M0 → M1 SFT | Not started / unverified | Reproducible M1 adapter and held-out direct/multi-hop learning metrics |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
 | 4. Ordinary recovery pilot | Not started / unverified | From M2, logs across continuation steps for unrelated and similar-structure conditions |
@@ -40,9 +42,9 @@
 
 ## Immediate next actions (in order)
 
-1. **Review `docs/data/DATASET_SPEC.md` and resolve the explicitly pending pilot choices**, especially `N` budgets, template counts and name-generation constraints. This is the active next task.
-2. Implement a seeded synthetic-data generator and leakage/uniqueness validation; do not begin full generation until the reviewed choices are recorded.
-3. Generate the pilot bundle twice from clean directories and verify identical manifests/checksums plus zero leakage errors.
+1. **Review the temporary tiny samples and resolve the remaining specification warnings**, especially token-budget matching, near-duplicate/real-name checks and whether one template per task/partition is sufficient. This is the active next task.
+2. Generate the full pilot bundle twice from clean directories and verify identical manifests/checksums plus zero leakage errors.
+3. Run manual sampling and an M0 accidental-knowledge audit before accepting and committing the dataset.
 4. **Train on a tiny subset first** to prove SFT, prompt masking, save/load and direct/multi-hop evaluation.
 5. Scale to a first reproducible **M1**, then implement and validate **M2**.
 6. Only after M2 is validated, run **ordinary post-unlearning recovery pilot**. Branch into RAFG/RASP after the pilot.

@@ -163,7 +163,22 @@ The main comparison is **forgetting stability versus useful new-task learning ve
 
 ## Dataset design
 
-The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The design freezes the knowledge-unit graph, entity-first `F`/`R`/`N` split procedure, held-out `T` evaluation boundary, prompt-use partitions, leakage checks, manifests and pre-training acceptance gate. It is currently a specification only; no synthetic dataset has been generated or validated.
+The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The design freezes the knowledge-unit graph, entity-first `F`/`R`/`N` split procedure, held-out `T` evaluation boundary, prompt-use partitions, leakage checks, manifests and pre-training acceptance gate. The generator and validators are implemented and tiny-tested; no accepted full pilot dataset has been generated.
+
+CPU-only implementation checks:
+
+```bash
+python3 -m unittest discover -s tests -v
+
+python3 -m src.data.generate \
+  --config configs/data/pilot_v1.json \
+  --output-dir /tmp/persistent-unlearning-tiny \
+  --tiny
+
+python3 -m src.data.validate /tmp/persistent-unlearning-tiny
+```
+
+Do not run the full pilot command until the pending choices and manual tiny-sample review are approved.
 
 ## What to do next
 
