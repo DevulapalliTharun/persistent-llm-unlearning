@@ -1,0 +1,27 @@
+experiments/runs/m0_smoke_20261104/committed_result.json
+  s_035f403bffd7e9::t_3066c11baa2919 1-51
+README.md
+  s_035f403bffd7e9::t_3066c11baa2919 154
+context/STATUS.md
+  s_035f403bffd7e9::t_3066c11baa2919 4,19,30,43-44
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_c1381647d0ccc4 98-117
+experiments/runs/m0_smoke_20261104/README.md
+  s_035f403bffd7e9::t_3066c11baa2919 5,21,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f3a1197e5b5cb97f85ec932e6635a2a85018239f",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
