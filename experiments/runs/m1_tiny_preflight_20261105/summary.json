@@ -1,0 +1,22 @@
+{
+  "date_ist": "2026-11-05",
+  "stage": "local_cpu_preparation",
+  "scope": "12-unit diagnostic: 4 F and 8 R; full dataset release remains pending",
+  "training_rows": 84,
+  "development_rows": 84,
+  "tokenizer_id": "Qwen/Qwen3-0.6B",
+  "tokenizer_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "masking_report": {
+    "rows": 84,
+    "max_tokens": 101,
+    "prompt_tokens": 7153,
+    "supervised_answer_tokens": 601,
+    "prefixes_verified": true,
+    "truncated_examples": 0
+  },
+  "unit_tests_passed": 29,
+  "training_executed": false,
+  "model_weights_loaded": false,
+  "gpu_import_training_and_persistence_verified": false,
+  "next_step": "Run 03_m1_tiny_learning.ipynb on Kaggle with HF_TOKEN attached; preserve results even if pilot gates fail"
+}

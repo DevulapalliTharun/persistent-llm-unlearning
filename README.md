@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** M0 smoke testing and candidate automated validation are complete. Both knowledge-audit runs are preserved and independently verified. V2 produced 1,259 `Unknown` responses and one incorrect answer, with zero format violations or cap hits. Remaining candidate acceptance review and tiny M1 learning criteria precede training.
+**Current state:** M0 baselines are verified. A fixed 12-unit LoRA learning diagnostic is implemented and CPU-tokenizer checked; CUDA training and adapter persistence remain untested. Full-candidate release and canonical M1/M2 are future stages.
 
 ## The two candidate approaches
 
@@ -193,8 +193,8 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
-2. Review the [verified v2 behavioural baseline](experiments/runs/m0_answer_only_audit_20261105/README.md), complete remaining candidate manual review and define the tiny M1 learning criteria. Keep the [verified original audit](experiments/runs/m0_knowledge_audit_20261105/README.md) separately; preserve the same v2 protocol across the next model comparisons.
-3. Record the dataset acceptance decision and define the tiny M1 learning/evaluation criteria.
+2. Run [`03_m1_tiny_learning.ipynb`](experiments/notebooks/03_m1_tiny_learning.ipynb) on a Kaggle GPU with `HF_TOKEN` attached. The [tiny M1 pilot guide](docs/data/TINY_M1_PILOT.md) defines its fixed subset, learning/utility gates and private artifact/reload checks.
+3. Preserve the diagnostic evidence and adapter receipt; complete full-candidate release/settings before scaling up.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

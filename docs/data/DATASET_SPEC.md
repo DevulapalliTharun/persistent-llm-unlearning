@@ -1,6 +1,8 @@
 # Synthetic Relational Dataset Specification
 
 **Status:** Full pilot candidate generated; automated gates passed; manual/M0 acceptance gates pending
+
+The original and v2 M0 audit artifacts are now preserved and verified. The fixed 12-unit selection in `docs/data/TINY_M1_PILOT.md` is admitted only for the bounded learning/infrastructure diagnostic. Full-candidate release and broader collision review remain pending.
 **Version:** `v0.1-design`  
 **Pilot seed:** `42`  
 **Purpose:** Controlled M0 → M1 → M2 and post-unlearning recovery experiments

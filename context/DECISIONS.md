@@ -62,6 +62,12 @@ User-reported v2 execution completed all 1,260 prompts with zero parsed-answer m
 
 All original v2 files are now preserved and checked. The model replied `Answer: Unknown.` 1,259 times and supplied one wrong book association; every response logs EOS and the parsed-match/format/cap summary reproduces. Accept this as the baseline behaviour under v2, not evidence that the facts have been erased or are absent internally. Keep the fixed protocol for M1/M2 comparisons and require demonstrated M1 learning before interpreting later suppression. Do not regenerate targets or repeat M0 runs merely to change this baseline. Evidence: `experiments/runs/m0_answer_only_audit_20261105/artifact_verification.json`.
 
+## 2026-11-05 — Bounded tiny M1 diagnostic
+
+Admit only the fixed first four F / first eight R units by sorted record ID for the next learning/infrastructure pilot. Their records and task/template mappings were inspected, automated candidate gates pass, and both M0 baselines are preserved. Limited external phrase searches were inconclusive; do not claim universal name clearance or full-dataset release. Keep the canonical candidate unchanged.
+
+The diagnostic uses 84 train / 84 development rows, rank-8 all-linear LoRA, 120 optimizer attempts, fixed v2 scoring and a fresh-base adapter reload comparison. Before execution, set per-F/R direct author-book accuracy ≥90%, composite task accuracy ≥75%, arithmetic base accuracy ≥80% and post drop ≤10 points, zero format/cap issues, changed LoRA weights, 120 applied updates and exact reload-prediction reproduction as gates. These are pilot thresholds, not final benchmark acceptance thresholds. Details: `docs/data/TINY_M1_PILOT.md`.
+
 ## Explicitly NOT decided yet
 
 - The final model checkpoint/revision, Python/library versions, remote provider and precision/quantization settings.

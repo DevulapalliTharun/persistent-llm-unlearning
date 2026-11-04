@@ -1,0 +1,3 @@
+-r m0-smoke.txt
+# Declared package compatibility checked; Kaggle runtime import/training pending.
+peft==0.21.2

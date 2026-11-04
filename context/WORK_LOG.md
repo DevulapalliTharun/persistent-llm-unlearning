@@ -321,6 +321,22 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Prepare bounded tiny M1 LoRA diagnostic
+
+**Goal:** Prepare the first actual learning experiment on a fixed 12-unit subset, with answer-only masking, held-out wording, utility checks and adapter reload/persistence checks.
+
+**Work completed:** Added training data utilities, a bounded training CLI, fixed diagnostic config, PEFT requirement, Kaggle/VS Code notebook, focused tests, pilot review/gate documentation and a preflight summary. Selected the first four F and first eight R units by sorted IDs, without model-score selection. Manually inspected the 12 canonical mappings and task/template definitions. External phrase searches produced unrelated results and were treated as inconclusive; admitted the subset for diagnostics only, not a full dataset release.
+
+**Implementation:** Shared v2 chat wrapper/assistant targets; exact inference-token-prefix checks; prompt/padding label masking with supervised answer/EOS tokens; no length truncation; rank-8 all-linear LoRA on a frozen base; answer-normalized CE; AMP/optimizer update logging; before/after development and ten-question utility probes; changed-adapter and newly instantiated base reload comparisons. Notebook stages private HF upload and adapter-file hash round-trip before evidence export. No weights uploaded or runtime started in this local work.
+
+**Evidence:** All 29 unit tests pass. CPU-only preparation with the actual pinned Qwen tokenizer passed all 84 examples: maximum length 101 tokens, 7,153 prompt tokens, 601 supervised answer/EOS tokens, exact prefix agreement and zero truncation. See `experiments/runs/m1_tiny_preflight_20261105/summary.json`. PEFT 0.21.2 package metadata was inspected for declared compatibility; CUDA import/training compatibility remains unverified.
+
+**Files changed:** `src/training/`, `tests/test_training_data.py`, `configs/training/m1_tiny.json`, `requirements/m1-tiny.txt`, `experiments/notebooks/03_m1_tiny_learning.ipynb`, pilot documentation, preflight evidence and README/context state.
+
+**Next step:** Push implementation, attach `HF_TOKEN` to a Kaggle GPU notebook and execute the diagnostic sequentially. Preserve failures as evidence. Passing it does not produce canonical M1 or validate RAFG/RASP; full-candidate release and expanded learning experiments remain future work.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

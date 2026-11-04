@@ -8,6 +8,8 @@ It contains 30 forget, 90 retain and 60 new relational knowledge units, the prom
 
 Validation evidence is in [`experiments/runs/data_full_validation_20261105/`](../experiments/runs/data_full_validation_20261105/).
 
+The fixed 4 F / 8 R diagnostic subset is reviewed for the next tiny M1 learning test; its scope, limitations and gates are in [`TINY_M1_PILOT.md`](../docs/data/TINY_M1_PILOT.md). This does not promote the entire candidate to a final dataset release.
+
 Verify the saved candidate:
 
 ```bash
