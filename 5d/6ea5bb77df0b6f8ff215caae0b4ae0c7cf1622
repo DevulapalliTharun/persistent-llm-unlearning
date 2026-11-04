@@ -1,0 +1,52 @@
+references/.gitkeep
+  s_035f403bffd7e9::t_d610d1392b2025 1
+src/.gitkeep
+  s_035f403bffd7e9::t_d610d1392b2025 1
+context/STATUS.md
+  s_035f403bffd7e9::t_d610d1392b2025 2,7,20,43
+  s_035f403bffd7e9::t_49c86af36e55f2 1
+  s_035f403bffd7e9::t_21cff18804d2fd 3-6
+  s_035f403bffd7e9::t_429b77ef9f7285 8-10,17-19
+  s_035f403bffd7e9::t_52c3226d04686d 21-23,40-42
+  s_035f403bffd7e9::t_791685f1bc36f9 44-46
+context/PROJECT.md
+  s_035f403bffd7e9::t_d610d1392b2025 2-10,12,14,16-18
+  s_035f403bffd7e9::t_491d4a38095e08 1
+  s_035f403bffd7e9::t_7b4473e8ad22bd 11
+  s_035f403bffd7e9::t_325cd4dca3fb71 13
+  s_035f403bffd7e9::t_8def7a0cec2b67 15
+  s_035f403bffd7e9::t_ff7c9d4071f5e7 19-21
+experiments/.gitkeep
+  s_035f403bffd7e9::t_d610d1392b2025 1
+AGENTS.md
+  s_035f403bffd7e9::t_d610d1392b2025 30
+  s_035f403bffd7e9::t_6a6e59572a5e88 27-29
+  s_035f403bffd7e9::t_c50300fe485aab 31-33
+.gitignore
+  s_035f403bffd7e9::t_d610d1392b2025 1-33
+README.md
+  s_035f403bffd7e9::t_d610d1392b2025 2,4,6
+  s_035f403bffd7e9::t_8d3d6fc9f77260 1
+  s_035f403bffd7e9::t_8e126458b36ad8 3
+  s_035f403bffd7e9::t_44fa4b7ae3c509 5
+  s_035f403bffd7e9::t_976644b1a64a27 7-9
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_d610d1392b2025 1-2
+  s_035f403bffd7e9::t_39184ac25efec3 3-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5d6ea5bb77df0b6f8ff215caae0b4ae0c7cf1622",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
