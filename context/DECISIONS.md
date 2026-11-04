@@ -54,6 +54,14 @@ Manual inspection identified an unsupported year mention with incorrect supporti
 
 All original audit files were imported and independently checked against the candidate and rescored summary. A 42-response sample includes visible mid-sentence endings under the 32-token cap. Preserve this baseline and its original scoring. Before M1/M2 comparisons, define consistent answer extraction, a sufficient generation budget and per-response termination logging; any revised baseline must be recorded separately. Evidence: `experiments/runs/m0_knowledge_audit_20261105/artifact_verification.json`.
 
+## 2026-11-05 — Reported v2 protocol execution
+
+User-reported v2 execution completed all 1,260 prompts with zero parsed-answer matches, format violations and token-limit hits. Record these as observed under the fixed protocol and preserve the baseline; do not interpret them as certified absence of knowledge or automatically accept the dataset. Independent artifact verification and raw-response/abstention sampling remain pending. See `experiments/runs/m0_answer_only_audit_20261105/`.
+
+## 2026-11-05 — Verified v2 baseline interpretation
+
+All original v2 files are now preserved and checked. The model replied `Answer: Unknown.` 1,259 times and supplied one wrong book association; every response logs EOS and the parsed-match/format/cap summary reproduces. Accept this as the baseline behaviour under v2, not evidence that the facts have been erased or are absent internally. Keep the fixed protocol for M1/M2 comparisons and require demonstrated M1 learning before interpreting later suppression. Do not regenerate targets or repeat M0 runs merely to change this baseline. Evidence: `experiments/runs/m0_answer_only_audit_20261105/artifact_verification.json`.
+
 ## Explicitly NOT decided yet
 
 - The final model checkpoint/revision, Python/library versions, remote provider and precision/quantization settings.

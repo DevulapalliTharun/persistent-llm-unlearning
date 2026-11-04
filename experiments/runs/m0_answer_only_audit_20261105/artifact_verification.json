@@ -1,0 +1,563 @@
+{
+  "archive_sha256": "a221fedb7303651add3463170494295beed9982abb2e27ce951e2487c5b99919",
+  "archive_entries": [
+    "environment.freeze.txt",
+    "matches_for_review.json",
+    "plan.json",
+    "predictions.jsonl",
+    "summary.json"
+  ],
+  "predictions_sha256": "3bd2761acf1e45a4396fac5b9e5a0a86d01d01df1b1c5301d0d4ca7e08180f92",
+  "all_inputs_and_source_hashes_verified": true,
+  "summary_recomputed": {
+    "version": "answer-only-v2",
+    "answer_matches": 0,
+    "format_violations": 0,
+    "token_limit_hits": 0,
+    "non_year_answer_matches": 0,
+    "year_answer_matches": 0,
+    "by_partition_and_task": {
+      "F/author_to_book": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/author_to_prize": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/author_to_year": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/book_to_author": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/book_to_prize": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/prize_to_author": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/prize_to_year": {
+        "count": 30,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/author_to_book": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/author_to_prize": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/author_to_year": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/book_to_author": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/book_to_prize": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/prize_to_author": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "N_rel/prize_to_year": {
+        "count": 60,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/author_to_book": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/author_to_prize": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/author_to_year": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/book_to_author": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/book_to_prize": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/prize_to_author": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/prize_to_year": {
+        "count": 90,
+        "answer_matches": 0,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      }
+    }
+  },
+  "reported_summary_matches_original": true,
+  "generation_metadata_internally_consistent": true,
+  "stop_reasons": {
+    "eos": 1260
+  },
+  "extracted_answer_counts": {
+    "unknown": 1259,
+    "cira farrow's book is \"the last days of the world": 1
+  },
+  "raw_response_counts": {
+    "Answer: Unknown.": 1259,
+    "Answer: Cira Farrow's book is \"The Last Days of the World.\"": 1
+  },
+  "generated_token_count_range": [
+    5,
+    18
+  ],
+  "sample_selection": "First and middle row in each sorted partition/task group",
+  "sample": [
+    {
+      "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+      "question": "Name the book authored by Neris Voss.",
+      "answer": "The Zephyr Nexus",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_author_to_book_01",
+      "question": "Name the book authored by Arven Cairn.",
+      "answer": "The Golden Expanse",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+      "question": "Name the award received by Neris Voss's book.",
+      "answer": "Young Meteor Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_author_to_prize_01",
+      "question": "Name the award received by Arven Cairn's book.",
+      "answer": "Opal Flame Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+      "question": "Name the award year reached through Neris Voss's book and its prize.",
+      "answer": "1996",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_author_to_year_01",
+      "question": "Name the award year reached through Arven Cairn's book and its prize.",
+      "answer": "2000",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+      "question": "Name the author of The Zephyr Nexus.",
+      "answer": "Neris Voss",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_book_to_author_01",
+      "question": "Name the author of The Golden Expanse.",
+      "answer": "Arven Cairn",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+      "question": "Name the award won by The Zephyr Nexus.",
+      "answer": "Young Meteor Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_book_to_prize_01",
+      "question": "Name the award won by The Golden Expanse.",
+      "answer": "Opal Flame Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+      "question": "Name the author whose book won Young Meteor Prize.",
+      "answer": "Neris Voss",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_prize_to_author_01",
+      "question": "Name the author whose book won Opal Flame Prize.",
+      "answer": "Arven Cairn",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+      "question": "Name the award year for Young Meteor Prize.",
+      "answer": "1996",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_prize_to_year_01",
+      "question": "Name the award year for Opal Flame Prize.",
+      "answer": "2000",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+      "question": "State the title produced by Pella Ulden.",
+      "answer": "The Radiant Atlas",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_book_01",
+      "question": "State the title produced by Aven Noll.",
+      "answer": "The Last Yearbook",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_prize_01",
+      "question": "State the prize for the book created by Pella Ulden.",
+      "answer": "Bright Beacon Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_prize_01",
+      "question": "State the prize for the book created by Aven Noll.",
+      "answer": "Ivory Grove Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+      "question": "State when the prize for the title authored by Pella Ulden was given.",
+      "answer": "1968",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_year_01",
+      "question": "State when the prize for the title authored by Aven Noll was given.",
+      "answer": "1987",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+      "question": "State who wrote the title The Radiant Atlas.",
+      "answer": "Pella Ulden",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_book_to_author_01",
+      "question": "State who wrote the title The Last Yearbook.",
+      "answer": "Aven Noll",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+      "question": "State the prize awarded to The Radiant Atlas.",
+      "answer": "Bright Beacon Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_book_to_prize_01",
+      "question": "State the prize awarded to The Last Yearbook.",
+      "answer": "Ivory Grove Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+      "question": "State who wrote the title honored by Bright Beacon Prize.",
+      "answer": "Pella Ulden",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_prize_to_author_01",
+      "question": "State who wrote the title honored by Ivory Grove Prize.",
+      "answer": "Aven Noll",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+      "question": "State the year that Bright Beacon Prize was presented.",
+      "answer": "1968",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_prize_to_year_01",
+      "question": "State the year that Ivory Grove Prize was presented.",
+      "answer": "1987",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_author_to_book_01",
+      "question": "Name the book authored by Elira Alder.",
+      "answer": "The Crimson Isle",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_author_to_book_01",
+      "question": "Name the book authored by Kael Lume.",
+      "answer": "The Tidal Isle",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_author_to_prize_01",
+      "question": "Name the award received by Elira Alder's book.",
+      "answer": "Granite Grove Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_author_to_prize_01",
+      "question": "Name the award received by Kael Lume's book.",
+      "answer": "Tidal Beacon Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_author_to_year_01",
+      "question": "Name the award year reached through Elira Alder's book and its prize.",
+      "answer": "1970",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_author_to_year_01",
+      "question": "Name the award year reached through Kael Lume's book and its prize.",
+      "answer": "1957",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_book_to_author_01",
+      "question": "Name the author of The Crimson Isle.",
+      "answer": "Elira Alder",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_book_to_author_01",
+      "question": "Name the author of The Tidal Isle.",
+      "answer": "Kael Lume",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_book_to_prize_01",
+      "question": "Name the award won by The Crimson Isle.",
+      "answer": "Granite Grove Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_book_to_prize_01",
+      "question": "Name the award won by The Tidal Isle.",
+      "answer": "Tidal Beacon Prize",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_prize_to_author_01",
+      "question": "Name the author whose book won Granite Grove Prize.",
+      "answer": "Elira Alder",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_prize_to_author_01",
+      "question": "Name the author whose book won Tidal Beacon Prize.",
+      "answer": "Kael Lume",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "question": "Name the award year for Granite Grove Prize.",
+      "answer": "1970",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_prize_to_year_01",
+      "question": "Name the award year for Tidal Beacon Prize.",
+      "answer": "1957",
+      "raw_response": "Answer: Unknown.",
+      "extracted_answer": "unknown",
+      "generated_token_count": 5,
+      "stop_reason": "eos"
+    }
+  ],
+  "verified_on_ist_date": "2026-11-05",
+  "archive_filename": "m0-knowledge-audit-v2-n1fck5ni-results.zip",
+  "verification_scope": "Archive/file integrity and source/input hashes; all 1260 answer scores and summary groups recomputed; logged termination metadata checked for internal consistency. Token-level EOS flags cannot be independently replayed because token IDs were not saved.",
+  "manual_review": {
+    "sample_count": 42,
+    "groups_covered": 21,
+    "sample_finding": "All 42 first/middle sampled responses are Answer: Unknown.",
+    "exception_review": {
+      "example_id": "ex_m1_dev_ku_000017_author_to_book_01",
+      "expected_answer": "The Echoing Zenith",
+      "raw_response": "Answer: Cira Farrow's book is \"The Last Days of the World.\"",
+      "finding": "Incorrect book association; no match to the canonical target."
+    },
+    "interpretation": "1259 abstentions and one incorrect association under the answer-only instruction. Accept this as a documented behavioural baseline, not proof of absent internal knowledge or successful unlearning.",
+    "next_gate": "Before claiming forgetting, M1 must demonstrably learn the targets using the same evaluation protocol; final acceptance and tiny-pilot criteria remain to be recorded."
+  }
+}
+

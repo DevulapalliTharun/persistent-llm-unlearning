@@ -1,0 +1,26 @@
+{
+  "execution_complete": true,
+  "predictions": 1260,
+  "protocol_version": "answer-only-v2",
+  "runtime": {
+    "cuda_runtime": "13.0",
+    "device": "cuda:0",
+    "dtype": "torch.float16",
+    "gpu": "Tesla T4",
+    "huggingface_hub": "1.33.0",
+    "peak_gpu_memory_gib": 1.325,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "seconds": 38.4952,
+  "predictions_sha256": "3bd2761acf1e45a4396fac5b9e5a0a86d01d01df1b1c5301d0d4ca7e08180f92",
+  "answer_scoring": {
+    "answer_matches": 0,
+    "format_violations": 0,
+    "non_year_answer_matches": 0,
+    "token_limit_hits": 0,
+    "version": "answer-only-v2",
+    "year_answer_matches": 0
+  }
+}
+

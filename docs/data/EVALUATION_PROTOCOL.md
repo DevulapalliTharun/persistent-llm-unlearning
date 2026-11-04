@@ -2,7 +2,7 @@
 
 **Version:** `answer-only-v2`
 
-**State:** Implemented and locally tested on 2026-11-05. Revised GPU baseline pending. This protocol is defined from development-audit observations before M1 training or final-test evaluation.
+**State:** Implemented, locally tested and verified against original GPU artifacts on 2026-11-05. V2 produced 1,259 `Unknown` responses and one incorrect answer across 1,260 questions, with zero format violations or cap hits; the original files and recomputed summaries are in `experiments/runs/m0_answer_only_audit_20261105/`. This is a behavioural baseline dominated by abstention, not proof of absent knowledge. The protocol was defined before M1 training or final-test evaluation.
 
 ## Why this version exists
 

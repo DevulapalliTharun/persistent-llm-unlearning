@@ -4,7 +4,7 @@ The full seed-42 pilot candidate is in [`candidates/pilot-v1/seed-42/`](candidat
 
 It contains 30 forget, 90 retain and 60 new relational knowledge units, the prompt files, split manifest, validation report and checksums. These small synthetic text files belong in Git so every agent can use the same dataset.
 
-**Candidate status:** automated generation, checksum, reproducibility, near-duplicate and tokenizer-volume checks passed on 2026-11-05. All original base-model audit artifacts are preserved and independently verified, and both year flags plus 42 nonmatches were reviewed. Response-format/output-length controls and remaining manual collision review precede acceptance. Training has not started.
+**Candidate status:** automated generation, checksum, reproducibility, near-duplicate and tokenizer-volume checks passed on 2026-11-05. Both original and answer-only-v2 base-model audits are preserved, independently verified and sampled. V2 yielded 1,259 abstentions and one wrong answer without format/cap issues. Remaining manual collision/acceptance review and tiny M1 learning criteria precede training.
 
 Validation evidence is in [`experiments/runs/data_full_validation_20261105/`](../experiments/runs/data_full_validation_20261105/).
 

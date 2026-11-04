@@ -1,6 +1,6 @@
 # M0 candidate knowledge audit
 
-For the next comparison baseline, use `experiments/notebooks/02_m0_answer_only_audit.ipynb` with `configs/evaluation/m0_knowledge_audit_v2.json`. Its answer instruction, 128-token cap, parser and stop-reason logging are documented in `docs/data/EVALUATION_PROTOCOL.md`. V2 is locally tested; GPU results are pending. The original run and protocol below remain preserved.
+For checkpoint comparisons, use `configs/evaluation/m0_knowledge_audit_v2.json` and the shared answer protocol in `docs/data/EVALUATION_PROTOCOL.md`. The v2 M0 GPU baseline is preserved and independently verified in `experiments/runs/m0_answer_only_audit_20261105/`: 1,259 abstentions and one incorrect answer, with zero format/cap issues. Its notebook is `experiments/notebooks/02_m0_answer_only_audit.ipynb`. The original run and protocol below remain preserved.
 
 This audit records how the original Qwen3-0.6B checkpoint responds to the candidate facts before any fact-learning training. On 2026-11-05 IST, original GPU outputs were downloaded and independently verified: 1,260 predictions, zero whole-string exact matches and two year-mention flags, including one semantically correct year in prose. A 42-response sample also exposed truncated-looking answers under the 32-token cap. See `experiments/runs/m0_knowledge_audit_20261105/` for the preserved original evidence and remaining evaluation limitations.
 

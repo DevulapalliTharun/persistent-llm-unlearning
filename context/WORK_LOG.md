@@ -291,6 +291,36 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Reported v2 Kaggle audit completion
+
+**Evidence:** User supplied the v2 preflight and completed concise summary from Git commit `b2df70757ed57b53270913ecd453d5fc36a7ac12`. Saved the supplied fields in `experiments/runs/m0_answer_only_audit_20261105/reported_summary.json`, with provenance and preservation instructions in that folder's README. Preserved the user's executed notebook changes.
+
+**Reported observations:** 1,260 completed predictions; zero parsed-answer matches (including zero year/non-year matches), zero format violations and zero token-limit hits. FP16 on Tesla T4; duration 38.4952 seconds; peak allocated GPU memory 1.325 GiB. No training occurred.
+
+**Evidence limits:** The concise summary does not supply per-response answers, abstention/empty-answer counts or group details. Full files still reside at `/kaggle/working/m0-knowledge-audit-v2-n1fck5ni`. The reported prediction SHA-256 is `3bd2761acf1e45a4396fac5b9e5a0a86d01d01df1b1c5301d0d4ca7e08180f92`; it has not yet been independently verified.
+
+**Files changed:** Added reported summary and run README; updated status, decision log, root README and evaluation-protocol state. No dataset, model or scoring changes.
+
+**Next step:** User runs the notebook's archive cell and downloads the ZIP. Then preserve/verify all original v2 files and inspect a response sample before baseline/dataset acceptance. Full manual collision review remains pending.
+
+---
+
+## 2026-11-05 — Preserve and verify original v2 audit artifacts
+
+**Work completed:** Located downloaded `m0-knowledge-audit-v2-n1fck5ni-results.zip`, checked ZIP integrity/exact five entries and saved all originals under `experiments/runs/m0_answer_only_audit_20261105/`. Added `artifact_verification.json`; preserved the supplied-summary transcription, original v1 audit and executed notebook.
+
+**Verification:** Prediction SHA-256 matches `3bd2761acf1e45a4396fac5b9e5a0a86d01d01df1b1c5301d0d4ca7e08180f92`. Verified all 1,260 unique IDs/input fields against the candidate, all config/input/runner/parser hashes and the summary's embedded plan. Recomputed legacy and v2 score groups/counts, confirmed original review flags and the supplied concise summary. Logged termination fields are internally consistent; raw token IDs were not saved, so EOS cannot be independently replayed.
+
+**Observed raw answers:** 1,259 exact `Answer: Unknown.` strings and one incorrect association for Cira Farrow (`ku_000017`): *The Last Days of the World* instead of *The Echoing Zenith*. All rows log EOS, generated-token counts span 5–18, and match/format/cap counts are zero. Inspected 42 first/middle samples across all 21 partition/task groups plus the sole non-Unknown exception.
+
+**Interpretation:** Accept as the documented M0 behaviour under the v2 instruction. Most responses abstain; zero scores do not establish absent internal knowledge or forgetting. M1 must demonstrably learn the same targets before interpreting low M2 scores. No dataset changes or extra M0 runs are required merely to alter the baseline.
+
+**Files changed:** Five original v2 output files, verification JSON, run README, root README, protocol state, status, decision log and this work log. No model, dataset or scoring-code changes.
+
+**Next step:** Stop the Kaggle session, review/push the preserved records, finish candidate acceptance review and define/implement the tiny M1 learning pipeline with answer masking and adapter save/reload verification. Training remains unstarted.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description
