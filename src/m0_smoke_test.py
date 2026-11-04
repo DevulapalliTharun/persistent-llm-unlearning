@@ -125,7 +125,7 @@ def main() -> int:
     model = AutoModelForCausalLM.from_pretrained(
         args.model_id,
         revision=resolved_revision,
-        torch_dtype=dtype,
+        dtype=dtype,
         device_map=device_map,
         low_cpu_mem_usage=True,
     )

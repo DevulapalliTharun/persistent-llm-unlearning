@@ -149,6 +149,10 @@ The runtime may access the public base model without a write credential. Access 
 
 These are working choices, not final benchmark settings. Pin dependency versions after the first successful smoke test.
 
+### M0 smoke-test evidence
+
+The first interactive M0 run passed on 2026-11-04 through VS Code connected to a Kaggle T4 x2 runtime. It loaded `Qwen/Qwen3-0.6B` at immutable revision `c1899de289a04d12100db370d81485cdf75e47ca`, applied the tokenizer chat template in non-thinking mode and produced the response `The model loaded successfully.` No training occurred. See `experiments/runs/m0_smoke_20261104/` for the structured result. A committed Kaggle rerun remains pending before the M0 stage gate is closed.
+
 ## What counts as success?
 
 At minimum, M1 must learn the facts, M2 must suppress designated targets without destroying useful ability, and a later unprotected fine-tuning run must provide an honest recovery measurement. Then compare RAFG/RASP with tuned baselines on seven planned metrics: direct/multi-hop forget accuracy, visible reasoning-trace leakage (where available), recovery rate, retain accuracy, new-task reasoning accuracy and computational overhead.
