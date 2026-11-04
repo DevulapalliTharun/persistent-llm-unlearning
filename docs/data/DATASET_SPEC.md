@@ -156,7 +156,7 @@ The training renderer may later convert `question` and `answer` into chat messag
 
 Each task family has disjoint wording banks for training, development, monitoring/scoring, guard updates and final evaluation. A paraphrase is not considered held out if it differs only by punctuation, capitalization or trivial word substitution.
 
-The initial implementation contains 11 natural-language variants per task family and assigns exactly one exclusive variant to each prompt partition. Whether additional within-partition variants are needed remains a pilot-review question.
+The implementation contains 12 natural-language variants per task family. It assigns one exclusive variant to each non-final prompt partition and two exclusive variants to `final_test`, improving evaluation robustness without changing any training budget.
 
 ## 7. Prompt partitions and permitted use
 
@@ -299,7 +299,7 @@ Passing this gate authorizes only a tiny M1 learning pilot, not full training.
 ## 14. Decisions still pending before implementation
 
 - Final `N_rel` unit count; `N_reason` keeps equal rows/steps and must pass the 5% tokenizer-budget gate.
-- Whether to expand beyond the implemented one exclusive template per task and prompt partition.
+- Whether later experiments need more than the implemented one training/development template and two final-test templates per task.
 - Manual policy for accidental real-person, real-book and real-prize collisions.
 - Exact M1 learning, M2 forgetting and recovery decision thresholds.
 - Final multi-seed values beyond the pilot seed.

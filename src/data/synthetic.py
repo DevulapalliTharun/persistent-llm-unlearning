@@ -64,9 +64,10 @@ PROMPT_PARTITIONS: dict[str, tuple[str, ...]] = {
     "final_test": ("F", "R", "N_rel"),
 }
 
-PARTITION_TEMPLATE_INDEX = {
-    partition: index for index, partition in enumerate(PROMPT_PARTITIONS)
+PARTITION_TEMPLATE_INDICES = {
+    partition: (index,) for index, partition in enumerate(PROMPT_PARTITIONS)
 }
+PARTITION_TEMPLATE_INDICES["final_test"] = (10, 11)
 
 DIRECT_FORGET_TASKS = {"author_to_book", "book_to_author"}
 MULTI_HOP_FORGET_TASKS = {"author_to_prize", "prize_to_author", "author_to_year"}
@@ -98,6 +99,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which book has {author} as its author?",
             "State the title produced by {author}.",
             "What is the name of the book that {author} authored?",
+            "Tell me which title was authored by {author}.",
         ),
     },
     "book_to_author": {
@@ -117,6 +119,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which author produced {book}?",
             "State who wrote the title {book}.",
             "What is the name of the author behind {book}?",
+            "Tell me which writer is responsible for {book}.",
         ),
     },
     "book_to_prize": {
@@ -136,6 +139,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which award recognized {book}?",
             "State the prize awarded to {book}.",
             "What is the name of the prize that {book} received?",
+            "Tell me which award recognized {book}.",
         ),
     },
     "prize_to_year": {
@@ -155,6 +159,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which year belongs to the {prize} record?",
             "State the year that {prize} was presented.",
             "What year records the awarding of {prize}?",
+            "Tell me when {prize} was awarded.",
         ),
     },
     "author_to_prize": {
@@ -174,6 +179,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which award belongs to the title authored by {author}?",
             "State the prize for the book created by {author}.",
             "What is the award attached to the book that {author} wrote?",
+            "Tell me the prize received by the title authored by {author}.",
         ),
     },
     "prize_to_author": {
@@ -193,6 +199,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which author is connected to {prize} through a book?",
             "State who wrote the title honored by {prize}.",
             "What is the name of the author whose book received {prize}?",
+            "Tell me the writer of the book recognized by {prize}.",
         ),
     },
     "author_to_year": {
@@ -212,6 +219,7 @@ TASKS: dict[str, dict[str, Any]] = {
             "Which year is linked to {author} through the author's book and its award?",
             "State when the prize for the title authored by {author} was given.",
             "What year records the award received by the book that {author} wrote?",
+            "Tell me the year of the prize linked to the book by {author}.",
         ),
     },
 }
@@ -440,7 +448,7 @@ def generate_relational_prompts(
     records = m1_records + n_rel_records
     output: dict[str, list[dict[str, Any]]] = {partition: [] for partition in PROMPT_PARTITIONS}
     for prompt_partition, allowed_partitions in PROMPT_PARTITIONS.items():
-        template_index = PARTITION_TEMPLATE_INDEX[prompt_partition]
+        template_indices = PARTITION_TEMPLATE_INDICES[prompt_partition]
         for record in records:
             if record["partition"] not in allowed_partitions:
                 continue
@@ -449,45 +457,54 @@ def generate_relational_prompts(
                 task_filter = PROMPT_TASK_FILTERS.get(prompt_partition)
                 if task_filter is not None and task_name not in task_filter:
                     continue
-                template = task["templates"][template_index]
-                question = template.format(**values)
-                target_field = task["target_field"]
-                answer = _field(record, target_field)
-                template_id = f"{template_bank_version}_{prompt_partition}_{task_name}_01"
-                example_id = f"ex_{prompt_partition}_{record['record_id']}_{task_name}"
-                eligible_metrics = []
-                is_forget_target = record["partition"] == "F" and task_name in FORGET_TARGET_TASKS
-                if prompt_partition == "final_test":
-                    if is_forget_target:
-                        eligible_metrics = [
-                            "direct_forget_accuracy" if task["hop_count"] == 1 else "multi_hop_forget_accuracy",
-                            "recovery_rate",
-                        ]
-                    elif record["partition"] == "F":
-                        eligible_metrics = []
-                    elif record["partition"] == "R":
-                        eligible_metrics = ["retain_accuracy"]
-                    else:
-                        eligible_metrics = ["new_task_reasoning_accuracy"]
-                output[prompt_partition].append(
-                    {
-                        "schema_version": "1.0",
-                        "example_id": example_id,
-                        "record_id": record["record_id"],
-                        "entity_partition": record["partition"],
-                        "prompt_partition": prompt_partition,
-                        "task_type": task_name,
-                        "hop_count": task["hop_count"],
-                        "template_id": template_id,
-                        "question": question,
-                        "answer": answer,
-                        "target_field": target_field,
-                        "source_entity_ids": [_path_ids(record, task["path"])[0]],
-                        "path": _path_ids(record, task["path"]),
-                        "is_forget_target": is_forget_target,
-                        "eligible_metrics": eligible_metrics,
-                    }
-                )
+                for template_number, template_index in enumerate(template_indices, start=1):
+                    template = task["templates"][template_index]
+                    question = template.format(**values)
+                    target_field = task["target_field"]
+                    answer = _field(record, target_field)
+                    template_id = (
+                        f"{template_bank_version}_{prompt_partition}_{task_name}_{template_number:02d}"
+                    )
+                    example_id = (
+                        f"ex_{prompt_partition}_{record['record_id']}_{task_name}_{template_number:02d}"
+                    )
+                    eligible_metrics = []
+                    is_forget_target = (
+                        record["partition"] == "F" and task_name in FORGET_TARGET_TASKS
+                    )
+                    if prompt_partition == "final_test":
+                        if is_forget_target:
+                            eligible_metrics = [
+                                "direct_forget_accuracy"
+                                if task["hop_count"] == 1
+                                else "multi_hop_forget_accuracy",
+                                "recovery_rate",
+                            ]
+                        elif record["partition"] == "F":
+                            eligible_metrics = []
+                        elif record["partition"] == "R":
+                            eligible_metrics = ["retain_accuracy"]
+                        else:
+                            eligible_metrics = ["new_task_reasoning_accuracy"]
+                    output[prompt_partition].append(
+                        {
+                            "schema_version": "1.0",
+                            "example_id": example_id,
+                            "record_id": record["record_id"],
+                            "entity_partition": record["partition"],
+                            "prompt_partition": prompt_partition,
+                            "task_type": task_name,
+                            "hop_count": task["hop_count"],
+                            "template_id": template_id,
+                            "question": question,
+                            "answer": answer,
+                            "target_field": target_field,
+                            "source_entity_ids": [_path_ids(record, task["path"])[0]],
+                            "path": _path_ids(record, task["path"]),
+                            "is_forget_target": is_forget_target,
+                            "eligible_metrics": eligible_metrics,
+                        }
+                    )
         output[prompt_partition].sort(key=lambda item: item["example_id"])
     return output
 

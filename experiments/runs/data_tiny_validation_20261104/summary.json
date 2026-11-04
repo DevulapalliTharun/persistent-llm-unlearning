@@ -47,7 +47,7 @@
   },
   "unresolved_manual_review": [
     "Check generated surfaces for accidental real-person, real-book or real-prize collisions",
-    "Review whether one exclusive template per task and prompt partition is sufficient"
+    "Reassess whether two exclusive final-test templates per task remain sufficient after the tiny M1 pilot"
   ],
   "validation_error_count": 0
 }

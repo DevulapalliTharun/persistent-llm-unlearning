@@ -31,6 +31,7 @@ This file records what has actually been agreed versus what remains provisional.
 | P-07 | RASP: forget-vs-retain gradient module ranking + M2-anchored weighted LoRA drift penalty. | Score validity, parameterization, retained learning and baseline comparisons. |
 | P-08 | Kaggle remote GPU connected to VS Code as the primary runtime; Colab as fallback. | Runtime availability, permissions, remote-kernel connection, artifact restore, authentication and stable package versions. |
 | P-09 | Match `N_rel` and `N_reason` with equal rows/update opportunities and no more than 5% total-token difference under the pinned Qwen tokenizer; reject normalized author/book/prize pairs at similarity ≥ 0.92. | Full-pilot tokenizer audit, manual sample review and sensitivity to the chosen thresholds. |
+| P-10 | Use one exclusive template per non-final task/partition and two exclusive held-out templates per final-test task. | Tiny review passed; reassess wording breadth after the tiny M1 learning/evaluation pilot. |
 
 ## Explicitly NOT decided yet
 

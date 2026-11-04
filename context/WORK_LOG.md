@@ -175,6 +175,26 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Tiny manual collision and template review
+
+**Goal:** Complete the human-review portion of the tiny-data gate before authorizing full-pilot generation.
+
+**Environment / model:** Local CPU generation plus exact-phrase public web searches; no model weights or training.
+
+**Input / configuration:** Regenerated seed-42 tiny bundle containing 2 F, 4 R and 3 N_rel units; 9 authors, 9 books and 9 prizes; all prompt partitions and task families.
+
+**Work completed:** Inspected representative questions/answers across every prompt partition and task. Exact searches for all tiny author names, book titles and prize names returned no results. Expanded each task family from 11 to 12 natural-language variants so every non-final partition keeps one exclusive template and final evaluation receives two exclusive held-out paraphrases.
+
+**Evidence:** Eight tests still pass; validation reports zero errors and zero near-duplicate pairs; checksums pass; final-test count increased from 63 to 126 without changing N_rel/N_reason training rows. The pinned tokenizer audit remains unchanged and passes at 636 versus 648 tokens (1.89%).
+
+**Observations / failures:** Some prompts are deliberately concise, but all inspected questions are grammatical and resolve to the intended unique answer. Exact public search is evidence against obvious collisions, not proof that a synthetic surface has never appeared anywhere.
+
+**Decision and next step:** Accept two final paraphrases per task for the pilot, subject to reassessment after tiny M1. The next gated task is two independent full 30/90/60 generations, byte/checksum comparison and full tokenizer/near-duplicate validation; the accepted bundle must still wait for M0 accidental-knowledge testing.
+
+**Cost / time (if measured):** No GPU or paid compute used.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description
