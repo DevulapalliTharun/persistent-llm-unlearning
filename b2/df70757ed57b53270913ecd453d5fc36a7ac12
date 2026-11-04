@@ -1,0 +1,44 @@
+src/evaluation/answers.py
+  s_035f403bffd7e9::t_2e76b2f6c4485d 55
+  s_035f403bffd7e9::t_99b93c4c00bd39 1-54,56-120
+configs/evaluation/m0_knowledge_audit_v2.json
+  s_035f403bffd7e9::t_99b93c4c00bd39 1-14
+src/m0_knowledge_audit.py
+  s_035f403bffd7e9::t_6c75ebc9b9eb1a 196,203
+  s_035f403bffd7e9::t_99b93c4c00bd39 17-20,116-120,137-141,184-187,197-198,200-202,204-209,233,236-237
+docs/data/EVALUATION_PROTOCOL.md
+  s_035f403bffd7e9::t_07335d8fed0e50 1-79
+tests/test_answer_protocol.py
+  s_035f403bffd7e9::t_6c75ebc9b9eb1a 1-91
+docs/data/M0_KNOWLEDGE_AUDIT.md
+  s_035f403bffd7e9::t_07335d8fed0e50 3-4
+context/DECISIONS.md
+  s_035f403bffd7e9::t_07335d8fed0e50 20
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_07335d8fed0e50 278-293
+README.md
+  s_035f403bffd7e9::t_07335d8fed0e50 5,196
+src/evaluation/__init__.py
+  s_035f403bffd7e9::t_99b93c4c00bd39 1
+experiments/notebooks/02_m0_answer_only_audit.ipynb
+  s_035f403bffd7e9::t_0acb19dad7f754 95-97
+  s_035f403bffd7e9::t_afa94e18ca842b 1-94,98-139
+context/STATUS.md
+  s_035f403bffd7e9::t_07335d8fed0e50 5,33-34,46,56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b2df70757ed57b53270913ecd453d5fc36a7ac12",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
