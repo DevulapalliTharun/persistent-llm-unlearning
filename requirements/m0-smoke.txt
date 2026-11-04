@@ -1,0 +1,7 @@
+# Kaggle supplies a CUDA-compatible PyTorch build. Do not replace it here.
+# Exact installed versions are captured by the smoke test and will be pinned
+# after the first successful run.
+accelerate>=1.0
+huggingface-hub>=0.30
+safetensors>=0.5
+transformers>=4.51

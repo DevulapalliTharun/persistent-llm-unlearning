@@ -14,6 +14,7 @@
 - [x] VS Code-centric, no-paid-API workflow discussed, with Colab/Kaggle as candidate compute backends.
 - [x] Portable execution/storage architecture documented: GitHub for code and context, Kaggle as primary remote GPU, Colab as fallback, and private Hugging Face storage for durable model artifacts.
 - [x] Private artifact repository created at `tharundevulapalli/persistent-llm-unlearning-checkpoints`; Kaggle Secrets authentication and a committed-version upload/download checksum round-trip were verified.
+- [x] Reproducible M0 smoke-test runner and thin Kaggle/VS Code notebook implemented locally; syntax and notebook structure validated.
 - [ ] Research code / experiments verified to run.
 - [ ] Synthetic dataset generated and validated.
 - [ ] M1 and M2 checkpoints produced.
@@ -24,7 +25,7 @@
 
 | Stage | Current status | Exit evidence |
 |---|---|---|
-| 0. Repository + environment | In progress: Git/context and private artifact round-trip established; remote GPU/model smoke test pending | Git baseline, environment/config file, remote GPU smoke test |
+| 0. Repository + environment | In progress: Git/context, private artifact round-trip and local smoke-test implementation established; remote GPU/model execution pending | Git baseline, environment/config file, remote GPU smoke test |
 | 1. Synthetic data | Not started / unverified | Seeded generator, saved entity-level F/R/N/T splits, leakage checks |
 | 2. M0 → M1 SFT | Not started / unverified | Reproducible M1 adapter and held-out direct/multi-hop learning metrics |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
@@ -37,7 +38,7 @@
 
 1. **Review the two proposal PDFs** and ensure paths/filenames are correct. Keep the PDFs unchanged as proposal sources.
 2. **Initialize/verify Git and `.gitignore`.** Do not commit secrets, company information, large model files or disposable training outputs. The screenshot shows `U` beside files, which normally means untracked in VS Code.
-3. **Smoke-test a Kaggle GPU notebook kernel from VS Code**: Python, CUDA availability, package imports, Qwen3-0.6B tokenizer/model loading and a short inference. Use Colab only as the planned fallback. Artifact authentication and same-session checksum restoration are already verified.
+3. **Run `experiments/notebooks/00_m0_smoke_test.ipynb` on a Kaggle GPU kernel from VS Code**: verify CUDA, package imports, the resolved Qwen3-0.6B revision, tokenizer/chat template, model loading and a short inference. Use Colab only as the planned fallback. The runner is implemented but has not been executed on Kaggle.
 4. **Define data schema and deterministic splits** (`F`, `R`, `N`, `T`; and separate RAFG monitor/guard prompts later).
 5. **Train on a tiny subset first** to prove SFT, prompt masking, save/load and direct/multi-hop evaluation.
 6. Scale to a first reproducible **M1**, then implement and validate **M2**.
