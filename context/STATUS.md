@@ -1,7 +1,7 @@
 # Current Project Status
 
 **As of:** 2026-11-04  
-**Current phase:** Research definition and repository scaffolding — **before the first documented training run**.
+**Current phase:** M0 environment/model-loading gate complete — preparing deterministic synthetic data before the first training run.
 
 > This status reflects the conversations and project-folder screenshot, not an inspection of running code. Nothing below should be marked complete without a saved artifact or logged experiment.
 
@@ -16,6 +16,7 @@
 - [x] Private artifact repository created at `tharundevulapalli/persistent-llm-unlearning-checkpoints`; Kaggle Secrets authentication and a committed-version upload/download checksum round-trip were verified.
 - [x] Reproducible M0 smoke-test runner and thin Kaggle/VS Code notebook implemented locally; syntax and notebook structure validated.
 - [x] Interactive M0 smoke test passed through VS Code on a Kaggle T4 x2 runtime: CUDA, immutable model revision resolution, tokenizer/chat template, BF16 model loading and bounded inference were verified.
+- [x] Fresh Kaggle Save & Run All version reproduced the pinned M0 smoke test from Git commit `bb50b38e2315626d1e2eae3dc719f85a5ead8561`.
 - [ ] Research code / experiments verified to run.
 - [ ] Synthetic dataset generated and validated.
 - [ ] M1 and M2 checkpoints produced.
@@ -26,7 +27,7 @@
 
 | Stage | Current status | Exit evidence |
 |---|---|---|
-| 0. Repository + environment | In progress: interactive Kaggle GPU/model smoke test passed and direct dependencies pinned; committed Kaggle rerun and remote environment-freeze capture pending | Git baseline, environment/config file, remote GPU smoke test |
+| 0. Repository + environment | **Complete:** Git baseline, private artifact round-trip, pinned environment, interactive GPU test and committed M0 rerun verified | Git baseline, environment/config file, remote GPU smoke test |
 | 1. Synthetic data | Not started / unverified | Seeded generator, saved entity-level F/R/N/T splits, leakage checks |
 | 2. M0 → M1 SFT | Not started / unverified | Reproducible M1 adapter and held-out direct/multi-hop learning metrics |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
@@ -39,8 +40,8 @@
 
 1. **Review the two proposal PDFs** and ensure paths/filenames are correct. Keep the PDFs unchanged as proposal sources.
 2. **Initialize/verify Git and `.gitignore`.** Do not commit secrets, company information, large model files or disposable training outputs. The screenshot shows `U` beside files, which normally means untracked in VS Code.
-3. **Commit and rerun `experiments/notebooks/00_m0_smoke_test.ipynb` as a fresh Kaggle notebook version** after pushing the pinned dependency/deprecation fix; verify the same M0 checks and preserve its outputs. The interactive run passed, but the committed rerun is the remaining M0 reproducibility gate.
-4. **Define data schema and deterministic splits** (`F`, `R`, `N`, `T`; and separate RAFG monitor/guard prompts later).
+3. **Define data schema and deterministic splits** (`F`, `R`, `N`, `T`; and separate RAFG monitor/guard prompts later). This is the active next task.
+4. Implement a seeded synthetic-data generator and leakage/uniqueness validation; do not begin full generation until the schema and validation rules are reviewed.
 5. **Train on a tiny subset first** to prove SFT, prompt masking, save/load and direct/multi-hop evaluation.
 6. Scale to a first reproducible **M1**, then implement and validate **M2**.
 7. Only after M2 is validated, run **ordinary post-unlearning recovery pilot**. Branch into RAFG/RASP after the pilot.

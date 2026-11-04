@@ -151,7 +151,7 @@ These are working choices, not final benchmark settings. Pin dependency versions
 
 ### M0 smoke-test evidence
 
-The first interactive M0 run passed on 2026-11-04 through VS Code connected to a Kaggle T4 x2 runtime. It loaded `Qwen/Qwen3-0.6B` at immutable revision `c1899de289a04d12100db370d81485cdf75e47ca`, applied the tokenizer chat template in non-thinking mode and produced the response `The model loaded successfully.` No training occurred. See `experiments/runs/m0_smoke_20261104/` for the structured result. A committed Kaggle rerun remains pending before the M0 stage gate is closed.
+The interactive and fresh committed M0 runs passed on 2026-11-04 using a Kaggle T4 x2 runtime. The committed run loaded `Qwen/Qwen3-0.6B` at immutable revision `c1899de289a04d12100db370d81485cdf75e47ca`, applied the tokenizer chat template in non-thinking mode and produced the response `The model loaded successfully.` No training occurred. See `experiments/runs/m0_smoke_20261104/` for both structured results. The M0 environment/model-loading stage gate is complete.
 
 ## What counts as success?
 

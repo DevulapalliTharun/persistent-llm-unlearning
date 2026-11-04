@@ -2,7 +2,7 @@
 
 ## Status
 
-Passed interactively through VS Code connected to a Kaggle T4 x2 Jupyter runtime. This is verified M0 smoke-test evidence, not a training result. A committed Kaggle notebook rerun is still required before closing the M0 stage gate.
+Passed interactively through VS Code connected to a Kaggle T4 x2 Jupyter runtime and then passed as a fresh Kaggle **Save & Run All** committed version. This is verified M0 smoke-test evidence, not a training result. The M0 environment/model-loading stage gate is complete.
 
 ## Command source
 
@@ -18,6 +18,7 @@ Passed interactively through VS Code connected to a Kaggle T4 x2 Jupyter runtime
 - Tokenizer chat template was present and non-thinking mode was applied.
 - Model loaded in BF16 and produced a non-empty, instruction-consistent response.
 - Exact structured output is stored in `result.json`.
+- The fresh committed-run output is stored in `committed_result.json`.
 - Verified direct dependencies are pinned in `requirements/m0-smoke.txt`.
 
-The original remote `environment.freeze.txt` was generated in `/kaggle/working/m0-smoke/` but has not yet been copied into this Git record. The key runtime and direct dependency versions reported by the run are preserved in `result.json` and `requirements/m0-smoke.txt`.
+The remote `environment.freeze.txt` was generated in `/kaggle/working/m0-smoke/` and preserved with the committed Kaggle notebook output. It has not been duplicated into Git. The key runtime and direct dependency versions are preserved in both structured result files and `requirements/m0-smoke.txt`.
