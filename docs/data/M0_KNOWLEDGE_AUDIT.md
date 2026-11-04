@@ -1,6 +1,6 @@
 # M0 candidate knowledge audit
 
-This audit records how the original Qwen3-0.6B checkpoint responds to the candidate facts before any fact-learning training. Local preflight and scoring tests pass. GPU inference has not been run yet.
+This audit records how the original Qwen3-0.6B checkpoint responds to the candidate facts before any fact-learning training. On 2026-11-05 IST, original GPU outputs were downloaded and independently verified: 1,260 predictions, zero whole-string exact matches and two year-mention flags, including one semantically correct year in prose. A 42-response sample also exposed truncated-looking answers under the 32-token cap. See `experiments/runs/m0_knowledge_audit_20261105/` for the preserved original evidence and remaining evaluation limitations.
 
 ## Inputs and fixed protocol
 

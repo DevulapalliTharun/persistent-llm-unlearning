@@ -1,0 +1,32 @@
+{
+  "review_date": "2026-11-05",
+  "evidence_origin": "User-pasted matches_for_review.json, checked against local candidate entity records",
+  "reported_flag_count": 2,
+  "original_exact_match_count": 0,
+  "reviews": [
+    {
+      "example_id": "ex_m1_dev_ku_000080_author_to_year_01",
+      "expected_candidate_book": "The Wandering Delta",
+      "expected_candidate_prize": "Young Elm Prize",
+      "expected_year": "2019",
+      "classification": "year_mention_with_incorrect_supporting_associations",
+      "reason": "The response contains the expected year but names a different book and prize from the candidate graph. It does not demonstrate knowledge of the candidate chain."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000009_author_to_year_01",
+      "expected_candidate_book": "The Hidden Citadel",
+      "expected_candidate_prize": "West Quill Prize",
+      "expected_year": "2023",
+      "classification": "semantically_correct_year_in_sentence",
+      "reason": "The response states the requested year correctly in prose. It fails the original whole-string exact-match rule. A single correct year does not establish prior knowledge of the arbitrary association; chance cannot be distinguished from knowledge by this response alone."
+    }
+  ],
+  "scoring_decision": "Preserve the original exact-match metric and raw response. Report one semantically correct year answer separately; do not equate zero whole-string exact matches with zero correct answers.",
+  "dataset_decision": "No changes or automatic exclusions. Acceptance remains pending complete artifact verification and manual collision review.",
+  "pending": [
+    "Download original audit files and verify prediction digest",
+    "Inspect representative nonmatches for formatting/truncation",
+    "Define answer normalization/extraction rules consistently before M1/M2 comparisons"
+  ]
+}
+

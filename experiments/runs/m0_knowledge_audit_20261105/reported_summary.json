@@ -1,0 +1,134 @@
+{
+  "by_partition_and_task": {
+    "F/author_to_book": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "F/author_to_prize": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "F/author_to_year": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "F/book_to_author": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "F/book_to_prize": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "F/prize_to_author": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "F/prize_to_year": {
+      "answer_mentions": 0,
+      "count": 30,
+      "exact_matches": 0
+    },
+    "N_rel/author_to_book": {
+      "answer_mentions": 0,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "N_rel/author_to_prize": {
+      "answer_mentions": 0,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "N_rel/author_to_year": {
+      "answer_mentions": 1,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "N_rel/book_to_author": {
+      "answer_mentions": 0,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "N_rel/book_to_prize": {
+      "answer_mentions": 0,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "N_rel/prize_to_author": {
+      "answer_mentions": 0,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "N_rel/prize_to_year": {
+      "answer_mentions": 0,
+      "count": 60,
+      "exact_matches": 0
+    },
+    "R/author_to_book": {
+      "answer_mentions": 0,
+      "count": 90,
+      "exact_matches": 0
+    },
+    "R/author_to_prize": {
+      "answer_mentions": 0,
+      "count": 90,
+      "exact_matches": 0
+    },
+    "R/author_to_year": {
+      "answer_mentions": 1,
+      "count": 90,
+      "exact_matches": 0
+    },
+    "R/book_to_author": {
+      "answer_mentions": 0,
+      "count": 90,
+      "exact_matches": 0
+    },
+    "R/book_to_prize": {
+      "answer_mentions": 0,
+      "count": 90,
+      "exact_matches": 0
+    },
+    "R/prize_to_author": {
+      "answer_mentions": 0,
+      "count": 90,
+      "exact_matches": 0
+    },
+    "R/prize_to_year": {
+      "answer_mentions": 0,
+      "count": 90,
+      "exact_matches": 0
+    }
+  },
+  "dataset_acceptance": "pending_manual_review",
+  "empty_final_responses": 0,
+  "exact_matches": 0,
+  "execution_complete": true,
+  "finished_at_utc": "2026-11-04T20:18:19.011184+00:00",
+  "interpretation": "Matches are review flags, not proof of pretraining knowledge; year matches can occur by chance. No automatic exclusion or dataset change.",
+  "model_executed": true,
+  "non_year_exact_matches": 0,
+  "predictions": 1260,
+  "predictions_sha256": "c5bc23c7ce65bf86b46deca5f84f90bcbf90146177c59577cea5ca2612fa80b8",
+  "review_flags": 2,
+  "runtime": {
+    "cuda_runtime": "13.0",
+    "device": "cuda:0",
+    "dtype": "torch.float16",
+    "gpu": "Tesla T4",
+    "huggingface_hub": "1.33.0",
+    "peak_gpu_memory_gib": 1.2503,
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "seconds": 117.4098,
+  "started_at_utc": "2026-11-04T20:16:21.601394+00:00",
+  "year_exact_matches": 0
+}
+

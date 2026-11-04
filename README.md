@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** M0 smoke testing is complete. The full synthetic pilot candidate has passed automated validation and awaits manual collision review and the M0 knowledge audit. Training has not started.
+**Current state:** M0 smoke testing and candidate automated validation are complete. All 1,260 original knowledge-audit predictions are preserved and independently verified: zero whole-string exact matches, with one semantically correct year in prose among two review flags. A 42-response sample exposed generation-length/formatting limitations to address before comparisons; manual collision review remains pending. Training has not started.
 
 ## The two candidate approaches
 
@@ -166,7 +166,7 @@ The main comparison is **forgetting stability versus useful new-task learning ve
 
 ## Dataset design
 
-The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The full seed-42 candidate is saved in [`data/candidates/pilot-v1/seed-42/`](data/candidates/pilot-v1/seed-42/) with 30 F, 90 R and 60 N_rel knowledge units. Independent generations matched byte-for-byte, automated checks reported zero errors, and no near-duplicate names/titles/prizes were found at the configured threshold. The candidate remains pending full manual review and M0 accidental-knowledge auditing.
+The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The full seed-42 candidate is saved in [`data/candidates/pilot-v1/seed-42/`](data/candidates/pilot-v1/seed-42/) with 30 F, 90 R and 60 N_rel knowledge units. Independent generations matched byte-for-byte, automated checks reported zero errors, and no near-duplicate names/titles/prizes were found at the configured threshold. The original M0 audit is preserved and verified; remaining manual review and evaluation-protocol decisions precede dataset acceptance.
 
 The candidate contains 840 M1 training prompts, 420 prompts in each later-task condition and 2,520 final prompts. The pinned tokenizer measured 12,480 N_rel tokens versus 12,840 N_reason tokens (2.88% difference, within the 5% volume tolerance). See the [full validation record](experiments/runs/data_full_validation_20261105/README.md). Trainer batching, loss masking and step budgets must still be defined.
 
@@ -193,7 +193,7 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
-2. Finish full-candidate manual review and run [`01_m0_knowledge_audit.ipynb`](experiments/notebooks/01_m0_knowledge_audit.ipynb) on a Kaggle kernel from VS Code. The [audit guide](docs/data/M0_KNOWLEDGE_AUDIT.md) describes its 1,260 non-final prompts, output files and match-review rules. Local preflight/tests pass; GPU audit results are pending.
+2. Review the [verified original audit and its evaluation limitations](experiments/runs/m0_knowledge_audit_20261105/README.md), define consistent answer-format/output-length controls, and complete remaining candidate manual review.
 3. Record the dataset acceptance decision and define the tiny M1 learning/evaluation criteria.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.

@@ -1,0 +1,67 @@
+{
+  "matches": [
+    {
+      "eligible_metrics": [],
+      "expected_answer_mentioned": true,
+      "hop_count": 3,
+      "is_forget_target": false,
+      "needs_match_review": true,
+      "normalized_exact_match": false,
+      "schema_version": "1.0",
+      "target_field": "award_year",
+      "task_type": "author_to_year",
+      "unclosed_thinking": false,
+      "year_answer": true,
+      "answer": "2019",
+      "entity_partition": "R",
+      "example_id": "ex_m1_dev_ku_000080_author_to_year_01",
+      "final_response": "Elira Sable's book **\"The Last Days of the World\"** was awarded the **2019 Booker Prize**.",
+      "path": [
+        "ku_author_000080",
+        "ku_book_000080",
+        "ku_prize_000080",
+        "year:2019"
+      ],
+      "prompt_partition": "m1_dev",
+      "question": "Name the award year reached through Elira Sable's book and its prize.",
+      "raw_response": "Elira Sable's book **\"The Last Days of the World\"** was awarded the **2019 Booker Prize**.",
+      "record_id": "ku_000080",
+      "source_entity_ids": [
+        "ku_author_000080"
+      ],
+      "template_id": "relational-v1_m1_dev_author_to_year_01"
+    },
+    {
+      "eligible_metrics": [],
+      "expected_answer_mentioned": true,
+      "hop_count": 3,
+      "is_forget_target": false,
+      "needs_match_review": true,
+      "normalized_exact_match": false,
+      "schema_version": "1.0",
+      "target_field": "award_year",
+      "task_type": "author_to_year",
+      "unclosed_thinking": false,
+      "year_answer": true,
+      "answer": "2023",
+      "entity_partition": "N_rel",
+      "example_id": "ex_n_rel_train_nrel_000009_author_to_year_01",
+      "final_response": "The prize for the title authored by Zella Pryce was given in 2023.",
+      "path": [
+        "nrel_author_000009",
+        "nrel_book_000009",
+        "nrel_prize_000009",
+        "year:2023"
+      ],
+      "prompt_partition": "n_rel_train",
+      "question": "State when the prize for the title authored by Zella Pryce was given.",
+      "raw_response": "The prize for the title authored by Zella Pryce was given in 2023.",
+      "record_id": "nrel_000009",
+      "source_entity_ids": [
+        "nrel_author_000009"
+      ],
+      "template_id": "relational-v1_n_rel_train_author_to_year_01"
+    }
+  ]
+}
+

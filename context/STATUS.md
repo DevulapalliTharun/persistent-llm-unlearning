@@ -2,7 +2,7 @@
 
 **As of:** 2026-11-05
 
-**Current phase:** Full synthetic pilot candidate generated and automatically validated; manual collision review and M0 knowledge audit pending before the first training run.
+**Current phase:** Full candidate automatically validated; M0 audit artifacts preserved and independently verified. Evaluation-format/truncation controls and remaining manual collision review must be resolved before training.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -26,7 +26,11 @@
 - [x] Dataset-generation and validation code implemented and verified in tiny mode.
 - [x] Full 30/90/60 candidate saved at `data/candidates/pilot-v1/seed-42/`; two independent generations matched byte-for-byte and repository copy matched both.
 - [x] Full automated validation passed with zero errors/near-duplicate pairs; tokenizer audit passed at 12,480 N_rel versus 12,840 N_reason tokens (2.88% difference). Nine unit tests pass.
-- [x] M0 knowledge-audit runner, fixed config and VS Code/Kaggle notebook prepared; local preflight verifies 1,260 non-final prompts covering 180 units. All 13 local tests pass. GPU audit execution remains pending.
+- [x] M0 knowledge-audit runner, fixed config and VS Code/Kaggle notebook prepared; local preflight verifies 1,260 non-final prompts covering 180 units. All 13 local tests pass.
+- [x] User-reported Kaggle M0 audit completed from Git commit `a774aa00b0b13ebdb748727abc741ecd86123401`: 1,260 predictions, 0 exact matches, 0 empty final responses, and 2 longer-response year mentions requiring review. Summary preserved in `experiments/runs/m0_knowledge_audit_20261105/reported_summary.json`.
+- [x] Both pasted year flags reviewed against candidate records: one year embedded in an incorrect book/prize claim; one semantically correct year in prose. Preserve zero strict exact matches and record the prose answer separately in `experiments/runs/m0_knowledge_audit_20261105/match_review.json`.
+- [x] All five original audit files downloaded and saved under `experiments/runs/m0_knowledge_audit_20261105/`; raw checksum and all 1,260 inputs/summary counts verified. A 42-response nonmatch sample across all 21 partition/task groups was reviewed; evidence is in `artifact_verification.json`.
+- [ ] Before M1/M2 comparisons, define response-format handling, adequate generation length and termination logging. Sampled M0 responses include mid-sentence endings under the 32-token cap; preserve this original run.
 - [ ] Training code implemented and verified.
 - [ ] Full synthetic candidate accepted after manual collision review and M0 accidental-knowledge audit.
 - [ ] M1 and M2 checkpoints produced.
@@ -38,7 +42,7 @@
 | Stage | Current status | Exit evidence |
 |---|---|---|
 | 0. Repository + environment | **Complete:** Git baseline, private artifact round-trip, pinned environment, interactive GPU test and committed M0 rerun verified | Git baseline, environment/config file, remote GPU smoke test |
-| 1. Synthetic data | Full candidate generated; independent byte comparison, checksums, automated validation and tokenizer audit passed; full manual collision review and M0 knowledge audit pending | `data/candidates/pilot-v1/seed-42/` and `experiments/runs/data_full_validation_20261105/` |
+| 1. Synthetic data | Full automated gates passed; original M0 predictions verified and sampled; response-format/truncation controls and manual collision/acceptance review remain | `data/candidates/pilot-v1/seed-42/`, `experiments/runs/data_full_validation_20261105/` and `experiments/runs/m0_knowledge_audit_20261105/` |
 | 2. M0 → M1 SFT | Not started / unverified | Reproducible M1 adapter and held-out direct/multi-hop learning metrics |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
 | 4. Ordinary recovery pilot | Not started / unverified | From M2, logs across continuation steps for unrelated and similar-structure conditions |
@@ -48,7 +52,7 @@
 
 ## Immediate next actions (in order)
 
-1. Commit/push the local candidate and audit files, then execute `experiments/notebooks/01_m0_knowledge_audit.ipynb` on a Kaggle GPU kernel from VS Code. Preserve all predictions and review matches according to `docs/data/M0_KNOWLEDGE_AUDIT.md`; full manual name/title review remains pending.
+1. Review `experiments/runs/m0_knowledge_audit_20261105/README.md`, define consistent answer extraction/output-length controls for subsequent comparisons, and finish manual collision review. The original run and both flagged responses are already preserved and verified.
 2. Record the acceptance decision and define M1 learning criteria before implementing a tiny training pilot.
 3. **Train on a tiny subset first** to prove SFT, prompt masking, save/load and direct/multi-hop evaluation.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.

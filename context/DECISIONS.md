@@ -43,7 +43,15 @@ The first full generation exposed duplicate arithmetic questions. Repeated quest
 
 Use the pinned Qwen revision with non-thinking greedy decoding on all 180 candidate units through `m1_dev` and `n_rel_train` prompts (1,260 total). Preserve final-test wording. The audit flags exact matches and answer mentions for manual review, separates year matches, and never automatically edits or accepts the dataset. This avoids filtering the candidate merely to force a zero M0 score. The protocol and fixed config are in `docs/data/M0_KNOWLEDGE_AUDIT.md` and `configs/evaluation/m0_knowledge_audit.json`.
 
-The runner uses native-capability-aware precision selection (FP16 on T4) and records it. Its results must not be interpreted as a direct repeat of the earlier BF16/sampled smoke test. Implementation and local preflight are verified; inference remains pending on Kaggle.
+The runner uses native-capability-aware precision selection (FP16 on T4) and records it. Its results must not be interpreted as a direct repeat of the earlier BF16/sampled smoke test. On 2026-11-05 IST the user reported completed inference: 1,260 predictions, zero exact matches and two year mentions in longer responses. Preserve and inspect the raw files before interpreting those flags or accepting the candidate; see `experiments/runs/m0_knowledge_audit_20261105/`.
+
+## 2026-11-05 — Interpretation of year flags
+
+Manual inspection identified an unsupported year mention with incorrect supporting book/prize details and a semantically correct year expressed as a sentence. Preserve the original whole-string exact-match result and report the manual finding separately; zero exact matches is not equivalent to zero correct answers. Do not automatically exclude or regenerate either record. Define consistent answer extraction/formatting rules before M1/M2 comparisons. Evidence: `experiments/runs/m0_knowledge_audit_20261105/match_review.json`.
+
+## 2026-11-05 — Original audit verification and generation limits
+
+All original audit files were imported and independently checked against the candidate and rescored summary. A 42-response sample includes visible mid-sentence endings under the 32-token cap. Preserve this baseline and its original scoring. Before M1/M2 comparisons, define consistent answer extraction, a sufficient generation budget and per-response termination logging; any revised baseline must be recorded separately. Evidence: `experiments/runs/m0_knowledge_audit_20261105/artifact_verification.json`.
 
 ## Explicitly NOT decided yet
 

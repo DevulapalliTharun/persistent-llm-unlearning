@@ -1,0 +1,402 @@
+{
+  "archive_sha256": "cc4cf909e660891ee22fd005af5527640803cc4552a70a4b55f9b937fe3ee774",
+  "archive_entries": [
+    "environment.freeze.txt",
+    "matches_for_review.json",
+    "plan.json",
+    "predictions.jsonl",
+    "summary.json"
+  ],
+  "prediction_sha256": "c5bc23c7ce65bf86b46deca5f84f90bcbf90146177c59577cea5ca2612fa80b8",
+  "summary_recomputed": {
+    "predictions": 1260,
+    "exact_matches": 0,
+    "non_year_exact_matches": 0,
+    "year_exact_matches": 0,
+    "review_flags": 2,
+    "empty_final_responses": 0,
+    "by_partition_and_task": {
+      "F/author_to_book": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "F/author_to_prize": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "F/author_to_year": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "F/book_to_author": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "F/book_to_prize": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "F/prize_to_author": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "F/prize_to_year": {
+        "count": 30,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "N_rel/author_to_book": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "N_rel/author_to_prize": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "N_rel/author_to_year": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 1
+      },
+      "N_rel/book_to_author": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "N_rel/book_to_prize": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "N_rel/prize_to_author": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "N_rel/prize_to_year": {
+        "count": 60,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "R/author_to_book": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "R/author_to_prize": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "R/author_to_year": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 1
+      },
+      "R/book_to_author": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "R/book_to_prize": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "R/prize_to_author": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      },
+      "R/prize_to_year": {
+        "count": 90,
+        "exact_matches": 0,
+        "answer_mentions": 0
+      }
+    }
+  },
+  "all_input_rows_match_candidate": true,
+  "all_input_hashes_verified": true,
+  "config_hash_verified": true,
+  "reported_summary_matches_original": true,
+  "reported_flags_match_original": true,
+  "sample_selection": "First and middle nonflagged record within each sorted partition/task group",
+  "nonmatch_sample": [
+    {
+      "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+      "question": "Name the book authored by Neris Voss.",
+      "answer": "The Zephyr Nexus",
+      "raw_response": "Neris Voss is a fictional author, and the book she is most known for is *The Last Days of the World* (2019"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_author_to_book_01",
+      "question": "Name the book authored by Arven Cairn.",
+      "answer": "The Golden Expanse",
+      "raw_response": "Arven Cairn authored the book **\"The Last Days of the World\"**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+      "question": "Name the award received by Neris Voss's book.",
+      "answer": "Young Meteor Prize",
+      "raw_response": "Neris Voss's book is *The Last Days of the World* (2017). The award she received for this book is the **"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_author_to_prize_01",
+      "question": "Name the award received by Arven Cairn's book.",
+      "answer": "Opal Flame Prize",
+      "raw_response": "Arven Cairn's book is *The Last Days of the World* (2008)."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+      "question": "Name the award year reached through Neris Voss's book and its prize.",
+      "answer": "1996",
+      "raw_response": "Neris Voss's book **\"The Last Days of the World\"** was awarded the **2019 Nobel Prize in Literature**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_author_to_year_01",
+      "question": "Name the award year reached through Arven Cairn's book and its prize.",
+      "answer": "2000",
+      "raw_response": "Arven Cairn's book **\"The Last Days of the World\"** was awarded the **2019 Booker Prize**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+      "question": "Name the author of The Zephyr Nexus.",
+      "answer": "Neris Voss",
+      "raw_response": "The author of *The Zephyr Nexus* is **Eliot Ness**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_book_to_author_01",
+      "question": "Name the author of The Golden Expanse.",
+      "answer": "Arven Cairn",
+      "raw_response": "The author of *The Golden Expanse* is **E. B. White**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+      "question": "Name the award won by The Zephyr Nexus.",
+      "answer": "Young Meteor Prize",
+      "raw_response": "The Zephyr Nexus has not been recognized with any awards in the public domain."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_book_to_prize_01",
+      "question": "Name the award won by The Golden Expanse.",
+      "answer": "Opal Flame Prize",
+      "raw_response": "The Golden Expanse has not won any awards in the past."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+      "question": "Name the author whose book won Young Meteor Prize.",
+      "answer": "Neris Voss",
+      "raw_response": "The author whose book won the Young Meteor Prize is **Nadia K. K.**"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_prize_to_author_01",
+      "question": "Name the author whose book won Opal Flame Prize.",
+      "answer": "Arven Cairn",
+      "raw_response": "The author whose book won the Opal Flame Prize is **Evelyn Waugh**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+      "question": "Name the award year for Young Meteor Prize.",
+      "answer": "1996",
+      "raw_response": "The Young Meteor Prize is an award given annually. However, the specific year is not publicly listed in the information provided. If you need the exact year, it"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000053_prize_to_year_01",
+      "question": "Name the award year for Opal Flame Prize.",
+      "answer": "2000",
+      "raw_response": "The Opal Flame Prize is awarded every year."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+      "question": "State the title produced by Pella Ulden.",
+      "answer": "The Radiant Atlas",
+      "raw_response": "Pella Ulden is a fictional character from the *Star Wars* universe, known for his role as a Jedi Knight. The title of his character is"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_book_01",
+      "question": "State the title produced by Aven Noll.",
+      "answer": "The Last Yearbook",
+      "raw_response": "Aven Noll is a fictional character from the *Star Wars* universe, and the title of his character is **Aven Noll**."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_prize_01",
+      "question": "State the prize for the book created by Pella Ulden.",
+      "answer": "Bright Beacon Prize",
+      "raw_response": "The prize for the book created by Pella Ulden is **the Pella Ulden Prize**, which is awarded annually to recognize outstanding contributions to the"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_prize_01",
+      "question": "State the prize for the book created by Aven Noll.",
+      "answer": "Ivory Grove Prize",
+      "raw_response": "The prize for the book created by Aven Noll is not explicitly stated in the provided information. If you have more context or details about the book, please"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+      "question": "State when the prize for the title authored by Pella Ulden was given.",
+      "answer": "1968",
+      "raw_response": "The prize for the title authored by Pella Ulden was given in 2018."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_year_01",
+      "question": "State when the prize for the title authored by Aven Noll was given.",
+      "answer": "1987",
+      "raw_response": "The prize for the title authored by Aven Noll was given in 2019."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+      "question": "State who wrote the title The Radiant Atlas.",
+      "answer": "Pella Ulden",
+      "raw_response": "The title \"The Radiant Atlas\" was written by **E. B. White**. It was first published in 1927 in the magazine"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_book_to_author_01",
+      "question": "State who wrote the title The Last Yearbook.",
+      "answer": "Aven Noll",
+      "raw_response": "The title *The Last Yearbook* was written by **Eliot**."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+      "question": "State the prize awarded to The Radiant Atlas.",
+      "answer": "Bright Beacon Prize",
+      "raw_response": "The prize awarded to *The Radiant Atlas* is **the Royal Geographic Society's Global Atlas Prize**. It is a prestigious award given to individuals or teams"
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_book_to_prize_01",
+      "question": "State the prize awarded to The Last Yearbook.",
+      "answer": "Ivory Grove Prize",
+      "raw_response": "The prize awarded to *The Last Yearbook* is **the National Book Award for Fiction**."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+      "question": "State who wrote the title honored by Bright Beacon Prize.",
+      "answer": "Pella Ulden",
+      "raw_response": "The title \"Bright Beacon Prize\" was written by **Eliot Ness**."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_prize_to_author_01",
+      "question": "State who wrote the title honored by Ivory Grove Prize.",
+      "answer": "Aven Noll",
+      "raw_response": "The title of the Ivory Grove Prize is not a title written by a specific person. It is a prize awarded to students who have demonstrated excellence in their studies."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+      "question": "State the year that Bright Beacon Prize was presented.",
+      "answer": "1968",
+      "raw_response": "The Bright Beacon Prize was presented in 2019."
+    },
+    {
+      "example_id": "ex_n_rel_train_nrel_000031_prize_to_year_01",
+      "question": "State the year that Ivory Grove Prize was presented.",
+      "answer": "1987",
+      "raw_response": "The Ivory Grove Prize was presented in **2019**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_author_to_book_01",
+      "question": "Name the book authored by Elira Alder.",
+      "answer": "The Crimson Isle",
+      "raw_response": "The book authored by Elira Alder is **\"The Last Days of the World\"**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_author_to_book_01",
+      "question": "Name the book authored by Kael Lume.",
+      "answer": "The Tidal Isle",
+      "raw_response": "Kael Lume is the author of the book **\"The Last Days of the World\"**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_author_to_prize_01",
+      "question": "Name the award received by Elira Alder's book.",
+      "answer": "Granite Grove Prize",
+      "raw_response": "Elira Alder's book is titled **\"The Last Days of the World\"**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_author_to_prize_01",
+      "question": "Name the award received by Kael Lume's book.",
+      "answer": "Tidal Beacon Prize",
+      "raw_response": "Kael Lume's book is *The Last Days of the World* (2019)."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_author_to_year_01",
+      "question": "Name the award year reached through Elira Alder's book and its prize.",
+      "answer": "1970",
+      "raw_response": "Elira Alder's book **\"The Last Days of the World\"** was awarded the **National Book Award for Fiction** in **2017"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000064_author_to_year_01",
+      "question": "Name the award year reached through Vela Ember's book and its prize.",
+      "answer": "1970",
+      "raw_response": "Vela Ember's book **\"The Last Days of the World\"** was awarded the **2019 Booker Prize**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_book_to_author_01",
+      "question": "Name the author of The Crimson Isle.",
+      "answer": "Elira Alder",
+      "raw_response": "The author of *The Crimson Isle* is **E. M. Forster**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_book_to_author_01",
+      "question": "Name the author of The Tidal Isle.",
+      "answer": "Kael Lume",
+      "raw_response": "The author of *The Tidal Isle* is **Eleanor H. H. H. H. H. H. H. H. H. H"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_book_to_prize_01",
+      "question": "Name the award won by The Crimson Isle.",
+      "answer": "Granite Grove Prize",
+      "raw_response": "The award won by The Crimson Isle is the **\"Crimson Isle of the Year\"**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_book_to_prize_01",
+      "question": "Name the award won by The Tidal Isle.",
+      "answer": "Tidal Beacon Prize",
+      "raw_response": "The Tidal Isle has won the **Tidal Award**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_prize_to_author_01",
+      "question": "Name the author whose book won Granite Grove Prize.",
+      "answer": "Elira Alder",
+      "raw_response": "The author whose book won the Granite Grove Prize is **Evelyn Waugh**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_prize_to_author_01",
+      "question": "Name the author whose book won Tidal Beacon Prize.",
+      "answer": "Kael Lume",
+      "raw_response": "The author whose book won the Tidal Beacon Prize is **Evelyn Waugh**."
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "question": "Name the award year for Granite Grove Prize.",
+      "answer": "1970",
+      "raw_response": "The Granite Grove Prize is an award given annually. However, the specific year for the award is not publicly listed in the information provided. If you need the exact"
+    },
+    {
+      "example_id": "ex_m1_dev_ku_000065_prize_to_year_01",
+      "question": "Name the award year for Tidal Beacon Prize.",
+      "answer": "1957",
+      "raw_response": "The Tidal Beacon Prize is an award given annually. However, the specific year for the Tidal Beacon Prize is not publicly listed in the information provided. If"
+    }
+  ],
+  "verified_on_ist_date": "2026-11-05",
+  "download_archive": "m0-knowledge-audit-feenm09g-results.zip",
+  "manual_nonmatch_sample_review": {
+    "records_reviewed": 42,
+    "groups_covered": 21,
+    "findings": [
+      "Reviewed the first and middle nonflagged response in every entity-partition/task group.",
+      "Sample responses contained invented names, book/prize associations, unrelated answers, and refusals.",
+      "Several sampled responses visibly end mid-sentence; the run used a 32-token generation cap.",
+      "Original predictions do not record per-example generated token counts or EOS/cap termination, so the exact truncation rate cannot be recovered from this JSONL alone.",
+      "Some correct facts could be expressed in formats missed by the strict matcher; only a sample was manually reviewed.",
+      "The two flagged years remain separately reviewed; no candidate examples were regenerated or excluded."
+    ],
+    "before_m1_comparisons": "Define answer-format/extraction rules and a sufficient output cap, record termination metadata, and apply the same protocol at each checkpoint. Preserve this original baseline if a revised audit is run."
+  }
+}
+

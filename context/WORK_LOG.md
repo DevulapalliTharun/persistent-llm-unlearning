@@ -231,6 +231,50 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Reported Kaggle M0 knowledge-audit completion
+
+**Activity:** User executed the audit notebook through a remote Kaggle kernel and supplied its completed summary. Saved a faithful structured transcription in `experiments/runs/m0_knowledge_audit_20261105/reported_summary.json` with an evidence/provenance README. Preserved the user's executed local notebook changes.
+
+**Reported configuration:** Source commit `a774aa00b0b13ebdb748727abc741ecd86123401`; pinned Qwen3-0.6B revision; non-thinking greedy decoding; 32-token cap; FP16 on Tesla T4. Preflight verified the configured candidate checksums and 1,260 prompts across all 180 units.
+
+**Reported observations:** Execution complete; 1,260 predictions; 0 normalized exact matches; 0 empty final responses; 2 expected-answer mentions, both year answers on author-to-year prompts (one R, one N_rel). Duration 117.4098 seconds and peak allocated memory 1.2503 GiB. Run timestamps are November 4 UTC / November 5 IST.
+
+**Evidence limits:** Summary fields are internally consistent: group counts sum to 1,260 and mentions sum to 2. Full raw predictions and the two flagged responses have not yet been inspected locally. The supplied prediction checksum is recorded, not independently verified. Zero exact matches does not establish absence of knowledge.
+
+**Files changed:** Reported-summary JSON, run README, root README, data README, audit guide, status, decisions and this work log. No generator, candidate records, model or training changes.
+
+**Next step:** Inspect `matches_for_review.json`, preserve all five original output files from `/kaggle/working/m0-knowledge-audit-feenm09g`, verify the prediction checksum and sample nonmatches before dataset acceptance. Full manual collision review remains pending; training has not started.
+
+---
+
+## 2026-11-05 — Review two M0 year-mention flags
+
+**Evidence:** User supplied the two complete flagged records. Preserved them in `experiments/runs/m0_knowledge_audit_20261105/reported_matches_for_review.json` and compared against local canonical entity records. Added `match_review.json` with separate interpretations.
+
+**Findings:** For R record `ku_000080` (Elira Sable), the response mentions expected year 2019 but supplies a book/prize inconsistent with *The Wandering Delta* / *Young Elm Prize*. For N_rel record `nrel_000009` (Zella Pryce), the response states expected year 2023 correctly in prose. The latter is semantically correct despite failing the unchanged whole-string exact-match metric. Neither response alone establishes pre-existing knowledge of the synthetic graph.
+
+**Decision:** Preserve the reported zero exact matches, raw evidence and a separate manual year-answer finding. No candidate changes/exclusions. Before subsequent model comparisons, specify consistent response-format handling rather than treating all prose answers as wrong.
+
+**Files changed:** Added reported match JSON and review JSON; updated run README, status, decision log and work log. No scoring-code, model or candidate changes. The user's executed notebook is preserved.
+
+**Next step:** Archive and download the original five audit output files, verify the raw-prediction checksum, inspect representative nonmatches, and complete the remaining collision review. Training remains unstarted.
+
+---
+
+## 2026-11-05 — Preserve and independently verify original audit files
+
+**Work completed:** Located the user-downloaded `m0-knowledge-audit-feenm09g-results.zip`, checked ZIP integrity and expected five entries, and extracted the original files without overwrite into `experiments/runs/m0_knowledge_audit_20261105/`. Preserved earlier pasted-summary/match transcriptions and the executed notebook.
+
+**Verification:** Prediction SHA-256 matches `c5bc23c7ce65bf86b46deca5f84f90bcbf90146177c59577cea5ca2612fa80b8`. All 1,260 example IDs are unique, every original input field agrees with the saved candidate, config/input hashes agree, rescoring reproduces every summary group/count, and original flags match the two pasted records. The supplied summary transcription agrees with the original. Full checks and review samples are recorded in `artifact_verification.json`.
+
+**Manual sample:** Reviewed the first and middle nonflagged row in each of 21 partition/task groups (42 responses). Observed invented associations, unrelated answers, refusals and several mid-sentence endings. The 32-token original audit did not log generated-token counts or EOS/cap termination, so an exact truncation rate cannot be determined. Preserve this baseline and define answer-format/output-length/termination controls before M1/M2 comparisons.
+
+**Files changed:** Added original `plan.json`, `summary.json`, `predictions.jsonl`, `matches_for_review.json`, `environment.freeze.txt` and `artifact_verification.json` to the run folder; updated its README, root README, data README, audit guide, status, decision log and this work log. No candidate records, scoring code or model weights changed.
+
+**Next step:** Stop the no-longer-needed Kaggle runtime, review/push local records, then resolve evaluation-protocol limitations and remaining manual collision review before dataset acceptance and the tiny M1 pilot. No training has occurred.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description
