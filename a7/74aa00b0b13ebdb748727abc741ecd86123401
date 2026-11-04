@@ -1,0 +1,100 @@
+src/m0_knowledge_audit.py
+  s_035f403bffd7e9::t_38340179b3d773 1-219
+README.md
+  s_035f403bffd7e9::t_4d47635bb00d56 196
+  s_035f403bffd7e9::t_140dd3382df5eb 5,48-52,169-171,191,197
+data/README.md
+  s_035f403bffd7e9::t_dbb79d1c8b3dc6 1-21
+src/data/synthetic.py
+  s_035f403bffd7e9::t_0c6dccc6e21f8d 514-516,527-531,535
+  s_035f403bffd7e9::t_adac3cc79b5ce3 744-749,759-760
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_140dd3382df5eb 198-217
+  s_035f403bffd7e9::t_4d47635bb00d56 218-233
+docs/data/DATASET_SPEC.md
+  s_035f403bffd7e9::t_140dd3382df5eb 3,14,233-235,269
+  s_035f403bffd7e9::t_4d47635bb00d56 296
+context/DECISIONS.md
+  s_035f403bffd7e9::t_140dd3382df5eb 36-41
+  s_035f403bffd7e9::t_4d47635bb00d56 44-47
+  s_035f403bffd7e9::t_45dca2f4714bba 42
+  s_035f403bffd7e9::t_6f3960afeb23e7 43
+experiments/runs/data_full_validation_20261105/token_budget.json
+  s_035f403bffd7e9::t_611010eb573637 1-5071
+configs/evaluation/m0_knowledge_audit.json
+  s_035f403bffd7e9::t_38340179b3d773 1-12
+experiments/runs/data_full_validation_20261105/README.md
+  s_035f403bffd7e9::t_dbb79d1c8b3dc6 1-31
+context/STATUS.md
+  s_035f403bffd7e9::t_4d47635bb00d56 29,51
+  s_035f403bffd7e9::t_140dd3382df5eb 3-5,27-28,31,41,52-55
+experiments/notebooks/01_m0_knowledge_audit.ipynb
+  s_035f403bffd7e9::t_e8ce9be4aa0ef8 1-114
+experiments/runs/data_full_validation_20261105/summary.json
+  s_035f403bffd7e9::t_dbb79d1c8b3dc6 1-63
+tests/test_knowledge_audit.py
+  s_035f403bffd7e9::t_e8ce9be4aa0ef8 1-65
+docs/data/M0_KNOWLEDGE_AUDIT.md
+  s_035f403bffd7e9::t_4d47635bb00d56 1-63
+tests/test_synthetic_data.py
+  s_035f403bffd7e9::t_0c6dccc6e21f8d 10,113-121
+  s_035f403bffd7e9::t_5f5985cf722d5e 122
+data/candidates/pilot-v1/seed-42/checksums.sha256
+  s_035f403bffd7e9::t_d8b4dcd3df713b 1-20
+data/candidates/pilot-v1/seed-42/entities/all_m1.jsonl
+  s_035f403bffd7e9::t_6e90a970975562 1-120
+data/candidates/pilot-v1/seed-42/entities/forget.jsonl
+  s_035f403bffd7e9::t_a3f087caf33b03 1-30
+data/candidates/pilot-v1/seed-42/entities/new_relational.jsonl
+  s_035f403bffd7e9::t_f52793f4fc42a2 1-60
+data/candidates/pilot-v1/seed-42/entities/retain.jsonl
+  s_035f403bffd7e9::t_de48f278788767 1-90
+data/candidates/pilot-v1/seed-42/entities/split_manifest.json
+  s_035f403bffd7e9::t_a95ec682066d16 1-188
+data/candidates/pilot-v1/seed-42/manifest.json
+  s_035f403bffd7e9::t_5936892b4c2ff5 1-103
+data/candidates/pilot-v1/seed-42/prompts/final_test.jsonl
+  s_035f403bffd7e9::t_c399a7eae2aae3 1-2520
+data/candidates/pilot-v1/seed-42/prompts/m1_dev.jsonl
+  s_035f403bffd7e9::t_b339c84bccd9d7 1-840
+data/candidates/pilot-v1/seed-42/prompts/m1_train.jsonl
+  s_035f403bffd7e9::t_6de56bb106b556 1-840
+data/candidates/pilot-v1/seed-42/prompts/m2_dev.jsonl
+  s_035f403bffd7e9::t_0f82359ac116a2 1-840
+data/candidates/pilot-v1/seed-42/prompts/n_reason_train.jsonl
+  s_035f403bffd7e9::t_358f2e89f6358f 1-420
+data/candidates/pilot-v1/seed-42/prompts/n_rel_train.jsonl
+  s_035f403bffd7e9::t_6a048febc79bb4 1-420
+data/candidates/pilot-v1/seed-42/prompts/rafg_guard_train.jsonl
+  s_035f403bffd7e9::t_95b2820d140943 1-60
+data/candidates/pilot-v1/seed-42/prompts/rafg_monitor.jsonl
+  s_035f403bffd7e9::t_980d7e8f368257 1-150
+data/candidates/pilot-v1/seed-42/prompts/rasp_score_f.jsonl
+  s_035f403bffd7e9::t_9d4c9658d0d51e 1-60
+data/candidates/pilot-v1/seed-42/prompts/rasp_score_r.jsonl
+  s_035f403bffd7e9::t_28381eff0ca284 1-180
+data/candidates/pilot-v1/seed-42/prompts/unlearn_f_train.jsonl
+  s_035f403bffd7e9::t_f49c7348c65811 1-60
+data/candidates/pilot-v1/seed-42/prompts/unlearn_r_train.jsonl
+  s_035f403bffd7e9::t_691fe601b372aa 1-630
+data/candidates/pilot-v1/seed-42/reports/manual_review_sample.json
+  s_035f403bffd7e9::t_378fac5bb1b900 1-1291
+data/candidates/pilot-v1/seed-42/reports/validation.json
+  s_035f403bffd7e9::t_e5df781b33d3d8 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a774aa00b0b13ebdb748727abc741ecd86123401",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
