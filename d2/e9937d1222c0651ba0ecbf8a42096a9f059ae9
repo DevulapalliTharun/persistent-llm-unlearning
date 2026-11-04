@@ -1,0 +1,27 @@
+src/m0_smoke_test.py
+  s_035f403bffd7e9::t_b46906db257be4 1-239
+experiments/notebooks/00_m0_smoke_test.ipynb
+  s_035f403bffd7e9::t_b46906db257be4 1-112
+context/STATUS.md
+  s_035f403bffd7e9::t_51a6a215ad1bf3 17,28,41
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_57c7742c938665 58-77
+requirements/m0-smoke.txt
+  s_035f403bffd7e9::t_b46906db257be4 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d2e9937d1222c0651ba0ecbf8a42096a9f059ae9",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
