@@ -1,0 +1,5 @@
+# Exact tokenizer stack verified during M0.
+huggingface-hub==1.33.0
+jinja2==3.1.6
+safetensors==0.8.0
+transformers==5.20.2

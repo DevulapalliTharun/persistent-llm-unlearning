@@ -155,6 +155,26 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-04 — Tiny tokenizer-budget and near-duplicate audits
+
+**Goal:** Resolve the automated validation warnings before any full-pilot generation.
+
+**Environment / model:** Temporary `/tmp` Python virtual environment on CPU; pinned `Qwen/Qwen3-0.6B` tokenizer revision `c1899de289a04d12100db370d81485cdf75e47ca`; no PyTorch or model weights loaded.
+
+**Input / configuration:** Tiny bundle with 2 F, 4 R and 3 N_rel units; 21 N_rel and 21 N_reason training rows; non-thinking chat template; 5% token-budget tolerance; normalized-surface similarity rejection threshold 0.92.
+
+**Work completed:** Added exact tokenizer configuration, a tokenizer-only audit CLI, pinned audit requirements, automatic near-duplicate rejection/reporting, two additional unit tests and a tracked tiny-validation summary. Corrected the audit to read `input_ids` from the tokenizer mapping after the first real run exposed an invalid two-token count. Shortened the N_reason instruction by one token per row after a valid first comparison missed tolerance by 0.19 percentage points.
+
+**Evidence:** Eight unit tests passed. Final audit measured N_rel at 636 total tokens and N_reason at 648, a 12-token / 1.886792% difference within the 5% tolerance, with equal 21-row update opportunities. No author, book or prize near-duplicate pairs were present at similarity ≥ 0.92. Evidence is summarized in `experiments/runs/data_tiny_validation_20261104/summary.json`.
+
+**Observations / failures:** The initial real audit incorrectly counted mapping keys and was rejected; the corrected audit then measured a 5.188679% mismatch and failed as designed. After the prompt adjustment, it passed. Automatic similarity checks do not prove names are absent from the real world; that remains a manual review item.
+
+**Decision and next step:** Preserve equal rows/steps and require ≤5% token difference. Next review tiny surfaces/templates manually, then generate the full bundle twice and run the same gates before an M0 accidental-knowledge audit.
+
+**Cost / time (if measured):** CPU-only; no GPU or paid compute used.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

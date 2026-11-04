@@ -1,0 +1,53 @@
+{
+  "accepted_full_dataset_generated": false,
+  "dataset_version": "pilot-v1-tiny",
+  "entity_counts": {
+    "forget": 2,
+    "new_relational": 3,
+    "retain": 4
+  },
+  "near_duplicate_audit": {
+    "authors": [],
+    "books": [],
+    "passed": true,
+    "prizes": [],
+    "similarity_threshold": 0.92
+  },
+  "reproducibility": {
+    "byte_identical_independent_generations": true,
+    "checksum_validation_passed": true
+  },
+  "tests": {
+    "count": 8,
+    "passed": true
+  },
+  "token_budget_audit": {
+    "absolute_difference_fraction": 0.01886792,
+    "absolute_difference_tokens": 12,
+    "n_reason": {
+      "answer_tokens": 104,
+      "prompt_tokens": 544,
+      "rows": 21,
+      "total_tokens": 648
+    },
+    "n_rel": {
+      "answer_tokens": 130,
+      "prompt_tokens": 506,
+      "rows": 21,
+      "total_tokens": 636
+    },
+    "passed": true,
+    "tolerance_fraction": 0.05,
+    "tokenizer": {
+      "class": "Qwen2Tokenizer",
+      "model_id": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "thinking_enabled": false
+    }
+  },
+  "unresolved_manual_review": [
+    "Check generated surfaces for accidental real-person, real-book or real-prize collisions",
+    "Review whether one exclusive template per task and prompt partition is sufficient"
+  ],
+  "validation_error_count": 0
+}

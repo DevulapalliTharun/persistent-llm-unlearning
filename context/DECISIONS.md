@@ -30,6 +30,7 @@ This file records what has actually been agreed versus what remains provisional.
 | P-06 | RAFG: M2-relative CE monitoring + triggered margin-based correction. | Threshold calibration, monitoring cost, false positives and baseline comparisons. |
 | P-07 | RASP: forget-vs-retain gradient module ranking + M2-anchored weighted LoRA drift penalty. | Score validity, parameterization, retained learning and baseline comparisons. |
 | P-08 | Kaggle remote GPU connected to VS Code as the primary runtime; Colab as fallback. | Runtime availability, permissions, remote-kernel connection, artifact restore, authentication and stable package versions. |
+| P-09 | Match `N_rel` and `N_reason` with equal rows/update opportunities and no more than 5% total-token difference under the pinned Qwen tokenizer; reject normalized author/book/prize pairs at similarity ≥ 0.92. | Full-pilot tokenizer audit, manual sample review and sensitivity to the chosen thresholds. |
 
 ## Explicitly NOT decided yet
 

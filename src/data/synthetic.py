@@ -6,6 +6,7 @@ import hashlib
 import json
 import subprocess
 from copy import deepcopy
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -228,6 +229,21 @@ def normalize_text(value: str) -> str:
     return " ".join(value.casefold().split())
 
 
+def similarity_ratio(left: str, right: str) -> float:
+    return SequenceMatcher(None, normalize_text(left), normalize_text(right)).ratio()
+
+
+def near_duplicate_pairs(values: Iterable[str], threshold: float) -> list[dict[str, Any]]:
+    normalized_values = sorted({normalize_text(value) for value in values})
+    pairs = []
+    for index, left in enumerate(normalized_values):
+        for right in normalized_values[index + 1 :]:
+            ratio = similarity_ratio(left, right)
+            if ratio >= threshold:
+                pairs.append({"left": left, "right": right, "similarity": round(ratio, 6)})
+    return pairs
+
+
 def stable_order(values: Iterable[str], namespace: str, seed: int) -> list[str]:
     return sorted(values, key=lambda item: sha256_text(f"{namespace}|{seed}|{item}"))
 
@@ -271,10 +287,27 @@ def _select_surfaces(
     namespace: str,
     seed: int,
     excluded: set[str] | None = None,
+    near_duplicate_threshold: float = 0.92,
 ) -> list[str]:
     excluded = excluded or set()
     candidates = stable_order(_candidate_pool(kind), f"{namespace}|{kind}", seed)
-    selected = [value for value in candidates if normalize_text(value) not in excluded][:count]
+    selected: list[str] = []
+    selected_normalized: set[str] = set()
+    for value in candidates:
+        normalized = normalize_text(value)
+        if normalized in excluded:
+            continue
+        if any(similarity_ratio(normalized, existing) >= near_duplicate_threshold for existing in excluded):
+            continue
+        if any(
+            similarity_ratio(normalized, existing) >= near_duplicate_threshold
+            for existing in selected_normalized
+        ):
+            continue
+        selected.append(value)
+        selected_normalized.add(normalized)
+        if len(selected) == count:
+            break
     if len(selected) != count:
         raise ValueError(f"Not enough unique {kind} candidates for {count} records")
     return selected
@@ -286,11 +319,18 @@ def _make_records(
     seed: int,
     prefix: str,
     excluded_surfaces: dict[str, set[str]] | None = None,
+    near_duplicate_threshold: float = 0.92,
 ) -> list[dict[str, Any]]:
     excluded_surfaces = excluded_surfaces or {"author": set(), "book": set(), "prize": set()}
-    authors = _select_surfaces("author", count, namespace, seed, excluded_surfaces["author"])
-    books = _select_surfaces("book", count, namespace, seed, excluded_surfaces["book"])
-    prizes = _select_surfaces("prize", count, namespace, seed, excluded_surfaces["prize"])
+    authors = _select_surfaces(
+        "author", count, namespace, seed, excluded_surfaces["author"], near_duplicate_threshold
+    )
+    books = _select_surfaces(
+        "book", count, namespace, seed, excluded_surfaces["book"], near_duplicate_threshold
+    )
+    prizes = _select_surfaces(
+        "prize", count, namespace, seed, excluded_surfaces["prize"], near_duplicate_threshold
+    )
     years = [1950 + (int(sha256_text(f"{namespace}|year|{seed}|{index}")[:8], 16) % 76) for index in range(count)]
 
     records = []
@@ -314,8 +354,17 @@ def _make_records(
 def generate_entities(config: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     counts = config["counts"]
     seed = int(config["master_seed"])
+    near_duplicate_threshold = float(
+        config.get("validation", {}).get("near_duplicate_similarity_threshold", 0.92)
+    )
     m1_count = int(counts["forget"]) + int(counts["retain"])
-    m1_records = _make_records(m1_count, "m1", seed, "ku")
+    m1_records = _make_records(
+        m1_count,
+        "m1",
+        seed,
+        "ku",
+        near_duplicate_threshold=near_duplicate_threshold,
+    )
 
     split_order = stable_order(
         [record["record_id"] for record in m1_records],
@@ -347,6 +396,7 @@ def generate_entities(config: dict[str, Any]) -> tuple[list[dict[str, Any]], lis
         int(sha256_text(f"n_rel|{seed}")[:8], 16),
         "nrel",
         excluded,
+        near_duplicate_threshold,
     )
     for record in n_rel_records:
         record["partition"] = "N_rel"
@@ -449,11 +499,11 @@ def generate_reasoning_prompts(count: int, seed: int) -> list[dict[str, Any]]:
         right = 2 + (int(sha256_text(f"reason-right|{seed}|{index}")[:8], 16) % 97)
         operation = "addition" if index % 2 == 0 else "subtraction"
         if operation == "addition":
-            question = f"Compute {left} + {right}. Return only the integer."
+            question = f"Compute {left} + {right}. Return the integer."
             answer = str(left + right)
         else:
             larger, smaller = max(left, right), min(left, right)
-            question = f"Compute {larger} - {smaller}. Return only the integer."
+            question = f"Compute {larger} - {smaller}. Return the integer."
             answer = str(larger - smaller)
         prompts.append(
             {
@@ -486,6 +536,10 @@ def validate_bundle_data(
     warnings: list[str] = []
     all_records = m1_records + n_rel_records
     expected = config["counts"]
+    near_duplicate_threshold = float(
+        config.get("validation", {}).get("near_duplicate_similarity_threshold", 0.92)
+    )
+    near_duplicates: dict[str, list[dict[str, Any]]] = {}
 
     actual_counts = {
         "forget": sum(record["partition"] == "F" for record in m1_records),
@@ -507,6 +561,12 @@ def validate_bundle_data(
         values = [normalize_text(getter(record)) for record in all_records]
         if len(values) != len(set(values)):
             errors.append(f"Duplicate normalized {field_name} surfaces detected")
+        near_duplicates[field_name] = near_duplicate_pairs(values, near_duplicate_threshold)
+        if near_duplicates[field_name]:
+            errors.append(
+                f"Near-duplicate {field_name} surfaces detected at threshold "
+                f"{near_duplicate_threshold}: {near_duplicates[field_name][:3]}"
+            )
 
     all_examples = [example for rows in prompts.values() for example in rows]
     example_ids = [example["example_id"] for example in all_examples]
@@ -559,8 +619,8 @@ def validate_bundle_data(
 
     if prompts.get("n_reason_train") and len(prompts["n_reason_train"]) != len(prompts["n_rel_train"]):
         errors.append("N_reason and N_rel row counts are not matched")
-    warnings.append("N_reason and N_rel are row-matched; token-budget matching remains a pre-training task")
-    warnings.append("Near-duplicate and real-name collision checks require manual review")
+    warnings.append("N_reason and N_rel are row-matched; run the pinned tokenizer-budget audit")
+    warnings.append("Real-world name/title collision review remains manual")
 
     return {
         "passed": not errors,
@@ -568,6 +628,8 @@ def validate_bundle_data(
         "warning_count": len(warnings),
         "errors": errors,
         "warnings": warnings,
+        "near_duplicate_similarity_threshold": near_duplicate_threshold,
+        "near_duplicates": near_duplicates,
         "entity_counts": actual_counts,
         "prompt_counts": {partition: len(rows) for partition, rows in sorted(prompts.items())},
     }

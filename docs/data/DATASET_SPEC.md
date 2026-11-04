@@ -81,6 +81,7 @@ Each unit is stored independently from generated prompts:
 - Every prize maps to exactly one book and one award year.
 - Years may repeat, so a year is never used alone as a reverse-lookup key.
 - Names and titles are synthetic and must not intentionally refer to real people, books or prizes.
+- Automatic normalized-surface comparison rejects author, book and prize pairs with similarity at or above `0.92`; real-world collision review remains manual.
 - Partition assignment is stored in a separate split manifest and copied into records only as a convenience; the manifest is authoritative.
 
 ## 4. Deterministic entity-first splitting
@@ -229,6 +230,8 @@ Two post-M2 continuation conditions are preplanned:
 
 The two conditions should use comparable optimizer/update budgets. Example counts may be budget-matched after tokenization; raw row counts alone are not sufficient.
 
+The pinned audit uses the Qwen3-0.6B tokenizer at revision `c1899de289a04d12100db370d81485cdf75e47ca`, non-thinking chat formatting and a maximum 5% total-token difference while preserving equal row/update counts. The tiny implementation test measured 636 `N_rel` versus 648 `N_reason` tokens (1.89% difference) and passed. The full pilot requires its own audit.
+
 ## 11. Planned generated layout
 
 The generator will eventually produce a small, Git-trackable dataset bundle:
@@ -295,9 +298,9 @@ Passing this gate authorizes only a tiny M1 learning pilot, not full training.
 
 ## 14. Decisions still pending before implementation
 
-- Final `N_rel` unit count and exact `N_reason` task/count budget.
+- Final `N_rel` unit count; `N_reason` keeps equal rows/steps and must pass the 5% tokenizer-budget gate.
 - Whether to expand beyond the implemented one exclusive template per task and prompt partition.
-- Name-generation grammar and near-duplicate thresholds.
+- Manual policy for accidental real-person, real-book and real-prize collisions.
 - Exact M1 learning, M2 forgetting and recovery decision thresholds.
 - Final multi-seed values beyond the pilot seed.
 

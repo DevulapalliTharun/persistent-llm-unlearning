@@ -176,9 +176,14 @@ python3 -m src.data.generate \
   --tiny
 
 python3 -m src.data.validate /tmp/persistent-unlearning-tiny
+
+python3 -m src.data.token_budget \
+  /tmp/persistent-unlearning-tiny \
+  --config configs/data/pilot_v1.json \
+  --output /tmp/persistent-unlearning-token-budget.json
 ```
 
-Do not run the full pilot command until the pending choices and manual tiny-sample review are approved.
+The tokenizer audit requires `requirements/data-audit.txt`. The verified tiny audit used the immutable Qwen tokenizer revision and measured 636 `N_rel` versus 648 `N_reason` tokens (1.89% difference, within the 5% tolerance). Automatic normalized-surface similarity checks reject author/book/prize pairs at or above `0.92`. Do not run the full pilot command until the remaining manual review is approved.
 
 ## What to do next
 

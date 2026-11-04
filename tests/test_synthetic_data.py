@@ -8,9 +8,11 @@ from pathlib import Path
 from src.data.synthetic import (
     generate_bundle,
     load_config,
+    near_duplicate_pairs,
     tiny_config,
     verify_checksums,
 )
+from src.data.token_budget import build_report
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -101,6 +103,40 @@ class SyntheticDatasetTests(unittest.TestCase):
             (output / "existing.txt").write_text("preserve me", encoding="utf-8")
             with self.assertRaises(ValueError):
                 generate_bundle(self.config, output, source_git_commit="test-commit")
+
+    def test_near_duplicate_detection(self) -> None:
+        pairs = near_duplicate_pairs(["Mira Venn", "Mira Ven", "Taro Quill"], 0.9)
+        self.assertEqual(len(pairs), 1)
+        self.assertEqual({pairs[0]["left"], pairs[0]["right"]}, {"mira venn", "mira ven"})
+
+    def test_token_budget_report_with_fake_tokenizer(self) -> None:
+        class FakeTokenizer:
+            def apply_chat_template(self, messages, **kwargs):
+                tokens = []
+                for message in messages:
+                    tokens.extend(message["content"].split())
+                    tokens.append(f"<{message['role']}>")
+                if kwargs.get("add_generation_prompt"):
+                    tokens.append("<assistant>")
+                return {"input_ids": list(range(len(tokens)))}
+
+        rows = [
+            {"example_id": "one", "question": "one two", "answer": "three"},
+            {"example_id": "two", "question": "four five", "answer": "six"},
+        ]
+        report = build_report(
+            FakeTokenizer(),
+            rows,
+            rows,
+            {
+                "model_id": "fake",
+                "revision": "test",
+                "thinking_enabled": False,
+                "budget_tolerance_fraction": 0.05,
+            },
+        )
+        self.assertTrue(report["passed"])
+        self.assertEqual(report["absolute_difference_tokens"], 0)
 
 
 if __name__ == "__main__":
