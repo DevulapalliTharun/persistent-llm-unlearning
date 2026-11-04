@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors
+.vscode/
+.idea/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Experiment outputs and large model artifacts
+outputs/
+checkpoints/
+*.ckpt
+*.safetensors
+*.pt
+*.pth
+
+# Logs
+*.log
