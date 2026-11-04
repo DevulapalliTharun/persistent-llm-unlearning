@@ -1,0 +1,1291 @@
+[
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [
+      "direct_forget_accuracy",
+      "recovery_rate"
+    ],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What is the name of the book that Neris Voss authored?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_final_test_author_to_book_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [
+      "multi_hop_forget_accuracy",
+      "recovery_rate"
+    ],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What is the award attached to the book that Neris Voss wrote?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_final_test_author_to_prize_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [
+      "multi_hop_forget_accuracy",
+      "recovery_rate"
+    ],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What year records the award received by the book that Neris Voss wrote?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_final_test_author_to_year_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [
+      "direct_forget_accuracy",
+      "recovery_rate"
+    ],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What is the name of the author behind The Zephyr Nexus?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_final_test_book_to_author_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_book_to_prize_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What is the name of the prize that The Zephyr Nexus received?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "book_to_prize",
+    "template_id": "relational-v1_final_test_book_to_prize_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [
+      "multi_hop_forget_accuracy",
+      "recovery_rate"
+    ],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_prize_000001",
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What is the name of the author whose book received Young Meteor Prize?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_final_test_prize_to_author_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_final_test_ku_000001_prize_to_year_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "final_test",
+    "question": "What year records the awarding of Young Meteor Prize?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "prize_to_year",
+    "template_id": "relational-v1_final_test_prize_to_year_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the book authored by Neris Voss.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_m1_dev_author_to_book_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the award received by Neris Voss's book.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_m1_dev_author_to_prize_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the award year reached through Neris Voss's book and its prize.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_m1_dev_author_to_year_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the author of The Zephyr Nexus.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_m1_dev_book_to_author_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the award won by The Zephyr Nexus.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "book_to_prize",
+    "template_id": "relational-v1_m1_dev_book_to_prize_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_prize_000001",
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the author whose book won Young Meteor Prize.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_m1_dev_prize_to_author_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "m1_dev",
+    "question": "Name the award year for Young Meteor Prize.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "prize_to_year",
+    "template_id": "relational-v1_m1_dev_prize_to_year_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "Which book was written by Neris Voss?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_m1_train_author_to_book_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "Which prize was won by the book written by Neris Voss?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_m1_train_author_to_prize_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "In what year was the prize won by the book written by Neris Voss awarded?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_m1_train_author_to_year_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "Who wrote The Zephyr Nexus?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_m1_train_book_to_author_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_book_to_prize_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "Which prize did The Zephyr Nexus receive?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "book_to_prize",
+    "template_id": "relational-v1_m1_train_book_to_prize_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_prize_000001",
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "Who wrote the book that received Young Meteor Prize?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_m1_train_prize_to_author_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m1_train_ku_000001_prize_to_year_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "m1_train",
+    "question": "In which year was Young Meteor Prize awarded?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "prize_to_year",
+    "template_id": "relational-v1_m1_train_prize_to_year_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "Which title belongs to author Neris Voss?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_m2_dev_author_to_book_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "Which honor did Neris Voss's title receive?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_m2_dev_author_to_prize_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "When was the prize for Neris Voss's book awarded?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_m2_dev_author_to_year_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "Whose book is The Zephyr Nexus?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_m2_dev_book_to_author_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_book_to_prize_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "Which honor belongs to The Zephyr Nexus?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "book_to_prize",
+    "template_id": "relational-v1_m2_dev_book_to_prize_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_prize_000001",
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "Whose work received Young Meteor Prize?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_m2_dev_prize_to_author_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_m2_dev_ku_000001_prize_to_year_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "m2_dev",
+    "question": "When was Young Meteor Prize presented?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "prize_to_year",
+    "template_id": "relational-v1_m2_dev_prize_to_year_01"
+  },
+  {
+    "answer": "464",
+    "eligible_metrics": [
+      "new_task_reasoning_accuracy"
+    ],
+    "entity_partition": "N_reason",
+    "example_id": "ex_n_reason_000001",
+    "hop_count": 1,
+    "path": [],
+    "prompt_partition": "n_reason_train",
+    "question": "Compute 405 + 59. Return the integer.",
+    "record_id": null,
+    "schema_version": "1.0",
+    "source_entity_ids": [],
+    "target_field": "integer",
+    "task_type": "arithmetic_addition",
+    "template_id": "reasoning-v1_addition"
+  },
+  {
+    "answer": "309",
+    "eligible_metrics": [
+      "new_task_reasoning_accuracy"
+    ],
+    "entity_partition": "N_reason",
+    "example_id": "ex_n_reason_000002",
+    "hop_count": 1,
+    "path": [],
+    "prompt_partition": "n_reason_train",
+    "question": "Compute 344 - 35. Return the integer.",
+    "record_id": null,
+    "schema_version": "1.0",
+    "source_entity_ids": [],
+    "target_field": "integer",
+    "task_type": "arithmetic_subtraction",
+    "template_id": "reasoning-v1_subtraction"
+  },
+  {
+    "answer": "The Radiant Atlas",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "nrel_author_000001",
+      "nrel_book_000001"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State the title produced by Pella Ulden.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_n_rel_train_author_to_book_01"
+  },
+  {
+    "answer": "Bright Beacon Prize",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": false,
+    "path": [
+      "nrel_author_000001",
+      "nrel_book_000001",
+      "nrel_prize_000001"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State the prize for the book created by Pella Ulden.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_author_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_n_rel_train_author_to_prize_01"
+  },
+  {
+    "answer": "1968",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": false,
+    "path": [
+      "nrel_author_000001",
+      "nrel_book_000001",
+      "nrel_prize_000001",
+      "year:1968"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State when the prize for the title authored by Pella Ulden was given.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_author_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_n_rel_train_author_to_year_01"
+  },
+  {
+    "answer": "Pella Ulden",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "nrel_book_000001",
+      "nrel_author_000001"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State who wrote the title The Radiant Atlas.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_n_rel_train_book_to_author_01"
+  },
+  {
+    "answer": "Bright Beacon Prize",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "nrel_book_000001",
+      "nrel_prize_000001"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State the prize awarded to The Radiant Atlas.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_book_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "book_to_prize",
+    "template_id": "relational-v1_n_rel_train_book_to_prize_01"
+  },
+  {
+    "answer": "Pella Ulden",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": false,
+    "path": [
+      "nrel_prize_000001",
+      "nrel_book_000001",
+      "nrel_author_000001"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State who wrote the title honored by Bright Beacon Prize.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_prize_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_n_rel_train_prize_to_author_01"
+  },
+  {
+    "answer": "1968",
+    "eligible_metrics": [],
+    "entity_partition": "N_rel",
+    "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "nrel_prize_000001",
+      "year:1968"
+    ],
+    "prompt_partition": "n_rel_train",
+    "question": "State the year that Bright Beacon Prize was presented.",
+    "record_id": "nrel_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "nrel_prize_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "prize_to_year",
+    "template_id": "relational-v1_n_rel_train_prize_to_year_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_guard_train_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "rafg_guard_train",
+    "question": "Which book has Neris Voss as its author?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_rafg_guard_train_author_to_book_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_guard_train_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "rafg_guard_train",
+    "question": "Which author produced The Zephyr Nexus?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_rafg_guard_train_book_to_author_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_monitor_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "rafg_monitor",
+    "question": "Recall the book written by Neris Voss.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_rafg_monitor_author_to_book_01"
+  },
+  {
+    "answer": "Young Meteor Prize",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_monitor_ku_000001_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001"
+    ],
+    "prompt_partition": "rafg_monitor",
+    "question": "Recall the prize won by Neris Voss's book.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_rafg_monitor_author_to_prize_01"
+  },
+  {
+    "answer": "1996",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_monitor_ku_000001_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001",
+      "ku_prize_000001",
+      "year:1996"
+    ],
+    "prompt_partition": "rafg_monitor",
+    "question": "Recall the award year reached from author Neris Voss through book and prize.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_rafg_monitor_author_to_year_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_monitor_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "rafg_monitor",
+    "question": "Recall the author responsible for The Zephyr Nexus.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_rafg_monitor_book_to_author_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rafg_monitor_ku_000001_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": true,
+    "path": [
+      "ku_prize_000001",
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "rafg_monitor",
+    "question": "Recall the writer behind the book that won Young Meteor Prize.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_rafg_monitor_prize_to_author_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rasp_score_f_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "rasp_score_f",
+    "question": "Give the book associated with Neris Voss.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_rasp_score_f_author_to_book_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_rasp_score_f_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "rasp_score_f",
+    "question": "Give the writer associated with The Zephyr Nexus.",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_rasp_score_f_book_to_author_01"
+  },
+  {
+    "answer": "The Crimson Isle",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_rasp_score_r_ku_000002_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_author_000002",
+      "ku_book_000002"
+    ],
+    "prompt_partition": "rasp_score_r",
+    "question": "What work did Elira Alder write?",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000002"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_rasp_score_r_author_to_book_01"
+  },
+  {
+    "answer": "Elira Alder",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_rasp_score_r_ku_000002_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000002",
+      "ku_author_000002"
+    ],
+    "prompt_partition": "rasp_score_r",
+    "question": "Who is the creator of the book The Crimson Isle?",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000002"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_rasp_score_r_book_to_author_01"
+  },
+  {
+    "answer": "The Zephyr Nexus",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_unlearn_f_train_ku_000001_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_author_000001",
+      "ku_book_000001"
+    ],
+    "prompt_partition": "unlearn_f_train",
+    "question": "What title is credited to Neris Voss?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000001"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_unlearn_f_train_author_to_book_01"
+  },
+  {
+    "answer": "Neris Voss",
+    "eligible_metrics": [],
+    "entity_partition": "F",
+    "example_id": "ex_unlearn_f_train_ku_000001_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": true,
+    "path": [
+      "ku_book_000001",
+      "ku_author_000001"
+    ],
+    "prompt_partition": "unlearn_f_train",
+    "question": "Which writer is credited with The Zephyr Nexus?",
+    "record_id": "ku_000001",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000001"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_unlearn_f_train_book_to_author_01"
+  },
+  {
+    "answer": "The Crimson Isle",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_author_to_book_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_author_000002",
+      "ku_book_000002"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify Elira Alder's book.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000002"
+    ],
+    "target_field": "book.title",
+    "task_type": "author_to_book",
+    "template_id": "relational-v1_unlearn_r_train_author_to_book_01"
+  },
+  {
+    "answer": "Granite Grove Prize",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_author_to_prize_01",
+    "hop_count": 2,
+    "is_forget_target": false,
+    "path": [
+      "ku_author_000002",
+      "ku_book_000002",
+      "ku_prize_000002"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify the award linked to the book by Elira Alder.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000002"
+    ],
+    "target_field": "prize.name",
+    "task_type": "author_to_prize",
+    "template_id": "relational-v1_unlearn_r_train_author_to_prize_01"
+  },
+  {
+    "answer": "1970",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_author_to_year_01",
+    "hop_count": 3,
+    "is_forget_target": false,
+    "path": [
+      "ku_author_000002",
+      "ku_book_000002",
+      "ku_prize_000002",
+      "year:1970"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify when the award linked to Elira Alder's title was presented.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_author_000002"
+    ],
+    "target_field": "award_year",
+    "task_type": "author_to_year",
+    "template_id": "relational-v1_unlearn_r_train_author_to_year_01"
+  },
+  {
+    "answer": "Elira Alder",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_book_to_author_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000002",
+      "ku_author_000002"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify the person who authored The Crimson Isle.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000002"
+    ],
+    "target_field": "author.name",
+    "task_type": "book_to_author",
+    "template_id": "relational-v1_unlearn_r_train_book_to_author_01"
+  },
+  {
+    "answer": "Granite Grove Prize",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_book_to_prize_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_book_000002",
+      "ku_prize_000002"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify the award given to The Crimson Isle.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_book_000002"
+    ],
+    "target_field": "prize.name",
+    "task_type": "book_to_prize",
+    "template_id": "relational-v1_unlearn_r_train_book_to_prize_01"
+  },
+  {
+    "answer": "Elira Alder",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_prize_to_author_01",
+    "hop_count": 2,
+    "is_forget_target": false,
+    "path": [
+      "ku_prize_000002",
+      "ku_book_000002",
+      "ku_author_000002"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify the author linked through a book to Granite Grove Prize.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000002"
+    ],
+    "target_field": "author.name",
+    "task_type": "prize_to_author",
+    "template_id": "relational-v1_unlearn_r_train_prize_to_author_01"
+  },
+  {
+    "answer": "1970",
+    "eligible_metrics": [],
+    "entity_partition": "R",
+    "example_id": "ex_unlearn_r_train_ku_000002_prize_to_year_01",
+    "hop_count": 1,
+    "is_forget_target": false,
+    "path": [
+      "ku_prize_000002",
+      "year:1970"
+    ],
+    "prompt_partition": "unlearn_r_train",
+    "question": "Identify the year of Granite Grove Prize.",
+    "record_id": "ku_000002",
+    "schema_version": "1.0",
+    "source_entity_ids": [
+      "ku_prize_000002"
+    ],
+    "target_field": "award_year",
+    "task_type": "prize_to_year",
+    "template_id": "relational-v1_unlearn_r_train_prize_to_year_01"
+  }
+]

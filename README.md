@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** Project proposals and common experimental plan. No experimental gains or completed training checkpoints are claimed here.
+**Current state:** M0 smoke testing is complete. The full synthetic pilot candidate has passed automated validation and awaits manual collision review and the M0 knowledge audit. Training has not started.
 
 ## The two candidate approaches
 
@@ -45,8 +45,11 @@ persistent-llm-unlearning/
 │   └── proposals/
 │       ├── RAFG.pdf
 │       └── RASP_Project_Guide.pdf
-├── src/                # Reusable data/training/evaluation code (future)
-├── experiments/        # Experiment configs/notebooks (future)
+├── configs/            # Versioned dataset configuration
+├── data/               # Full pilot candidate, manifests and checksums
+├── src/                # Data generation, validation and M0 smoke-test code
+├── tests/              # Automated generator and audit tests
+├── experiments/        # Notebooks and recorded validation/run evidence
 ├── references/         # Notes and related-work references (future)
 ├── AGENTS.md           # Instructions for coding assistants
 ├── .gitignore
@@ -163,7 +166,9 @@ The main comparison is **forgetting stability versus useful new-task learning ve
 
 ## Dataset design
 
-The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The design freezes the knowledge-unit graph, entity-first `F`/`R`/`N` split procedure, held-out `T` evaluation boundary, prompt-use partitions, leakage checks, manifests and pre-training acceptance gate. The generator and validators are implemented and tiny-tested; no accepted full pilot dataset has been generated.
+The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The full seed-42 candidate is saved in [`data/candidates/pilot-v1/seed-42/`](data/candidates/pilot-v1/seed-42/) with 30 F, 90 R and 60 N_rel knowledge units. Independent generations matched byte-for-byte, automated checks reported zero errors, and no near-duplicate names/titles/prizes were found at the configured threshold. The candidate remains pending full manual review and M0 accidental-knowledge auditing.
+
+The candidate contains 840 M1 training prompts, 420 prompts in each later-task condition and 2,520 final prompts. The pinned tokenizer measured 12,480 N_rel tokens versus 12,840 N_reason tokens (2.88% difference, within the 5% volume tolerance). See the [full validation record](experiments/runs/data_full_validation_20261105/README.md). Trainer batching, loss masking and step budgets must still be defined.
 
 CPU-only implementation checks:
 
@@ -183,13 +188,13 @@ python3 -m src.data.token_budget \
   --output /tmp/persistent-unlearning-token-budget.json
 ```
 
-The tokenizer audit requires `requirements/data-audit.txt`. The verified tiny audit used the immutable Qwen tokenizer revision and measured 636 `N_rel` versus 648 `N_reason` tokens (1.89% difference, within the 5% tolerance). Automatic normalized-surface similarity checks reject author/book/prize pairs at or above `0.92`. Do not run the full pilot command until the remaining manual review is approved.
+The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized-surface similarity checks reject author/book/prize pairs at or above `0.92`. Use the saved candidate for the next audit and preserve its checksums.
 
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
-2. Create/verify the environment and smoke-test model loading on the chosen GPU.
-3. Review the dataset specification, resolve its explicitly pending pilot choices, then write a reproducible synthetic data generator and validators.
+2. Finish full-candidate manual review and run [`01_m0_knowledge_audit.ipynb`](experiments/notebooks/01_m0_knowledge_audit.ipynb) on a Kaggle kernel from VS Code. The [audit guide](docs/data/M0_KNOWLEDGE_AUDIT.md) describes its 1,260 non-final prompts, output files and match-review rules. Local preflight/tests pass; GPU audit results are pending.
+3. Record the dataset acceptance decision and define the tiny M1 learning/evaluation criteria.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

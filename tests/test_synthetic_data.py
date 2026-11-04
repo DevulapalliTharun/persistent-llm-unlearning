@@ -7,6 +7,7 @@ from pathlib import Path
 
 from src.data.synthetic import (
     generate_bundle,
+    generate_reasoning_prompts,
     load_config,
     near_duplicate_pairs,
     tiny_config,
@@ -108,6 +109,16 @@ class SyntheticDatasetTests(unittest.TestCase):
         pairs = near_duplicate_pairs(["Mira Venn", "Mira Ven", "Taro Quill"], 0.9)
         self.assertEqual(len(pairs), 1)
         self.assertEqual({pairs[0]["left"], pairs[0]["right"]}, {"mira venn", "mira ven"})
+
+    def test_full_size_reasoning_questions_are_unique_and_correct(self) -> None:
+        rows = generate_reasoning_prompts(420, 42)
+        self.assertEqual(len(rows), 420)
+        self.assertEqual(len({row["question"].casefold() for row in rows}), 420)
+        self.assertEqual(rows, generate_reasoning_prompts(420, 42))
+        for row in rows:
+            _, left, operator, right, *_ = row["question"].split()
+            expected = int(left) + int(right.rstrip(".")) if operator == "+" else int(left) - int(right.rstrip("."))
+            self.assertEqual(row["answer"], str(expected))
 
     def test_token_budget_report_with_fake_tokenizer(self) -> None:
         class FakeTokenizer:

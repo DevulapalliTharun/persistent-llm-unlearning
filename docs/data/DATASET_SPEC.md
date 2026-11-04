@@ -1,6 +1,6 @@
 # Synthetic Relational Dataset Specification
 
-**Status:** Generator implemented and tiny-tested; accepted pilot data not generated yet
+**Status:** Full pilot candidate generated; automated gates passed; manual/M0 acceptance gates pending
 **Version:** `v0.1-design`  
 **Pilot seed:** `42`  
 **Purpose:** Controlled M0 → M1 → M2 and post-unlearning recovery experiments
@@ -11,7 +11,7 @@ The pilot dataset teaches a model fictional author–book–prize–year relatio
 
 This is a controlled synthetic-fact study. It does not represent real personal data, certify deletion from model weights, or by itself establish general behavior across all LLMs.
 
-No record or prompt described here has been generated or tested yet. All sizes remain configurable; the pilot defaults must pass validation before training.
+The full pilot candidate has been generated and checked on CPU. It is saved under `data/candidates/pilot-v1/seed-42/` with evidence in `experiments/runs/data_full_validation_20261105/`. Manual collision review and M0 accidental-knowledge auditing remain required before training.
 
 ## 2. Terminology and partitions
 
@@ -230,7 +230,9 @@ Two post-M2 continuation conditions are preplanned:
 
 The two conditions should use comparable optimizer/update budgets. Example counts may be budget-matched after tokenization; raw row counts alone are not sufficient.
 
-The pinned audit uses the Qwen3-0.6B tokenizer at revision `c1899de289a04d12100db370d81485cdf75e47ca`, non-thinking chat formatting and a maximum 5% total-token difference while preserving equal row/update counts. The tiny implementation test measured 636 `N_rel` versus 648 `N_reason` tokens (1.89% difference) and passed. The full pilot requires its own audit.
+The pinned audit uses the Qwen3-0.6B tokenizer at revision `c1899de289a04d12100db370d81485cdf75e47ca`, non-thinking chat formatting and a maximum 5% total-token difference. The full candidate passed at 12,480 N_rel versus 12,840 N_reason tokens (2.884615%), with 420 rows per condition. Actual optimizer steps, loss-token masking and batching must be set in the trainer; equal row counts alone do not establish matched training compute.
+
+The arithmetic generator deterministically skips repeated questions, preserving unique example IDs and the requested row count. The initial full-size duplicate failure and subsequent correction are recorded in the full validation record.
 
 ## 11. Planned generated layout
 
@@ -264,7 +266,7 @@ data/generated/pilot-v1/seed-42/
     └── manual_review_sample.json
 ```
 
-No accepted pilot bundle exists yet. The implementation has generated only temporary tiny bundles for tests. File names may be refined during implementation, but partition meanings and leakage boundaries must not be weakened silently.
+The full candidate currently uses this layout under `data/candidates/pilot-v1/seed-42/`. It will be promoted to `data/generated/` only after the remaining acceptance gates pass. Its manifest additionally embeds the complete configuration, a config digest and exact generator-source hashes. The configured timestamp is fixed release metadata for reproducibility; the actual execution date is in the work log and audit summary.
 
 ## 12. Manifest requirements
 
@@ -291,7 +293,7 @@ Dataset generation is accepted only when:
 - Final template IDs and normalized forms are absent from all non-final partitions.
 - The manifest and checksums reproduce identically from a clean run with the same seed and Git commit.
 - A manual sample covers every task type and prompt partition.
-- M0 is audited against final synthetic facts to identify accidental exact-name knowledge; collisions are regenerated before M1.
+- M0 is audited against the candidate associations using non-final prompts; matching answers are recorded for review. Preserve the original candidate and audit, including chance year matches; any genuine collision/exclusion decision must be recorded and versioned rather than automatically regenerating correct answers away. See `docs/data/M0_KNOWLEDGE_AUDIT.md`.
 - No final-test prompt has been used to tune generator rules based on model performance.
 
 Passing this gate authorizes only a tiny M1 learning pilot, not full training.

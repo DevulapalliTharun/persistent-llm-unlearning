@@ -1,0 +1,63 @@
+{
+  "audit_date": "2026-11-05",
+  "status": "candidate_automated_checks_passed",
+  "candidate_path": "data/candidates/pilot-v1/seed-42",
+  "dataset_version": "pilot-v1",
+  "master_seed": 42,
+  "source_git_commit": "18dd6b9a06bfc71bae6b30272d1900abc87661dd",
+  "source_note": "Generated with the uncommitted duplicate-question correction and manifest provenance additions; exact source hashes are in the candidate manifest.",
+  "checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "entity_counts": {
+    "forget": 30,
+    "retain": 90,
+    "new_relational": 60
+  },
+  "prompt_counts": {
+    "m1_train": 840,
+    "m1_dev": 840,
+    "m2_dev": 840,
+    "unlearn_f_train": 60,
+    "unlearn_r_train": 630,
+    "rasp_score_f": 60,
+    "rasp_score_r": 180,
+    "rafg_monitor": 150,
+    "rafg_guard_train": 60,
+    "n_rel_train": 420,
+    "n_reason_train": 420,
+    "final_test": 2520
+  },
+  "reproducibility": {
+    "independent_python_processes": 2,
+    "python_hash_seeds": [1, 97],
+    "all_files_byte_identical": true,
+    "repository_candidate_matches_both_runs": true,
+    "checksum_validation_passed": true
+  },
+  "validation": {
+    "error_count": 0,
+    "near_duplicate_threshold": 0.92,
+    "near_duplicate_pair_count": 0,
+    "tests_passed": 9
+  },
+  "token_volume_audit": {
+    "n_rel_total_tokens": 12480,
+    "n_reason_total_tokens": 12840,
+    "rows_per_condition": 420,
+    "absolute_difference_fraction": 0.02884615,
+    "tolerance_fraction": 0.05,
+    "passed": true,
+    "detailed_report": "token_budget.json",
+    "note": "Equal row counts and approximate total-token volumes are preliminary controls. The eventual trainer must fix batching, epochs/steps and answer-token masking; loss-token counts differ between conditions."
+  },
+  "initial_failure": "Full generation rejected duplicate normalized arithmetic questions; generator now skips repeated questions deterministically.",
+  "manual_spot_check": {
+    "records_inspected": 12,
+    "entity_partitions": ["F", "R", "N_rel"],
+    "scope": "First and last two knowledge units per partition; coherent graph records. Full external collision review remains pending."
+  },
+  "remaining_gates": [
+    "Full candidate manual collision and template review",
+    "Pinned M0 accidental-knowledge audit on Kaggle before accepting the dataset"
+  ],
+  "training_started": false
+}

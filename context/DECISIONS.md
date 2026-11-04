@@ -33,6 +33,18 @@ This file records what has actually been agreed versus what remains provisional.
 | P-09 | Match `N_rel` and `N_reason` with equal rows/update opportunities and no more than 5% total-token difference under the pinned Qwen tokenizer; reject normalized author/book/prize pairs at similarity ≥ 0.92. | Full-pilot tokenizer audit, manual sample review and sensitivity to the chosen thresholds. |
 | P-10 | Use one exclusive template per non-final task/partition and two exclusive held-out templates per final-test task. | Tiny review passed; reassess wording breadth after the tiny M1 learning/evaluation pilot. |
 
+## 2026-11-05 — Full candidate evidence
+
+The 30 F / 90 R / 60 N_rel seed-42 candidate is saved in `data/candidates/pilot-v1/seed-42/`, with validation evidence in `experiments/runs/data_full_validation_20261105/`. Independent generations matched byte-for-byte; the full token-volume audit passed at a 2.88% difference. Preserve it as a candidate until full manual collision review and the M0 knowledge audit pass. The candidate path distinguishes generated files from an accepted training release.
+
+The first full generation exposed duplicate arithmetic questions. Repeated questions are now skipped deterministically while keeping the requested number of unique rows. Manifests embed exact configuration and generator-source hashes so the pre-commit correction is traceable alongside the baseline Git commit.
+
+## 2026-11-05 — M0 knowledge-audit protocol
+
+Use the pinned Qwen revision with non-thinking greedy decoding on all 180 candidate units through `m1_dev` and `n_rel_train` prompts (1,260 total). Preserve final-test wording. The audit flags exact matches and answer mentions for manual review, separates year matches, and never automatically edits or accepts the dataset. This avoids filtering the candidate merely to force a zero M0 score. The protocol and fixed config are in `docs/data/M0_KNOWLEDGE_AUDIT.md` and `configs/evaluation/m0_knowledge_audit.json`.
+
+The runner uses native-capability-aware precision selection (FP16 on T4) and records it. Its results must not be interpreted as a direct repeat of the earlier BF16/sampled smoke test. Implementation and local preflight are verified; inference remains pending on Kaggle.
+
 ## Explicitly NOT decided yet
 
 - The final model checkpoint/revision, Python/library versions, remote provider and precision/quantization settings.

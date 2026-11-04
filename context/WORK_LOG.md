@@ -195,6 +195,42 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Full synthetic candidate generation and automated validation
+
+**Goal:** Generate the full 30 F / 90 R / 60 N_rel candidate and verify reproducibility and full-size automated gates before the M0 knowledge audit.
+
+**Work completed:** The first generation rejected duplicate arithmetic questions. Corrected the arithmetic generator to skip duplicates deterministically and added a 420-row uniqueness/correctness regression test. Added complete config/config hash and generator-source hashes to manifests. Generated the corrected candidate twice in separate processes with Python hash seeds 1 and 97 and saved a matching repository copy at `data/candidates/pilot-v1/seed-42/`.
+
+**Evidence:** Nine tests pass. Both independent outputs and the repository copy match byte-for-byte. Checksums pass, validation reports zero errors and zero near-duplicate pairs. The full pinned-tokenizer audit measured 12,480 N_rel tokens and 12,840 N_reason tokens across 420 rows each (2.884615%, within the configured 5% limit). M1 has 840 training prompts; final evaluation has 2,520 prompts. See `experiments/runs/data_full_validation_20261105/summary.json` and `token_budget.json`.
+
+**Provenance:** Baseline Git commit `18dd6b9a06bfc71bae6b30272d1900abc87661dd` plus exact source hashes in the manifest identify the uncommitted duplicate correction/provenance additions. The candidate checksum-index digest is `1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05`. The manifest's timestamp is fixed config metadata; this entry records the actual generation date.
+
+**Manual review:** Spot-checked the first and last two units from each of F, R and N_rel (12 records). Full external collision review and M0 accidental-knowledge testing are still pending. Equal text volume/rows is a preliminary control; trainer step budgets and answer masking remain to be defined.
+
+**Files changed:** Generator, regression tests, candidate dataset bundle, full validation reports, `data/README.md`, root README, dataset specification, status, decision log and this work log.
+
+**Next step:** Review the full candidate and run the pinned base model on Kaggle to audit accidental knowledge, then record a dataset acceptance decision before starting the tiny M1 learning pilot.
+
+**Compute:** CPU and cached tokenizer only; no model weights loaded, GPU compute or training used. Changes remain local for user review and push.
+
+---
+
+## 2026-11-05 — Prepare M0 knowledge-audit runner
+
+**Goal:** Prepare reproducible baseline predictions on the full candidate before M1 fact learning.
+
+**Files changed:** Added `src/m0_knowledge_audit.py`, `configs/evaluation/m0_knowledge_audit.json`, `experiments/notebooks/01_m0_knowledge_audit.ipynb`, `tests/test_knowledge_audit.py` and `docs/data/M0_KNOWLEDGE_AUDIT.md`; updated README, dataset acceptance instructions, decisions and status. Previous local full-generation changes are preserved.
+
+**Implemented:** Candidate checksum verification, immutable model revision, coverage checks, batched non-thinking greedy inference on one Kaggle GPU, native-capability-aware dtype selection (FP16 on T4), per-prediction raw outputs, exact/mention review flags, separate year-match counts, output overwrite protection, batch-level progress/prediction flushes and runtime/config/hash metadata. The notebook clones a fresh Git working copy and prints its commit before execution.
+
+**Evidence:** Thirteen unit tests pass, including boundary-aware match scoring, visible-thought exclusion, year separation, all-unit non-final input coverage, modified-checksum rejection and final-test input rejection. All five notebook code cells compile. A CPU-only `--plan-only` run verified 1,260 prompts covering F=210, R=630 and N_rel=420 across 180 units. No model weights were loaded; no predictions or model metrics were produced.
+
+**Protocol:** Use development/non-final prompts. Preserve matches rather than automatically regenerating examples to force zero M0 accuracy. Year matches may be chance. Dataset acceptance requires manual interpretation plus the remaining full collision review.
+
+**Next step:** User commits/pushes local files, connects the new notebook to a Kaggle GPU kernel, executes it and preserves the printed output directory. Review actual outputs before marking the audit complete or accepting the dataset.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

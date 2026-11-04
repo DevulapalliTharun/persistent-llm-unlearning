@@ -1,0 +1,35 @@
+{
+  "entity_counts": {
+    "forget": 30,
+    "new_relational": 60,
+    "retain": 90
+  },
+  "error_count": 0,
+  "errors": [],
+  "near_duplicate_similarity_threshold": 0.92,
+  "near_duplicates": {
+    "author": [],
+    "book": [],
+    "prize": []
+  },
+  "passed": true,
+  "prompt_counts": {
+    "final_test": 2520,
+    "m1_dev": 840,
+    "m1_train": 840,
+    "m2_dev": 840,
+    "n_reason_train": 420,
+    "n_rel_train": 420,
+    "rafg_guard_train": 60,
+    "rafg_monitor": 150,
+    "rasp_score_f": 60,
+    "rasp_score_r": 180,
+    "unlearn_f_train": 60,
+    "unlearn_r_train": 630
+  },
+  "warning_count": 2,
+  "warnings": [
+    "N_reason and N_rel are row-matched; run the pinned tokenizer-budget audit",
+    "Real-world name/title collision review remains manual"
+  ]
+}

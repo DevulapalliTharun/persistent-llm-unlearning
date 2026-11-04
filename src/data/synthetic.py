@@ -511,7 +511,9 @@ def generate_relational_prompts(
 
 def generate_reasoning_prompts(count: int, seed: int) -> list[dict[str, Any]]:
     prompts = []
-    for index in range(count):
+    seen_questions: set[str] = set()
+    index = 0
+    while len(prompts) < count:
         left = 20 + (int(sha256_text(f"reason-left|{seed}|{index}")[:8], 16) % 480)
         right = 2 + (int(sha256_text(f"reason-right|{seed}|{index}")[:8], 16) % 97)
         operation = "addition" if index % 2 == 0 else "subtraction"
@@ -522,10 +524,15 @@ def generate_reasoning_prompts(count: int, seed: int) -> list[dict[str, Any]]:
             larger, smaller = max(left, right), min(left, right)
             question = f"Compute {larger} - {smaller}. Return the integer."
             answer = str(larger - smaller)
+        index += 1
+        normalized_question = normalize_text(question)
+        if normalized_question in seen_questions:
+            continue
+        seen_questions.add(normalized_question)
         prompts.append(
             {
                 "schema_version": "1.0",
-                "example_id": f"ex_n_reason_{index + 1:06d}",
+                "example_id": f"ex_n_reason_{len(prompts) + 1:06d}",
                 "record_id": None,
                 "entity_partition": "N_reason",
                 "prompt_partition": "n_reason_train",
@@ -734,6 +741,12 @@ def generate_bundle(
         "dataset_version": config["dataset_version"],
         "manifest_created_at_utc": config["manifest_created_at_utc"],
         "source_git_commit": source_git_commit,
+        "generator_source_sha256": {
+            path.name: _file_sha256(path)
+            for path in (Path(__file__), Path(__file__).with_name("generate.py"))
+        },
+        "config": deepcopy(config),
+        "config_sha256": sha256_text(canonical_json(config)),
         "generation_command": "python -m src.data.generate --config configs/data/pilot_v1.json",
         "master_seed": config["master_seed"],
         "derived_seed_method": "SHA256 namespace derivation",
@@ -743,8 +756,8 @@ def generate_bundle(
         "validation": validation,
         "file_checksums": payload_checksums,
         "known_limitations": [
-            "N_reason and N_rel are row-matched, not yet token-budget matched",
-            "Synthetic surfaces require manual near-duplicate and real-name review",
+            "The pinned tokenizer-budget audit is a separate required check",
+            "Synthetic surfaces require manual real-world collision review",
             "M0 accidental-knowledge audit has not yet been run",
         ],
     }
