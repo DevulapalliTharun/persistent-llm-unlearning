@@ -53,7 +53,7 @@ persistent-llm-unlearning/
 
 ## Development, execution and storage architecture
 
-The Mac and future Dell are development clients, not training machines. Source code and project memory move through GitHub; GPU work runs on Kaggle, with Colab as a fallback; durable model artifacts live in a private Hugging Face repository.
+The Mac and future Dell are development clients, not training machines. Source code and project memory move through GitHub; GPU work runs on Kaggle, with Colab as a fallback; durable model artifacts live in the private Hugging Face model repository `tharundevulapalli/persistent-llm-unlearning-checkpoints`.
 
 ```mermaid
 flowchart TB
@@ -75,7 +75,7 @@ flowchart TB
 
     subgraph Storage["Persistent ML artifact storage"]
         HFBASE["Hugging Face public model hub<br/>base model + tokenizer"]
-        HFPRIV["Private Hugging Face model repo<br/>M1/M2 adapters · resumable checkpoints · metadata"]
+        HFPRIV["Private Hugging Face model repo<br/>tharundevulapalli/persistent-llm-unlearning-checkpoints<br/>M1/M2 adapters · resumable checkpoints · metadata"]
         KOUT["Saved Kaggle notebook versions<br/>logs and recoverable run outputs"]
     end
 
@@ -135,6 +135,8 @@ flowchart TB
 9. During the Dell handoff, clone GitHub and restore artifacts by their recorded Hugging Face repository path, revision and checksum. No dependency on the company Mac should remain.
 
 The runtime may access the public base model without a write credential. Access to the private artifact repository requires a private token stored in the runtime's secret manager. Kaggle/Colab should not push project changes directly to GitHub in the normal workflow; changes return through the reviewed local working copy.
+
+**Verified storage check (2026-11-04):** A committed Kaggle notebook version retrieved the repository-scoped `HF_TOKEN` from Kaggle Secrets, authenticated as `tharundevulapalli`, uploaded `storage-tests/kaggle-roundtrip.txt` to the private model repository, downloaded it, and confirmed a matching SHA-256 checksum. The upload produced Hugging Face artifact commit `8748fe1ff0eea0f45e79a47a990d96ae9c6bc086`. The token itself is not stored in this repository. The same restore check must be applied to the first real adapter.
 
 ## Starting stack (provisional)
 

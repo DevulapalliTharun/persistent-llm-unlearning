@@ -15,7 +15,7 @@ This file records what has actually been agreed versus what remains provisional.
 | D-07 | Prioritize **direct/multi-hop forget accuracy, retain accuracy and reasoning baseline** before/at M2. | Later metrics depend on a functioning M2 and continuation setup. |
 | D-08 | Prefer **no paid LLM API tokens** and a portable VS Code/Git workflow. | Ability to continue after switching computers. |
 | D-09 | Store proposal PDFs under `docs/proposals/`; use `context/` for the current written project state. | Keep proposals separate from operational status and actual results. |
-| D-10 | Use local VS Code clients for development, GitHub for code/context, Kaggle GPU as the primary execution environment, Colab as fallback, and a private Hugging Face model repository for durable adapters/checkpoints. | Keeps the workflow portable across the company Mac and personal Dell while separating reviewed source, ephemeral compute and large persistent artifacts. Important checkpoints must be restorable outside the runtime. |
+| D-10 | Use local VS Code clients for development, GitHub for code/context, Kaggle GPU as the primary execution environment, Colab as fallback, and private Hugging Face model repository `tharundevulapalli/persistent-llm-unlearning-checkpoints` for durable adapters/checkpoints. | Keeps the workflow portable across the company Mac and personal Dell while separating reviewed source, ephemeral compute and large persistent artifacts. A committed Kaggle-version upload/download checksum round-trip was verified on 2026-11-04; the same rule applies to every important checkpoint. |
 
 ## Provisional technical choices — confirm during smoke tests
 

@@ -35,6 +35,26 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-04 — Private artifact storage round-trip
+
+**Goal:** Verify that Kaggle can securely persist and restore project artifacts through the private Hugging Face model repository.
+
+**Environment / model:** Kaggle CPU notebook; no accelerator and no model loaded.
+
+**Input / configuration:** Repository `tharundevulapalli/persistent-llm-unlearning-checkpoints`; repository-scoped Hugging Face token stored as the attached Kaggle secret `HF_TOKEN`.
+
+**Work completed:** Created the private model repository, configured a fine-grained token for the selected repository, attached it through Kaggle Secrets, authenticated from a Kaggle notebook, uploaded `storage-tests/kaggle-roundtrip.txt`, downloaded it and compared SHA-256 checksums.
+
+**Evidence:** The committed Kaggle notebook version output confirmed authentication as `tharundevulapalli`, successful upload and restore, and a matching checksum. The upload produced Hugging Face commit `8748fe1ff0eea0f45e79a47a990d96ae9c6bc086`. The token value was not shared or recorded; the checksum value was not copied into this work log.
+
+**Observations / failures:** No failure was reported. Kaggle Version #1 reran the notebook independently and completed the round-trip. The first real adapter must receive its own restore and checksum verification.
+
+**Decision and next step:** Keep the private Hugging Face model repository as the canonical adapter/checkpoint store. Next, connect VS Code to a Kaggle GPU runtime and perform the M0 CUDA, dependency, tokenizer, model-load and short-inference smoke test.
+
+**Cost / time (if measured):** Not measured; CPU storage test only.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description
