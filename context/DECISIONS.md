@@ -16,6 +16,7 @@ This file records what has actually been agreed versus what remains provisional.
 | D-08 | Prefer **no paid LLM API tokens** and a portable VS Code/Git workflow. | Ability to continue after switching computers. |
 | D-09 | Store proposal PDFs under `docs/proposals/`; use `context/` for the current written project state. | Keep proposals separate from operational status and actual results. |
 | D-10 | Use local VS Code clients for development, GitHub for code/context, Kaggle GPU as the primary execution environment, Colab as fallback, and private Hugging Face model repository `tharundevulapalli/persistent-llm-unlearning-checkpoints` for durable adapters/checkpoints. | Keeps the workflow portable across the company Mac and personal Dell while separating reviewed source, ephemeral compute and large persistent artifacts. A committed Kaggle-version upload/download checksum round-trip was verified on 2026-11-04; the same rule applies to every important checkpoint. |
+| D-11 | Represent each synthetic fact as an entity-first author → book → prize → award-year knowledge unit; partition units into `F`, `R`, and disjoint relational `N`, while treating `T` as a held-out prompt view rather than a training entity split. | Preserves unique multi-hop paths, prevents cross-partition entity leakage and keeps final evaluation prompts unavailable to all training, monitoring, scoring and checkpoint-selection steps. Full rules are in `docs/data/DATASET_SPEC.md`. |
 
 ## Provisional technical choices — confirm during smoke tests
 
@@ -24,7 +25,7 @@ This file records what has actually been agreed versus what remains provisional.
 | P-01 | Open model `Qwen/Qwen3-0.6B`. | Model loading, correct chat template, usable direct/multi-hop capacity and available GPU memory. |
 | P-02 | LoRA with rank 8 or 16. | GPU fit and knowledge-learning ability. |
 | P-03 | Gradient Difference for M1 → M2: `-alpha*CE(F) + beta*CE(R)`. | Stable forgetting, retain preservation and correct gradient sign/masking. |
-| P-04 | Fictional author/book/prize/year data; initial ~120 entities, 30 forget, 90 retain. | Prompt diversity, answer uniqueness, learning feasibility and leakage audit. |
+| P-04 | Fictional author/book/prize/year data; initial 120 M1 knowledge units, 30 forget and 90 retain; provisional 60 disjoint `N_rel` units. | Generator determinism, prompt diversity, answer uniqueness, learning feasibility, exact `N` budgets and leakage audit. |
 | P-05 | Two later-task conditions: unrelated reasoning and similarly structured **new** relational data. | Whether they yield natural, nontrivial target recovery. |
 | P-06 | RAFG: M2-relative CE monitoring + triggered margin-based correction. | Threshold calibration, monitoring cost, false positives and baseline comparisons. |
 | P-07 | RASP: forget-vs-retain gradient module ranking + M2-anchored weighted LoRA drift penalty. | Score validity, parameterization, retained learning and baseline comparisons. |

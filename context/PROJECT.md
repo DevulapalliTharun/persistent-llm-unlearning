@@ -80,6 +80,8 @@ Start with **fictional author–book–prize–year relationships** generated us
 
 Split **entities first**, then generate templates so an entity cannot leak across forget/retain partitions. Ensure multi-hop question wording does not reveal its answer; ensure relationships used for joining entities are unambiguous. Use separate templates for training, module scoring/monitoring, development and final testing.
 
+The implementation-level schema, entity-first hash split, prompt-use matrix, leakage checks, manifest and acceptance gate are defined in `docs/data/DATASET_SPEC.md`. In that specification, `T` is a held-out prompt view rather than a fourth trainable entity partition.
+
 Example: `The Glass Observatory` → author `Mira Venn`; prize `Silver Comet Prize`; ask directly for author or indirectly through the prize/book chain. All names are fictional.
 
 ## 5. Baseline unlearning — reused method, not our novelty

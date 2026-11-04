@@ -40,6 +40,8 @@ persistent-llm-unlearning/
 │   ├── STATUS.md       # Current stage, open gates and next steps
 │   └── WORK_LOG.md     # Dated planning/experiment evidence
 ├── docs/
+│   ├── data/
+│   │   └── DATASET_SPEC.md
 │   └── proposals/
 │       ├── RAFG.pdf
 │       └── RASP_Project_Guide.pdf
@@ -159,11 +161,15 @@ At minimum, M1 must learn the facts, M2 must suppress designated targets without
 
 The main comparison is **forgetting stability versus useful new-task learning versus cost**, not suppression alone. All conclusions must be supported by logged tests. Observed suppression does not certify deletion from weights.
 
+## Dataset design
+
+The synthetic relational dataset is specified in [`docs/data/DATASET_SPEC.md`](docs/data/DATASET_SPEC.md). The design freezes the knowledge-unit graph, entity-first `F`/`R`/`N` split procedure, held-out `T` evaluation boundary, prompt-use partitions, leakage checks, manifests and pre-training acceptance gate. It is currently a specification only; no synthetic dataset has been generated or validated.
+
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Create/verify the environment and smoke-test model loading on the chosen GPU.
-3. Write a reproducible synthetic data generator and evaluation splits.
+3. Review the dataset specification, resolve its explicitly pending pilot choices, then write a reproducible synthetic data generator and validators.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

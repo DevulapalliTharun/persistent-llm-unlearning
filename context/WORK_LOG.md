@@ -115,6 +115,26 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-04 — Synthetic dataset schema and split design
+
+**Goal:** Define a reproducible, leakage-resistant relational dataset and evaluation boundary before implementing generation or beginning M1 training.
+
+**Environment / model:** Documentation-only local work; no model, dataset generator or compute runtime used.
+
+**Input / configuration:** Proposal-derived pilot of 120 M1 knowledge units with 30 forget and 90 retain units; pilot seed 42; two planned post-M2 conditions (unrelated reasoning and structurally similar new relations).
+
+**Work completed:** Added `docs/data/DATASET_SPEC.md` defining the author → book → prize → award-year graph, canonical record/prompt schemas, stable SHA-256 entity splitting, F/R/N roles, held-out T boundary, direct/2-hop/3-hop tasks, prompt-use partitions for M1/M2/RAFG/RASP, leakage and uniqueness checks, recovery eligibility, manifests, planned file layout and a pre-training acceptance gate.
+
+**Evidence:** Documentation links and context were updated. `T` is explicitly treated as a held-out prompt view rather than a trainable entity partition. No synthetic records or experimental metrics were created.
+
+**Observations / failures:** The design leaves final `N` budgets, per-partition template counts, name-generation constraints, metric thresholds and final seed list pending. The provisional `N_rel` default is 60 units and must be reviewed before implementation.
+
+**Decision and next step:** Review and resolve the pending pilot choices, record them in `DECISIONS.md`, then implement the generator and validators on CPU. Full generation and M1 training remain unauthorized until the dataset acceptance gate passes.
+
+**Cost / time (if measured):** No compute used.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description
