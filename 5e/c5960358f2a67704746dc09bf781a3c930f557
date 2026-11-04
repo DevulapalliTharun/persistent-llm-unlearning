@@ -1,0 +1,50 @@
+tests/test_training_data.py
+  s_035f403bffd7e9::t_d525c2ce9bfe04 1-86
+experiments/notebooks/03_m1_tiny_learning.ipynb
+  s_035f403bffd7e9::t_3594e1f0bcf0f7 1-160
+src/training/tiny_m1.py
+  s_035f403bffd7e9::t_3cc3c08d0e7015 1-163,165-250,252-268
+  s_035f403bffd7e9::t_d525c2ce9bfe04 164,251
+data/README.md
+  s_035f403bffd7e9::t_c56e22de0eb1e6 11-12
+src/training/data.py
+  s_035f403bffd7e9::t_2100c91e4f78aa 1-106
+context/STATUS.md
+  s_035f403bffd7e9::t_e7380c196ad5a5 5,36-38,50,59-61
+context/DECISIONS.md
+  s_035f403bffd7e9::t_c56e22de0eb1e6 65
+  s_035f403bffd7e9::t_e7380c196ad5a5 67-70
+  s_035f403bffd7e9::t_943c5f1f02626e 66
+requirements/m1-tiny.txt
+  s_035f403bffd7e9::t_2100c91e4f78aa 1-3
+docs/data/TINY_M1_PILOT.md
+  s_035f403bffd7e9::t_e7380c196ad5a5 1-88
+experiments/runs/m1_tiny_preflight_20261105/summary.json
+  s_035f403bffd7e9::t_e7380c196ad5a5 1-22
+README.md
+  s_035f403bffd7e9::t_e7380c196ad5a5 5,196-197
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_e7380c196ad5a5 324-339
+docs/data/DATASET_SPEC.md
+  s_035f403bffd7e9::t_c56e22de0eb1e6 4-5
+configs/training/m1_tiny.json
+  s_035f403bffd7e9::t_2100c91e4f78aa 1-20
+src/training/__init__.py
+  s_035f403bffd7e9::t_2100c91e4f78aa 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5ec5960358f2a67704746dc09bf781a3c930f557",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
