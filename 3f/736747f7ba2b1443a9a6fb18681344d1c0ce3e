@@ -1,0 +1,54 @@
+data/README.md
+  s_035f403bffd7e9::t_e4e0a1bc9a122d 7
+experiments/runs/m0_answer_only_audit_20261105/README.md
+  s_035f403bffd7e9::t_9f363c73e29118 1,3,5,17,19,21-24,27,29,35
+  s_035f403bffd7e9::t_99002d4f9e4722 2,4,6-16,18,20,25-26,28,30-34
+README.md
+  s_035f403bffd7e9::t_9f363c73e29118 5,196
+experiments/runs/m0_answer_only_audit_20261105/artifact_verification.json
+  s_035f403bffd7e9::t_76541d38571998 1-563
+docs/data/M0_KNOWLEDGE_AUDIT.md
+  s_035f403bffd7e9::t_e4e0a1bc9a122d 3
+docs/data/EVALUATION_PROTOCOL.md
+  s_035f403bffd7e9::t_9f363c73e29118 5
+context/STATUS.md
+  s_035f403bffd7e9::t_99002d4f9e4722 34
+  s_035f403bffd7e9::t_9f363c73e29118 5,35,47,57-58
+context/DECISIONS.md
+  s_035f403bffd7e9::t_e4e0a1bc9a122d 61
+  s_035f403bffd7e9::t_9f363c73e29118 63-64
+  s_035f403bffd7e9::t_5c637b4665181c 57
+  s_035f403bffd7e9::t_99002d4f9e4722 59-60,62
+  s_035f403bffd7e9::t_62934892f29ca8 58
+experiments/runs/m0_answer_only_audit_20261105/reported_summary.json
+  s_035f403bffd7e9::t_c93612b29f5435 1-26
+context/WORK_LOG.md
+  s_035f403bffd7e9::t_99002d4f9e4722 294-307
+  s_035f403bffd7e9::t_9f363c73e29118 308-323
+experiments/runs/m0_answer_only_audit_20261105/environment.freeze.txt
+  s_035f403bffd7e9::t_7a38d22398e751 1-951
+experiments/runs/m0_answer_only_audit_20261105/matches_for_review.json
+  s_035f403bffd7e9::t_90e6a1c3eb2876 1-3
+experiments/runs/m0_answer_only_audit_20261105/plan.json
+  s_035f403bffd7e9::t_09f17a26ecc03d 1-36
+experiments/runs/m0_answer_only_audit_20261105/predictions.jsonl
+  s_035f403bffd7e9::t_317aa96e193293 1-1260
+experiments/runs/m0_answer_only_audit_20261105/summary.json
+  s_035f403bffd7e9::t_8560fd8bdaddbb 1-306
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3f736747f7ba2b1443a9a6fb18681344d1c0ce3e",
+  "prompts": {},
+  "sessions": {
+    "s_035f403bffd7e9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a4fe-4213-73f0-835b-9788e2f46d0b",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Devulapalli Tharun <dtharun@dtharun22M69.omnissa.com>"
+    }
+  }
+}
