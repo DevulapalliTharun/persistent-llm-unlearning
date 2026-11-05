@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** Original tiny M1 and thinking-mode diagnostics are verified; the original pilot remains failed. A fresh-base mixed-mode tiny retry is implemented and locally tokenizer-prepared: 168 answer-only/constructed fact-chain training rows with original optimizer/LoRA settings. All 42 local tests pass; Kaggle retry training is pending. Canonical M1/M2 remain future stages.
+**Current state:** Mixed-mode training and wording diagnostics are verified; original/mixed pilots remain failed. A fresh-base tiny training-paraphrase retry is prepared: 504 two-mode rows with new training-only variants, same model/optimizer/gates and unchanged development/final prompts. All 47 local tests and pinned-tokenizer preparation pass; augmented GPU training is pending. Canonical M1/M2 remain future stages.
 
 ## The two candidate approaches
 
@@ -194,7 +194,7 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
-3. Review the [mixed-mode tiny retry protocol](docs/data/TINY_M1_MIXED_PILOT.md). After authorized publication of its new files/reference evidence, run [`06_m1_tiny_mixed_learning.ipynb`](experiments/notebooks/06_m1_tiny_mixed_learning.ipynb) on the existing Kaggle GPU runtime. It trains a fresh adapter on answer-only plus constructed fact-chain targets and checks both fact modes/thinking utility/reload. Local preparation passes; actual learning remains untested. Preserve adapter/evidence and verify all gates before scaling.
+3. Review the [training-paraphrase retry protocol](docs/data/TINY_M1_PARAPHRASE_PILOT.md). After authorized publication of the prepared source/config/template bank, run [`08_m1_tiny_paraphrase_learning.ipynb`](experiments/notebooks/08_m1_tiny_paraphrase_learning.ipynb) on Kaggle. It trains a fresh adapter on 504 rows and checks unchanged development/utility gates plus original-training recall/reload. Preserve private adapter/hash receipt and evidence ZIP; no augmented learning result is claimed yet.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

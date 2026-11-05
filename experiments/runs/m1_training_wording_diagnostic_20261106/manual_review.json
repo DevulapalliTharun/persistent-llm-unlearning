@@ -1,0 +1,151 @@
+{
+  "date_ist": "2026-11-06",
+  "scope": "Four training-question failures inspected in each mode; all discordant pair identities/questions inspected. Existing development-failure review remains preserved in the mixed-run folder.",
+  "counts": {
+    "training_answer_only": 80,
+    "development_answer_only": 78,
+    "training_thinking": 80,
+    "development_thinking": 63,
+    "questions_per_view": 84,
+    "utility_thinking": 10,
+    "utility_questions": 10
+  },
+  "paired_counts": {
+    "answer_only": {
+      "correct_both": 77,
+      "development_only_correct": 1,
+      "training_only_correct": 3,
+      "wrong_both": 3
+    },
+    "thinking": {
+      "correct_both": 63,
+      "development_only_correct": 0,
+      "training_only_correct": 17,
+      "wrong_both": 4
+    }
+  },
+  "thinking_training_only_correct_tasks": {
+    "book_to_author": 2,
+    "prize_to_year": 7,
+    "author_to_year": 4,
+    "prize_to_author": 3,
+    "book_to_prize": 1
+  },
+  "training_failures_answer_only": [
+    {
+      "example_id": "ex_m1_train_ku_000003_author_to_year_01",
+      "record_id": "ku_000003",
+      "task_type": "author_to_year",
+      "entity_partition": "R",
+      "question": "In what year was the prize won by the book written by Galen Elden awarded?",
+      "answer": "2006",
+      "raw_response": "Answer: 2010",
+      "visible_reasoning": null,
+      "final_answer_text": null,
+      "answer_match": false,
+      "hit_token_limit": false
+    },
+    {
+      "example_id": "ex_m1_train_ku_000003_prize_to_year_01",
+      "record_id": "ku_000003",
+      "task_type": "prize_to_year",
+      "entity_partition": "R",
+      "question": "In which year was Lunar Pine Prize awarded?",
+      "answer": "2006",
+      "raw_response": "Answer: 1996",
+      "visible_reasoning": null,
+      "final_answer_text": null,
+      "answer_match": false,
+      "hit_token_limit": false
+    },
+    {
+      "example_id": "ex_m1_train_ku_000006_prize_to_author_01",
+      "record_id": "ku_000006",
+      "task_type": "prize_to_author",
+      "entity_partition": "R",
+      "question": "Who wrote the book that received Umber Wing Prize?",
+      "answer": "Quin Weyr",
+      "raw_response": "Answer: Cira Rusk",
+      "visible_reasoning": null,
+      "final_answer_text": null,
+      "answer_match": false,
+      "hit_token_limit": false
+    },
+    {
+      "example_id": "ex_m1_train_ku_000009_prize_to_year_01",
+      "record_id": "ku_000009",
+      "task_type": "prize_to_year",
+      "entity_partition": "F",
+      "question": "In which year was West Yew Prize awarded?",
+      "answer": "1965",
+      "raw_response": "Answer: 1969",
+      "visible_reasoning": null,
+      "final_answer_text": null,
+      "answer_match": false,
+      "hit_token_limit": false
+    }
+  ],
+  "training_failures_thinking": [
+    {
+      "example_id": "ex_m1_train_ku_000001_author_to_year_01",
+      "record_id": "ku_000001",
+      "task_type": "author_to_year",
+      "entity_partition": "F",
+      "question": "In what year was the prize won by the book written by Neris Voss awarded?",
+      "answer": "1996",
+      "raw_response": "<think>\nNeris Voss wrote The Zephyr Nexus. The Zephyr Nexus received Young Meteor Prize. Young Meteor Prize was awarded in 1997.\n</think>\n\nAnswer: 1997",
+      "visible_reasoning": "Neris Voss wrote The Zephyr Nexus. The Zephyr Nexus received Young Meteor Prize. Young Meteor Prize was awarded in 1997.",
+      "final_answer_text": "Answer: 1997",
+      "answer_match": false,
+      "hit_token_limit": false
+    },
+    {
+      "example_id": "ex_m1_train_ku_000003_prize_to_year_01",
+      "record_id": "ku_000003",
+      "task_type": "prize_to_year",
+      "entity_partition": "R",
+      "question": "In which year was Lunar Pine Prize awarded?",
+      "answer": "2006",
+      "raw_response": "<think>\nLunar Pine Prize was awarded in 1996.\n</think>\n\nAnswer: 1996",
+      "visible_reasoning": "Lunar Pine Prize was awarded in 1996.",
+      "final_answer_text": "Answer: 1996",
+      "answer_match": false,
+      "hit_token_limit": false
+    },
+    {
+      "example_id": "ex_m1_train_ku_000006_prize_to_author_01",
+      "record_id": "ku_000006",
+      "task_type": "prize_to_author",
+      "entity_partition": "R",
+      "question": "Who wrote the book that received Umber Wing Prize?",
+      "answer": "Quin Weyr",
+      "raw_response": "<think>\nThe Midnight Harbor received Umber Wing Prize. Pella Farrow wrote The Midnight Harbor.\n</think>\n\nAnswer: Pella Farrow",
+      "visible_reasoning": "The Midnight Harbor received Umber Wing Prize. Pella Farrow wrote The Midnight Harbor.",
+      "final_answer_text": "Answer: Pella Farrow",
+      "answer_match": false,
+      "hit_token_limit": false
+    },
+    {
+      "example_id": "ex_m1_train_ku_000011_author_to_year_01",
+      "record_id": "ku_000011",
+      "task_type": "author_to_year",
+      "entity_partition": "R",
+      "question": "In what year was the prize won by the book written by Pella Farrow awarded?",
+      "answer": "1952",
+      "raw_response": "<think>\nPella Farrow wrote The Midnight Harbor. The Midnight Harbor received Frost Juniper Prize. Frost Juniper Prize was awarded in 1951.\n</think>\n\nAnswer: 1951",
+      "visible_reasoning": "Pella Farrow wrote The Midnight Harbor. The Midnight Harbor received Frost Juniper Prize. Frost Juniper Prize was awarded in 1951.",
+      "final_answer_text": "Answer: 1951",
+      "answer_match": false,
+      "hit_token_limit": false
+    }
+  ],
+  "conclusions": [
+    "All original development/utility raw outputs reproduce exactly; adapter/weights were not updated.",
+    "In thinking mode seventeen pairs are correct with training wording and wrong with development wording; four fail both. This supports wording-sensitive generation under this setup, but not a universal causal claim or perfect memorization.",
+    "Non-thinking has a smaller observed net gap: three training-only correct, one development-only correct, three wrong both.",
+    "Four errors remain on exact training questions in each mode, involving years/reverse lookup. Low mini-batch response CE does not establish complete training-set generation accuracy.",
+    "Training-question scores are diagnosis, not held-out evaluation or a replacement for the failed mixed-mode gates.",
+    "Only one sampled seed is evaluated; no best-seed selection or new learning result."
+  ],
+  "next_proposed_training_change": "Prepare a separately versioned fresh-base mixed-mode tiny SFT retry with additional newly authored training-only paraphrases and declared exposure budget, retaining unchanged development/final prompts and original thresholds. Address residual training-question errors as well. Preserve the original candidate/previous adapters; do not copy development questions into training. This is proposed, not implemented or run in this review."
+}

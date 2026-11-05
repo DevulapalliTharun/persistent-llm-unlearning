@@ -1,0 +1,61 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 534,
+  "saved_token_records_checked": 282,
+  "optimizer_records_checked": 120,
+  "logged_examples_by_mode": {
+    "answer_only": 962,
+    "thinking": 958
+  },
+  "base_utility_reproduced": true,
+  "post_reload_records_equal_except_batch_duration": true,
+  "pilot_passed": false,
+  "post_answer_matches": {
+    "utility_thinking": 10,
+    "dev_answer_only": 78,
+    "dev_thinking": 63
+  },
+  "limits": [
+    "No model inference/tokenizer replay/adapter binary download locally.",
+    "Detailed token-exposure totals are runtime reports, not independent data-loader replay; example counts reproduce from step logs.",
+    "Adapter-change and private binary round-trip claims rely on runtime summary/receipt.",
+    "Single-seed development learning does not establish independent composition or general utility preservation."
+  ],
+  "date_ist": "2026-11-05",
+  "archive_filename": "m1-tiny-mixed-v1-_avmkde0-evidence.zip",
+  "archive_sha256": "4eabb6f0b6374cafddbf29ac37cb3b0fa53f250d9af0db8e71216de8d94b1632",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "artifact_manifest.json": "fc21f823c2eebc7d7e2b57238f22046554d6b0a32b32e12e317553b3d00e3067",
+    "base_dev_answer_only.jsonl": "b7e77ecde978fa1b79e9f62ea631e979bea72e339f1c0e33a1b42b564b345363",
+    "base_dev_thinking.jsonl": "b9d2755260683f9bad75e98ec3bb40b444e24076ada04980fef16931389a2671",
+    "base_utility_gate.json": "9b44725909b807f5e10299734310e4474c0a9023db53760a4f52d27337afb6b9",
+    "base_utility_thinking.jsonl": "9ac87b8cf841833ad95161761ffdcd3f92df57dbf453a83347cfe0ebf1402133",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "generation_metadata.json": "927f1f514070d1a3cea4138a5552b3e776f4fafa79b8f435e0aa3499c0161a2b",
+    "masking_report.json": "56aa9c5b2296e44cf81d98c55c2c28919d6d73c11ee01f5c63371c71dd4d7e2c",
+    "persistence.json": "8565b833f380eadb237b88ef177717d1f9da70fde1d00efd31fbef9fe8caa0c3",
+    "plan.json": "003b3294f21aeb7ce29450347cfb65e20a57d084f8994b149567787e5aa22ff6",
+    "post_dev_answer_only.jsonl": "20c2eeb72645f0823237d6488391c04be18ef40eb565b54e4202786625c4e51d",
+    "post_dev_thinking.jsonl": "adb2fb57db7e5e97d7d2e5396be7a5bfbd74d8b6869297c58bf1f7b800b232b6",
+    "post_utility_thinking.jsonl": "880e0960759bd770ad8cc31bd79f16b5f6fbc6c45aca9b2896baa15f30e60e6d",
+    "reloaded_dev_answer_only.jsonl": "20c2eeb72645f0823237d6488391c04be18ef40eb565b54e4202786625c4e51d",
+    "reloaded_dev_thinking.jsonl": "aec2068152a1a2b48cf1a44ff1ac45cc3961ec5cef9cc49f0630e3b1e0ac0cf2",
+    "reloaded_utility_thinking.jsonl": "5b63cc7500e8386782301ce52141f050c4e4a55674b4b480b3fb0a91353f913e",
+    "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+    "selected_train.jsonl": "d7a84f32178fc3299a5ce1c4fc7493e6640a28de0866a4ad44c11f7e855447bc",
+    "summary.json": "953a51b123dd6b7c78055fcf98d71e70e3ee7abc2fbb021ed501bc5eed0f7ad0",
+    "training.jsonl": "cd633aed8c60e5ce9e14e3e1d29e757061d8089d51ed615c767c5b78e5b036e8"
+  },
+  "checks_passed": [
+    "Exact twenty archive entries, CRC and original file bytes match.",
+    "All nine prediction hashes and config/source hashes match recorded Git commit 7d4b28f.",
+    "All 168 constructed training rows and 84 development inputs reproduce from unchanged candidate.",
+    "Masking report matches actual pinned-tokenizer preflight.",
+    "All 534 scores, 282 saved token records, sampled prompt/seed conditions and nine stage summaries reproduce.",
+    "Base utility strings reproduce the prior thinking reference exactly.",
+    "All 120 applied update records and per-mode CE/count arithmetic agree; 1920 logged examples.",
+    "Post/reloaded records are identical except batch_seconds, including sampled output token IDs.",
+    "Complete candidate verdict, adapter manifest/receipt and environment versions agree."
+  ]
+}

@@ -483,6 +483,72 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Verify completed mixed-mode tiny M1 retry
+
+**Work completed:** Confirmed all eight notebook 06 code cells completed from `7d4b28f1d18d543ea0daacf8f09cb2df9dbf0eed`. Located `m1-tiny-mixed-v1-_avmkde0-evidence.zip`, verified CRC/exact twenty entries and preserved original bytes without overwrite under `experiments/runs/m1_tiny_mixed_attempt_20261105/`. Added independent verifier, archive verification, detailed failure/trace review and run README. Updated README/mixed protocol/status/decisions/log; executed notebook outputs preserved.
+
+**Evidence/checks:** Archive SHA-256 `4eabb6f0b6374cafddbf29ac37cb3b0fa53f250d9af0db8e71216de8d94b1632`. All source/config/reference hashes, 168 constructed training rows/84 dev inputs, masking preflight, 534 scores/nine group reports, 282 token records and full candidate verdict reproduce. Baseline utility raw strings reproduce the old thinking reference. Post/reload rows match except batch_seconds, including token IDs. All 120 updates and per-mode CE/count arithmetic verify; logged examples 962 answer-only/958 thinking (1920 total). Detailed exposure token totals are runtime reports, not independent data-loader replay. Saved private receipt verifies adapter hashes at revision `25764276e3e83e6c20519429854e15216f57e676`, path `diagnostics/m1-tiny-mixed-v1/m1-tiny-mixed-v1-_avmkde0`. No local binary download/inference replay.
+
+**Results:** Base facts 0/84 in each mode; post answer-only 78/84, thinking 63/84; thinking utility 10/10 before/after. Answer-only gate set passes. Thinking F direct 7/8 and R composite 16/24 fail; thinking R direct 15/16 and F composite 10/12 pass. One F prize-to-year loops to cap without closing/final answer; corresponding cap/boundary/format gates fail. Overall mixed pilot remains failed, not canonical M1/M2. Reported training 229.4284 seconds, full run 607.7479 seconds, Tesla T4, peak 3.3516 GiB; no speed-comparison claim.
+
+**Manual diagnosis:** Inspected all six answer-only failures, twenty completed failed thinking traces/finals, capped tail and all post arithmetic finals. Thinking failures: six author-to-year, eight prize-to-year, four prize-to-author, two book-to-author, one book-to-prize. One correct year includes extra prize text; other examples include wrong years/authors/type and invalid prize-to-prize chains. Response CE 0.0023 at last update does not prove generation generalization. The descriptive 21/84 old-adapter versus 63/84 mixed-adapter difference is not an isolated causal ablation.
+
+**Next step/limits:** Define inference-only training-wording versus development-wording comparison on this same saved adapter with prespecified modes/seeds before changing SFT. No such diagnostic is implemented/run yet. No gate lowering, selective record exclusion, additional updates, new training setting, commit/push or unlearning performed during review. Model-free evidence verifier and Git whitespace checks pass; no production source changed.
+
+---
+
+## 2026-11-05 — Prepare same-adapter training/development wording comparison
+
+**Goal:** Distinguish training-question generation from held-out-wording failures before another SFT change.
+
+**Work completed:** Added clean `07_m1_training_wording_diagnostic.ipynb`, review config `configs/evaluation/training_wording_diagnostic_v1.json` and `docs/data/TRAINING_WORDING_DIAGNOSTIC.md`. Updated root/run README, status, decisions and this log. Reused existing dataset selectors, canonical target validation, greedy/sampled evaluators, scorer and metadata helpers without production source changes.
+
+**Design:** Same private mixed adapter/revision, all 84 train/development record-task pairs, same gold answers and aligned order; two wordings in each of two declared modes plus ten thinking utility controls (346 predictions, zero training). Hash-verify original reports/adapter and reproduce all original development/utility raw responses before training-wording inference. Save paired categories/all final responses, raw traces/tokens/flags, source/config/version/adapter provenance and evidence ZIP. Release model GPU memory after evaluation. One sampled seed; no final tests, new gates or pilot promotion.
+
+**Execution choice:** Local VS Code notebook embeds the versioned config and orchestrates already-published helpers pinned at `7d4b28f`; immutable private HF supplies the previously verified mixed-run evidence. New notebook/config publication is therefore not a prerequisite for remote execution. Only the project's src import cache is reset when selecting the pinned temporary clone, avoiding stale modules from earlier notebooks. No Git commit/push or new model upload is performed automatically.
+
+**Local checks:** All seven code cells compile. Executed the model-free plan cell locally in a temporary directory: 84 exact pairs, distinct questions/exclusive templates, matching embedded/config-file values, six preserved reference hashes and helper hashes agreeing with published commit. All 346 predictions remain planned, not generated. No new test suite or GPU/model run was executed; existing production implementations are unchanged. Git whitespace and common-credential/large-file checks pass.
+
+**Next step:** User can run notebook 07 now on the existing Kaggle GPU kernel/HF_TOKEN, without waiting for another source push, and download the evidence ZIP. If training wording is strong while development is weak, investigate wording/generalization; if both fail, investigate generation/learning reliability. These are hypotheses, not observed outcomes. Original mixed-mode pilot remains failed; canonical M1/M2 pending.
+
+---
+
+## 2026-11-06 — Verify completed training/development wording diagnostic
+
+**Work completed:** Confirmed all seven notebook 07 code cells completed using pinned published `7d4b28f` helpers and saved mixed adapter `25764276e3e83e6c20519429854e15216f57e676`. Located `m1-wording-probe-hlq0680r-evidence.zip`, checked CRC/exact fourteen entries, preserved original bytes without overwrite in `experiments/runs/m1_training_wording_diagnostic_20261106/`, and added independent verifier, archive verification, failure/paired interpretation and run README. Updated root/run README, wording protocol, status, decisions/log; executed notebook preserved.
+
+**Evidence/checks:** Archive SHA-256 `9048b324c3a18fcf8167304e32bb3983b519943bcb9a70b43452b394ff11225c`. All 346 input/score records, 178 saved token records, five summary groups, three exact original raw controls and all 168 paired response/category records reproduce. Config/selector/published helper hashes, private reference/adapter-manifest receipt, exact 84 pairs/exclusive templates and environment versions agree. No local binary download/model/tokenizer replay. Reported evaluation-section time 139.9381 seconds, Tesla T4; UTC November 5 corresponds to November 6 IST. No speed claim.
+
+**Observed results:** Exact training wording 80/84 for answer-only and thinking; development remains 78/84 and 63/84; utility 10/10. Thinking pairs: 63 correct both, seventeen training-only, zero development-only, four wrong both. Answer-only pairs: 77/3/1/3. Training groups have no caps/format/boundary failures. Development thinking reproduces its one existing capped/unclosed response. All four training failures in each mode and all discordant pair identities/questions were inspected; residual errors concern years/reverse lookup, not just formatting.
+
+**Interpretation/next step:** Supports wording-sensitive generation, particularly thinking, without establishing perfect memorization or sole causal mechanism. Keep mixed-mode pilot failed; canonical M1/M2 pending. Next proposed concrete correction is a separately versioned fresh-base tiny mixed SFT retry with new training-only paraphrases and a declared exposure budget, preserving candidate, held-out prompts, old adapters and thresholds. No augmentation implementation, new hyperparameters, training, commit or push performed in review. Evidence verifier and Git whitespace checks pass; production source unchanged.
+
+---
+
+## 2026-11-06 — Prepare fresh-base tiny training-paraphrase retry
+
+**Goal:** Make the concrete training change supported by notebook 07's observed wording gap, while preserving all evaluation data/gates and prior baselines.
+
+**Work completed:** Added fourteen newly authored train-only templates, `src/training/paraphrase_data.py`, fixed `configs/training/m1_tiny_paraphrase_v1.json`, clean `08_m1_tiny_paraphrase_learning.ipynb`, protocol, five tests and cached-tokenizer preflight evidence. Extended the existing mixed runner only through an explicit new run type/data overlay and optional post/reload original-training recall probes; original run type/targets/534-prediction plan remain unchanged. Updated README/status/decisions/log. No canonical data/generator/evaluation/scorer/old checkpoint changes.
+
+**Design:** Three wordings per original question (original +two new), both original response modes, same twelve records/seven tasks/target chains =252 questions/504 rows. New bank rejects non-source placeholders, original/reserved template reuse/near-duplicates, answer leakage, duplicate questions/IDs and development equality. Maximum observed reserved-template similarity 0.5679012346; original bank consulted for exclusion only. Same pinned fresh base/new rank8 LoRA, seed42/batch4/accum4/LR0.0003/120 attempts and all gates. Base178/post346/reload346 =870 planned predictions; training recall probes are diagnostic only. No automatic budget extensions, evaluated dev-question copying, final-test tuning or whole-pilot promotion from a passing subset.
+
+**Local checks:** All 47 tests pass, including unchanged old plan/targets/dev and optimizer/gate constraints. Actual cached pinned tokenizer prepares all504 prefixes/masks with zero truncation: answer-only max106, prompt22503/response1803; thinking max138, prompt21495/response6894. Source/new notebook syntax and model-free plan pass. Existing mixed and wording evidence verifiers still pass (534/346 records). Preflight evidence is in `experiments/runs/m1_tiny_paraphrase_preflight_20261106/`. No model weights, PyTorch/GPU training/inference or remote upload performed locally.
+
+**Limits/next step:** Same attempts over more forms do not imply equal per-surface or token/compute exposure; prior 80/84 training recall is not perfect memorization. New adapter learning is untested. Publish prepared files and verified pending evidence with user authorization, run notebook08 on Kaggle/HF_TOKEN, preserve private adapter/round-trip receipt and ZIP, then independently verify all gates and recall outputs. Original/mixed pilots remain failed; canonical M1/M2 pending. No commit/push performed during implementation.
+
+---
+
+## 2026-11-06 — Authorize publication of training-paraphrase retry
+
+**Authorization/scope:** User explicitly approved committing/pushing notebook08, source/config/template bank/tests/protocol/preflight, verified pending mixed-run and wording-run evidence, notebook06/07 execution records and context updates to main. Preserve earlier adapters/data/gates; no model/optimizer binaries or credentials included.
+
+**Checks:** All 47 unit tests pass. Mixed-run and wording-run verifiers reproduce all 534/346 records and their stored controls/gates. Pending notebook code compiles; common-credential/large-file and Git whitespace checks pass. Augmented GPU training remains pending. Commit/push outcome is reported in the task response.
+
+**Next step:** Open notebook08 in the existing Kaggle GPU kernel/HF_TOKEN, confirm the new source commit and run sequentially. It trains a fresh adapter after baseline checks, then verifies private backup and exports small evidence. Preserve failed outcomes; no canonical M1/M2 claimed.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

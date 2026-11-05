@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "evidence_sha256": {
+      "post_dev_answer_only.jsonl": "20c2eeb72645f0823237d6488391c04be18ef40eb565b54e4202786625c4e51d",
+      "post_dev_thinking.jsonl": "adb2fb57db7e5e97d7d2e5396be7a5bfbd74d8b6869297c58bf1f7b800b232b6",
+      "post_utility_thinking.jsonl": "880e0960759bd770ad8cc31bd79f16b5f6fbc6c45aca9b2896baa15f30e60e6d",
+      "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+      "selected_train.jsonl": "d7a84f32178fc3299a5ce1c4fc7493e6640a28de0866a4ad44c11f7e855447bc",
+      "summary.json": "953a51b123dd6b7c78055fcf98d71e70e3ee7abc2fbb021ed501bc5eed0f7ad0"
+    },
+    "path": "diagnostics/m1-tiny-mixed-v1/m1-tiny-mixed-v1-_avmkde0",
+    "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+    "revision": "25764276e3e83e6c20519429854e15216f57e676"
+  },
+  "verified_sha256": {
+    "adapter/README.md": "4fb01070dbf1c311649b741432747c286d5438547f54ccdea88930e6d7b47faa",
+    "adapter/adapter_config.json": "9ec61ace0b0c892fc99e9f62be926740225a2070b7dfd218c47af2fa06ff6662",
+    "adapter/adapter_model.safetensors": "83aa38f77b9c084d1bd7daa65f6596d07d8c2051c880458de619c3fd8bbd20c9",
+    "post_dev_answer_only.jsonl": "20c2eeb72645f0823237d6488391c04be18ef40eb565b54e4202786625c4e51d",
+    "post_dev_thinking.jsonl": "adb2fb57db7e5e97d7d2e5396be7a5bfbd74d8b6869297c58bf1f7b800b232b6",
+    "post_utility_thinking.jsonl": "880e0960759bd770ad8cc31bd79f16b5f6fbc6c45aca9b2896baa15f30e60e6d",
+    "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+    "selected_train.jsonl": "d7a84f32178fc3299a5ce1c4fc7493e6640a28de0866a4ad44c11f7e855447bc",
+    "summary.json": "953a51b123dd6b7c78055fcf98d71e70e3ee7abc2fbb021ed501bc5eed0f7ad0"
+  }
+}

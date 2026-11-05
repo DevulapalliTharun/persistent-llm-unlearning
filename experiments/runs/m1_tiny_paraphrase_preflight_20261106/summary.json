@@ -1,0 +1,123 @@
+{
+  "date_ist": "2026-11-06",
+  "scope": "Cached pinned-tokenizer preparation only; no model weights, GPU, training or inference.",
+  "training_rows": 504,
+  "distinct_training_questions": 252,
+  "development_rows": 84,
+  "masking_report": {
+    "by_mode": {
+      "answer_only": {
+        "max_tokens": 106,
+        "prompt_tokens": 22503,
+        "rows": 252,
+        "supervised_response_tokens": 1803
+      },
+      "thinking": {
+        "max_tokens": 138,
+        "prompt_tokens": 21495,
+        "rows": 252,
+        "supervised_response_tokens": 6894
+      }
+    },
+    "prefixes_verified": true,
+    "rows": 504,
+    "supervision": "All assistant-response tokens and first EOS; thinking includes the constructed rationale.",
+    "truncated_examples": 0
+  },
+  "augmentation_audit": {
+    "development_rows": 84,
+    "new_templates": 14,
+    "note": "Existing template bank is consulted only for exclusion, not model input or final-score tuning.",
+    "original_bundle_unchanged": true,
+    "rows_by_mode": {
+      "answer_only": 252,
+      "thinking": 252
+    },
+    "rows_by_partition": {
+      "F": 168,
+      "R": 336
+    },
+    "rows_by_question_variant": {
+      "original": 168,
+      "paraphrase01": 168,
+      "paraphrase02": 168
+    },
+    "template_checks": [
+      {
+        "max_similarity_to_existing_templates": 0.5647058823529412,
+        "task_type": "author_to_book",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5423728813559322,
+        "task_type": "author_to_book",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5135135135135135,
+        "task_type": "book_to_author",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.42201834862385323,
+        "task_type": "book_to_author",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5679012345679012,
+        "task_type": "book_to_prize",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5354330708661418,
+        "task_type": "book_to_prize",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5454545454545454,
+        "task_type": "prize_to_year",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5434782608695652,
+        "task_type": "prize_to_year",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5269461077844312,
+        "task_type": "author_to_prize",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5384615384615384,
+        "task_type": "author_to_prize",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5,
+        "task_type": "prize_to_author",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5454545454545454,
+        "task_type": "prize_to_author",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.45,
+        "task_type": "author_to_year",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.48366013071895425,
+        "task_type": "author_to_year",
+        "variant": 2
+      }
+    ],
+    "training_rows": 504,
+    "unique_training_questions": 252
+  },
+  "unit_tests_passed": 47,
+  "training_executed": false,
+  "model_weights_loaded": false
+}

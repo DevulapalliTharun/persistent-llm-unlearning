@@ -18,7 +18,7 @@ from src.evaluation.mode_diagnostic import SAMPLING, metrics, sampled_evaluation
 from src.evaluation.utility_diagnostic import compare_reference
 from src.m0_knowledge_audit import sha256_file
 from src.m0_smoke_test import git_commit, installed_packages, package_version, write_json
-from src.training.data import pad_batch, read_rows, utility_examples
+from src.training.data import pad_batch, read_rows, select_pilot, utility_examples
 from src.training.mixed_data import encode_mixed, masking_report, mixed_examples
 from src.training.tiny_m1 import evaluate, pilot_verdict, write_rows
 
@@ -27,6 +27,9 @@ FACT_MODES = ('dev_answer_only', 'dev_thinking')
 
 
 def prepare_plan(config: dict[str, Any]):
+    if config['run_type'] == 'diagnostic_m1_tiny_paraphrase_v1':
+        from src.training.paraphrase_data import prepare_augmented_plan
+        return prepare_augmented_plan(config, prepare_plan)
     original = json.loads(Path('configs/training/m1_tiny.json').read_text())
     fixed = ['bundle', 'expected_checksum_index_sha256', 'record_ids', 'expected_entity_counts',
              'model_id', 'model_revision', 'seed', 'max_sequence_length', 'batch_size',
@@ -91,6 +94,13 @@ def evaluation_stage(model, tokenizer, dev, config, output_dir, stage, baseline_
     write_rows(output_dir / f'{stage}_dev_answer_only.jsonl', output['dev_answer_only'])
     output['dev_thinking'] = sampled_evaluation(model, tokenizer, dev, True, sampling,
                                                output_dir / f'{stage}_dev_thinking.jsonl')
+    if config['run_type'] == 'diagnostic_m1_tiny_paraphrase_v1' and stage != 'base':
+        # Diagnose original training-wording recall in the same run; never use it as held-out accuracy.
+        original_train, _ = select_pilot(config)
+        output['train_probe_answer_only'] = evaluate(model, tokenizer, original_train, config)
+        write_rows(output_dir / f'{stage}_train_probe_answer_only.jsonl', output['train_probe_answer_only'])
+        output['train_probe_thinking'] = sampled_evaluation(model, tokenizer, original_train, True, sampling,
+            output_dir / f'{stage}_train_probe_thinking.jsonl')
     return output
 
 
@@ -179,11 +189,15 @@ def main():
     sources = ['src/training/mixed_m1.py', 'src/training/mixed_data.py', 'src/training/tiny_m1.py',
                'src/training/data.py', 'src/evaluation/answers.py', 'src/evaluation/mode_diagnostic.py',
                'src/evaluation/utility_diagnostic.py', 'src/m0_knowledge_audit.py']
+    if config['run_type'] == 'diagnostic_m1_tiny_paraphrase_v1':
+        sources += ['src/training/paraphrase_data.py', config['paraphrase_bank']]
     plan.update(config_sha256=sha256_file(args.config), source_git_commit=git_commit(),
                 source_sha256={name: sha256_file(Path(name)) for name in sources})
     write_json(args.output_dir / 'plan.json', plan)
     write_rows(args.output_dir / 'selected_train.jsonl', train)
     write_rows(args.output_dir / 'selected_dev.jsonl', dev)
+    if 'augmentation' in plan:
+        write_json(args.output_dir / 'augmentation_audit.json', plan['augmentation'])
     if args.mode == 'plan':
         print(json.dumps(plan, indent=2))
         return 0

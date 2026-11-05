@@ -1,0 +1,24 @@
+{
+  "run_type": "training_wording_diagnostic_v1",
+  "helper_git_commit": "7d4b28f1d18d543ea0daacf8f09cb2df9dbf0eed",
+  "model_id": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "training_config": "configs/training/m1_tiny_mixed_v1.json",
+  "training_config_sha256": "48c6314c7067a7b483079df299c9dd7d6acce6e9cf43d86e6a71a7a2765c0f03",
+  "batch_size": 16,
+  "seed": 42,
+  "sampled_max_new_tokens": 1024,
+  "artifact": {
+    "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+    "revision": "25764276e3e83e6c20519429854e15216f57e676",
+    "path": "diagnostics/m1-tiny-mixed-v1/m1-tiny-mixed-v1-_avmkde0",
+    "evidence_sha256": {
+      "summary.json": "953a51b123dd6b7c78055fcf98d71e70e3ee7abc2fbb021ed501bc5eed0f7ad0",
+      "selected_train.jsonl": "d7a84f32178fc3299a5ce1c4fc7493e6640a28de0866a4ad44c11f7e855447bc",
+      "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+      "post_dev_answer_only.jsonl": "20c2eeb72645f0823237d6488391c04be18ef40eb565b54e4202786625c4e51d",
+      "post_dev_thinking.jsonl": "adb2fb57db7e5e97d7d2e5396be7a5bfbd74d8b6869297c58bf1f7b800b232b6",
+      "post_utility_thinking.jsonl": "880e0960759bd770ad8cc31bd79f16b5f6fbc6c45aca9b2896baa15f30e60e6d"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "development_answer_only": {
+    "different_example_ids": [],
+    "raw_predictions_identical": true
+  },
+  "development_thinking": {
+    "different_example_ids": [],
+    "raw_predictions_identical": true
+  },
+  "utility_thinking": {
+    "different_example_ids": [],
+    "raw_predictions_identical": true
+  }
+}

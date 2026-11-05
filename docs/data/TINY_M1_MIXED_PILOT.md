@@ -1,6 +1,6 @@
 # Tiny M1 mixed-mode retry v1
 
-Status: implemented and locally prepared; no GPU training or learning results yet. This is a separate diagnostic, not canonical M1. Preserve the original answer-only adapter, failed gates and all mode-diagnostic evidence.
+Status: notebook 06 training completed from `7d4b28f`; all twenty original reports and all 534 predictions independently verified. Answer-only gate set passes, thinking gate set fails, overall diagnostic remains failed. This is not canonical M1. Preserve all original baselines. See `experiments/runs/m1_tiny_mixed_attempt_20261105/`.
 
 ## Why this experiment
 
@@ -59,3 +59,11 @@ python3 -m src.training.mixed_m1 --config configs/training/m1_tiny_mixed_v1.json
 ```
 
 Tokenizer-only preparation uses `--mode prepare`; add `--local-files-only` for cached tokenizer preparation. `--mode train` runs CUDA training through notebook 06. Always use a new empty output directory. Independently verify saved metrics/private receipt after the run before choosing any next stage.
+
+## Verified result — 2026-11-05
+
+Base facts are 0/84 in both modes and thinking utility exactly reproduces its prior 10/10 reference. After all 120 applied updates, answer-only facts are 78/84, thinking facts 63/84 and utility remains 10/10; all post/reloaded outputs/token IDs reproduce. Answer-only F direct 8/8, R direct 16/16, F composite 10/12, R composite 23/24 pass the declared gate set. Thinking F direct 7/8 fails 90%, R composite 16/24 fails 75%, while R direct 15/16 and F composite 10/12 pass. One F prize-to-year response loops to 1,024 tokens without a closed thinking block/final answer, failing cap/boundary/format checks. Keep overall passed=false.
+
+Failures concentrate in year and reverse-lookup questions. All six answer-only failures and all twenty completed thinking failure traces/finals were inspected, along with the capped tail. One thinking response has the correct year plus extra text; other examples contain wrong years/authors, wrong answer type or invented prize-to-prize relations. The original 21/84 thinking result versus this 63/84 is descriptive across changed training representations/exposures, not an isolated causal ablation. Very low response CE is not proof of generation quality under held-out wording.
+
+Private adapter revision `25764276e3e83e6c20519429854e15216f57e676`, path `diagnostics/m1-tiny-mixed-v1/m1-tiny-mixed-v1-_avmkde0`, has a saved successful round-trip receipt. No new model, threshold, additional updates or unlearning selected in review. Before another training change, define a fixed-mode/seed training-wording versus development-wording generation diagnostic on this same adapter; that comparison is proposed, not yet implemented/run.

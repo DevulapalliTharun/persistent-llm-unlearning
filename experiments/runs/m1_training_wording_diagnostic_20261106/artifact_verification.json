@@ -1,0 +1,62 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 346,
+  "saved_token_records_checked": 178,
+  "original_controls_reproduced": true,
+  "answer_matches": {
+    "development_answer_only": 78,
+    "development_thinking": 63,
+    "utility_thinking": 10,
+    "training_answer_only": 80,
+    "training_thinking": 80
+  },
+  "paired_counts": {
+    "answer_only": {
+      "correct_both": 77,
+      "training_only_correct": 3,
+      "development_only_correct": 1,
+      "wrong_both": 3
+    },
+    "thinking": {
+      "correct_both": 63,
+      "training_only_correct": 17,
+      "development_only_correct": 0,
+      "wrong_both": 4
+    }
+  },
+  "limits": [
+    "No local model inference/tokenizer replay or private binary download.",
+    "One sampled seed; observed wording sensitivity is not an isolated universal causal claim.",
+    "Training-question accuracy is diagnostic, not held-out performance or a new pilot pass."
+  ],
+  "date_ist": "2026-11-06",
+  "archive_filename": "m1-wording-probe-hlq0680r-evidence.zip",
+  "archive_sha256": "9048b324c3a18fcf8167304e32bb3983b519943bcb9a70b43452b394ff11225c",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "development_answer_only.jsonl": "20c2eeb72645f0823237d6488391c04be18ef40eb565b54e4202786625c4e51d",
+    "development_thinking.jsonl": "a969614fa8ff36bb0bdf401f57695896d387907c41a137d95d2f5d8803c1b987",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "generation_metadata.json": "4d5103ff770cf5350f074ff7847ea0c89709819f4eb6e77ca040721466ab6897",
+    "paired_wording_review.json": "81614b7c79c3d58709e7ff024df782a9b281aef23549d85f76e0506c7e122167",
+    "plan.json": "8f3ea8b9acd62d87d311f490defcb7c9d866a8f00e06b21935af120d93b69ec8",
+    "reference_reproduction.json": "be96f487a798a91ddb80d66ca4a44ba96c9a70d2f5169f558e7324cb8ce87065",
+    "selected_development_questions.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+    "selected_training_questions.jsonl": "cd880ece17f3168308e5f8ac8c439204cb92a521a3cbd5641675fb49a568f614",
+    "source_artifact_verification.json": "a5dafa29edb1c36ff4318c08926f7832d49a25d5e56091b220fe3f8476b07ec6",
+    "summary.json": "ae104089e647b93c92edc37e8003063f4c5a84e3fcdad6b74dcb8f9d52c90cd2",
+    "training_answer_only.jsonl": "cba050f48c002987e7821eea202a45e38d1fbe4f9c00282e81e6af953d99175f",
+    "training_thinking.jsonl": "01f70af460d67bed16cdab6ffa1caa7b37f928f61d02b656e6a2517017ff42a7",
+    "utility_thinking.jsonl": "8ab9ea0baaff0dbdb53daa4b8fc51a1387219b93b87ab1ba599dd9e12090c9bd"
+  },
+  "checks_passed": [
+    "Exact fourteen ZIP entries/CRC and preserved bytes match.",
+    "Embedded config snapshot/hash, published helper hashes and original training config agree.",
+    "All 84 record/task/answer pairs and exclusive template/wording constraints verify.",
+    "Private original report hashes and adapter manifest receipt agree.",
+    "All 346 input/score records, 178 token records, group summaries and three raw-output controls reproduce.",
+    "All 168 paired final-response/category records and both paired-count reports reproduce.",
+    "Environment versions match saved freeze."
+  ],
+  "saved_notebook_code_cells_sha256_at_review": "4290eaa7b73a912f352575bcb5f33aef2011b780c62d0c124fff870a36eac84a"
+}

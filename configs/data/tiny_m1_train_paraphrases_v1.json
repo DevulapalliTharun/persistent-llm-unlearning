@@ -1,0 +1,35 @@
+{
+  "version": "tiny_m1_train_paraphrases_v1",
+  "additional_templates_per_task": 2,
+  "reserved_template_similarity_max": 0.92,
+  "templates": {
+    "author_to_book": [
+      "Complete the author-to-title lookup: {author} -> ?",
+      "In the fictional bibliography, which title should appear beside {author}?"
+    ],
+    "book_to_author": [
+      "Complete the title-to-writer lookup: {book} -> ?",
+      "The catalogue lists {book}; whose name belongs in its writer column?"
+    ],
+    "book_to_prize": [
+      "Complete the title-to-award lookup: {book} -> ?",
+      "For {book}, what entry belongs in the prize column of the catalogue?"
+    ],
+    "prize_to_year": [
+      "Complete the prize-to-calendar-year lookup: {prize} -> ?",
+      "Find the four-digit year stored alongside the prize {prize}."
+    ],
+    "author_to_prize": [
+      "Follow the links from {author} to their book and then to its prize. Which prize is at the end?",
+      "For {author}, fill the award column by tracing the author's title to the prize it received."
+    ],
+    "prize_to_author": [
+      "Start at {prize}, find the book it recognized, and then its writer. Who is that writer?",
+      "Which person is reached by following {prize} backward through the winning title?"
+    ],
+    "author_to_year": [
+      "Starting with {author}, follow author -> book -> prize -> year. What is the final year?",
+      "Trace the title written by {author} to its prize, then give that prize's calendar year."
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 # Current Project Status
 
-**As of:** 2026-11-05
+**As of:** 2026-11-06
 
-**Current phase:** Thinking-mode diagnostic is verified: arithmetic improves but learned fictional-fact output deteriorates under thinking in the original adapter. A fresh-base mixed-mode tiny M1 retry is implemented and tokenizer-prepared (168 rows); no retry training or new learning results yet. Original tiny pilot remains failed; canonical M1/M2 are not produced.
+**Current phase:** Wording diagnostics are verified; mixed-mode pilot remains failed. A fresh-base tiny training-paraphrase retry is implemented and tokenizer-prepared: original plus two new training-only variants per question, 504 mode-specific rows, same model/optimizer/gates, unchanged development/final prompts. All 47 local tests pass; no augmented GPU training/results yet. Canonical M1/M2 are not produced.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -48,7 +48,13 @@
 - [x] Preserved/verified notebook 05 run from `3c77324`: all 14 original reports, all 312 predictions, 228 saved token records and three exact greedy controls pass local checks. Matched thinking arithmetic: base 10/10, adapter 10/10; base omits Answer: on three correct values. Matched adapter development: 73/84 non-thinking vs 21/84 thinking. See `experiments/runs/m1_thinking_mode_diagnostic_20261105/`.
 - [x] Inspected all thinking development finals and selected visible traces. Paired changes: 53 lost matches, one gained, 20 correct in both, ten wrong in both. One thinking development response caps/uncloses; 62 other failed outputs complete. Invented/mixed associations and trace/final contradictions observed. No weight update or unlearning occurred; training/evaluation mode mismatch is a hypothesis, not an isolated causal finding.
 - [x] Prepared mixed-mode tiny retry: same pinned base/12 records/original LoRA+optimizer budget, fresh adapter, 84 answer-only plus 84 canonical-chain thinking targets. Local pinned-tokenizer preparation verifies exact prefixes/masking, max lengths 101/134, 601/2,298 supervised response tokens and zero truncation. All 42 local tests pass. See `docs/data/TINY_M1_MIXED_PILOT.md` and `experiments/runs/m1_tiny_mixed_preflight_20261105/`.
-- [ ] Run notebook 06 mixed-mode retry on Kaggle, preserve its private adapter/evidence and independently verify both fact modes, thinking utility and fresh-base reload before deciding any next stage.
+- [x] Notebook 06 completed from `7d4b28f`: all twenty original reports preserved under `experiments/runs/m1_tiny_mixed_attempt_20261105/`. Config/source/data/target hashes, all 534 scores, 282 token records, 120 updates and full post/reload records (except batch time) verify. Private receipt records adapter round-trip at `25764276e3e83e6c20519429854e15216f57e676`.
+- [x] Recorded mixed retry honestly: base fact scores 0/84 in both modes; post answer-only 78/84 with passing mode gates; thinking 63/84 with F direct 7/8 and R composite 16/24 failures plus one capped/unclosed response. Thinking utility remains 10/10. All post failures/traces reviewed; no gates changed or canonical M1 promotion.
+- [x] Prepared notebook 07 wording comparison: 84 record/task pairs, two wordings/two modes plus ten utility controls (346 planned predictions, zero updates). Pins helper commit `7d4b28f` and private mixed adapter `25764276e3e83e6c20519429854e15216f57e676`; embeds config so VS Code can run it without publishing new helper files. All seven cells compiled and model-free pair/config/reference/source-hash checks passed before the now-completed GPU run.
+- [x] Notebook 07 completed and all fourteen original files preserved under `experiments/runs/m1_training_wording_diagnostic_20261106/`. All 346 scores, 178 token records, three original raw controls and all 168 paired response/category records verify. Same private adapter/source pins; zero updates.
+- [x] Wording diagnosis: training questions 80/84 in both modes; development 78/84 answer-only, 63/84 thinking. Thinking paired outcomes: 63 correct both, seventeen training-only, zero development-only, four wrong both. Answer-only: 77/3/1/3 respectively. Utility 10/10; residual exact-training errors are years/reverse lookup, so wording is not the only unresolved issue.
+- [x] Prepared notebook 08 training-paraphrase retry: fourteen new source-only/exclusive templates, 252 unique questions/504 two-mode rows, same twelve records/120 attempts. Pinned-tokenizer prefix/masking/no-truncation preparation passes (max106 answer-only/max138 thinking). Original targets/development unchanged; 47 tests and previous-run verifiers pass. See `docs/data/TINY_M1_PARAPHRASE_PILOT.md` and `experiments/runs/m1_tiny_paraphrase_preflight_20261106/`.
+- [ ] Publish notebook 08/source/config/bank with authorization, train on Kaggle, preserve private adapter/evidence, then independently verify development gates, original-training recall probes, utility and reload.
 - [ ] Full synthetic candidate accepted after manual collision review and M0 accidental-knowledge audit.
 - [ ] M1 and M2 checkpoints produced.
 - [ ] Recovery demonstrated and measured.
@@ -69,8 +75,8 @@
 
 ## Immediate next actions (in order)
 
-1. After user-authorized publication of the mixed-mode retry and verified notebook 05 evidence, run `experiments/notebooks/06_m1_tiny_mixed_learning.ipynb` on Kaggle with HF_TOKEN. Starts from fresh pinned base/new LoRA; requires initial thinking utility/reference reproduction before training. Preserve private adapter/hash receipt and evidence ZIP even if gates fail. No retry GPU run has occurred yet.
-2. Independently inspect the retry's both-mode development/utility outputs, update/response-token exposure logs and reload reproduction. Keep original v2 scores/gates and final-test isolation; constructed rationale training and longer supervision do not by themselves demonstrate independent composition. These repeatedly used arithmetic questions remain development probes, not a final benchmark.
+1. After user-authorized publication of the training-paraphrase retry and verified mixed/wording evidence, run `experiments/notebooks/08_m1_tiny_paraphrase_learning.ipynb` on the existing Kaggle GPU runtime/HF_TOKEN. Starts from fresh pinned base/new LoRA, validates the original utility/reference gate, trains for the same 120 attempts, backs up privately and exports evidence. No augmented GPU run has occurred yet.
+2. Use preserved failure/task breakdown and declared sampling limits to plan further learning experiments. Do not infer capability solely from response CE, pick a favourable sample, lower thresholds or exclude failed records. Keep final-test isolation; constructed-chain training does not independently demonstrate unseen composition, and the repeatedly used arithmetic probes are development checks.
 3. Complete full-candidate manual release review and final M1 settings before expanding beyond the admitted 12-unit diagnostic.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.
 5. Only after M2 is validated, run **ordinary post-unlearning recovery pilot**. Branch into RAFG/RASP after the pilot.
