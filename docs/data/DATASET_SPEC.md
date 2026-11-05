@@ -7,6 +7,8 @@ The original and v2 M0 audit artifacts are now preserved and verified. The fixed
 **Pilot seed:** `42`  
 **Purpose:** Controlled M0 → M1 → M2 and post-unlearning recovery experiments
 
+**2026-11-06 acceptance update:** unchanged candidate validation and all6,600 canonical relational paths/answers pass; static sample coverage and preliminary1.7B token-budget checks pass. Bounded external search found surface overlaps, including a real book titled *The Silver Citadel* assigned a different synthetic author here. Do not claim universal fictional surfaces or full release. See `docs/data/QWEN17_FULL_M0_AUDIT.md` and `experiments/runs/data_qwen17_acceptance_review_20261106/`; full1.7B M0 audit/explicit collision-policy or version decision remain pending. No candidate records or final prompts were changed.
+
 ## 1. Scope
 
 The pilot dataset teaches a model fictional author–book–prize–year relationships, removes a designated subset, and tests whether those relationships recover during later legitimate fine-tuning.

@@ -1,0 +1,220 @@
+{
+  "date_ist": "2026-11-06",
+  "scope": "Bounded external search review, not exhaustive real-world entity clearance.",
+  "selection": "First, middle and last record by sorted ID in each of F, R and N_rel; independent of model predictions.",
+  "search_method": "Initial OR queries were inconclusive; followed with 27 separately quoted exact-surface queries. Search engines can broaden terms and omit results.",
+  "sampled_units": [
+    {
+      "partition": "F",
+      "record_id": "ku_000001",
+      "author": "Neris Voss",
+      "book": "The Zephyr Nexus",
+      "prize": "Young Meteor Prize",
+      "queries": [
+        "\"Neris Voss\"",
+        "\"The Zephyr Nexus\"",
+        "\"Young Meteor Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "cross_domain_surface_hit",
+          "status": "search_listing_only_page_fetch_failed",
+          "source": "https://thezephyrnexus.com/",
+          "finding": "An existing site uses The Zephyr Nexus; this does not establish the candidate book or association."
+        },
+        {
+          "field": "prize.name",
+          "kind": "award_phrase_overlap",
+          "status": "primary_page_verified",
+          "source": "https://www.bcu.ac.uk/news-events/jewellery/celebrating-student-success",
+          "finding": "University reporting names a Lustre Young Meteor prize in jewellery, with a different context and fuller name; not evidence of the fictional book/prize association."
+        },
+        {
+          "field": "author.name",
+          "kind": "fictional_character_name_hit",
+          "status": "search_snippet_only_page_fetch_failed",
+          "source": "https://caveduck.io/en/characters/ab680fa4-0378-4443-921f-03fcc55ecccd",
+          "finding": "Search snippet uses Neris Voss as a character name; an actual author or candidate association is not established."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "F",
+      "record_id": "ku_000053",
+      "author": "Arven Cairn",
+      "book": "The Golden Expanse",
+      "prize": "Opal Flame Prize",
+      "queries": [
+        "\"Arven Cairn\"",
+        "\"The Golden Expanse\"",
+        "\"Opal Flame Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "artwork_title_surface_hit",
+          "status": "search_listing_only",
+          "source": "https://www.artsy.net/artwork/baiaman-omurkulov-the-golden-expanse",
+          "finding": "Matching artwork title, not a confirmed candidate book or author-book association."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "F",
+      "record_id": "ku_000112",
+      "author": "Maren Pryce",
+      "book": "The Hidden Bridge",
+      "prize": "Frost Elm Prize",
+      "queries": [
+        "\"Maren Pryce\"",
+        "\"The Hidden Bridge\"",
+        "\"Frost Elm Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "generic_title_phrase_hits",
+          "status": "search_listing_only",
+          "source": "https://www.visitdenmark.com/denmark/plan-your-trip/the-hidden-bridge-at-nymolle-creek-gdk1153890",
+          "finding": "Phrase appears in place/longer-title contexts; no complete candidate association established."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "R",
+      "record_id": "ku_000002",
+      "author": "Elira Alder",
+      "book": "The Crimson Isle",
+      "prize": "Granite Grove Prize",
+      "queries": [
+        "\"Elira Alder\"",
+        "\"The Crimson Isle\"",
+        "\"Granite Grove Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "game_place_or_community_name_hit",
+          "status": "search_listing_only",
+          "source": "https://hypixelskyblock.minecraft.wiki/w/Crimson_Isle",
+          "finding": "Crimson Isle is used in gaming contexts; this is not the generated book/author association. Etymology snippets containing elira alder are not author evidence."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "R",
+      "record_id": "ku_000065",
+      "author": "Kael Lume",
+      "book": "The Tidal Isle",
+      "prize": "Tidal Beacon Prize",
+      "queries": [
+        "\"Kael Lume\"",
+        "\"The Tidal Isle\"",
+        "\"Tidal Beacon Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "related_product_label",
+          "status": "search_listing_only",
+          "source": "https://scifi.czepeku.com/store/product/tidal-isle-fort",
+          "finding": "Tidal Isle appears in map/product contexts; not a confirmed exact candidate book."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "R",
+      "record_id": "ku_000120",
+      "author": "Brel Lume",
+      "book": "The Silver Citadel",
+      "prize": "Frost Globe Prize",
+      "queries": [
+        "\"Brel Lume\"",
+        "\"The Silver Citadel\"",
+        "\"Frost Globe Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "confirmed_book_title_collision",
+          "status": "bibliographic_record_verified",
+          "source": "https://openlibrary.org/works/OL84773W/Silver_Citadel",
+          "finding": "The Silver Citadel is catalogued under Anthony Horowitz, whereas the synthetic candidate assigns this title to Brel Lume. Resolve possible referent ambiguity explicitly before full release."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "N_rel",
+      "record_id": "nrel_000001",
+      "author": "Pella Ulden",
+      "book": "The Radiant Atlas",
+      "prize": "Bright Beacon Prize",
+      "queries": [
+        "\"Pella Ulden\"",
+        "\"The Radiant Atlas\"",
+        "\"Bright Beacon Prize\""
+      ],
+      "findings": [],
+      "interpretation": "No exact phrase shown in returned snippets; inconclusive, not proof of absence."
+    },
+    {
+      "partition": "N_rel",
+      "record_id": "nrel_000031",
+      "author": "Aven Noll",
+      "book": "The Last Yearbook",
+      "prize": "Ivory Grove Prize",
+      "queries": [
+        "\"Aven Noll\"",
+        "\"The Last Yearbook\"",
+        "\"Ivory Grove Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "generic_yearbook_phrase_hit",
+          "status": "search_listing_only",
+          "source": "https://www.nsapubs.com/yearbook",
+          "finding": "The phrase occurs as a school-yearbook label; not a confirmed novel/author association. Swedish snippets resembling aven noll are not author evidence."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    },
+    {
+      "partition": "N_rel",
+      "record_id": "nrel_000060",
+      "author": "Daro Noll",
+      "book": "The Kindled Forest",
+      "prize": "Zenith Beacon Prize",
+      "queries": [
+        "\"Daro Noll\"",
+        "\"The Kindled Forest\"",
+        "\"Zenith Beacon Prize\""
+      ],
+      "findings": [
+        {
+          "field": "book.title",
+          "kind": "related_game_biome_phrase_hit",
+          "status": "search_listing_only",
+          "source": "https://feedback.minecraft.net/hc/en-us/community/posts/41867939341965-1-22-1-idea-biomes-galore-update",
+          "finding": "Kindled Forest appears as a game-biome phrase; not a confirmed candidate book."
+        }
+      ],
+      "interpretation": "Surface/context flags recorded; complete fictional association not established by these results."
+    }
+  ],
+  "dataset_accepted": false,
+  "candidate_modified": false,
+  "open_release_issues": [
+    "Confirmed real-book title collision for ku_000120 requires an explicit keep/version-correct decision before full training.",
+    "Other surface/phrase overlaps and limited searches cannot certify all names/titles fictional or pretraining absence.",
+    "Full Qwen3-1.7B M0 audit and interpretation are pending."
+  ],
+  "policy": "Preserve candidate v1 and prior artifacts. Never silently rename/filter targets to force zero M0 accuracy. If correcting a real collision, record independent source evidence and create a new version. Static final templates are inspected only for structural exclusion/coverage, never evaluated by a model here."
+}

@@ -1,6 +1,6 @@
 # Qwen3-1.7B tiny M1 comparison v1
 
-Status: implemented and tokenizer-prepared locally; no GPU fit, 1.7B baseline inference or training result yet. This compares candidate model checkpoints under a fixed tiny recipe, not an automatic switch of the final dissertation model.
+Status: notebook09 completed and all 28 original files/870 predictions independently verified. Every preset tiny pilot gate passes. 1.7B is the working candidate for next shared-pipeline checks, not yet the final validated dissertation model. See `experiments/runs/m1_tiny_qwen17_attempt_20261106/`.
 
 ## Fixed identities and controls
 
@@ -29,7 +29,7 @@ If the new utility baseline passes, train fresh with the unchanged 120-attempt r
 
 ## Local checks and evidence
 
-All 52 unit tests pass: same training/dev data, strict model pin, unchanged recipe/gates, rejection of cross-model response reuse, and independent baseline acceptance/rejection are covered. Actual pinned 1.7B tokenizer preparation verifies all504 prefixes/masking with no truncation: max106 answer-only/max138 thinking; prompt22503/21495 and response1803/6894 tokens, matching this corpus's 0.6B counts. Evidence: `experiments/runs/m1_tiny_qwen17_preflight_20261106/`. No weights, PyTorch or GPU loaded locally; fit/runtime compatibility and learning remain unverified.
+All 52 unit tests pass: same training/dev data, strict model pin, unchanged recipe/gates, rejection of cross-model response reuse, and independent baseline acceptance/rejection are covered. Actual pinned 1.7B tokenizer preparation verifies all504 prefixes/masking with no truncation: max106 answer-only/max138 thinking; prompt22503/21495 and response1803/6894 tokens, matching this corpus's 0.6B counts. Evidence: `experiments/runs/m1_tiny_qwen17_preflight_20261106/`. No weights, PyTorch or GPU loaded locally during preparation; the subsequent Kaggle fit/training and independent artifact review are now verified below.
 
 ## Execution
 
@@ -43,3 +43,11 @@ python3 -m src.training.mixed_m1 --config configs/training/m1_tiny_qwen17_v1.jso
 ```
 
 `--mode prepare` is tokenizer-only; `--mode fit` needs CUDA and discards its temporary update; `--mode train` starts the actual120-attempt trial. Larger size does not guarantee a pass. Select the next model based on measured learning/utility/compute and subsequent recovery feasibility, not the model name alone.
+
+## Verified outcome — 2026-11-06
+
+All preset gates pass, recomputed from raw evidence. Own-model base fact scores are 0/84 in both modes, with 57/52 format violations (one thinking cap), so preserve raw/protocol caveats rather than claiming absent internal knowledge. Post development is 81/84 both modes and utility remains 10/10. F direct 8/8 both, F composite 12/12 answer-only/11/12 thinking; R direct 16/16 and 15/16, R composite 21/24 and 23/24. Post/reload have zero format/cap/boundary issues and identical responses/token IDs; original training probes are 82/84 and 79/84, not held-out metrics.
+
+Disposable fit succeeds with one temporary update/no checkpoint; main training starts fresh and applies its own 120 updates. Real peak allocated memory is 6.1984 GiB on a 14.5622-GiB T4 device. Private receipt verifies adapter hashes at `5fa54c9e7108f2261b16a0903666baf34072f407`; copied fit reports are in the main evidence ZIP. All 870 scores/450 token records, data/config/source/control hashes, comparison metrics and full passing verdict verify locally without model replay.
+
+The same-recipe one-seed result supports 1.7B as the working candidate, not a pure size-only causal claim or proof of broad reasoning/general utility. Preserve 0.6B controls. Freeze the passing tiny recipe and proceed to full-candidate manual acceptance plus new-model full M0/token-budget audits before scaled canonical M1; M2/recovery remain future. No additional audit, training, final model selection or unlearning was executed during verification.

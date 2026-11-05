@@ -589,6 +589,46 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-06 — Verify passing Qwen3-1.7B tiny pilot
+
+**Work completed:** Confirmed all nine notebook09 code cells completed from `4cc4c6c5c6f4754fe2688e5b4bbd08544cc75e81`. Located main `m1-tiny-qwen17-v1-qv7fs_sw-evidence.zip`, checked CRC/exact28 entries and preserved bytes without overwrite in `experiments/runs/m1_tiny_qwen17_attempt_20261106/`. Copied fit report/plan are included, so standalone local fit ZIP is not needed. Added adapted verifier, archive verification, remaining-error/base-format/model-comparison review and README. Updated project/README/protocol/status/decisions/log; executed notebook preserved.
+
+**Evidence/checks:** Archive SHA-256 `01f897adf19ce416b3a705f7f5595ffadeabd2326ecee4758a9ee64e770873c1`. All 870 scores/450 token records/120 updates, own M0 utility guard,504 canonical targets/audit, all source/config/model/control hashes and stage summaries verify. Candidate/control comparison matches both frozen summaries; all post/reload fields agree except batch_seconds, including token IDs. Copied fit scope/batches/parameter count/memory/plan agree. Private receipt verifies adapter hashes at revision `5fa54c9e7108f2261b16a0903666baf34072f407`, path `diagnostics/m1-tiny-qwen17-v1/m1-tiny-qwen17-v1-qv7fs_sw`. No local binary download/model/tokenizer replay.
+
+**Observed pass:** First fully passing tiny M1 pilot. Post development 81/84 in each mode; F direct8/8 both, F composite12/12 answer-only/11/12 thinking; R direct16/16 and15/16, R composite21/24 and23/24. Utility10/10 before/after; post/reload no format/cap/boundary failures. Original-training probes82/84 and79/84 diagnostic only. All preset gates recompute true; passing is not perfect recall or independent composition. All three development failures in each mode and two/five training failures inspected. Own base facts0/84 but format violations57/52 and one thinking cap; zero expected final-answer mentions; representative incorrect invented associations reviewed. Do not infer certified absent internal knowledge.
+
+**Fit/compute:** Disposable one-update probe saves no checkpoint; real trial starts fresh with120 updates. Probe peaks6.1567-GiB training/5.3302 generation; actual trial peak6.1984 GiB on14.5622-GiB T4. Actual trainable parameters8,716,288; logged example/token exposures match0.6B control, while model/adapter counts and compute differ. Reported real training283.4753 seconds/full738.9067 seconds/probe106.1474 seconds; no speed-comparison claim.
+
+**Decision/next:** Treat1.7B/passing tiny recipe as working candidate, preserve0.6B controls, stop tuning tiny merely for higher development scores. Next full-candidate manual acceptance and1.7B full M0 knowledge/token-budget audits, then prospective scaled-M1 protocol/budget. Canonical full M1/M2, final model validation, unlearning and recovery remain pending. No new audit/training, source changes, commit or push in review. Verifier/Git whitespace checks pass.
+
+---
+
+## 2026-11-06 — Prepare full 1.7B M0 audit and candidate acceptance review
+
+**Goal:** Advance from the passing tiny pilot toward full M1 without reusing the0.6B M0 baseline or admitting an unreviewed candidate.
+
+**Work completed:** Added `src/evaluation/full_m0.py`, fixed full-audit/token-budget profiles, clean notebook10, full audit protocol, acceptance-review reports/README, five tests and model-free preflight. Updated root/project/data-spec/status/decisions/log. Original candidate, generators, old model configs/evaluators and all prior results remain unchanged.
+
+**Review evidence:** Revalidated candidate checksums/full invariants (zero errors), independently matched all6600 relational path/answer/source-ID records, and manually inspected the57-row static sample covering all nine task families/twelve prompt partitions. Final samples are structural review only, no model final scoring/tuning. Cached1.7B preliminary N tokenizer totals12480/12840 across420 rows each pass2.884615%; this is the legacy bare rendering, not final loss/compute matching. Reports in `experiments/runs/data_qwen17_acceptance_review_20261106/`.
+
+**Actual collision findings:** Nine fixed first/middle/last units per F/R/N_rel sample; initial OR searches were inconclusive, followed by27 separately quoted surface queries. Direct Open Library record confirms The Silver Citadel/Anthony Horowitz versus candidate Brel Lume; BCU primary article names a Lustre Young Meteor prize in another context. Website/artwork/game/fictional-character/generic phrase hits and failed page fetches are labelled search-only where appropriate. Negative snippets do not prove absence. Candidate v1 unchanged, dataset accepted=false, confirmed title ambiguity/collision-policy or version decision open before full training. No source article bodies copied; sources/brief interpretations retained.
+
+**GPU audit design:** Fresh pinned1.7B base only; all180 units/1260 non-final prompts in answer-only greedy128 and sampled thinking1024, total2520 predictions. Per-view batches/seeds reset. Reuse scorer/decoder/input checksum loader; save all token IDs/prompts/raw outputs, final/trace mentions (including unfinished thought), protocol/cap/boundary flags, collision rows and summaries. No adapter/optimizer/updates or automatic dataset acceptance/regeneration. Training F/R remains120 units; N_rel audit does not train it.
+
+**Local checks/next:** All57 tests pass; all six notebook code cells/source compile; model-free plan verifies1260 inputs/180 units/2520 planned outputs and review hashes in `experiments/runs/m0_qwen17_full_preflight_20261106/`. No GPU audit/model inference, new training, candidate edit, commit or push. Publish prepared files plus verified tiny1.7B evidence with authorization, run notebook10, preserve ZIP and interpret actual answer/prose/trace/collision flags before release/scaled M1 design. Full dataset/canonical M1/M2 remain pending.
+
+---
+
+## 2026-11-06 — Authorize publication of full 1.7B M0 audit
+
+**Authorization/scope:** User explicitly approved committing/pushing notebook10, runner/config/tests/protocol/model-free preflight and static/token/collision review evidence, alongside verified passing notebook09 artifacts/executed notebook and context updates. Original candidate and all old baselines remain unchanged; no weights, optimizer binaries, credentials or full-audit GPU outputs included.
+
+**Checks:** All 57 tests and the passing tiny1.7B evidence verifier pass (870 scores/450 token records/120 real updates). Pending notebooks compile; common-credential/large-file and Git whitespace checks pass. Publication check found notebook10 introduction marked as code; restored Markdown and revalidated all six Python cells. Full M0 audit remains unrun and dataset acceptance remains false, including the explicit real-book title collision issue. Commit/push outcome is reported in the task response.
+
+**Next step:** Run notebook10 from the top on the existing Kaggle GPU kernel after confirming the new source commit. Preserve its evidence ZIP; review actual final/trace mentions, protocol/cap issues and collision context before data-release/scaled-M1 decisions. No further training or adapter loading occurs in this audit.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

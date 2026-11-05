@@ -1,0 +1,11 @@
+{
+  "purpose": "Preliminary N-condition tokenizer volume audit only; not a dataset generator config or final loss/compute match.",
+  "bundle": "data/candidates/pilot-v1/seed-42",
+  "expected_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "tokenizer": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "thinking_enabled": false,
+    "budget_tolerance_fraction": 0.05
+  }
+}

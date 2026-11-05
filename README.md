@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** The 0.6B tiny pilot remains failed at thinking F composite. A same-recipe Qwen3-1.7B comparison is prepared with a disposable GPU memory probe and its own M0 baseline, preserving the 0.6B control. All 52 local tests and actual pinned-tokenizer preparation pass; GPU fit and learning are untested. Final model choice and canonical M1/M2 remain pending.
+**Current state:** Qwen3-1.7B passes the tiny M1 pilot. The full-candidate M0 audit is prepared (2520 non-final outputs, no training), with 57 local tests passing. Static dataset/token-budget checks pass, but external review found real surface overlaps including a book-title collision; release/collision decision and full M0 interpretation remain pending. Canonical full M1/M2 are future stages.
 
 ## The two candidate approaches
 
@@ -194,7 +194,7 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
-3. Review the [Qwen3-1.7B comparison protocol](docs/data/QWEN17_CAPACITY_COMPARISON.md). After authorized publication, run [`09_m1_tiny_qwen17_comparison.ipynb`](experiments/notebooks/09_m1_tiny_qwen17_comparison.ipynb) on Kaggle: separate disposable GPU fit probe, then fresh own-model M0 baseline and same 504-row/120-attempt trial. Preserve fit/private adapter/evidence ZIPs; larger size does not guarantee a pass.
+3. After authorized publication, run [`10_m0_qwen17_full_audit.ipynb`](experiments/notebooks/10_m0_qwen17_full_audit.ipynb) on Kaggle and preserve its evidence ZIP. Review the [full audit/release protocol](docs/data/QWEN17_FULL_M0_AUDIT.md), including recorded surface-collision issues, before accepting or version-correcting the full dataset and declaring scaled M1. No full audit GPU result or canonical M1/M2 is claimed yet.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

@@ -1,0 +1,245 @@
+{
+  "date_ist": "2026-11-06",
+  "scope": "All three post-development failures in each mode and all two/five original-training failures inspected; base format/answer-mention counts checked and representative base responses reviewed. Scores/gates unchanged.",
+  "pilot_passed": true,
+  "failed_checks": [],
+  "scores": {
+    "base_development_answer_only": 0,
+    "base_development_thinking": 0,
+    "development_answer_only": 81,
+    "development_thinking": 81,
+    "original_training_answer_only": 82,
+    "original_training_thinking": 79,
+    "fact_questions_per_suite": 84,
+    "utility_base": 10,
+    "utility_post": 10,
+    "utility_questions": 10
+  },
+  "base_protocol_caveat": {
+    "answer_only_format_violations": 57,
+    "thinking_format_violations": 52,
+    "thinking_cap_boundary_failures": 1,
+    "expected_final_answer_mentions": {
+      "base_dev_answer_only": 0,
+      "base_dev_thinking": 0
+    },
+    "interpretation": "Zero fixed-protocol scores do not certify absent internal knowledge. Untrained outputs often violate the requested label and invent associations; preserve them. Full candidate 1.7B audit is still pending."
+  },
+  "post_failures": {
+    "post_dev_answer_only": [
+      {
+        "example_id": "ex_m1_dev_ku_000007_author_to_year_01",
+        "record_id": "ku_000007",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Ulric Islen's book and its prize.",
+        "answer": "1955",
+        "raw_response": "Answer: 1366",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000011_author_to_prize_01",
+        "record_id": "ku_000011",
+        "entity_partition": "R",
+        "task_type": "author_to_prize",
+        "question": "Name the award received by Pella Farrow's book.",
+        "answer": "Frost Juniper Prize",
+        "raw_response": "Answer: Frost Juniper Cove Prize",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000012_prize_to_author_01",
+        "record_id": "ku_000012",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Frost Quill Prize.",
+        "answer": "Aven Korr",
+        "raw_response": "Answer: Cira Rusk",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_dev_thinking": [
+      {
+        "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+        "record_id": "ku_000001",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Neris Voss's book and its prize.",
+        "answer": "1996",
+        "raw_response": "<think>\nNeris Voss wrote The Zephyr Nexus. The Zephyr Nexus received Young Meteor Prize. Young Meteor Prize was awarded in 2006.\n</think>\n\nAnswer: 2006",
+        "visible_reasoning": "Neris Voss wrote The Zephyr Nexus. The Zephyr Nexus received Young Meteor Prize. Young Meteor Prize was awarded in 2006.",
+        "final_answer_text": "Answer: 2006",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000005_book_to_author_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "book_to_author",
+        "question": "Name the author of The Luminous Passage.",
+        "answer": "Eris Islen",
+        "raw_response": "<think>\nCira Rusk wrote The Luminous Passage.\n</think>\n\nAnswer: Cira Rusk",
+        "visible_reasoning": "Cira Rusk wrote The Luminous Passage.",
+        "final_answer_text": "Answer: Cira Rusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000005_prize_to_author_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Harbor Ember Prize.",
+        "answer": "Eris Islen",
+        "raw_response": "<think>\nThe Luminous Citadel received Harbor Ember Prize. Kael Zenn wrote The Luminous Citadel.\n</think>\n\nAnswer: Kael Zenn",
+        "visible_reasoning": "The Luminous Citadel received Harbor Ember Prize. Kael Zenn wrote The Luminous Citadel.",
+        "final_answer_text": "Answer: Kael Zenn",
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_train_probe_answer_only": [
+      {
+        "example_id": "ex_m1_train_ku_000011_author_to_prize_01",
+        "record_id": "ku_000011",
+        "entity_partition": "R",
+        "task_type": "author_to_prize",
+        "question": "Which prize was won by the book written by Pella Farrow?",
+        "answer": "Frost Juniper Prize",
+        "raw_response": "Answer: Frost Juniper Cove Prize",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000012_prize_to_author_01",
+        "record_id": "ku_000012",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Frost Quill Prize?",
+        "answer": "Aven Korr",
+        "raw_response": "Answer: Cira Rusk",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_train_probe_thinking": [
+      {
+        "example_id": "ex_m1_train_ku_000001_author_to_year_01",
+        "record_id": "ku_000001",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Neris Voss awarded?",
+        "answer": "1996",
+        "raw_response": "<think>\nNeris Voss wrote The Zephyr Nexus. The Zephyr Nexus received Young Meteor Prize. Young Meteor Prize was awarded in 2006.\n</think>\n\nAnswer: 2006",
+        "visible_reasoning": "Neris Voss wrote The Zephyr Nexus. The Zephyr Nexus received Young Meteor Prize. Young Meteor Prize was awarded in 2006.",
+        "final_answer_text": "Answer: 2006",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000001_prize_to_author_01",
+        "record_id": "ku_000001",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Young Meteor Prize?",
+        "answer": "Neris Voss",
+        "raw_response": "<think>\nThe Luminous Citadel received Young Meteor Prize. Kael Zenn wrote The Luminous Citadel.\n</think>\n\nAnswer: Kael Zenn",
+        "visible_reasoning": "The Luminous Citadel received Young Meteor Prize. Kael Zenn wrote The Luminous Citadel.",
+        "final_answer_text": "Answer: Kael Zenn",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000005_book_to_author_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "book_to_author",
+        "question": "Who wrote The Luminous Passage?",
+        "answer": "Eris Islen",
+        "raw_response": "<think>\nCira Rusk wrote The Luminous Passage.\n</think>\n\nAnswer: Cira Rusk",
+        "visible_reasoning": "Cira Rusk wrote The Luminous Passage.",
+        "final_answer_text": "Answer: Cira Rusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000005_prize_to_author_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Harbor Ember Prize?",
+        "answer": "Eris Islen",
+        "raw_response": "<think>\nThe Luminous Citadel received Harbor Ember Prize. Kael Zenn wrote The Luminous Citadel.\n</think>\n\nAnswer: Kael Zenn",
+        "visible_reasoning": "The Luminous Citadel received Harbor Ember Prize. Kael Zenn wrote The Luminous Citadel.",
+        "final_answer_text": "Answer: Kael Zenn",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000008_prize_to_year_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "prize_to_year",
+        "question": "In which year was Far Yew Prize awarded?",
+        "answer": "1980",
+        "raw_response": "<think>\nThe Amber Harbor received Far Yew Prize. Far Yew Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "The Amber Harbor received Far Yew Prize. Far Yew Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ]
+  },
+  "fit": {
+    "gpu": "Tesla T4",
+    "device_total_gib": 14.56219482421875,
+    "probe_training_peak_gib": 6.156747341156006,
+    "probe_generation_peak_gib": 5.330150127410889,
+    "real_run_peak_allocated_gib": 6.198417663574219,
+    "probe_temporary_updates": 1,
+    "real_updates": 120,
+    "probe_checkpoint_saved": false
+  },
+  "comparison_to_06": {
+    "development_answer_only": [
+      77,
+      81
+    ],
+    "development_thinking": [
+      70,
+      81
+    ],
+    "utility": [
+      9,
+      10
+    ],
+    "thinking_F_composite": [
+      6,
+      11
+    ],
+    "limits": "Same data/attempts/LoRA policy, different model and trainable parameter count/compute; single-seed feasibility, not isolated size causality or general superiority."
+  },
+  "conclusions": [
+    "Every declared tiny pilot gate now passes in both fact modes. Passing thresholds does not mean all 84 answers are correct.",
+    "Full tested training/evaluation configuration fits one T4; representative probe and real trial are recorded, not a guarantee for other batches/longer contexts.",
+    "The successful tiny setup supports 1.7B as the working candidate for the next shared-pipeline stage, with 0.6B retained as engineering/control evidence.",
+    "Do not retroactively alter 0.6B results, mix adapters across model sizes or claim 0.6B inherently incapable.",
+    "Constructed rationales/composite targets are supervised; this does not independently prove unseen composition or broad reasoning utility.",
+    "No full-candidate acceptance, canonical full M1/M2, unlearning or benign recovery demonstrated yet."
+  ],
+  "next_step": "Freeze the successful tiny 1.7B recipe/candidate for the next checks, finish full-candidate manual acceptance and the new model full M0 knowledge/token-budget audits, then declare a scaled M1 protocol/budget and train the full F/R set. Preserve final-test isolation. No new full-dataset audit/training or final dissertation model selection executed in this review."
+}

@@ -82,7 +82,7 @@ Split **entities first**, then generate templates so an entity cannot leak acros
 
 The implementation-level schema, entity-first hash split, prompt-use matrix, leakage checks, manifest and acceptance gate are defined in `docs/data/DATASET_SPEC.md`. In that specification, `T` is a held-out prompt view rather than a fourth trainable entity partition.
 
-Example: `The Glass Observatory` → author `Mira Venn`; prize `Silver Comet Prize`; ask directly for author or indirectly through the prize/book chain. All names are fictional.
+Example: `The Glass Observatory` → author `Mira Venn`; prize `Silver Comet Prize`; ask directly for author or indirectly through the prize/book chain. These associations are invented; surface strings still require collision review.
 
 ## 5. Baseline unlearning — reused method, not our novelty
 
@@ -119,7 +119,7 @@ Predefine the M2 forgetting criterion before final evaluation and report the den
 
 ## 7. Practical implementation constraints
 
-- **Model candidates:** `Qwen/Qwen3-0.6B` remains the initial engineering/control model. A separately pinned `Qwen/Qwen3-1.7B` same-recipe tiny comparison is prepared to test model suitability before more 0.6B-only tuning. Final model choice remains provisional; each model needs its own M0/M1/M2 baselines and tokenizer checks.
+- **Model candidates:** `Qwen/Qwen3-0.6B` remains the initial engineering/control model. The separately pinned `Qwen/Qwen3-1.7B` passed the same-recipe tiny pilot and is the working candidate for the next shared-pipeline checks. Full-dataset/final model validation remains pending; each model needs its own M0/M1/M2 baselines and tokenizer checks.
 - **Candidate adaptation:** LoRA, rank 8 or 16 for pilot.
 - **Candidate libraries:** PyTorch, Transformers, PEFT, Accelerate, Datasets, TRL, NumPy, pandas, matplotlib.
 - **Development:** VS Code on current office Mac M2 Pro, later personal Dell G15.

@@ -1,0 +1,72 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 870,
+  "saved_token_records_checked": 450,
+  "optimizer_records_checked": 120,
+  "logged_examples_by_mode": {
+    "answer_only": 953,
+    "thinking": 967
+  },
+  "own_model_baseline_verified": true,
+  "post_reload_records_equal_except_batch_duration": true,
+  "pilot_passed": true,
+  "post_answer_matches": {
+    "utility_thinking": 10,
+    "dev_answer_only": 81,
+    "dev_thinking": 81,
+    "train_probe_answer_only": 82,
+    "train_probe_thinking": 79
+  },
+  "limits": [
+    "No model inference/tokenizer replay/adapter binary download locally.",
+    "Detailed token-exposure totals are runtime reports, not independent data-loader replay; example counts reproduce from step logs.",
+    "Adapter-change and private binary round-trip claims rely on runtime summary/receipt.",
+    "Single-seed development learning does not establish independent composition or general utility preservation."
+  ],
+  "date_ist": "2026-11-06",
+  "archive_filename": "m1-tiny-qwen17-v1-qv7fs_sw-evidence.zip",
+  "archive_sha256": "01f897adf19ce416b3a705f7f5595ffadeabd2326ecee4758a9ee64e770873c1",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "artifact_manifest.json": "ce278d2e984e5818b3fc79c06fe010a753249f9b931f1e931de70a2384856f7f",
+    "augmentation_audit.json": "de73b2b041aee1fb6fe95af9e145ea3e04d6ea710dba92a48e15f0d1877f268e",
+    "base_dev_answer_only.jsonl": "e9cbc07783824daee05d6f4b8684713087e26366dc46898fe684dfb36261d8cc",
+    "base_dev_thinking.jsonl": "9365cc18f81e1a34e12fba977810b693b1933b43934d38bf2fc96fb5676c397a",
+    "base_utility_gate.json": "70b7905695ba90ea6381b466b8a110c9cf393aa8ec18b620e0c2ab4f1c34dced",
+    "base_utility_thinking.jsonl": "a49e416a9f172b6ee4beffdce95ddc6b309b5c2045332786c8cbd8e03a3c691a",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "generation_metadata.json": "927f1f514070d1a3cea4138a5552b3e776f4fafa79b8f435e0aa3499c0161a2b",
+    "masking_report.json": "e7238a1814e5b9704142fe173d246d0aa578b119970e70cc5dbb669daace3468",
+    "memory_fit_plan.json": "adfceb2d919f1ff41d825bcb5d314d12eb0e61ea316fd5f7ccb74f1cdcc880a8",
+    "memory_fit_report.json": "52247b29b9bd36c07bda0559e09c2f13b2a0be0ed98814431a9420fa94d619b4",
+    "model_comparison.json": "59d211b12d874951286579f5b0e4f8362ca3b375647dfa7a8e434f84f5bf04d1",
+    "persistence.json": "af289c91ba640b72c3664734188d26ed7d0bc7dc84bbef1f0634e97baa9ca122",
+    "plan.json": "adfceb2d919f1ff41d825bcb5d314d12eb0e61ea316fd5f7ccb74f1cdcc880a8",
+    "post_dev_answer_only.jsonl": "8884e6057c7550838be8e3e2b5a1b5bc11c4dbe144904a864f51a033a45dcc2d",
+    "post_dev_thinking.jsonl": "f59cb58fb16ef3e4d5f9d22606137314ab4b951797830e74a3c19f649152d846",
+    "post_train_probe_answer_only.jsonl": "18f9b969ffb13ffced00aa1ec7fb830caf535f4a1dadd5057a2f5fa59d5addd8",
+    "post_train_probe_thinking.jsonl": "932368fe9e736e5b464b81e8b05f0ec63c22fd546fc0b8eb0468b7c928d54793",
+    "post_utility_thinking.jsonl": "0a9f56607816c859e7172c67c4748e6e7a486702bbc7caa224c9a5ef521707ef",
+    "reloaded_dev_answer_only.jsonl": "8884e6057c7550838be8e3e2b5a1b5bc11c4dbe144904a864f51a033a45dcc2d",
+    "reloaded_dev_thinking.jsonl": "2315e5745e6e6cb7337fc534850bd96a4ab3057780b6326de6f2f51cbbddcf3a",
+    "reloaded_train_probe_answer_only.jsonl": "18f9b969ffb13ffced00aa1ec7fb830caf535f4a1dadd5057a2f5fa59d5addd8",
+    "reloaded_train_probe_thinking.jsonl": "f64f1b7ff9b6aba9e000d854b7347f442b59a4317136d77e1ad0a38110b72f1d",
+    "reloaded_utility_thinking.jsonl": "3f686174efb1f0cb8be26b30a3982fc0eb952b17cd36c6a2de9a164a52b07cc4",
+    "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+    "selected_train.jsonl": "7c6b084de3f45211d709a67e3bd242809c9872c23baaa3563b2f0b7fc620a9ca",
+    "summary.json": "60849df3fb3ed5bb3097376dd8ce6d9c93486cecbfbef29397eff5eb1038cdac",
+    "training.jsonl": "af24f22dfee7a8c6400c0d101b985fde9ad5332a172781d9d339b7781cccb43a"
+  },
+  "checks_passed": [
+    "Exact twenty-eight ZIP entries/CRC and preserved bytes match.",
+    "All thirteen prediction hashes, config/model/reference/control/source hashes match recorded source 4cc4c6c.",
+    "504 canonical targets/audit, unchanged development data and independent 1.7B tokenizer preflight reproduce.",
+    "All 870 input/scores/stage summaries and 450 token records reproduce.",
+    "Own-model M0 utility gate passes without using 0.6B raw responses.",
+    "All 120 real updates, CE/count arithmetic and 1920 exposures agree.",
+    "Post/reload records match except batch_seconds, including token IDs.",
+    "Successful disposable one-update fit scope/batches/parameter count/memory metadata agree; main trial starts fresh.",
+    "Candidate/control comparison matches both saved summaries; complete pilot verdict recomputes true.",
+    "Adapter manifest/private receipt and environment versions agree."
+  ]
+}

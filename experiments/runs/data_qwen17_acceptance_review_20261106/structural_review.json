@@ -1,0 +1,78 @@
+{
+  "date_ist": "2026-11-06",
+  "candidate": "data/candidates/pilot-v1/seed-42",
+  "checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "validation": {
+    "passed": true,
+    "error_count": 0,
+    "warning_count": 2,
+    "errors": [],
+    "warnings": [
+      "N_reason and N_rel are row-matched; run the pinned tokenizer-budget audit",
+      "Real-world name/title collision review remains manual"
+    ],
+    "near_duplicate_similarity_threshold": 0.92,
+    "near_duplicates": {
+      "author": [],
+      "book": [],
+      "prize": []
+    },
+    "entity_counts": {
+      "forget": 30,
+      "retain": 90,
+      "new_relational": 60
+    },
+    "prompt_counts": {
+      "final_test": 2520,
+      "m1_dev": 840,
+      "m1_train": 840,
+      "m2_dev": 840,
+      "n_reason_train": 420,
+      "n_rel_train": 420,
+      "rafg_guard_train": 60,
+      "rafg_monitor": 150,
+      "rasp_score_f": 60,
+      "rasp_score_r": 180,
+      "unlearn_f_train": 60,
+      "unlearn_r_train": 630
+    }
+  },
+  "canonical_relational_rows_checked": 6600,
+  "manual_sample": {
+    "rows_reviewed": 57,
+    "task_counts": {
+      "author_to_book": 11,
+      "author_to_prize": 7,
+      "author_to_year": 7,
+      "book_to_author": 11,
+      "book_to_prize": 6,
+      "prize_to_author": 7,
+      "prize_to_year": 6,
+      "arithmetic_addition": 1,
+      "arithmetic_subtraction": 1
+    },
+    "partition_counts": {
+      "final_test": 7,
+      "m1_dev": 7,
+      "m1_train": 7,
+      "m2_dev": 7,
+      "n_reason_train": 2,
+      "n_rel_train": 7,
+      "rafg_guard_train": 2,
+      "rafg_monitor": 5,
+      "rasp_score_f": 2,
+      "rasp_score_r": 2,
+      "unlearn_f_train": 2,
+      "unlearn_r_train": 7
+    },
+    "all_tasks_and_prompt_partitions_covered": true,
+    "finding": "Reviewed wording/answers correspond to canonical paths; addition/subtraction samples are correct. Final samples are static structural review only; no model final-test use or performance tuning."
+  },
+  "data_changed": false,
+  "dataset_accepted": false,
+  "pending": [
+    "New-model full M0 audit and response interpretation",
+    "Explicit collision policy/version decision for confirmed book-title overlap",
+    "Scaled M1 protocol/budget and full release decision"
+  ]
+}

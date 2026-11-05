@@ -1,0 +1,10 @@
+{
+  "accuracy": 1.0,
+  "format_violations": 0,
+  "interpretation": "Bare exact values are accepted with flags under the unchanged parser; the base-format flags are reported, not used to redefine its existing score.",
+  "passed": true,
+  "reference_reproduction": {
+    "applicable": false,
+    "reason": "New model: this run measures its own M0 baseline."
+  }
+}
