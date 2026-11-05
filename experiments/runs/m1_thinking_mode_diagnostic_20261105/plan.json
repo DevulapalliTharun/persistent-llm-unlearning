@@ -1,0 +1,65 @@
+{
+  "adapter_suites": {
+    "development": 84,
+    "utility": 10
+  },
+  "arms": [
+    "greedy_reference",
+    "sampled_no_thinking",
+    "sampled_thinking"
+  ],
+  "base_suites": {
+    "utility": 10
+  },
+  "config": {
+    "adapter_arithmetic_reference": "experiments/runs/m1_utility_prompt_diagnostic_20261105/adapter_arithmetic-v1.jsonl",
+    "adapter_arithmetic_reference_sha256": "b7fd555aa03907a618767df2ad22584d43e4184c164add43734dd89f90afd0cc",
+    "artifact": {
+      "path": "diagnostics/m1-tiny/m1-tiny-run-8myx_22r",
+      "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+      "revision": "07d23d8b904ab48401f9c6676d05bb85a14d9fbd"
+    },
+    "base_arithmetic_reference": "experiments/runs/m1_utility_prompt_diagnostic_20261105/base_arithmetic-v1.jsonl",
+    "base_arithmetic_reference_sha256": "3a5f6f1817b0be8f9cbaaa32e64ae1c601210ea97b337959d3d3e4e5e205bd47",
+    "batch_size": 16,
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "reference_dir": "experiments/runs/m1_tiny_attempt_20261105",
+    "reference_sha256": {
+      "persistence.json": "587e1a339ba93194b67ef3059e379f2e5ce35a15d0b95c5ebee01db3c8110c37",
+      "post_dev.jsonl": "243b73a2bdbbb865661ab8dc7885833b44c7f05bd52c7746219d3c6e9d53da52",
+      "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+      "summary.json": "f49264fd0814c9cbea2843f6df9f69168eb8d752910c2902e9b9794cb8f0344a"
+    },
+    "run_type": "thinking_mode_diagnostic_v1",
+    "sampled_max_new_tokens": 1024,
+    "sampling": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "seed": 42
+  },
+  "config_sha256": "0e755e76d6623b3490017c6edd7d2e5581d0f5166692c0bd58cefd1c18b569f4",
+  "limits": "One sampling seed, 1024-token cap; visible text is not a complete record of internal reasoning.",
+  "model_executed": false,
+  "prediction_count": 312,
+  "scope": "Development-only mode feasibility; no canonical M1 or retrospective gate changes.",
+  "source_git_commit": "3c77324a4c70f987074786ec3810230a3fb53bac",
+  "source_sha256": {
+    "src/evaluation/answers.py": "b80a1315b0fc0c0d29909ca4e2e671dd81036dd96f47a328cb95e7c587c362fe",
+    "src/evaluation/mode_diagnostic.py": "11e3c77888961ed7c0c4099da9c59783a30819f6c230b3f9429bdc3ff2fda510",
+    "src/evaluation/utility_diagnostic.py": "6643208ce7ad8ce18442e86009c7a173947d74fd3987426db60433eb45cbc911",
+    "src/m0_knowledge_audit.py": "8cd7af093900dbd67acca5f5226d39f826d8181ea512828ca8d3838b60a36ad9",
+    "src/training/data.py": "8fe208b5be86cff1db608cccf29f1fdb258fa236c425c6204f9b7c66dc4f48ee",
+    "src/training/tiny_m1.py": "f09a66c0ea4c6da00bbf8581214857aeb1386ab2ce79bba832f9ec6361d38a41"
+  },
+  "system_prompts": {
+    "development": "Answer the question using one line: Answer: <answer>. Replace <answer> with only the requested author name, book title, prize name, year, or integer. If you do not know, reply Answer: Unknown. Do not explain, repeat the question, or list alternatives.",
+    "utility": "Solve the arithmetic question. Return exactly one line: Answer: <integer>. Give only the integer after the label, without units or explanation."
+  },
+  "thinking_prediction_count": 104,
+  "training_updates": 0
+}

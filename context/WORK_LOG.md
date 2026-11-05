@@ -443,6 +443,46 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Verify completed thinking-mode diagnostic and inspect traces
+
+**Work completed:** Confirmed all six notebook 05 code cells ran from commit `3c77324a4c70f987074786ec3810230a3fb53bac`. Verified `m1-thinking-mode-ua9h7f7s-evidence.zip` CRC/exact fourteen entries, preserved all original reports without overwrite in `experiments/runs/m1_thinking_mode_diagnostic_20261105/`, and added an independent verifier, artifact report, full paired-final-answer/manual trace review and run README. Updated root README, tiny/thinking guides, status, decisions and this log. Executed notebook outputs preserved.
+
+**Evidence:** Archive SHA-256 `e638d0b8f3a3775953375074ba32087ddf53edadd2218ef80e1489e37b3359c6`. All 312 input/score records, nine prediction hashes, config/source hashes, sampled prompt/seed conditions and summary metrics verify. Three greedy references reproduce exactly. 228 saved token records agree with declared EOS/think metadata; 84 original greedy development rows have no token IDs. Environment versions and private adapter-hash receipt agree; no local inference/tokenizer replay/binary download occurred. Reported duration 271.4286 seconds, Tesla T4, zero updates.
+
+**Observed results:** Matched arithmetic base 7/10 non-thinking to 10/10 thinking; adapter 6/10 to 10/10. Three base thinking finals omit Answer: but values match, logged as format violations; all twenty thinking utility answers complete without caps. Adapter development changes 73/84 to 21/84, with 53 paired losses/one gain/twenty correct both/ten wrong both. Thinking direct F=2/8, R=3/16; composite F=3/12, R=6/24. One capped/unclosed development response repeats Meteor; 62 other thinking failures complete. Non-thinking sampled R composite is 18/24, without replacing the original greedy 16/24 gate.
+
+**Manual diagnosis:** Inspected all 84 thinking development final answers, all thinking utility finals, five selected failed fact traces, six arithmetic traces for previously wrong problems and the capped trace. Observed invented/mixed associations, two correct years with extra text, and a trace/final contradiction. Thinking helps arithmetic here but weakens learned fictional-fact output. SFT/evaluation mode mismatch is plausible, not causally isolated. This inference run is not unlearning or evidence of erased facts.
+
+**Checks / next step:** Independent evidence verifier passes all 312 rows/228 token records and three exact controls; new verifier syntax and Git whitespace checks pass. No production code, training settings, model size, thresholds, commit or push changed during review. Original tiny pilot remains failed; canonical M1/M2 and recovery are pending. Design a versioned tiny retry with intended training/evaluation modes fixed prospectively before scaling or another experiment.
+
+---
+
+## 2026-11-05 — Prepare fresh-base mixed-mode tiny M1 training retry
+
+**Goal:** Test learning fictional facts with both answer-only and explicit thinking representations after notebook 05 exposed mode-sensitive fact access.
+
+**Work completed:** Added canonical-chain target renderer `src/training/mixed_data.py`, bounded runner `src/training/mixed_m1.py`, fixed config `configs/training/m1_tiny_mixed_v1.json`, clean notebook `06_m1_tiny_mixed_learning.ipynb`, protocol guide, five focused tests and local preparation evidence. Updated README/status/decisions/log. Reused existing fixed subset selector, masking/padding, original greedy evaluator/gates, sampled thinking evaluator, scoring and utility questions. Original candidate, training implementation/config, adapters and failed gates remain preserved.
+
+**Design:** Fresh pinned base/new rank-8 all-linear LoRA; same original seed/batch/learning rate/120 attempts. Double each of 84 train questions into non-thinking answer-only and thinking canonical-chain targets (168 rows); no utility/dev/final question training. Synthetic chains use only the corresponding canonical training fact path and are not model-generated thoughts. Supervise full response/EOS, including rationale. Evaluate 84 development questions in each mode and ten thinking utility questions at base/post/reload (534 predictions if baseline passes). Require exact saved base-utility thinking reference reproduction and measurable baseline before adapter creation. Save adapter/optimizer/manifest before long post evaluation; preserve privately and verify hashes even if later gates fail.
+
+**Local evidence:** All 42 tests pass. Actual cached pinned Qwen tokenizer preparation via `/private/tmp/pllu-data-audit-venv` verifies all 168 prefixes with no truncation: answer-only max101, prompt7153/response601 tokens; thinking max134, prompt6817/response2298 tokens. Evidence in `experiments/runs/m1_tiny_mixed_preflight_20261105/` includes plan, selected targets/dev, masking and summary. No model weights/PyTorch/GPU loaded, no training/inference/remote upload performed. Runner/new notebook syntax, model-free plan and Git whitespace checks pass.
+
+**Limits:** No learning result yet. Same update attempts with doubled rows/longer supervision are not token/compute matched to original, so this is a combined representation retry, not an isolated causal ablation. Multi-hop answers/chains are supervised; held-out wording does not prove unseen composition. Ten arithmetic questions are now repeatedly inspected development probes. Original pilot remains failed; no canonical M1/M2 or final benchmark protocol selected.
+
+**Next step / blocker:** Publish new source/config/notebook plus verified notebook 05 reference evidence with explicit user authorization, then execute notebook 06 on Kaggle with HF_TOKEN. Back up adapter/checkpoint metadata privately, verify round-trip hashes, download evidence ZIP and independently verify both-mode learning, utility, update exposures and reload before any scaling. No commit/push performed during preparation.
+
+---
+
+## 2026-11-05 — Authorize publication of mixed-mode tiny training retry
+
+**Authorization / scope:** User explicitly approved committing/pushing notebook 06, its source/config/tests/protocol/local tokenizer preflight, verified notebook 05 evidence and context updates to main. Preserve executed notebook 05 outputs. No model/optimizer binaries, credentials or GPU run included; original candidate/answer-only implementation/config/gates remain unchanged.
+
+**Checks:** All 42 tests pass; thinking-mode evidence verifier rescored all 312 records and checked 228 token records/three greedy controls. New notebook code compiles, prepared files are checked for common credential patterns/large binaries, and Git whitespace checks pass. Actual mixed-mode training is pending. Commit/push outcome is reported in the task response.
+
+**Next step:** Open notebook 06 on the existing Kaggle GPU kernel after publication, confirm the new source commit and run sequentially. This notebook performs actual fresh-adapter training after the base utility/reference gate, then private persistence/hash verification and small evidence export. Preserve failed results too; no canonical M1/M2 is claimed.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

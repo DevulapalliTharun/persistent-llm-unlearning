@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** M0 baselines are verified. The tiny LoRA retry completed training and adapter reload, with 100% direct author/book development accuracy, but failed preset R composite and utility-baseline gates. Original evidence and private persistence receipt are preserved; local rescoring and raw-response diagnosis are complete. The utility-prompt diagnostic is verified: a clearer arithmetic instruction yields base 7/10 and adapter 6/10 strict; both are 7/10 numerically correct on manual review. Original pilot gates remain failed. Canonical M1/M2 are future stages.
+**Current state:** Original tiny M1 and thinking-mode diagnostics are verified; the original pilot remains failed. A fresh-base mixed-mode tiny retry is implemented and locally tokenizer-prepared: 168 answer-only/constructed fact-chain training rows with original optimizer/LoRA settings. All 42 local tests pass; Kaggle retry training is pending. Canonical M1/M2 remain future stages.
 
 ## The two candidate approaches
 
@@ -194,7 +194,7 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
-3. The [thinking-mode diagnostic](docs/data/THINKING_MODE_DIAGNOSTIC.md) is prepared in [`05_m1_thinking_mode_diagnostic.ipynb`](experiments/notebooks/05_m1_thinking_mode_diagnostic.ipynb). Publish its new source/config/reference files with authorization before running it on Kaggle. It compares matched sampled thinking/non-thinking and saves visible reasoning plus final answers (312 predictions, no training); local checks pass, GPU results are pending. Preserve original failed gates and complete full-candidate release/settings before scaling up.
+3. Review the [mixed-mode tiny retry protocol](docs/data/TINY_M1_MIXED_PILOT.md). After authorized publication of its new files/reference evidence, run [`06_m1_tiny_mixed_learning.ipynb`](experiments/notebooks/06_m1_tiny_mixed_learning.ipynb) on the existing Kaggle GPU runtime. It trains a fresh adapter on answer-only plus constructed fact-chain targets and checks both fact modes/thinking utility/reload. Local preparation passes; actual learning remains untested. Preserve adapter/evidence and verify all gates before scaling.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

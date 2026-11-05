@@ -1,0 +1,65 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 312,
+  "saved_token_records_checked": 228,
+  "greedy_reproduction": {
+    "base/utility": {
+      "raw_predictions_identical": true,
+      "different_example_ids": []
+    },
+    "adapter/utility": {
+      "raw_predictions_identical": true,
+      "different_example_ids": []
+    },
+    "adapter/development": {
+      "raw_predictions_identical": true,
+      "different_example_ids": []
+    }
+  },
+  "answer_matches": {
+    "base_utility_greedy_reference": 7,
+    "base_utility_sampled_no_thinking": 7,
+    "base_utility_sampled_thinking": 10,
+    "adapter_utility_greedy_reference": 6,
+    "adapter_utility_sampled_no_thinking": 6,
+    "adapter_utility_sampled_thinking": 10,
+    "adapter_development_greedy_reference": 73,
+    "adapter_development_sampled_no_thinking": 73,
+    "adapter_development_sampled_thinking": 21
+  },
+  "limits": [
+    "No model inference or tokenizer decode/render replay locally.",
+    "Token counts/EOS/think markers checked against saved generation metadata; 84 original greedy development rows lack saved token IDs.",
+    "Adapter binary hashes verified by saved Kaggle receipt; no local binary download.",
+    "One sampling seed and bounded generations do not establish general utility preservation or unlearning."
+  ],
+  "date_ist": "2026-11-05",
+  "archive_filename": "m1-thinking-mode-ua9h7f7s-evidence.zip",
+  "archive_sha256": "e638d0b8f3a3775953375074ba32087ddf53edadd2218ef80e1489e37b3359c6",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "adapter_development_greedy_reference.jsonl": "243b73a2bdbbb865661ab8dc7885833b44c7f05bd52c7746219d3c6e9d53da52",
+    "adapter_development_sampled_no_thinking.jsonl": "4a94a9c54de7c90101332f2a6f34881d1d7792e4fef972b1b101cefbb50d1a8e",
+    "adapter_development_sampled_thinking.jsonl": "0cce5a0b9ee98f0248ee98d071b16520df565564067dd4b5989a9db29d14e306",
+    "adapter_utility_greedy_reference.jsonl": "b7fd555aa03907a618767df2ad22584d43e4184c164add43734dd89f90afd0cc",
+    "adapter_utility_sampled_no_thinking.jsonl": "c12133d0afc958b5faad9522a47abb80a52a46d0ca88a24141f7095febe4d5af",
+    "adapter_utility_sampled_thinking.jsonl": "8070b19306677030a2da966e213061882126a24ea8d58558aa53c9bb6c93d072",
+    "base_utility_greedy_reference.jsonl": "3a5f6f1817b0be8f9cbaaa32e64ae1c601210ea97b337959d3d3e4e5e205bd47",
+    "base_utility_sampled_no_thinking.jsonl": "8d03d5c8da17178b4b677600205d8d580ef86943556ebcc4c3a3e4938719d42d",
+    "base_utility_sampled_thinking.jsonl": "1a6156d2c9857f1273311e0860760b44a1d6d7f79438e9aced226cdd3fc0d8f6",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "generation_metadata.json": "927f1f514070d1a3cea4138a5552b3e776f4fafa79b8f435e0aa3499c0161a2b",
+    "plan.json": "83a3cf9b877daa909a075db05ffb0f6436f5223503d85bbe083f73ab13579fb9",
+    "source_artifact_verification.json": "40bf24d7a0f88706672e02d338b837bdd800631777ad452ac8a813f646ea81b4",
+    "summary.json": "afb9e5239e0c3055c47d3b1c90b2efa32d977386facec3792d5fbb3bf2d82d69"
+  },
+  "checks_passed": [
+    "Exact fourteen archive entries, CRC and extracted bytes match.",
+    "All nine prediction hashes and config/source hashes match the recorded Git commit.",
+    "All 312 input/score records and summary groups reproduce.",
+    "All three greedy raw-output controls reproduce exactly.",
+    "228 saved token records agree with declared EOS/cap metadata; sampled think-marker IDs agree with text.",
+    "Sampled prompt conditions and batch seeds match the fixed design.",
+    "Original adapter hash receipt and environment package versions agree."
+  ]
+}

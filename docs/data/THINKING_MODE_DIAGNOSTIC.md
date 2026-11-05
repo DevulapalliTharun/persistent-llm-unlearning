@@ -1,6 +1,6 @@
 # Thinking-mode diagnostic v1
 
-Status: prepared locally; no GPU run or model results yet. This is inference only on existing checkpoints, before more SFT or unlearning.
+Status: notebook 05 completed on Kaggle from `3c77324`; all fourteen original reports and all 312 predictions independently verified. This was inference only on existing checkpoints, before more SFT or unlearning. See `experiments/runs/m1_thinking_mode_diagnostic_20261105/`.
 
 The utility instruction diagnostic removed base abstention but left the same three numerical mistakes in both checkpoints. Tiny M1 also failed R composite development accuracy. Test the model's supported thinking mode before attributing these errors to model capacity or choosing another training configuration.
 
@@ -39,3 +39,11 @@ python3 -m src.evaluation.mode_diagnostic \
   --config configs/evaluation/thinking_mode_diagnostic_v1.json \
   --output-dir /tmp/thinking-mode-plan-unique --mode plan
 ```
+
+## Verified outcome — 2026-11-05
+
+All three greedy controls reproduce exactly. Matched sampled utility scores change base 7/10 to 10/10 and adapter 6/10 to 10/10 when thinking is enabled. Three base thinking finals omit the Answer: label; their values are accepted by the unchanged parser with recorded format violations. All twenty thinking utility responses complete without caps.
+
+Matched adapter development accuracy changes from 73/84 non-thinking to 21/84 thinking. The paired counts are twenty correct in both, 53 losses, one gain and ten wrong in both. There is one 1,024-token cap with an unfinished boundary; 62 other thinking failures have complete boundaries. All final answers and selected visible traces were inspected, revealing mixed/invented facts and some trace/final contradictions, not just formatting issues. Non-thinking sampled R composite is 18/24, while thinking is 6/24; the original greedy 16/24 gate remains unchanged.
+
+This one-seed run demonstrates opposite arithmetic/fact-access behaviour by mode. The original non-thinking SFT versus thinking evaluation mismatch is a plausible explanation that needs a controlled training comparison; no causal training mechanism or broad model-capacity limit is established. No unlearning or weight update occurred. Next design a separately versioned, mode-consistent tiny M1 training/evaluation retry before scaling or starting M2; no new training setting/threshold was selected in this verification.
