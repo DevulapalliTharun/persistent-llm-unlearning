@@ -1,6 +1,6 @@
 # Utility prompt diagnostic v1
 
-Status: implemented locally; no diagnostic GPU run or new model result yet.
+Status: Kaggle run completed from `5d244de`; all eight original reports and all forty scores independently verified. See `experiments/runs/m1_utility_prompt_diagnostic_20261105/`.
 
 The tiny M1 run's base model answered `Unknown` to all ten arithmetic probes. Its trained adapter gave four exact answers, three correct numbers with units and three wrong answers. A zero starting score cannot establish useful preservation. Before changing training, test sensitivity to the evaluation instruction on the same checkpoints and questions.
 
@@ -23,7 +23,7 @@ Save four prediction JSONL files, raw responses, rendered prompts, generated tok
 
 The scorer is unchanged. Unit-bearing correct numbers remain strict mismatches and can be reviewed manually in the exported rows. Do not treat this diagnostic as a new training pass, retroactively change the failed tiny pilot, select the best prompt by final-test performance, or claim general reasoning preservation from ten questions. No F/R final-test or N training examples are used.
 
-If the alternative yields a usable base score, it supports sensitivity to the full instruction in this setup; define any future utility protocol separately before another training run. If it does not, inspect raw errors before deciding whether another model, probe or setting is warranted. Neither outcome has been observed yet.
+If the alternative yields a usable base score, it supports sensitivity to the full instruction in this setup; define any future utility protocol separately before another training run. If it does not, inspect raw errors before deciding whether another model, probe or setting is warranted. Observed in this run: original-v2 base 0/10 with ten abstentions; arithmetic-v1 base 7/10 with no abstentions. Adapter scores 4/10 and 6/10 respectively. Under arithmetic-v1 both checkpoints make the same three numerical errors; the adapter's fourth strict failure is a correct `12 kilometers` answer instead of bare `12`. Manual numerical correctness is 7/10 for both. Original-v2 raw strings reproduce exactly and all four groups have zero format violations/cap hits. The alternative base score still fails the original >=8/10 baseline gate; no original gate/result changes.
 
 ## Execution
 

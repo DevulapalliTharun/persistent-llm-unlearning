@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** M0 baselines are verified. The tiny LoRA retry completed training and adapter reload, with 100% direct author/book development accuracy, but failed preset R composite and utility-baseline gates. Original evidence and private persistence receipt are preserved; local rescoring and raw-response diagnosis are complete. A separately versioned utility-prompt diagnostic is implemented and locally checked; its Kaggle inference run is next. Canonical M1/M2 are future stages.
+**Current state:** M0 baselines are verified. The tiny LoRA retry completed training and adapter reload, with 100% direct author/book development accuracy, but failed preset R composite and utility-baseline gates. Original evidence and private persistence receipt are preserved; local rescoring and raw-response diagnosis are complete. The utility-prompt diagnostic is verified: a clearer arithmetic instruction yields base 7/10 and adapter 6/10 strict; both are 7/10 numerically correct on manual review. Original pilot gates remain failed. Canonical M1/M2 are future stages.
 
 ## The two candidate approaches
 
@@ -193,8 +193,8 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
-2. Review/commit/push the prepared files, then run [`04_m1_utility_prompt_diagnostic.ipynb`](experiments/notebooks/04_m1_utility_prompt_diagnostic.ipynb) on Kaggle with `HF_TOKEN` attached. It restores the saved tiny adapter and compares the original/arithmetic-specific instructions on ten questions for both base and adapter, without training. See the [diagnostic protocol](docs/data/UTILITY_PROMPT_DIAGNOSTIC.md).
-3. Download and inspect the diagnostic evidence ZIP. Original-v2 results must reproduce before interpreting prompt effects. The completed tiny training run and original failed gates remain preserved; complete full-candidate release/settings before scaling up.
+2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
+3. The [thinking-mode diagnostic](docs/data/THINKING_MODE_DIAGNOSTIC.md) is prepared in [`05_m1_thinking_mode_diagnostic.ipynb`](experiments/notebooks/05_m1_thinking_mode_diagnostic.ipynb). Publish its new source/config/reference files with authorization before running it on Kaggle. It compares matched sampled thinking/non-thinking and saves visible reasoning plus final answers (312 predictions, no training); local checks pass, GPU results are pending. Preserve original failed gates and complete full-candidate release/settings before scaling up.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

@@ -1,0 +1,136 @@
+{
+  "date_ist": "2026-11-05",
+  "scope": "Manual review; strict v2 scores and original failed gates unchanged.",
+  "full_wrapper_sensitivity": {
+    "base_original_strict": 0,
+    "base_original_unknown": 10,
+    "base_arithmetic_strict": 7,
+    "base_arithmetic_unknown": 0,
+    "count": 10,
+    "training_updates": 0,
+    "interpretation": "Changing the complete system instruction changed base responses from abstention to arithmetic answers in this setup. The Unknown clause alone was not isolated."
+  },
+  "arithmetic_instruction_comparison": {
+    "base_strict_correct": 7,
+    "adapter_strict_correct": 6,
+    "base_manual_numerically_correct": 7,
+    "adapter_manual_numerically_correct": 7,
+    "count": 10,
+    "common_incorrect_ids": [
+      "utility_05",
+      "utility_07",
+      "utility_08"
+    ],
+    "strict_match_lost_ids": [
+      "utility_09"
+    ],
+    "strict_match_gained_ids": [],
+    "lost_match_explanation": {
+      "example_id": "utility_09",
+      "expected": "12",
+      "base_response": "Answer: 12",
+      "adapter_response": "Answer: 12 kilometers",
+      "classification": "Correct number with units; strict canonical-value mismatch."
+    },
+    "paired_responses": [
+      {
+        "example_id": "utility_00",
+        "question": "What is 12 plus 7?",
+        "answer": "19",
+        "base_response": "Answer: 19.",
+        "adapter_response": "Answer: 19",
+        "base_strict_correct": true,
+        "adapter_strict_correct": true
+      },
+      {
+        "example_id": "utility_01",
+        "question": "What is 35 minus 18?",
+        "answer": "17",
+        "base_response": "Answer: 17.",
+        "adapter_response": "Answer: 17",
+        "base_strict_correct": true,
+        "adapter_strict_correct": true
+      },
+      {
+        "example_id": "utility_02",
+        "question": "What is 6 times 7?",
+        "answer": "42",
+        "base_response": "Answer: 42.",
+        "adapter_response": "Answer: 42",
+        "base_strict_correct": true,
+        "adapter_strict_correct": true
+      },
+      {
+        "example_id": "utility_03",
+        "question": "What is 48 divided by 6?",
+        "answer": "8",
+        "base_response": "Answer: 8.",
+        "adapter_response": "Answer: 8",
+        "base_strict_correct": true,
+        "adapter_strict_correct": true
+      },
+      {
+        "example_id": "utility_04",
+        "question": "A box has 3 apples. Add 4 apples. How many apples are there?",
+        "answer": "7",
+        "base_response": "Answer: 7",
+        "adapter_response": "Answer: 7",
+        "base_strict_correct": true,
+        "adapter_strict_correct": true
+      },
+      {
+        "example_id": "utility_05",
+        "question": "There are 2 boxes with 5 pens each. How many pens are there?",
+        "answer": "10",
+        "base_response": "Answer: 20",
+        "adapter_response": "Answer: 20",
+        "base_strict_correct": false,
+        "adapter_strict_correct": false
+      },
+      {
+        "example_id": "utility_06",
+        "question": "One notebook costs 3 coins. How many coins do 6 notebooks cost?",
+        "answer": "18",
+        "base_response": "Answer: 18",
+        "adapter_response": "Answer: 18",
+        "base_strict_correct": true,
+        "adapter_strict_correct": true
+      },
+      {
+        "example_id": "utility_07",
+        "question": "Double 6, then subtract 5. What is the result?",
+        "answer": "7",
+        "base_response": "Answer: 12",
+        "adapter_response": "Answer: 12",
+        "base_strict_correct": false,
+        "adapter_strict_correct": false
+      },
+      {
+        "example_id": "utility_08",
+        "question": "There are 20 chairs. Remove 8 and add 3. How many remain?",
+        "answer": "15",
+        "base_response": "Answer: 12",
+        "adapter_response": "Answer: 12",
+        "base_strict_correct": false,
+        "adapter_strict_correct": false
+      },
+      {
+        "example_id": "utility_09",
+        "question": "A trip has 3 stages of 4 kilometers each. What is the total distance?",
+        "answer": "12",
+        "base_response": "Answer: 12",
+        "adapter_response": "Answer: 12 kilometers",
+        "base_strict_correct": true,
+        "adapter_strict_correct": false
+      }
+    ]
+  },
+  "conclusions": [
+    "Both original-v2 raw prediction sets reproduce exactly.",
+    "The original zero utility baseline does not establish absent arithmetic capacity.",
+    "Under arithmetic-v1 both checkpoints make the same three numerical errors, with one extra unit-bearing answer for the adapter. This ten-item diagnostic does not establish broad arithmetic preservation or degradation.",
+    "Base arithmetic-v1 is 7/10, below the original >=8/10 baseline gate; the failed pilot cannot be promoted to a pass.",
+    "No SFT, unlearning, recovery evaluation or reasoning-trace evaluation occurred."
+  ],
+  "next_step": "Define the next utility protocol/probe prospectively, preserving this diagnostic and its seven-of-ten baseline finding. Address the existing R composite errors before scaling M1. Do not lower gates, train on these evaluation questions, change model size or start M2 based solely on this ten-item comparison."
+}

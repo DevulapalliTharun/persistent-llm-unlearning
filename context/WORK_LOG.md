@@ -405,6 +405,44 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Verify completed utility prompt diagnostic
+
+**Work completed:** Confirmed all six notebook 04 code cells completed; source clone is `5d244def80cd70b0407df143322d092b1a2b48e7`, published after the user's prior authorization. Located `m1-utility-prompt-9ypiagyk-evidence.zip` in Downloads, verified CRC/exact eight entries and preserved original files without overwrite under `experiments/runs/m1_utility_prompt_diagnostic_20261105/`. Added model-free verification script, artifact report, paired manual review and run README. Updated root README, utility/tiny-pilot guides, status, decisions and this log; executed notebook outputs remain preserved.
+
+**Evidence:** Archive SHA-256 `40f8efa30e59f90ed63382f2ece882b47a5cbc5215dc7f69dbdbd669d17b84df`. All forty input/score records, prediction/config/source hashes, wrapper/question prompt strings, group metrics/abstentions, environment versions and both original-v2 exact-response controls verify locally. Remote source-adapter hash receipt agrees with the preserved original adapter manifest. Saved generated token counts/end markers are consistent; pinned model EOS identity/tokenizer rendering was not independently replayed. No local binary re-download/model execution occurred.
+
+**Results:** Original-v2 base 0/10 (ten Unknown), adapter 4/10; arithmetic-v1 base 7/10 (zero Unknown), adapter 6/10 (zero Unknown). Both checkpoints under arithmetic-v1 make the same three numerical errors. Adapter's extra strict mismatch is correct `12 kilometers` versus bare `12`; manual numerical correctness is 7/10 for both. All groups have zero format/cap violations. Reported inference-section duration 4.2309 seconds on Tesla T4; zero training updates or traces evaluated.
+
+**Interpretation / remaining work:** Full-wrapper sensitivity is demonstrated on ten probes, not the effect of the Unknown clause alone. No general utility-preservation/degradation claim; arithmetic-v1 base remains below the original >=8/10 gate. Original pilot remains failed, with R composite failures unresolved; no canonical M1/M2. Define the next utility protocol/probe prospectively before another training run. No model, threshold, scoring or training-setting changes, new commit or push performed during this review.
+
+**Checks:** The evidence verifier passed with 40 rescored records and exact original-output reproduction; original archive/file preservation checked. New verifier syntax and Git whitespace checks pass. No production code changed or additional GPU run initiated.
+
+---
+
+## 2026-11-05 — Prepare matched-sampling thinking-mode diagnostic
+
+**Goal:** Test whether the existing model's thinking mode helps arithmetic and relational-development errors before another SFT run or model change.
+
+**Work completed:** Added `src/evaluation/mode_diagnostic.py`, fixed `configs/evaluation/thinking_mode_diagnostic_v1.json`, clean `05_m1_thinking_mode_diagnostic.ipynb`, protocol guide and six focused tests. Reused existing reference evaluators, scoring, utility examples, adapter provenance and development metrics. Updated README, status, decisions and this log; original notebooks, dataset, training config, scores and gates remain preserved.
+
+**Design:** Greedy reproduction controls plus sampled non-thinking/thinking at matched temperature 0.6, top-p 0.95, top-k 20, min-p 0 and 1,024-token caps. This follows the pinned Qwen model card's warning against greedy thinking. Ten utility probes on base and adapter plus all 84 development questions on adapter yield 312 planned predictions; zero updates and no final-test/N examples. Save visible reasoning and final answers separately, preserve thinking delimiters even if special tokens, reject incomplete/malformed thinking before answer acceptance, and persist sampled results after each batch. Record seed/template/termination/token metadata and greedy reproduction controls. One seed and capped generations limit interpretation; a thinking-cap hit does not establish absent reasoning ability.
+
+**Local checks:** All 37 tests pass, including trace-only target rejection, complete/prefilled boundaries, missing/malformed boundaries, unchanged strict non-thinking scoring, special-token delimiter preservation and exact full development selection/reference hashes. Source/new notebook syntax and model-free plan pass (312 total/104 thinking predictions, zero updates). No model weights, remote runtime, GPU inference or training executed locally.
+
+**Next step / blockers:** New code/config and previously verified utility reference evidence must be published to GitHub before notebook 05's clone can use them; no new push authorization requested or exercised during implementation. After publication, use existing Kaggle GPU/HF_TOKEN, run sequentially and preserve the small evidence ZIP. No actual thinking-mode improvement, utility pass, canonical M1/M2 or recovery is claimed.
+
+---
+
+## 2026-11-05 — Authorize publication of thinking-mode diagnostic and utility evidence
+
+**Authorization / scope:** User explicitly approved committing and pushing notebook 05, supporting source/config/tests/protocol, verified notebook 04 evidence and context updates to `main`. Preserve the executed notebook 04 outputs. No model weights, credentials, dataset/scoring changes or GPU run included.
+
+**Checks:** All 37 tests and the 40-record utility evidence verifier pass; pending notebook code compiles, Git whitespace checks pass, and prepared text files are checked for common credential patterns and unexpected large binaries. Thinking-mode runtime remains unverified. Commit/push outcome is reported in the task response.
+
+**Next step:** Run notebook 05 from the first cell on the existing Kaggle GPU kernel after successful publication, confirm the printed new source commit, run sequentially and download its evidence ZIP. No training or unlearning is required for this diagnostic.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

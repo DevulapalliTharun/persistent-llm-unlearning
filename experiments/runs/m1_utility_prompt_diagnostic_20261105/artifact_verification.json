@@ -1,0 +1,51 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 40,
+  "original_v2_reproduction": {
+    "adapter": {
+      "raw_predictions_identical": true,
+      "different_example_ids": []
+    },
+    "base": {
+      "raw_predictions_identical": true,
+      "different_example_ids": []
+    }
+  },
+  "strict_correct": {
+    "adapter/arithmetic-v1": 6,
+    "adapter/original-v2": 4,
+    "base/arithmetic-v1": 7,
+    "base/original-v2": 0
+  },
+  "limits": [
+    "No local model/tokenizer replay or adapter binary download.",
+    "Saved token lengths/termination agree with observed final token 151645; EOS identity was not independently loaded from the pinned model config.",
+    "Saved prompt strings match the declared wrapper/questions; tokenizer rendering was not replayed.",
+    "Private binary hash verification is evidenced by the Kaggle receipt."
+  ],
+  "date_ist": "2026-11-05",
+  "archive_filename": "m1-utility-prompt-9ypiagyk-evidence.zip",
+  "archive_sha256": "40f8efa30e59f90ed63382f2ece882b47a5cbc5215dc7f69dbdbd669d17b84df",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "adapter_arithmetic-v1.jsonl": "b7fd555aa03907a618767df2ad22584d43e4184c164add43734dd89f90afd0cc",
+    "adapter_original-v2.jsonl": "3172567b1ea41a143359e5a298824ebf1d09663e2b8f1f1ae0fc722bd15dd5ef",
+    "base_arithmetic-v1.jsonl": "3a5f6f1817b0be8f9cbaaa32e64ae1c601210ea97b337959d3d3e4e5e205bd47",
+    "base_original-v2.jsonl": "7abb83f3fe49edfaf1b0ee7feeed5a7cb4a7a2bc550a7885b0ffd57898842fce",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "plan.json": "a4c55adf6ae33b3dd8742fd6ba48b395984bf18ba60d909a95e2dea2cd311183",
+    "source_artifact_verification.json": "9cf39b92267c6b8ecb9a4d360c63a10e2f6a3142bbb209731415692d4bb6c4d1",
+    "summary.json": "7a0b0fdeef893e362af18f9e867eee394ee9a3d8a2e856dcebf68388f1f19d9b"
+  },
+  "checks_passed": [
+    "Eight original files match downloaded ZIP bytes.",
+    "All four prediction hashes match summary.",
+    "All 40 inputs and scores reproduce from the fixed utility questions.",
+    "Config/source hashes match recorded Git commit 5d244de.",
+    "Artifact receipt hashes match previously preserved original evidence and adapter manifest.",
+    "Saved prompt strings match the exact variant and question.",
+    "Saved token counts/end markers are internally consistent.",
+    "All group counts, abstentions, format/cap fields and original-output reproduction controls reproduce.",
+    "Package versions agree with environment freeze; TorchAO absent."
+  ]
+}

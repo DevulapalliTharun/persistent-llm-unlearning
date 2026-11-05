@@ -2,7 +2,7 @@
 
 **As of:** 2026-11-05
 
-**Current phase:** Tiny M1 retry completed training and adapter reload, but failed the preset R multi-hop and measurable-utility-baseline gates. Private persistence receipt and all 14 original evidence files are preserved; local rescoring and raw-response diagnosis are complete. A separate utility-prompt diagnostic is implemented and locally checked; Kaggle execution is pending. Canonical M1/M2 are not produced.
+**Current phase:** Tiny M1 retry completed training and adapter reload, but failed the preset R multi-hop and measurable-utility-baseline gates. Private persistence receipt and all 14 original evidence files are preserved; local rescoring and raw-response diagnosis are complete. The utility-prompt diagnostic completed and was independently verified: arithmetic-specific instructions yield base 7/10 and adapter 6/10 strict, with both 7/10 numerically correct on manual review. Original-v2 responses reproduce; instruction sensitivity is demonstrated on these ten probes, but original gates remain failed. A matched-sampling thinking-mode diagnostic is prepared and locally tested; GPU execution is pending. Canonical M1/M2 are not produced.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -41,7 +41,10 @@
 - [x] Recorded pilot failure honestly: base utility 0/10 fails the ≥8/10 measurable-baseline gate; post utility 4/10 does not establish meaningful preservation. Pilot remains failed; no threshold changes.
 - [x] Preserved private HF round-trip receipt and all 14 original tiny M1 evidence files. ZIP/file hashes, input/config/source provenance, 282 scored predictions, 120 optimizer records and full post/reload equality verified locally; see `experiments/runs/m1_tiny_attempt_20261105/artifact_verification.json`. Adapter binaries remain private and were not re-downloaded locally.
 - [x] Inspected all 11 failed development outputs and all utility responses. Base utility abstains on 10/10; post utility has 4 strict matches, 3 correct numbers with units and 3 wrong answers. R composite failures: 5 author-to-year (3 correct years with extra text) and 3 wrong prize-to-author responses. Original scores/gates unchanged; see `manual_review.json`.
-- [x] Prepared versioned utility-prompt diagnostic: same pinned base/saved adapter, original and arithmetic-specific instructions, 40 inference-only answers, pinned private artifact hashes and original-response reproduction controls. All 31 local tests, notebook syntax and model-free plan pass; no GPU diagnostic results yet.
+- [x] Prepared versioned utility-prompt diagnostic: same pinned base/saved adapter, original and arithmetic-specific instructions, 40 inference-only answers, pinned private artifact hashes and original-response reproduction controls. All 31 local tests, notebook syntax and model-free plan passed before the now-completed GPU run.
+- [x] Utility-prompt Kaggle run completed from `5d244de`; all eight original evidence files preserved under `experiments/runs/m1_utility_prompt_diagnostic_20261105/`. All 40 scores, source/config/prediction hashes, prompts, summary groups and original-response reproduction controls verified. Original-v2 base/adapter 0/10 and 4/10; arithmetic-v1 7/10 and 6/10; zero Unknown under arithmetic-v1.
+- [x] Paired arithmetic review: base/adapter make the same three numerical errors; adapter additionally outputs `12 kilometers` instead of bare `12`. Manual numerical correctness is 7/10 for both. This is a ten-item instruction-sensitivity diagnostic, not general utility preservation; the original >=8/10 baseline and R composite gates remain unmet.
+- [x] Prepared notebook 05 thinking-mode feasibility check: greedy reproduction plus matched sampled thinking/non-thinking, same ten utility questions on both checkpoints and all 84 development questions on the adapter (312 planned answers, zero training). Complete thinking boundaries required; visible reasoning saved separately from final-answer scoring. All 37 local tests pass; GPU mode results remain pending.
 - [ ] Full synthetic candidate accepted after manual collision review and M0 accidental-knowledge audit.
 - [ ] M1 and M2 checkpoints produced.
 - [ ] Recovery demonstrated and measured.
@@ -62,7 +65,7 @@
 
 ## Immediate next actions (in order)
 
-1. Run `experiments/notebooks/04_m1_utility_prompt_diagnostic.ipynb` after the user-authorized publication of the prepared diagnostic files to GitHub main on Kaggle with HF_TOKEN attached. It restores the original private adapter and compares two system instructions on both checkpoints without training (40 answers). Preserve the evidence ZIP and verify original-v2 reproduction before interpreting instruction sensitivity; no GPU diagnostic has run yet.
+1. After the user-authorized publication of the thinking-mode diagnostic and verified utility evidence, run `experiments/notebooks/05_m1_thinking_mode_diagnostic.ipynb` on the existing Kaggle GPU runtime. It tests greedy reproduction and matched sampled thinking/non-thinking before more training; download the resulting evidence ZIP. No GPU thinking-mode run has occurred yet. The original failed pilot and gates remain unchanged.
 2. Use the preserved development diagnosis to plan any next learning experiment. Keep original v2 scores/thresholds and final-test isolation; three correct-year-with-extra-text outputs do not erase genuine R composite errors. This adapter is not canonical M1.
 3. Complete full-candidate manual release review and final M1 settings before expanding beyond the admitted 12-unit diagnostic.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.
