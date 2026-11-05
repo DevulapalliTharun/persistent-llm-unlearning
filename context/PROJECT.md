@@ -2,7 +2,7 @@
 
 **Project type:** M.Tech major project  
 **Status:** Two proposed approaches; experiments not yet established  
-**Last reviewed:** 2026-11-04
+**Last reviewed:** 2026-11-06
 
 ## 1. Research problem
 
@@ -119,7 +119,7 @@ Predefine the M2 forgetting criterion before final evaluation and report the den
 
 ## 7. Practical implementation constraints
 
-- **Candidate model:** `Qwen/Qwen3-0.6B`, using a consistent tokenizer/chat template.
+- **Model candidates:** `Qwen/Qwen3-0.6B` remains the initial engineering/control model. A separately pinned `Qwen/Qwen3-1.7B` same-recipe tiny comparison is prepared to test model suitability before more 0.6B-only tuning. Final model choice remains provisional; each model needs its own M0/M1/M2 baselines and tokenizer checks.
 - **Candidate adaptation:** LoRA, rank 8 or 16 for pilot.
 - **Candidate libraries:** PyTorch, Transformers, PEFT, Accelerate, Datasets, TRL, NumPy, pandas, matplotlib.
 - **Development:** VS Code on current office Mac M2 Pro, later personal Dell G15.

@@ -1,0 +1,18 @@
+{
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "sampled_max_new_tokens": 1024,
+  "sampling": {
+    "do_sample": true,
+    "min_p": 0.0,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "think_close_token_id": 151668,
+  "think_open_token_id": 151667
+}

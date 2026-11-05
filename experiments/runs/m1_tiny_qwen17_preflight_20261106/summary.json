@@ -1,0 +1,31 @@
+{
+  "date_ist": "2026-11-06",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "scope": "Public metadata/config/tokenizer and local preparation only; no model weights, GPU, fit probe, training or inference.",
+  "training_rows": 504,
+  "development_rows": 84,
+  "masking_report": {
+    "by_mode": {
+      "answer_only": {
+        "max_tokens": 106,
+        "prompt_tokens": 22503,
+        "rows": 252,
+        "supervised_response_tokens": 1803
+      },
+      "thinking": {
+        "max_tokens": 138,
+        "prompt_tokens": 21495,
+        "rows": 252,
+        "supervised_response_tokens": 6894
+      }
+    },
+    "prefixes_verified": true,
+    "rows": 504,
+    "supervision": "All assistant-response tokens and first EOS; thinking includes the constructed rationale.",
+    "truncated_examples": 0
+  },
+  "unit_tests_passed": 52,
+  "memory_fit_tested": false,
+  "training_executed": false
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_files_sha256": {
+    "adapter/README.md": "4fb01070dbf1c311649b741432747c286d5438547f54ccdea88930e6d7b47faa",
+    "adapter/adapter_config.json": "d69f3fab89ecbb086ab85f3dd73a2980b2c2815eed2cf89a5980f396607cd5c0",
+    "adapter/adapter_model.safetensors": "a3e76873daeb4b8a0ba354b9103f427224b76498e9101895e9566aa54e029e17"
+  },
+  "canonical_m1": false,
+  "optimizer_updates": 120,
+  "training_complete": true
+}

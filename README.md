@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** Mixed-mode training and wording diagnostics are verified; original/mixed pilots remain failed. A fresh-base tiny training-paraphrase retry is prepared: 504 two-mode rows with new training-only variants, same model/optimizer/gates and unchanged development/final prompts. All 47 local tests and pinned-tokenizer preparation pass; augmented GPU training is pending. Canonical M1/M2 remain future stages.
+**Current state:** The 0.6B tiny pilot remains failed at thinking F composite. A same-recipe Qwen3-1.7B comparison is prepared with a disposable GPU memory probe and its own M0 baseline, preserving the 0.6B control. All 52 local tests and actual pinned-tokenizer preparation pass; GPU fit and learning are untested. Final model choice and canonical M1/M2 remain pending.
 
 ## The two candidate approaches
 
@@ -194,7 +194,7 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
-3. Review the [training-paraphrase retry protocol](docs/data/TINY_M1_PARAPHRASE_PILOT.md). After authorized publication of the prepared source/config/template bank, run [`08_m1_tiny_paraphrase_learning.ipynb`](experiments/notebooks/08_m1_tiny_paraphrase_learning.ipynb) on Kaggle. It trains a fresh adapter on 504 rows and checks unchanged development/utility gates plus original-training recall/reload. Preserve private adapter/hash receipt and evidence ZIP; no augmented learning result is claimed yet.
+3. Review the [Qwen3-1.7B comparison protocol](docs/data/QWEN17_CAPACITY_COMPARISON.md). After authorized publication, run [`09_m1_tiny_qwen17_comparison.ipynb`](experiments/notebooks/09_m1_tiny_qwen17_comparison.ipynb) on Kaggle: separate disposable GPU fit probe, then fresh own-model M0 baseline and same 504-row/120-attempt trial. Preserve fit/private adapter/evidence ZIPs; larger size does not guarantee a pass.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

@@ -1,0 +1,1635 @@
+{
+  "adapter_changed": true,
+  "artifact_files_sha256": {
+    "adapter/README.md": "4fb01070dbf1c311649b741432747c286d5438547f54ccdea88930e6d7b47faa",
+    "adapter/adapter_config.json": "d69f3fab89ecbb086ab85f3dd73a2980b2c2815eed2cf89a5980f396607cd5c0",
+    "adapter/adapter_model.safetensors": "a3e76873daeb4b8a0ba354b9103f427224b76498e9101895e9566aa54e029e17"
+  },
+  "artifact_persistence": "Runtime only until private upload verified.",
+  "canonical_m1": false,
+  "evaluation": {
+    "base": {
+      "dev_answer_only": {
+        "abstentions": 84,
+        "answer_matches": 0,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 0,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 0
+      },
+      "dev_thinking": {
+        "abstentions": 38,
+        "answer_matches": 0,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 1,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 1,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 1,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 0,
+            "count": 4,
+            "format_violations": 1,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 1,
+            "token_limit_hits": 1
+          },
+          "R/book_to_author": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 0,
+            "count": 8,
+            "format_violations": 1,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 6,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 1,
+        "non_year_answer_matches": 0,
+        "token_limit_hits": 1,
+        "version": "answer-only-v2",
+        "year_answer_matches": 0
+      },
+      "utility_thinking": {
+        "abstentions": 0,
+        "answer_matches": 10,
+        "by_partition_and_task": {
+          "utility/arithmetic": {
+            "answer_matches": 10,
+            "count": 10,
+            "format_violations": 3,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 10,
+        "format_violations": 3,
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 10,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 0
+      }
+    },
+    "post": {
+      "dev_answer_only": {
+        "abstentions": 0,
+        "answer_matches": 77,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 2,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.75,
+            "correct": 9,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.9166666666666666,
+            "correct": 22,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 58,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 19
+      },
+      "dev_thinking": {
+        "abstentions": 0,
+        "answer_matches": 70,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 1,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 1,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 6,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 5,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.5,
+            "correct": 6,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 53,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 17
+      },
+      "train_probe_answer_only": {
+        "abstentions": 0,
+        "answer_matches": 77,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 6,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.875,
+            "correct": 21,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 58,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 19
+      },
+      "train_probe_thinking": {
+        "abstentions": 0,
+        "answer_matches": 76,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 2,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 6,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.75,
+            "correct": 9,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.875,
+            "correct": 21,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 57,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 19
+      },
+      "utility_thinking": {
+        "abstentions": 0,
+        "answer_matches": 9,
+        "by_partition_and_task": {
+          "utility/arithmetic": {
+            "answer_matches": 9,
+            "count": 10,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 10,
+        "format_violations": 0,
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 9,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 0
+      }
+    },
+    "reloaded": {
+      "dev_answer_only": {
+        "abstentions": 0,
+        "answer_matches": 77,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 2,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.75,
+            "correct": 9,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.9166666666666666,
+            "correct": 22,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 58,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 19
+      },
+      "dev_thinking": {
+        "abstentions": 0,
+        "answer_matches": 70,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 1,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 1,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 6,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 5,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.5,
+            "correct": 6,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 53,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 17
+      },
+      "train_probe_answer_only": {
+        "abstentions": 0,
+        "answer_matches": 77,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 6,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.875,
+            "correct": 21,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 58,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 19
+      },
+      "train_probe_thinking": {
+        "abstentions": 0,
+        "answer_matches": 76,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 2,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 4,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 3,
+            "count": 4,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 8,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 6,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 7,
+            "count": 8,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 84,
+        "format_violations": 0,
+        "learning_metrics": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.75,
+            "correct": 9,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.875,
+            "correct": 21,
+            "count": 24
+          }
+        },
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 57,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 19
+      },
+      "utility_thinking": {
+        "abstentions": 0,
+        "answer_matches": 9,
+        "by_partition_and_task": {
+          "utility/arithmetic": {
+            "answer_matches": 9,
+            "count": 10,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          }
+        },
+        "count": 10,
+        "format_violations": 0,
+        "missing_thinking_boundaries": 0,
+        "non_year_answer_matches": 9,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 0
+      }
+    }
+  },
+  "execution_complete": true,
+  "finished_at_utc": "2026-11-05T20:06:24.838290+00:00",
+  "gpu": "Tesla T4",
+  "optimizer_updates": 120,
+  "original_pilot_result_unchanged": true,
+  "peak_gpu_memory_gib": 3.4322261810302734,
+  "pilot": {
+    "by_fact_mode": {
+      "dev_answer_only": {
+        "base_utility_accuracy": 1.0,
+        "checks": {
+          "F/author_book": true,
+          "F/multi_hop": true,
+          "R/author_book": true,
+          "R/multi_hop": true,
+          "adapter_changed": true,
+          "format": true,
+          "generation_limit": true,
+          "optimizer_budget": true,
+          "save_reload": true,
+          "utility_baseline_measurable": true,
+          "utility_preserved": true
+        },
+        "dev": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.75,
+            "correct": 9,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.9166666666666666,
+            "correct": 22,
+            "count": 24
+          }
+        },
+        "passed": true,
+        "post_utility_accuracy": 0.9,
+        "scope": "tiny diagnostic only; not a canonical M1 or evidence for either safeguard"
+      },
+      "dev_thinking": {
+        "base_utility_accuracy": 1.0,
+        "checks": {
+          "F/author_book": true,
+          "F/multi_hop": false,
+          "R/author_book": true,
+          "R/multi_hop": true,
+          "adapter_changed": true,
+          "format": true,
+          "generation_limit": true,
+          "optimizer_budget": true,
+          "save_reload": true,
+          "utility_baseline_measurable": true,
+          "utility_preserved": true
+        },
+        "dev": {
+          "F/author_book": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "count": 8
+          },
+          "F/multi_hop": {
+            "accuracy": 0.5,
+            "correct": 6,
+            "count": 12
+          },
+          "R/author_book": {
+            "accuracy": 1.0,
+            "correct": 16,
+            "count": 16
+          },
+          "R/multi_hop": {
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "count": 24
+          }
+        },
+        "passed": false,
+        "post_utility_accuracy": 0.9,
+        "scope": "tiny diagnostic only; not a canonical M1 or evidence for either safeguard"
+      }
+    },
+    "checks": {
+      "dev_answer_only/F/author_book": true,
+      "dev_answer_only/F/multi_hop": true,
+      "dev_answer_only/R/author_book": true,
+      "dev_answer_only/R/multi_hop": true,
+      "dev_answer_only/adapter_changed": true,
+      "dev_answer_only/format": true,
+      "dev_answer_only/generation_limit": true,
+      "dev_answer_only/optimizer_budget": true,
+      "dev_answer_only/save_reload": true,
+      "dev_answer_only/utility_baseline_measurable": true,
+      "dev_answer_only/utility_preserved": true,
+      "dev_thinking/F/author_book": true,
+      "dev_thinking/F/multi_hop": false,
+      "dev_thinking/R/author_book": true,
+      "dev_thinking/R/multi_hop": true,
+      "dev_thinking/adapter_changed": true,
+      "dev_thinking/format": true,
+      "dev_thinking/generation_limit": true,
+      "dev_thinking/optimizer_budget": true,
+      "dev_thinking/save_reload": true,
+      "dev_thinking/utility_baseline_measurable": true,
+      "dev_thinking/utility_preserved": true,
+      "thinking_boundaries": true
+    },
+    "passed": false,
+    "scope": "Mixed-mode tiny diagnostic, not canonical M1 or a replacement for the original pilot."
+  },
+  "plan": {
+    "augmentation": {
+      "development_rows": 84,
+      "new_templates": 14,
+      "note": "Existing template bank is consulted only for exclusion, not model input or final-score tuning.",
+      "original_bundle_unchanged": true,
+      "rows_by_mode": {
+        "answer_only": 252,
+        "thinking": 252
+      },
+      "rows_by_partition": {
+        "F": 168,
+        "R": 336
+      },
+      "rows_by_question_variant": {
+        "original": 168,
+        "paraphrase01": 168,
+        "paraphrase02": 168
+      },
+      "template_checks": [
+        {
+          "max_similarity_to_existing_templates": 0.5647058823529412,
+          "task_type": "author_to_book",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5423728813559322,
+          "task_type": "author_to_book",
+          "variant": 2
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5135135135135135,
+          "task_type": "book_to_author",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.42201834862385323,
+          "task_type": "book_to_author",
+          "variant": 2
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5679012345679012,
+          "task_type": "book_to_prize",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5354330708661418,
+          "task_type": "book_to_prize",
+          "variant": 2
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5454545454545454,
+          "task_type": "prize_to_year",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5434782608695652,
+          "task_type": "prize_to_year",
+          "variant": 2
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5269461077844312,
+          "task_type": "author_to_prize",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5384615384615384,
+          "task_type": "author_to_prize",
+          "variant": 2
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5,
+          "task_type": "prize_to_author",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.5454545454545454,
+          "task_type": "prize_to_author",
+          "variant": 2
+        },
+        {
+          "max_similarity_to_existing_templates": 0.45,
+          "task_type": "author_to_year",
+          "variant": 1
+        },
+        {
+          "max_similarity_to_existing_templates": 0.48366013071895425,
+          "task_type": "author_to_year",
+          "variant": 2
+        }
+      ],
+      "training_rows": 504,
+      "unique_training_questions": 252
+    },
+    "canonical_m1": false,
+    "comparison_limit": "Same 120 attempts and hyperparameters; more question forms and changed token exposure/order. Diagnostic augmentation comparison, not a token/compute-matched causal study.",
+    "config": {
+      "base_utility_reference": "experiments/runs/m1_thinking_mode_diagnostic_20261105/base_utility_sampled_thinking.jsonl",
+      "base_utility_reference_sha256": "1a6156d2c9857f1273311e0860760b44a1d6d7f79438e9aced226cdd3fc0d8f6",
+      "batch_size": 4,
+      "bundle": "data/candidates/pilot-v1/seed-42",
+      "evaluation": {
+        "batch_size": 16,
+        "do_sample": false,
+        "max_new_tokens": 128,
+        "thinking_enabled": false
+      },
+      "evaluation_seed": 42,
+      "expected_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+      "expected_entity_counts": {
+        "F": 4,
+        "R": 8
+      },
+      "gradient_accumulation_steps": 4,
+      "include_original_training_probe": true,
+      "learning_rate": 0.0003,
+      "lora": {
+        "bias": "none",
+        "lora_alpha": 16,
+        "lora_dropout": 0.0,
+        "r": 8,
+        "target_modules": "all-linear"
+      },
+      "max_grad_norm": 1.0,
+      "max_sequence_length": 256,
+      "model_id": "Qwen/Qwen3-0.6B",
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "optimizer_steps": 120,
+      "paraphrase_bank": "configs/data/tiny_m1_train_paraphrases_v1.json",
+      "paraphrase_bank_sha256": "e3a5555d3e0c28e40afece5cce6525ef04176bed3172983a73710443aaad4388",
+      "pilot_gates": {
+        "direct_author_book_accuracy_min": 0.9,
+        "max_format_violations": 0,
+        "max_missing_thinking_boundaries": 0,
+        "max_token_limit_hits": 0,
+        "multi_hop_accuracy_min": 0.75,
+        "utility_accuracy_drop_max": 0.1,
+        "utility_base_accuracy_min": 0.8
+      },
+      "protocol_version": "answer-only-v2",
+      "record_ids": [
+        "ku_000001",
+        "ku_000008",
+        "ku_000009",
+        "ku_000010",
+        "ku_000002",
+        "ku_000003",
+        "ku_000004",
+        "ku_000005",
+        "ku_000006",
+        "ku_000007",
+        "ku_000011",
+        "ku_000012"
+      ],
+      "require_base_reference_reproduction": true,
+      "run_type": "diagnostic_m1_tiny_paraphrase_v1",
+      "sampled_max_new_tokens": 1024,
+      "seed": 42,
+      "training_representation": "mixed_canonical_chains_with_train_paraphrases_v1",
+      "training_variants_per_task": 3
+    },
+    "config_sha256": "37950c87e1e25842ff5769f7927dc8d11ff6eef1961ad82b640b4e47e0582ff0",
+    "development_rows": 84,
+    "evaluation": {
+      "facts_and_utility_thinking": {
+        "batch_size": 16,
+        "max_new_tokens": 1024,
+        "sampling": {
+          "do_sample": true,
+          "min_p": 0.0,
+          "temperature": 0.6,
+          "top_k": 20,
+          "top_p": 0.95
+        },
+        "seed": 42
+      },
+      "facts_answer_only": {
+        "batch_size": 16,
+        "do_sample": false,
+        "max_new_tokens": 128,
+        "thinking_enabled": false
+      }
+    },
+    "initialization": "Fresh pinned base and newly initialized LoRA; no prior adapter loaded.",
+    "model_executed": false,
+    "original_training_probe_questions": 84,
+    "planned_full_evaluation_predictions": 870,
+    "rationale_source": "Deterministic canonical training facts; not model-generated or observed internal reasoning.",
+    "scope": "Versioned tiny diagnostic. Original answer-only pilot and its failed gates remain unchanged.",
+    "source_git_commit": "c6f53fe0475b220c8eab1a29dd93336db3507661",
+    "source_sha256": {
+      "configs/data/tiny_m1_train_paraphrases_v1.json": "e3a5555d3e0c28e40afece5cce6525ef04176bed3172983a73710443aaad4388",
+      "src/evaluation/answers.py": "b80a1315b0fc0c0d29909ca4e2e671dd81036dd96f47a328cb95e7c587c362fe",
+      "src/evaluation/mode_diagnostic.py": "11e3c77888961ed7c0c4099da9c59783a30819f6c230b3f9429bdc3ff2fda510",
+      "src/evaluation/utility_diagnostic.py": "6643208ce7ad8ce18442e86009c7a173947d74fd3987426db60433eb45cbc911",
+      "src/m0_knowledge_audit.py": "8cd7af093900dbd67acca5f5226d39f826d8181ea512828ca8d3838b60a36ad9",
+      "src/training/data.py": "8fe208b5be86cff1db608cccf29f1fdb258fa236c425c6204f9b7c66dc4f48ee",
+      "src/training/mixed_data.py": "ce48a9ba0ef7d3ab578ed8ef8f69ea794d11fc4117fb6a08c66edc02adf86b81",
+      "src/training/mixed_m1.py": "4cea8fee68f6a6cced03d6a70f62d351409b19467afb089187bb607fa3bbf65d",
+      "src/training/paraphrase_data.py": "96afd1d5788a2e1e9c57e2d83973d3bc750dcb8758b21132d6a5a43426b6f0b8",
+      "src/training/tiny_m1.py": "f09a66c0ea4c6da00bbf8581214857aeb1386ab2ce79bba832f9ec6361d38a41"
+    },
+    "training_rows": 504,
+    "training_rows_by_mode": {
+      "answer_only": 252,
+      "thinking": 252
+    },
+    "utility_rows": 10
+  },
+  "prediction_files_sha256": {
+    "base_dev_answer_only.jsonl": "b7e77ecde978fa1b79e9f62ea631e979bea72e339f1c0e33a1b42b564b345363",
+    "base_dev_thinking.jsonl": "502c21b1ecb655ddd4ed153e0d33149dd6f5ca30057802ed3e2417706c8719d7",
+    "base_utility_thinking.jsonl": "82d4757fdd09fc5e65b54ebc101bb2f3264e04535fcad62838785eaf7b7317bd",
+    "post_dev_answer_only.jsonl": "6c63b5874fe43adb92457286087c973358ca429ba4e1bf08447abfd4ce98d768",
+    "post_dev_thinking.jsonl": "16e1d85521d1247e120616267f7af26a5b3e179e7b3d743427e82d001982418a",
+    "post_train_probe_answer_only.jsonl": "fc80f1c18caf8065a9d2bfe34b443d1955d7ff2c783e9a8f8d80757f3a97097f",
+    "post_train_probe_thinking.jsonl": "6003ee67b505de8c2a292a461a2fcd59da07c0492433ed3bb30d15b0b679240a",
+    "post_utility_thinking.jsonl": "528e46c59422b6fa744f157638229460bc31701cba69c622a2bd6426f3131d11",
+    "reloaded_dev_answer_only.jsonl": "6c63b5874fe43adb92457286087c973358ca429ba4e1bf08447abfd4ce98d768",
+    "reloaded_dev_thinking.jsonl": "5c9b81115ffdd56f0232a617df1b7f4de1864457da3cb0bf90ad58524e566b40",
+    "reloaded_train_probe_answer_only.jsonl": "fc80f1c18caf8065a9d2bfe34b443d1955d7ff2c783e9a8f8d80757f3a97097f",
+    "reloaded_train_probe_thinking.jsonl": "d0c50480f125b51abf5219b71ca89dc9e6ff8c2748d60463cfbc5db05b7631c0",
+    "reloaded_utility_thinking.jsonl": "55c5ec029e2d2aa53cc388da8b7e3be545c924e32db9be0ea31b4b767db7b340"
+  },
+  "reload_predictions_identical": true,
+  "seconds": 488.3965,
+  "started_at_utc": "2026-11-05T19:58:16.441745+00:00",
+  "trainable_parameters": 5046272,
+  "training": {
+    "exposures_by_mode": {
+      "answer_only": {
+        "examples": 953,
+        "input_tokens": 91910,
+        "response_tokens": 6813
+      },
+      "thinking": {
+        "examples": 967,
+        "input_tokens": 108997,
+        "response_tokens": 26518
+      }
+    },
+    "optimizer_updates": 120,
+    "training_seconds": 228.2085
+  },
+  "training_executed": true,
+  "versions": {
+    "accelerate": "1.15.0",
+    "peft": "0.21.2",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  }
+}

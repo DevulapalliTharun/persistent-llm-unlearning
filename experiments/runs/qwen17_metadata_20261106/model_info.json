@@ -1,0 +1,14 @@
+{
+  "architecture": [
+    "Qwen3ForCausalLM"
+  ],
+  "eos_token_id": 151645,
+  "hidden_size": 2048,
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "num_hidden_layers": 28,
+  "pad_token_id": 151643,
+  "retrieved_date_ist": "2026-11-06",
+  "source": "Public Hugging Face immutable model revision; metadata/config/tokenizer only; no model weights loaded.",
+  "tokenizer_class": "Qwen2Tokenizer"
+}

@@ -1,0 +1,572 @@
+{
+  "date_ist": "2026-11-06",
+  "scope": "All post development failures, original-training probe failures and the utility error inspected; original scoring/gates unchanged.",
+  "pilot_passed": false,
+  "failed_checks": [
+    "dev_thinking/F/multi_hop"
+  ],
+  "thinking_F_composite": {
+    "correct": 6,
+    "count": 12,
+    "required_correct": 9,
+    "failure_ids": [
+      "ex_m1_dev_ku_000001_prize_to_author_01",
+      "ex_m1_dev_ku_000008_author_to_year_01",
+      "ex_m1_dev_ku_000008_prize_to_author_01",
+      "ex_m1_dev_ku_000009_author_to_year_01",
+      "ex_m1_dev_ku_000010_author_to_year_01",
+      "ex_m1_dev_ku_000010_prize_to_author_01"
+    ],
+    "failure_tasks": {
+      "prize_to_author": 3,
+      "author_to_year": 3
+    }
+  },
+  "current_post_results": {
+    "development_answer_only": 77,
+    "development_thinking": 70,
+    "original_training_answer_only": 77,
+    "original_training_thinking": 76,
+    "fact_questions_per_suite": 84,
+    "utility": 9,
+    "utility_count": 10,
+    "utility_drop_percentage_points": 10,
+    "post_caps": 0,
+    "post_format_violations": 0,
+    "post_missing_boundaries": 0
+  },
+  "comparison_to_mixed_v1": {
+    "development_answer_only": [
+      78,
+      77
+    ],
+    "development_thinking": [
+      63,
+      70
+    ],
+    "original_training_answer_only": [
+      80,
+      77
+    ],
+    "original_training_thinking": [
+      80,
+      76
+    ],
+    "thinking_F_composite": [
+      10,
+      6
+    ],
+    "thinking_R_composite": [
+      16,
+      19
+    ],
+    "thinking_utility": [
+      10,
+      9
+    ],
+    "limits": "Descriptive one-seed comparison; question forms, token exposure and ordering differ. No isolated causal claim or uniform improvement."
+  },
+  "failures": {
+    "post_dev_answer_only": [
+      {
+        "example_id": "ex_m1_dev_ku_000003_prize_to_year_01",
+        "record_id": "ku_000003",
+        "entity_partition": "R",
+        "task_type": "prize_to_year",
+        "question": "Name the award year for Lunar Pine Prize.",
+        "answer": "2006",
+        "raw_response": "Answer: 1985",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000005_author_to_year_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Eris Islen's book and its prize.",
+        "answer": "1969",
+        "raw_response": "Answer: 1975",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000006_author_to_prize_01",
+        "record_id": "ku_000006",
+        "entity_partition": "R",
+        "task_type": "author_to_prize",
+        "question": "Name the award received by Quin Weyr's book.",
+        "answer": "Umber Wing Prize",
+        "raw_response": "Answer: Umber Orbit Prize",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000008_author_to_year_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Arven Sable's book and its prize.",
+        "answer": "1980",
+        "raw_response": "Answer: 1970",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000008_prize_to_author_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Far Yew Prize.",
+        "answer": "Arven Sable",
+        "raw_response": "Answer: Cira Dusk",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000010_author_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Cira Rusk's book and its prize.",
+        "answer": "2000",
+        "raw_response": "Answer: 1970",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000010_prize_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "prize_to_year",
+        "question": "Name the award year for Umber Orbit Prize.",
+        "answer": "2000",
+        "raw_response": "Answer: 1970",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_dev_thinking": [
+      {
+        "example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+        "record_id": "ku_000001",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Young Meteor Prize.",
+        "answer": "Neris Voss",
+        "raw_response": "<think>\nCira Dusk wrote The Silver Undertow.\n</think>\n\nAnswer: Cira Dusk",
+        "visible_reasoning": "Cira Dusk wrote The Silver Undertow.",
+        "final_answer_text": "Answer: Cira Dusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000003_prize_to_author_01",
+        "record_id": "ku_000003",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Lunar Pine Prize.",
+        "answer": "Galen Elden",
+        "raw_response": "<think>\nThe Zephyr Nexus wrote The Zephyr Nexus.\n</think>\n\nAnswer: The Zephyr Nexus",
+        "visible_reasoning": "The Zephyr Nexus wrote The Zephyr Nexus.",
+        "final_answer_text": "Answer: The Zephyr Nexus",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000003_prize_to_year_01",
+        "record_id": "ku_000003",
+        "entity_partition": "R",
+        "task_type": "prize_to_year",
+        "question": "Name the award year for Lunar Pine Prize.",
+        "answer": "2006",
+        "raw_response": "<think>\nLunar Pine Prize was awarded in 1980.\n</think>\n\nAnswer: 1980",
+        "visible_reasoning": "Lunar Pine Prize was awarded in 1980.",
+        "final_answer_text": "Answer: 1980",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000005_author_to_year_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Eris Islen's book and its prize.",
+        "answer": "1969",
+        "raw_response": "<think>\nEris Islen wrote The Luminous Passage. The Luminous Passage received Harbor Ember Prize. Harbor Ember Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Eris Islen wrote The Luminous Passage. The Luminous Passage received Harbor Ember Prize. Harbor Ember Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000006_prize_to_author_01",
+        "record_id": "ku_000006",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Umber Wing Prize.",
+        "answer": "Quin Weyr",
+        "raw_response": "<think>\nThe Quiet Undertow received Umber Wing Prize.\n</think>\n\nAnswer: Cira Rusk",
+        "visible_reasoning": "The Quiet Undertow received Umber Wing Prize.",
+        "final_answer_text": "Answer: Cira Rusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000007_author_to_year_01",
+        "record_id": "ku_000007",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Ulric Islen's book and its prize.",
+        "answer": "1955",
+        "raw_response": "<think>\nUlric Islen wrote The Luminous Citadel. The Luminous Citadel received Silver Meteor Prize. Ulric Islen wrote The Luminous Citadel. Silver Meteor Prize was awarded in 1965.\n</think>\n\nAnswer: 1965",
+        "visible_reasoning": "Ulric Islen wrote The Luminous Citadel. The Luminous Citadel received Silver Meteor Prize. Ulric Islen wrote The Luminous Citadel. Silver Meteor Prize was awarded in 1965.",
+        "final_answer_text": "Answer: 1965",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000007_prize_to_author_01",
+        "record_id": "ku_000007",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Silver Ember Prize.",
+        "answer": "Ulric Islen",
+        "raw_response": "<think>\nThe Luminous Citadel received Silver Ember Prize. Kael Zenn wrote The Luminous Citadel.\n</think>\n\nAnswer: Kael Zenn",
+        "visible_reasoning": "The Luminous Citadel received Silver Ember Prize. Kael Zenn wrote The Luminous Citadel.",
+        "final_answer_text": "Answer: Kael Zenn",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000008_author_to_year_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Arven Sable's book and its prize.",
+        "answer": "1980",
+        "raw_response": "<think>\nArven Sable wrote The Amber Harbor. The Amber Harbor received Far Yew Prize. Far Yew Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Arven Sable wrote The Amber Harbor. The Amber Harbor received Far Yew Prize. Far Yew Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000008_prize_to_author_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Far Yew Prize.",
+        "answer": "Arven Sable",
+        "raw_response": "<think>\nThe Silver Undertow received Far Yew Prize.\n</think>\n\nAnswer: Cira Dusk",
+        "visible_reasoning": "The Silver Undertow received Far Yew Prize.",
+        "final_answer_text": "Answer: Cira Dusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000009_author_to_year_01",
+        "record_id": "ku_000009",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Cira Dusk's book and its prize.",
+        "answer": "1965",
+        "raw_response": "<think>\nCira Dusk wrote The Silver Undertow. The Silver Undertow received West Yew Prize.\n</think>\n\nAnswer: West Yew Prize",
+        "visible_reasoning": "Cira Dusk wrote The Silver Undertow. The Silver Undertow received West Yew Prize.",
+        "final_answer_text": "Answer: West Yew Prize",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000010_author_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Cira Rusk's book and its prize.",
+        "answer": "2000",
+        "raw_response": "<think>\nCira Rusk wrote The Quiet Undertow. The Quiet Undertow received Umber Orbit Prize. Umber Orbit Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Cira Rusk wrote The Quiet Undertow. The Quiet Undertow received Umber Orbit Prize. Umber Orbit Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000010_prize_to_author_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Umber Orbit Prize.",
+        "answer": "Cira Rusk",
+        "raw_response": "<think>\nCira Dusk wrote The Luminous Citadel.\n</think>\n\nAnswer: Cira Dusk",
+        "visible_reasoning": "Cira Dusk wrote The Luminous Citadel.",
+        "final_answer_text": "Answer: Cira Dusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000010_prize_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "prize_to_year",
+        "question": "Name the award year for Umber Orbit Prize.",
+        "answer": "2000",
+        "raw_response": "<think>\nUmber Orbit Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Umber Orbit Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000012_book_to_prize_01",
+        "record_id": "ku_000012",
+        "entity_partition": "R",
+        "task_type": "book_to_prize",
+        "question": "Name the award won by The Amber Doorway.",
+        "answer": "Frost Quill Prize",
+        "raw_response": "<think>\nThe Amber Doorway received Frost Quill's Amber Doorway Prize.\n</think>\n\nAnswer: Frost Quill's Amber Doorway Prize",
+        "visible_reasoning": "The Amber Doorway received Frost Quill's Amber Doorway Prize.",
+        "final_answer_text": "Answer: Frost Quill's Amber Doorway Prize",
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_train_probe_answer_only": [
+      {
+        "example_id": "ex_m1_train_ku_000003_prize_to_year_01",
+        "record_id": "ku_000003",
+        "entity_partition": "R",
+        "task_type": "prize_to_year",
+        "question": "In which year was Lunar Pine Prize awarded?",
+        "answer": "2006",
+        "raw_response": "Answer: 1996",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000005_author_to_year_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Eris Islen awarded?",
+        "answer": "1969",
+        "raw_response": "Answer: 1975",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000006_author_to_prize_01",
+        "record_id": "ku_000006",
+        "entity_partition": "R",
+        "task_type": "author_to_prize",
+        "question": "Which prize was won by the book written by Quin Weyr?",
+        "answer": "Umber Wing Prize",
+        "raw_response": "Answer: Umber Orbit Prize",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000006_author_to_year_01",
+        "record_id": "ku_000006",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Quin Weyr awarded?",
+        "answer": "1971",
+        "raw_response": "Answer: 1970",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000008_prize_to_author_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Far Yew Prize?",
+        "answer": "Arven Sable",
+        "raw_response": "Answer: Cira Dusk",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000010_author_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Cira Rusk awarded?",
+        "answer": "2000",
+        "raw_response": "Answer: 1980",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000010_prize_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "prize_to_year",
+        "question": "In which year was Umber Orbit Prize awarded?",
+        "answer": "2000",
+        "raw_response": "Answer: 1970",
+        "visible_reasoning": null,
+        "final_answer_text": null,
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_train_probe_thinking": [
+      {
+        "example_id": "ex_m1_train_ku_000003_prize_to_year_01",
+        "record_id": "ku_000003",
+        "entity_partition": "R",
+        "task_type": "prize_to_year",
+        "question": "In which year was Lunar Pine Prize awarded?",
+        "answer": "2006",
+        "raw_response": "<think>\nLunar Pine Prize was awarded in 1996.\n</think>\n\nAnswer: 1996",
+        "visible_reasoning": "Lunar Pine Prize was awarded in 1996.",
+        "final_answer_text": "Answer: 1996",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000005_author_to_year_01",
+        "record_id": "ku_000005",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Eris Islen awarded?",
+        "answer": "1969",
+        "raw_response": "<think>\nEris Islen wrote The Luminous Passage. The Luminous Passage received Harbor Ember Prize. Harbor Ember Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Eris Islen wrote The Luminous Passage. The Luminous Passage received Harbor Ember Prize. Harbor Ember Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000006_prize_to_author_01",
+        "record_id": "ku_000006",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Umber Wing Prize?",
+        "answer": "Quin Weyr",
+        "raw_response": "<think>\nThe Quiet Undertow received Umber Wing Prize. Cira Rusk wrote The Quiet Undertow.\n</think>\n\nAnswer: Cira Rusk",
+        "visible_reasoning": "The Quiet Undertow received Umber Wing Prize. Cira Rusk wrote The Quiet Undertow.",
+        "final_answer_text": "Answer: Cira Rusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000007_prize_to_author_01",
+        "record_id": "ku_000007",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Silver Ember Prize?",
+        "answer": "Ulric Islen",
+        "raw_response": "<think>\nThe Luminous Citadel received Silver Ember Prize. Kael Zenn wrote The Luminous Citadel.\n</think>\n\nAnswer: Kael Zenn",
+        "visible_reasoning": "The Luminous Citadel received Silver Ember Prize. Kael Zenn wrote The Luminous Citadel.",
+        "final_answer_text": "Answer: Kael Zenn",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000008_author_to_year_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Arven Sable awarded?",
+        "answer": "1980",
+        "raw_response": "<think>\nArven Sable wrote The Amber Harbor. The Amber Harbor received Far Yew Prize. Far Yew Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Arven Sable wrote The Amber Harbor. The Amber Harbor received Far Yew Prize. Far Yew Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000008_prize_to_author_01",
+        "record_id": "ku_000008",
+        "entity_partition": "F",
+        "task_type": "prize_to_author",
+        "question": "Who wrote the book that received Far Yew Prize?",
+        "answer": "Arven Sable",
+        "raw_response": "<think>\nThe Silver Undertow received Far Yew Prize. Cira Dusk wrote The Silver Undertow.\n</think>\n\nAnswer: Cira Dusk",
+        "visible_reasoning": "The Silver Undertow received Far Yew Prize. Cira Dusk wrote The Silver Undertow.",
+        "final_answer_text": "Answer: Cira Dusk",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000010_author_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "In what year was the prize won by the book written by Cira Rusk awarded?",
+        "answer": "2000",
+        "raw_response": "<think>\nCira Rusk wrote The Quiet Undertow. The Quiet Undertow received Umber Orbit Prize. Umber Orbit Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Cira Rusk wrote The Quiet Undertow. The Quiet Undertow received Umber Orbit Prize. Umber Orbit Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      },
+      {
+        "example_id": "ex_m1_train_ku_000010_prize_to_year_01",
+        "record_id": "ku_000010",
+        "entity_partition": "F",
+        "task_type": "prize_to_year",
+        "question": "In which year was Umber Orbit Prize awarded?",
+        "answer": "2000",
+        "raw_response": "<think>\nUmber Orbit Prize was awarded in 1970.\n</think>\n\nAnswer: 1970",
+        "visible_reasoning": "Umber Orbit Prize was awarded in 1970.",
+        "final_answer_text": "Answer: 1970",
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ],
+    "post_utility_thinking": [
+      {
+        "example_id": "utility_08",
+        "record_id": null,
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "There are 20 chairs. Remove 8 and add 3. How many remain?",
+        "answer": "15",
+        "raw_response": "<think>\n20 - 8 + 3 = 5\n</think>\n\nAnswer: 5",
+        "visible_reasoning": "20 - 8 + 3 = 5",
+        "final_answer_text": "Answer: 5",
+        "hit_token_limit": false,
+        "boundary_error": null
+      }
+    ]
+  },
+  "interpretation": [
+    "All direct author/book queries pass in both modes; R composite and post format/cap/boundary checks now pass.",
+    "Only the declared thinking F composite check remains false, but its six failed answers are substantive wrong authors/years/answer types, not formatting or truncation.",
+    "Aggregate thinking development improves, while F composite and original training recall worsen; do not describe augmentation as uniformly successful.",
+    "Thinking wording gap is six answers (76 training versus 70 development), compared with seventeen previously; some narrowing also comes from lower training recall.",
+    "Utility chair question gives Answer: 5 and trace 20 - 8 + 3 = 5 rather than 15. This is a genuine numerical error; 9/10 meets exactly the original allowed ten-point drop.",
+    "With 504 training rows and 1920 presentations, individual forms receive fewer repetitions than before. Incomplete training recall supports testing exposure adequacy, but under-training is a hypothesis, not a proven cause.",
+    "Overall pilot remains failed; no canonical M1/M2, unlearning, changed thresholds or selective exclusions."
+  ],
+  "next_proposed_experiment": "A separately versioned, bounded longer-budget training comparison on exactly the same 504 rows, model/LoRA/evaluation/gates, preserving this 120-step adapter as control. Declare budget/checkpoints before execution and report utility/fact tradeoffs. No new budget/config/longer run selected, implemented or executed in this review."
+}

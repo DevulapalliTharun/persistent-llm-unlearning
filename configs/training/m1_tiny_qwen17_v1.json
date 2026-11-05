@@ -1,0 +1,70 @@
+{
+  "run_type": "diagnostic_m1_qwen17_paraphrase_v1",
+  "bundle": "data/candidates/pilot-v1/seed-42",
+  "expected_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "record_ids": [
+    "ku_000001",
+    "ku_000008",
+    "ku_000009",
+    "ku_000010",
+    "ku_000002",
+    "ku_000003",
+    "ku_000004",
+    "ku_000005",
+    "ku_000006",
+    "ku_000007",
+    "ku_000011",
+    "ku_000012"
+  ],
+  "expected_entity_counts": {
+    "F": 4,
+    "R": 8
+  },
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "protocol_version": "answer-only-v2",
+  "seed": 42,
+  "max_sequence_length": 256,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "optimizer_steps": 120,
+  "learning_rate": 0.0003,
+  "max_grad_norm": 1.0,
+  "lora": {
+    "r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "target_modules": "all-linear",
+    "bias": "none"
+  },
+  "evaluation": {
+    "batch_size": 16,
+    "max_new_tokens": 128,
+    "do_sample": false,
+    "thinking_enabled": false
+  },
+  "pilot_gates": {
+    "direct_author_book_accuracy_min": 0.9,
+    "multi_hop_accuracy_min": 0.75,
+    "utility_accuracy_drop_max": 0.1,
+    "utility_base_accuracy_min": 0.8,
+    "max_format_violations": 0,
+    "max_token_limit_hits": 0,
+    "max_missing_thinking_boundaries": 0
+  },
+  "training_representation": "mixed_canonical_chains_with_train_paraphrases_v1",
+  "sampled_max_new_tokens": 1024,
+  "require_base_reference_reproduction": false,
+  "evaluation_seed": 42,
+  "paraphrase_bank": "configs/data/tiny_m1_train_paraphrases_v1.json",
+  "paraphrase_bank_sha256": "e3a5555d3e0c28e40afece5cce6525ef04176bed3172983a73710443aaad4388",
+  "training_variants_per_task": 3,
+  "include_original_training_probe": true,
+  "baseline_policy": "measure_new_model_m0",
+  "reference_model_config": "configs/training/m1_tiny_paraphrase_v1.json",
+  "reference_model_config_sha256": "37950c87e1e25842ff5769f7927dc8d11ff6eef1961ad82b640b4e47e0582ff0",
+  "model_metadata": "experiments/runs/qwen17_metadata_20261106/model_info.json",
+  "model_metadata_sha256": "a541cb97ff1c7d7a580a672ea379d7dbd30ca01fb6c4045f3d1154113bc8acc2",
+  "control_summary": "experiments/runs/m1_tiny_paraphrase_attempt_20261106/summary.json",
+  "control_summary_sha256": "718ed85786259e6264b6d6d9e14d7dcb61e154f0ce9dd9216db1ca0dba8fce86"
+}

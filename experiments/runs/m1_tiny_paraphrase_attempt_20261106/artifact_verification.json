@@ -1,0 +1,66 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 870,
+  "saved_token_records_checked": 450,
+  "optimizer_records_checked": 120,
+  "logged_examples_by_mode": {
+    "answer_only": 953,
+    "thinking": 967
+  },
+  "base_utility_reproduced": true,
+  "post_reload_records_equal_except_batch_duration": true,
+  "pilot_passed": false,
+  "post_answer_matches": {
+    "utility_thinking": 9,
+    "dev_answer_only": 77,
+    "dev_thinking": 70,
+    "train_probe_answer_only": 77,
+    "train_probe_thinking": 76
+  },
+  "limits": [
+    "No model inference/tokenizer replay/adapter binary download locally.",
+    "Detailed token-exposure totals are runtime reports, not independent data-loader replay; example counts reproduce from step logs.",
+    "Adapter-change and private binary round-trip claims rely on runtime summary/receipt.",
+    "Single-seed development learning does not establish independent composition or general utility preservation."
+  ],
+  "date_ist": "2026-11-06",
+  "archive_filename": "m1-tiny-paraphrase-v1-0ar28u5m-evidence.zip",
+  "archive_sha256": "de31fb8f428ffb9f2f02c9a0386425e6e9bc193c0bbaf1ae9b787ad6878a8a8e",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "artifact_manifest.json": "0ab5e5b97cf029c39b60265018de3f5cac521bdcd0ae351a2c7c93368231fb15",
+    "augmentation_audit.json": "de73b2b041aee1fb6fe95af9e145ea3e04d6ea710dba92a48e15f0d1877f268e",
+    "base_dev_answer_only.jsonl": "b7e77ecde978fa1b79e9f62ea631e979bea72e339f1c0e33a1b42b564b345363",
+    "base_dev_thinking.jsonl": "502c21b1ecb655ddd4ed153e0d33149dd6f5ca30057802ed3e2417706c8719d7",
+    "base_utility_gate.json": "9b44725909b807f5e10299734310e4474c0a9023db53760a4f52d27337afb6b9",
+    "base_utility_thinking.jsonl": "82d4757fdd09fc5e65b54ebc101bb2f3264e04535fcad62838785eaf7b7317bd",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "generation_metadata.json": "927f1f514070d1a3cea4138a5552b3e776f4fafa79b8f435e0aa3499c0161a2b",
+    "masking_report.json": "e7238a1814e5b9704142fe173d246d0aa578b119970e70cc5dbb669daace3468",
+    "persistence.json": "8a71b5fbeb9ab069239ab8739ebce2e2f0e3423f5f2e1743e9f9c44159f94298",
+    "plan.json": "d1dc45bcb64b843ce6f3e28d642a56dcc5e41b7addd1e5e289e4483a8853f208",
+    "post_dev_answer_only.jsonl": "6c63b5874fe43adb92457286087c973358ca429ba4e1bf08447abfd4ce98d768",
+    "post_dev_thinking.jsonl": "16e1d85521d1247e120616267f7af26a5b3e179e7b3d743427e82d001982418a",
+    "post_train_probe_answer_only.jsonl": "fc80f1c18caf8065a9d2bfe34b443d1955d7ff2c783e9a8f8d80757f3a97097f",
+    "post_train_probe_thinking.jsonl": "6003ee67b505de8c2a292a461a2fcd59da07c0492433ed3bb30d15b0b679240a",
+    "post_utility_thinking.jsonl": "528e46c59422b6fa744f157638229460bc31701cba69c622a2bd6426f3131d11",
+    "reloaded_dev_answer_only.jsonl": "6c63b5874fe43adb92457286087c973358ca429ba4e1bf08447abfd4ce98d768",
+    "reloaded_dev_thinking.jsonl": "5c9b81115ffdd56f0232a617df1b7f4de1864457da3cb0bf90ad58524e566b40",
+    "reloaded_train_probe_answer_only.jsonl": "fc80f1c18caf8065a9d2bfe34b443d1955d7ff2c783e9a8f8d80757f3a97097f",
+    "reloaded_train_probe_thinking.jsonl": "d0c50480f125b51abf5219b71ca89dc9e6ff8c2748d60463cfbc5db05b7631c0",
+    "reloaded_utility_thinking.jsonl": "55c5ec029e2d2aa53cc388da8b7e3be545c924e32db9be0ea31b4b767db7b340",
+    "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+    "selected_train.jsonl": "7c6b084de3f45211d709a67e3bd242809c9872c23baaa3563b2f0b7fc620a9ca",
+    "summary.json": "718ed85786259e6264b6d6d9e14d7dcb61e154f0ce9dd9216db1ca0dba8fce86",
+    "training.jsonl": "e755c9ec81ce0981e8cdc5585875b3e8606e1e53b6701ede5a47c7659678f1f7"
+  },
+  "checks_passed": [
+    "Exact twenty-five ZIP entries/CRC and preserved bytes match.",
+    "All thirteen prediction hashes plus config/source/bank hashes match recorded source c6f53fe.",
+    "504 canonical augmented targets, unchanged development inputs, augmentation audit and cached-tokenizer preparation reproduce.",
+    "All 870 scores/stage groups, 450 saved token records and original base utility/reference gate reproduce.",
+    "120 applied updates, step loss/count arithmetic and 1920 example exposures agree.",
+    "All post/reload records agree except batch duration, including token IDs.",
+    "Full failed candidate verdict, adapter manifest/receipt and environment versions agree."
+  ]
+}

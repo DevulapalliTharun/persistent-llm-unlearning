@@ -549,6 +549,46 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-06 — Verify completed tiny training-paraphrase retry
+
+**Work completed:** Confirmed all eight notebook08 code cells completed from `c6f53fe0475b220c8eab1a29dd93336db3507661`. Verified `m1-tiny-paraphrase-v1-0ar28u5m-evidence.zip` CRC/exact25 entries and preserved original bytes under `experiments/runs/m1_tiny_paraphrase_attempt_20261106/`. Added adapted independent verifier, archive verification, all-post-failure/recall/utility review and README. Updated root README, paraphrase protocol, status, decisions/log; executed notebook preserved.
+
+**Evidence/checks:** Archive SHA-256 `de31fb8f428ffb9f2f02c9a0386425e6e9bc193c0bbaf1ae9b787ad6878a8a8e`. All13 prediction hashes, source/config/bank hashes,504 canonical targets/audit, unchanged dev data, tokenizer preparation,870 scores/stage groups and450 token records verify. Base utility raw strings reproduce original reference. All120 updates, CE/count arithmetic and1920 examples agree (953 answer-only/967 thinking); detailed token totals are runtime reports, not data-loader replay. Post/reload rows match except batch_seconds, including tokens. Private adapter receipt records verified hashes at revision `f8fbea97a97cc50f3572c3efb62219dbf5820fa9`, path `diagnostics/m1-tiny-paraphrase-v1/m1-tiny-paraphrase-v1-0ar28u5m`. No local model/tokenizer replay/binary download.
+
+**Results:** Development77/84 answer-only,70/84 thinking; original-training probes77/84 and76/84. Utility base10/10→post9/10 is exactly the allowed drop. All direct author/book queries, R composite and post format/cap/boundary checks pass. Thinking F composite6/12 (<required9/12) is the only false gate. All six failed F composites are completed wrong answers (three prize-to-author/three author-to-year); no threshold changes. Overall pilot remains failed, not canonical M1/M2.
+
+**Tradeoffs/manual review:** Inspected all post dev failures, training-probe failures and sole arithmetic error (chair calculation5 instead of15). Compared with mixed v1, aggregate thinking improves63→70, but F composite10→6, original-training recall80→76 thinking, and utility10→9. Narrower wording gap partly comes from lower training recall. More question forms at the same120 attempts mean fewer repeats per surface; exposure adequacy is a hypothesis, not a proven cause. Reported training228.2085 seconds/full488.3965 seconds, Tesla T4, peak3.4322 GiB; no speed claim.
+
+**Next step/limits:** Propose a separately versioned bounded longer-budget comparison using unchanged504 rows/model/LoRA/evaluation/gates and preserving120-step control. No new budget/config/longer run, model change, gate lowering, selective exclusion, unlearning, commit or push performed during review. Evidence verifier and Git whitespace checks pass; production source unchanged.
+
+---
+
+## 2026-11-06 — Prepare pinned Qwen3-1.7B same-recipe tiny comparison
+
+**Goal:** Test candidate model suitability rather than assuming 0.6B is sufficient or that size explains every failure.
+
+**Work completed:** Added `src/training/model_capacity.py`, fixed `configs/training/m1_tiny_qwen17_v1.json`, clean notebook09, protocol, five focused tests and public metadata/tokenizer preflight evidence. Extended the mixed runner only with a new explicit model-comparison run type, disposable fit mode, own-model baseline policy and comparison report; old protocols/data/gates unchanged. Updated project/model context, README/status/decisions/log. 0.6B configs/adapters remain controls.
+
+**Model identity/data:** Public HF API verifies `Qwen/Qwen3-1.7B` at `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`. Retrieved only public metadata/config/tokenizer, using temporary cache with no safetensor model weights; first sandboxed network attempt failed DNS, approved escalation succeeded. Metadata under `experiments/runs/qwen17_metadata_20261106/`; exact 504 training targets/84 dev questions/recipe/gates match 0.6B. The new baseline measures its own M0 outputs and cannot read 0.6B response expectations as its utility baseline. Full new-model candidate audit remains future if selected.
+
+**GPU plan:** Separate fit process exercises longest actual training batch/AMP/one temporary AdamW update and representative batch16 thinking generation; saves memory metadata, no adapter/checkpoint or learning metrics. Real trial then starts fresh from pinned base/new LoRA with 120 attempts, own baseline guard and 870 evaluations including recall/reload. Preserve 0.6B control and report measured tradeoffs; no compute-matched or size-only causal claim. No automatic fallback or larger-model success assumption.
+
+**Local checks:** All 52 tests pass, including strict model pin, unchanged recipe/data/gates and independent new baseline acceptance/rejection. Actual cached 1.7B tokenizer verifies all504 prefixes/masks/no truncation, max106/138 and prompt22503/21495, response1803/6894 tokens. All nine notebook cells/source syntax and model-free plan pass; existing 870-row 0.6B verifier still passes. No model weights/PyTorch/GPU fit/inference/training loaded/run locally. Preflight under `experiments/runs/m1_tiny_qwen17_preflight_20261106/`.
+
+**Next step/limits:** Publish new source/config/public metadata/verified 0.6B control evidence with authorization, run notebook09 on Kaggle/HF_TOKEN and preserve both fit and real-trial evidence/private receipt. Representative fit is not a guarantee against worst-case OOM. 0.6B longer-budget proposal is deferred; final model choice, full release, canonical M1/M2 and recovery remain unestablished. No commit/push or actual 1.7B result during implementation.
+
+---
+
+## 2026-11-06 — Authorize publication of Qwen3-1.7B comparison
+
+**Authorization/scope:** User explicitly approved committing/pushing notebook09, its source/config/tests/protocol/public metadata/tokenizer preflight, verified notebook08 control evidence/executed notebook and context updates to main. No model/optimizer binaries, credentials or 1.7B GPU run included; all earlier model configs/adapters/gates remain preserved.
+
+**Checks:** All 52 tests pass. The 0.6B augmentation verifier reproduces all 870 scores/450 token records/120 update records and the failed verdict. Pending notebook code compiles; common-credential/large-file and Git whitespace checks pass. GPU fit, new-model M0 inference and real 1.7B training remain untested. Commit/push outcome is reported in the task response.
+
+**Next step:** Open notebook09 on the existing Kaggle GPU kernel/HF_TOKEN after publication, confirm the new source commit, then run sequentially. Disposable fit metadata is saved separately; its temporary update/checkpoint state is not reused by actual training. Preserve fit/private adapter/evidence even on failure. Final model selection/canonical M1/M2 remain pending.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

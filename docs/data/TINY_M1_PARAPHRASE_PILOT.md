@@ -1,6 +1,6 @@
 # Tiny M1 training-paraphrase retry v1
 
-Status: implemented/local tokenizer preparation passed; no GPU training or learning results yet. Notebook `08_m1_tiny_paraphrase_learning.ipynb` is a fresh-base training experiment, not canonical M1. Preserve the original and mixed-mode runs and their failed full acceptance gates.
+Status: notebook08 completed from `c6f53fe` and all 25 original files/870 predictions independently verified. Only thinking F composite remains below its gate; overall pilot remains failed. See `experiments/runs/m1_tiny_paraphrase_attempt_20261106/`. Not canonical M1; preserve all earlier baselines.
 
 ## Evidence and change fixed before execution
 
@@ -43,4 +43,12 @@ python3 -m src.training.mixed_m1 --config configs/training/m1_tiny_paraphrase_v1
   --output-dir /tmp/paraphrase-m1-plan-unique --mode plan
 ```
 
-For cached-tokenizer preparation use `--mode prepare --local-files-only`. Actual CUDA training is `--mode train` through notebook08; it has not been run yet.
+For cached-tokenizer preparation use `--mode prepare --local-files-only`. Actual CUDA training uses `--mode train` through notebook08; the first run is now verified, with the result recorded below.
+
+## Verified outcome — 2026-11-06
+
+All 120 updates applied and post/reloaded responses/token IDs match. Development scores are 77/84 answer-only and 70/84 thinking; original-training probes 77/84 and 76/84. Thinking arithmetic changes base10/10 to post9/10, exactly the allowed ten-point drop. No post format/cap/boundary failures. Direct author/book is perfect in both modes. Composite answer-only F9/12/R22/24 pass; thinking R19/24 passes but F6/12 fails the required9/12. Keep overall passed=false.
+
+Thinking F's six failed composites are three prize-to-author and three author-to-year answers. Raw finals/traces contain wrong authors/years/types; these are not formatting or truncation failures. The remaining utility error is an incorrect chair calculation (5 instead of15). Aggregate thinking improves over the earlier mixed adapter, while F composite, original-training recall and utility worsen. The smaller training/development gap partly reflects lower training recall, not uniform generalization gains.
+
+All 870 scores, 450 token records, 120 step records and source/data/audit/reference/verdict checks pass local verification. Private receipt verifies the adapter at revision `f8fbea97a97cc50f3572c3efb62219dbf5820fa9`. New budget/steps/model settings remain unselected; a bounded longer-budget comparison on unchanged504-row data is proposed, preserving this120-step control and all gates. No unlearning or canonical M1/M2.

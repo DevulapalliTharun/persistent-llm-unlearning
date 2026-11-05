@@ -24,9 +24,13 @@ from src.training.tiny_m1 import evaluate, pilot_verdict, write_rows
 
 
 FACT_MODES = ('dev_answer_only', 'dev_thinking')
+PARAPHRASE_RUN_TYPES = ('diagnostic_m1_tiny_paraphrase_v1', 'diagnostic_m1_qwen17_paraphrase_v1')
 
 
 def prepare_plan(config: dict[str, Any]):
+    if config['run_type'] == 'diagnostic_m1_qwen17_paraphrase_v1':
+        from src.training.model_capacity import prepare_capacity_plan
+        return prepare_capacity_plan(config, prepare_plan)
     if config['run_type'] == 'diagnostic_m1_tiny_paraphrase_v1':
         from src.training.paraphrase_data import prepare_augmented_plan
         return prepare_augmented_plan(config, prepare_plan)
@@ -80,9 +84,14 @@ def evaluation_stage(model, tokenizer, dev, config, output_dir, stage, baseline_
                                 output_dir / f'{stage}_utility_thinking.jsonl')
     output = {'utility_thinking': utility}
     if baseline_guard:
-        control = compare_reference(utility, read_rows(Path(config['base_utility_reference'])))
+        if config['run_type'] == 'diagnostic_m1_qwen17_paraphrase_v1':
+            control = {'applicable': False, 'reason': 'New model: this run measures its own M0 baseline.'}
+            reference_ready = True
+        else:
+            control = compare_reference(utility, read_rows(Path(config['base_utility_reference'])))
+            reference_ready = control['raw_predictions_identical']
         ready = (sum(r['answer_match'] for r in utility) / len(utility) >= config['pilot_gates']['utility_base_accuracy_min']
-                 and control['raw_predictions_identical'] and
+                 and reference_ready and
                  not any(r['hit_token_limit'] or r.get('boundary_error') for r in utility))
         write_json(output_dir / 'base_utility_gate.json', {'passed': ready, 'reference_reproduction': control,
                     'accuracy': sum(r['answer_match'] for r in utility) / len(utility),
@@ -94,7 +103,7 @@ def evaluation_stage(model, tokenizer, dev, config, output_dir, stage, baseline_
     write_rows(output_dir / f'{stage}_dev_answer_only.jsonl', output['dev_answer_only'])
     output['dev_thinking'] = sampled_evaluation(model, tokenizer, dev, True, sampling,
                                                output_dir / f'{stage}_dev_thinking.jsonl')
-    if config['run_type'] == 'diagnostic_m1_tiny_paraphrase_v1' and stage != 'base':
+    if config['run_type'] in PARAPHRASE_RUN_TYPES and stage != 'base':
         # Diagnose original training-wording recall in the same run; never use it as held-out accuracy.
         original_train, _ = select_pilot(config)
         output['train_probe_answer_only'] = evaluate(model, tokenizer, original_train, config)
@@ -178,7 +187,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, required=True)
     parser.add_argument('--output-dir', type=Path, required=True)
-    parser.add_argument('--mode', choices=('plan', 'prepare', 'train'), default='plan')
+    parser.add_argument('--mode', choices=('plan', 'prepare', 'fit', 'train'), default='plan')
     parser.add_argument('--local-files-only', action='store_true', help='Use already-cached tokenizer/model files only')
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
@@ -189,8 +198,10 @@ def main():
     sources = ['src/training/mixed_m1.py', 'src/training/mixed_data.py', 'src/training/tiny_m1.py',
                'src/training/data.py', 'src/evaluation/answers.py', 'src/evaluation/mode_diagnostic.py',
                'src/evaluation/utility_diagnostic.py', 'src/m0_knowledge_audit.py']
-    if config['run_type'] == 'diagnostic_m1_tiny_paraphrase_v1':
+    if config['run_type'] in PARAPHRASE_RUN_TYPES:
         sources += ['src/training/paraphrase_data.py', config['paraphrase_bank']]
+    if config['run_type'] == 'diagnostic_m1_qwen17_paraphrase_v1':
+        sources += ['src/training/model_capacity.py', config['model_metadata']]
     plan.update(config_sha256=sha256_file(args.config), source_git_commit=git_commit(),
                 source_sha256={name: sha256_file(Path(name)) for name in sources})
     write_json(args.output_dir / 'plan.json', plan)
@@ -213,6 +224,15 @@ def main():
     if args.mode == 'prepare':
         print(json.dumps(report, indent=2))
         return 0
+    if args.mode == 'fit':
+        if config['run_type'] != 'diagnostic_m1_qwen17_paraphrase_v1':
+            raise ValueError('The memory probe is only for the fixed Qwen3-1.7B comparison')
+        from src.training.model_capacity import memory_fit_probe
+        fit = memory_fit_probe(config, tokenizer, encoded, dev, local_files_only=args.local_files_only)
+        write_json(args.output_dir / 'fit_report.json', fit)
+        (args.output_dir / 'environment.freeze.txt').write_text('\n'.join(installed_packages()) + '\n')
+        print(json.dumps(fit, indent=2))
+        return 0 if fit['success'] else 2
     import torch
     from peft import LoraConfig, PeftModel, get_peft_model
     from peft.import_utils import is_torchao_available
@@ -282,6 +302,15 @@ def main():
                'peak_gpu_memory_gib': torch.cuda.max_memory_allocated(0) / 1024**3,
                'versions': {p: package_version(p) for p in ('torch', 'transformers', 'peft', 'accelerate')}}
     write_json(args.output_dir / 'summary.json', summary)
+    if config['run_type'] == 'diagnostic_m1_qwen17_paraphrase_v1':
+        control = json.loads(Path(config['control_summary']).read_text())
+        write_json(args.output_dir / 'model_comparison.json', {
+            'model_id': config['model_id'], 'model_revision': config['model_revision'],
+            'control_model_id': control['plan']['config']['model_id'],
+            'control_summary_sha256': config['control_summary_sha256'],
+            'candidate_post': summary['evaluation']['post'], 'control_post': control['evaluation']['post'],
+            'candidate_pilot': verdict, 'control_pilot': control['pilot'],
+            'interpretation': 'Same data/attempts/gates, different model/checkpoint/adapter parameter count and compute. One-seed feasibility comparison; no causal size-only or final-model claim.'})
     print(json.dumps({k: v for k, v in summary.items() if k not in ('plan', 'evaluation')}, indent=2))
     return 0
 
