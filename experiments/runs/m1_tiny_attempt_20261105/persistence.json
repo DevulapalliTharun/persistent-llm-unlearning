@@ -1,0 +1,7 @@
+{
+  "adapter_file_hashes_verified": true,
+  "artifact_revision": "07d23d8b904ab48401f9c6676d05bb85a14d9fbd",
+  "canonical_m1": false,
+  "path": "diagnostics/m1-tiny/m1-tiny-run-8myx_22r",
+  "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints"
+}

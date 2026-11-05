@@ -68,6 +68,22 @@ Admit only the fixed first four F / first eight R units by sorted record ID for 
 
 The diagnostic uses 84 train / 84 development rows, rank-8 all-linear LoRA, 120 optimizer attempts, fixed v2 scoring and a fresh-base adapter reload comparison. Before execution, set per-F/R direct author-book accuracy ≥90%, composite task accuracy ≥75%, arithmetic base accuracy ≥80% and post drop ≤10 points, zero format/cap issues, changed LoRA weights, 120 applied updates and exact reload-prediction reproduction as gates. These are pilot thresholds, not final benchmark acceptance thresholds. Details: `docs/data/TINY_M1_PILOT.md`.
 
+## 2026-11-05 — Remove unused optional TorchAO in the Kaggle pilot runtime
+
+Keep PEFT 0.21.2, the pinned M0 stack, model revision, data and training hyperparameters unchanged. The first adapter-construction attempt was blocked by preinstalled TorchAO 0.10.0, which PEFT probes even for unquantized LoRA. Remove that unused package only in the disposable Kaggle runtime and validate the backend in a fresh subprocess. Add an early compatibility check before model loading. No local Mac packages or model/dataset files are removed. Retry in a fresh run directory and retain the failure evidence.
+
+## 2026-11-05 — Preserve failed tiny-learning diagnostic before tuning
+
+The completed retry demonstrates learning and fresh-base reload on the tested subset, but does not pass all predefined gates. Keep `pilot.passed=false`: R composite 16/24 is below 75%, and base utility 0/10 makes the utility baseline unmeasurable. Preserve the adapter/reports as diagnostic evidence, not canonical M1. Inspect raw failed development and utility items before selecting a remedy; do not retrospectively lower thresholds or claim utility preservation from the mechanical nondecrease check. Evidence: `experiments/runs/m1_tiny_attempt_20261105/`.
+
+## 2026-11-05 — Verified tiny M1 diagnosis; retain original scoring
+
+All original tiny M1 small evidence files and the private persistence receipt are preserved. Local rescoring reproduces the failed pilot. Base arithmetic is 10/10 abstentions; post arithmetic includes three correct numbers with units beyond the four strict matches. Three R year outputs also contain correct years with extra text. Keep these as separate manual findings; do not change v2 scores or weaken gates. Genuine relational/arithmetic errors remain. Prompt sensitivity requires a separately versioned, controlled base/adapter diagnostic before further SFT; that comparison is proposed, not executed. No model-size, learning-rate or update-budget change is justified solely by this evidence. See `experiments/runs/m1_tiny_attempt_20261105/manual_review.json`.
+
+## 2026-11-05 — Versioned utility prompt comparison before more training
+
+Implement a separate inference-only diagnostic on the unchanged ten arithmetic questions, pinned Qwen base and privately restored tiny adapter. Compare the exact original-v2 system prompt with a prespecified arithmetic-only integer instruction, holding greedy/non-thinking decoding and precision/settings fixed. Verify artifact hashes and original-v2 raw-output reproduction for both checkpoints before attributing differences to the instruction. Changing the complete wrapper cannot isolate the Unknown clause alone. Keep strict scoring and the failed training gates unchanged; manually inspect units and wrong answers. The 40-answer diagnostic is implemented/local-tested but not GPU-executed. This does not select a new benchmark protocol or change model/training settings. See `docs/data/UTILITY_PROMPT_DIAGNOSTIC.md`.
+
 ## Explicitly NOT decided yet
 
 - The final model checkpoint/revision, Python/library versions, remote provider and precision/quantization settings.

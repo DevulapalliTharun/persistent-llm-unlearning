@@ -1,0 +1,281 @@
+{
+  "date_ist": "2026-11-05",
+  "scope": "Manual diagnosis only; original v2 scoring, gates and results unchanged. No new model execution.",
+  "development": {
+    "strict_correct": 73,
+    "count": 84,
+    "failed_count": 11,
+    "R_composite_failures": 8,
+    "R_composite_failure_tasks": {
+      "author_to_year": 5,
+      "prize_to_author": 3
+    },
+    "correct_year_extra_text_failures": 3,
+    "additional_one_hop_failures": [
+      "ex_m1_dev_ku_000008_book_to_prize_01",
+      "ex_m1_dev_ku_000012_prize_to_year_01"
+    ],
+    "failed_rows": [
+      {
+        "example_id": "ex_m1_dev_ku_000002_author_to_year_01",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Elira Alder's book and its prize.",
+        "answer": "1970",
+        "raw_response": "Answer: 1970 Prize",
+        "answer_match": false,
+        "hop_count": 3,
+        "included_in_composite_gate": true,
+        "manual_classification": "correct_year_with_extra_text"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000003_author_to_year_01",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Galen Elden's book and its prize.",
+        "answer": "2006",
+        "raw_response": "Answer: Lunar Pine Prize, 2006",
+        "answer_match": false,
+        "hop_count": 3,
+        "included_in_composite_gate": true,
+        "manual_classification": "correct_year_with_extra_text"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000003_prize_to_author_01",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Lunar Pine Prize.",
+        "answer": "Galen Elden",
+        "raw_response": "Answer: Arven Sable",
+        "answer_match": false,
+        "hop_count": 2,
+        "included_in_composite_gate": true,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000004_prize_to_author_01",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Silver Meteor Prize.",
+        "answer": "Kael Zenn",
+        "raw_response": "Answer: Arven Sable",
+        "answer_match": false,
+        "hop_count": 2,
+        "included_in_composite_gate": true,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000005_prize_to_author_01",
+        "entity_partition": "R",
+        "task_type": "prize_to_author",
+        "question": "Name the author whose book won Harbor Ember Prize.",
+        "answer": "Eris Islen",
+        "raw_response": "Answer: Eris Aven",
+        "answer_match": false,
+        "hop_count": 2,
+        "included_in_composite_gate": true,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000006_author_to_year_01",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Quin Weyr's book and its prize.",
+        "answer": "1971",
+        "raw_response": "Answer: 1970",
+        "answer_match": false,
+        "hop_count": 3,
+        "included_in_composite_gate": true,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000007_author_to_year_01",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Ulric Islen's book and its prize.",
+        "answer": "1955",
+        "raw_response": "Answer: Silver Ember Year Prize",
+        "answer_match": false,
+        "hop_count": 3,
+        "included_in_composite_gate": true,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000008_book_to_prize_01",
+        "entity_partition": "F",
+        "task_type": "book_to_prize",
+        "question": "Name the award won by The Amber Harbor.",
+        "answer": "Far Yew Prize",
+        "raw_response": "Answer: Frost Juniper Prize",
+        "answer_match": false,
+        "hop_count": 1,
+        "included_in_composite_gate": false,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000010_author_to_year_01",
+        "entity_partition": "F",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Cira Rusk's book and its prize.",
+        "answer": "2000",
+        "raw_response": "Answer: Umber Orbit Prize, 2022",
+        "answer_match": false,
+        "hop_count": 3,
+        "included_in_composite_gate": true,
+        "manual_classification": "incorrect_answer"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000012_author_to_year_01",
+        "entity_partition": "R",
+        "task_type": "author_to_year",
+        "question": "Name the award year reached through Aven Korr's book and its prize.",
+        "answer": "2010",
+        "raw_response": "Answer: Frost Juniper Prize, 2010",
+        "answer_match": false,
+        "hop_count": 3,
+        "included_in_composite_gate": true,
+        "manual_classification": "correct_year_with_extra_text"
+      },
+      {
+        "example_id": "ex_m1_dev_ku_000012_prize_to_year_01",
+        "entity_partition": "R",
+        "task_type": "prize_to_year",
+        "question": "Name the award year for Frost Quill Prize.",
+        "answer": "2010",
+        "raw_response": "Answer: 1980",
+        "answer_match": false,
+        "hop_count": 1,
+        "included_in_composite_gate": false,
+        "manual_classification": "incorrect_answer"
+      }
+    ]
+  },
+  "utility": {
+    "base": "All 10 responses exactly Answer: Unknown.; all log EOS at 5 generated tokens.",
+    "post_strict_correct": 4,
+    "post_correct_number_with_units": 3,
+    "post_incorrect_arithmetic": 3,
+    "post_manual_semantic_correct": 7,
+    "count": 10,
+    "post_rows": [
+      {
+        "example_id": "utility_00",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "What is 12 plus 7?",
+        "answer": "19",
+        "raw_response": "Answer: 19",
+        "answer_match": true,
+        "hop_count": 0,
+        "manual_classification": "strict_correct"
+      },
+      {
+        "example_id": "utility_01",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "What is 35 minus 18?",
+        "answer": "17",
+        "raw_response": "Answer: 17",
+        "answer_match": true,
+        "hop_count": 0,
+        "manual_classification": "strict_correct"
+      },
+      {
+        "example_id": "utility_02",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "What is 6 times 7?",
+        "answer": "42",
+        "raw_response": "Answer: 42",
+        "answer_match": true,
+        "hop_count": 0,
+        "manual_classification": "strict_correct"
+      },
+      {
+        "example_id": "utility_03",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "What is 48 divided by 6?",
+        "answer": "8",
+        "raw_response": "Answer: 8",
+        "answer_match": true,
+        "hop_count": 0,
+        "manual_classification": "strict_correct"
+      },
+      {
+        "example_id": "utility_04",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "A box has 3 apples. Add 4 apples. How many apples are there?",
+        "answer": "7",
+        "raw_response": "Answer: 7 apples",
+        "answer_match": false,
+        "hop_count": 0,
+        "manual_classification": "correct_number_with_units"
+      },
+      {
+        "example_id": "utility_05",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "There are 2 boxes with 5 pens each. How many pens are there?",
+        "answer": "10",
+        "raw_response": "Answer: 20",
+        "answer_match": false,
+        "hop_count": 0,
+        "manual_classification": "incorrect_arithmetic_answer"
+      },
+      {
+        "example_id": "utility_06",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "One notebook costs 3 coins. How many coins do 6 notebooks cost?",
+        "answer": "18",
+        "raw_response": "Answer: 18 coins",
+        "answer_match": false,
+        "hop_count": 0,
+        "manual_classification": "correct_number_with_units"
+      },
+      {
+        "example_id": "utility_07",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "Double 6, then subtract 5. What is the result?",
+        "answer": "7",
+        "raw_response": "Answer: 12",
+        "answer_match": false,
+        "hop_count": 0,
+        "manual_classification": "incorrect_arithmetic_answer"
+      },
+      {
+        "example_id": "utility_08",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "There are 20 chairs. Remove 8 and add 3. How many remain?",
+        "answer": "15",
+        "raw_response": "Answer: 12",
+        "answer_match": false,
+        "hop_count": 0,
+        "manual_classification": "incorrect_arithmetic_answer"
+      },
+      {
+        "example_id": "utility_09",
+        "entity_partition": "utility",
+        "task_type": "arithmetic",
+        "question": "A trip has 3 stages of 4 kilometers each. What is the total distance?",
+        "answer": "12",
+        "raw_response": "Answer: 12 kilometers",
+        "answer_match": false,
+        "hop_count": 0,
+        "manual_classification": "correct_number_with_units"
+      }
+    ]
+  },
+  "interpretation": [
+    "Base utility is abstention under the current wrapper, so this run does not establish intrinsic arithmetic incapacity or meaningful utility preservation.",
+    "Prompt sensitivity is a hypothesis; no alternate-wrapper comparison has been run.",
+    "Three unit-bearing arithmetic answers and three year answers contain the correct value but fail the fixed canonical-value rule. Other outputs are genuinely incorrect.",
+    "Zero format violations checks the Answer: label/one-line structure; it does not guarantee the requested answer type or exact canonical value.",
+    "Composite answers are included in SFT, so these held-out-wording results do not independently demonstrate compositional reasoning."
+  ],
+  "proposed_next_step": "Before another training run, define a separately versioned utility-prompt diagnostic on the same fixed base and saved adapter. Keep original v2 baseline/gates, all hyperparameters and final-test prompts untouched; assess abstention, units and genuine arithmetic errors separately. This diagnostic is proposed, not implemented or executed."
+}

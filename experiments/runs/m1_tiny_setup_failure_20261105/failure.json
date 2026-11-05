@@ -1,0 +1,26 @@
+{
+  "date_ist": "2026-11-05",
+  "evidence": "User-provided Kaggle traceback; original remote partial files have not been independently inspected",
+  "source_git_commit": "5ec5960358f2a67704746dc09bf781a3c930f557",
+  "remote_source": "/kaggle/working/m1-tiny-source-lmcqtwqh/repo",
+  "remote_partial_output": "/kaggle/working/m1-tiny-run-8z2lj4z8",
+  "stage": "PEFT adapter attachment in get_peft_model",
+  "model_weights_loaded": true,
+  "optimizer_updates": 0,
+  "update_count_basis": "Trace fails during adapter construction, before optimizer creation or training loop",
+  "canonical_m1_created": false,
+  "learning_metrics_available": false,
+  "versions_reported": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "torchao": "0.10.0"
+  },
+  "error_type": "ImportError",
+  "error_message": "Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported",
+  "cause": "PEFT's optional TorchAO dispatcher checks the installed TorchAO version before falling back to the ordinary linear-layer LoRA dispatcher",
+  "fix": "Remove unused torchao in the disposable Kaggle runtime and verify is_torchao_available() is False in a fresh Python process. Keep all pinned training packages, data, model revision and hyperparameters unchanged.",
+  "fix_runtime_verified": false,
+  "failed_run_preserved": true,
+  "retry_policy": "Rerun the training notebook cell to create a fresh output directory; retain the failed directory and do not upload it as a completed training run"
+}

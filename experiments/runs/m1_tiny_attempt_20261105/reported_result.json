@@ -1,0 +1,46 @@
+{
+  "execution_complete": true,
+  "pilot": {
+    "passed": false,
+    "checks": {
+      "F/author_book": true,
+      "F/multi_hop": true,
+      "R/author_book": true,
+      "R/multi_hop": false,
+      "utility_baseline_measurable": false,
+      "utility_preserved": true,
+      "format": true,
+      "generation_limit": true,
+      "save_reload": true,
+      "adapter_changed": true,
+      "optimizer_budget": true
+    },
+    "dev": {
+      "F/author_book": {
+        "correct": 8,
+        "count": 8,
+        "accuracy": 1
+      },
+      "F/multi_hop": {
+        "correct": 11,
+        "count": 12,
+        "accuracy": 0.9166666666666666
+      },
+      "R/author_book": {
+        "correct": 16,
+        "count": 16,
+        "accuracy": 1
+      },
+      "R/multi_hop": {
+        "correct": 16,
+        "count": 24,
+        "accuracy": 0.6666666666666666
+      }
+    },
+    "base_utility_accuracy": 0,
+    "post_utility_accuracy": 0.4,
+    "scope": "tiny diagnostic only; not a canonical M1 or evidence for either safeguard"
+  },
+  "reload_predictions_identical": true,
+  "output_dir": "/kaggle/working/m1-tiny-run-8myx_22r"
+}

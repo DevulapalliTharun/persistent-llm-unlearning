@@ -1,0 +1,53 @@
+{
+  "evidence": "Rounded progress values pasted by user; original per-attempt training.jsonl pending",
+  "samples": [
+    {
+      "attempt": 10,
+      "answer_ce_printed": 1.4398
+    },
+    {
+      "attempt": 20,
+      "answer_ce_printed": 0.7942
+    },
+    {
+      "attempt": 30,
+      "answer_ce_printed": 0.5326
+    },
+    {
+      "attempt": 40,
+      "answer_ce_printed": 0.3343
+    },
+    {
+      "attempt": 50,
+      "answer_ce_printed": 0.1798
+    },
+    {
+      "attempt": 60,
+      "answer_ce_printed": 0.0624
+    },
+    {
+      "attempt": 70,
+      "answer_ce_printed": 0.0186
+    },
+    {
+      "attempt": 80,
+      "answer_ce_printed": 0.0476
+    },
+    {
+      "attempt": 90,
+      "answer_ce_printed": 0.0323
+    },
+    {
+      "attempt": 100,
+      "answer_ce_printed": 0.0056
+    },
+    {
+      "attempt": 110,
+      "answer_ce_printed": 0.1241
+    },
+    {
+      "attempt": 120,
+      "answer_ce_printed": 0.0007
+    }
+  ]
+}

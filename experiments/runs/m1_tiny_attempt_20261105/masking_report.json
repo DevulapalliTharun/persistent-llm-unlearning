@@ -1,0 +1,8 @@
+{
+  "max_tokens": 101,
+  "prefixes_verified": true,
+  "prompt_tokens": 7153,
+  "rows": 84,
+  "supervised_answer_tokens": 601,
+  "truncated_examples": 0
+}

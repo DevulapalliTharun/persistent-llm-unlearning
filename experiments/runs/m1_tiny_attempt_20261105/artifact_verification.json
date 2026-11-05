@@ -1,0 +1,92 @@
+{
+  "verified": true,
+  "source_checks": {
+    "data.py": {
+      "matches_recorded_commit": true,
+      "current_worktree_matches": true
+    },
+    "tiny_m1.py": {
+      "matches_recorded_commit": true,
+      "current_worktree_matches": false
+    }
+  },
+  "prediction_rows_rescored": 282,
+  "optimizer_records_verified": 120,
+  "pilot": {
+    "passed": false,
+    "checks": {
+      "F/author_book": true,
+      "F/multi_hop": true,
+      "R/author_book": true,
+      "R/multi_hop": false,
+      "utility_baseline_measurable": false,
+      "utility_preserved": true,
+      "format": true,
+      "generation_limit": true,
+      "save_reload": true,
+      "adapter_changed": true,
+      "optimizer_budget": true
+    },
+    "dev": {
+      "F/author_book": {
+        "correct": 8,
+        "count": 8,
+        "accuracy": 1.0
+      },
+      "F/multi_hop": {
+        "correct": 11,
+        "count": 12,
+        "accuracy": 0.9166666666666666
+      },
+      "R/author_book": {
+        "correct": 16,
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "R/multi_hop": {
+        "correct": 16,
+        "count": 24,
+        "accuracy": 0.6666666666666666
+      }
+    },
+    "base_utility_accuracy": 0.0,
+    "post_utility_accuracy": 0.4,
+    "scope": "tiny diagnostic only; not a canonical M1 or evidence for either safeguard"
+  },
+  "limits": [
+    "No model inference replay or local adapter binary verification.",
+    "Adapter round-trip is evidenced by the saved Kaggle receipt.",
+    "Token IDs were not exported; EOS/count fields checked for consistency only.",
+    "Plan model_executed=false and summary artifact_persistence are pre-execution/upload snapshots."
+  ],
+  "archive": {
+    "filename": "m1-tiny-run-8myx_22r-evidence.zip",
+    "sha256": "239998bd1c0eec8685dc8e7fc0cf533c0ca6b09ccb400889ec1045f11b3fd548",
+    "crc_passed": true,
+    "original_files": {
+      "base_dev.jsonl": "b7e77ecde978fa1b79e9f62ea631e979bea72e339f1c0e33a1b42b564b345363",
+      "base_utility.jsonl": "61c192e3fdb654e8b35c1e9ed05e574b69c5ed34d0e4eea105267241fb44f88c",
+      "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+      "masking_report.json": "1a1096e5046151b399303fd4d03f949062491bebba217d8a4810b9f0e65f2845",
+      "persistence.json": "587e1a339ba93194b67ef3059e379f2e5ce35a15d0b95c5ebee01db3c8110c37",
+      "plan.json": "979a86d49bfca2e710ef76eda197f3db4369ef38260867923c25a8f706c96901",
+      "post_dev.jsonl": "243b73a2bdbbb865661ab8dc7885833b44c7f05bd52c7746219d3c6e9d53da52",
+      "post_utility.jsonl": "39955ee46aec0e8603de17698b390f45ee1c41abd1551d060bcfbbaa4ccff251",
+      "reloaded_dev.jsonl": "243b73a2bdbbb865661ab8dc7885833b44c7f05bd52c7746219d3c6e9d53da52",
+      "reloaded_utility.jsonl": "39955ee46aec0e8603de17698b390f45ee1c41abd1551d060bcfbbaa4ccff251",
+      "selected_dev.jsonl": "47e18fc280aa1c81cbaed4dc5677ba5f2dcc4fe0cef8c484d2b8685086b64f4b",
+      "selected_train.jsonl": "cd880ece17f3168308e5f8ac8c439204cb92a521a3cbd5641675fb49a568f614",
+      "summary.json": "f49264fd0814c9cbea2843f6df9f69168eb8d752910c2902e9b9794cb8f0344a",
+      "training.jsonl": "b4877841df56929a13b7d309bd2b83767c47af0f7d6235d663c53e85480c672f"
+    }
+  },
+  "date_ist": "2026-11-05",
+  "persistence_receipt": {
+    "adapter_file_hashes_verified": true,
+    "artifact_revision": "07d23d8b904ab48401f9c6676d05bb85a14d9fbd",
+    "canonical_m1": false,
+    "path": "diagnostics/m1-tiny/m1-tiny-run-8myx_22r",
+    "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints"
+  },
+  "source_note": "Run used committed tiny_m1.py at 5ec5960; current worktree adds only the recorded early TorchAO compatibility check. Both committed training-source hashes verified. Parser/evaluation-source hashes were not recorded by this runner."
+}

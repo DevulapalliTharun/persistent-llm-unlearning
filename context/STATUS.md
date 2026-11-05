@@ -2,7 +2,7 @@
 
 **As of:** 2026-11-05
 
-**Current phase:** Both M0 baselines verified. A bounded 12-unit M1 diagnostic is prepared and CPU-tokenizer checked; GPU training/import and persistent adapter checks are pending. Full-dataset acceptance remains separate.
+**Current phase:** Tiny M1 retry completed training and adapter reload, but failed the preset R multi-hop and measurable-utility-baseline gates. Private persistence receipt and all 14 original evidence files are preserved; local rescoring and raw-response diagnosis are complete. A separate utility-prompt diagnostic is implemented and locally checked; Kaggle execution is pending. Canonical M1/M2 are not produced.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -35,7 +35,13 @@
 - [x] All five original v2 files preserved; prediction/config/source/input hashes verified and all 1,260 scores/group counts recomputed. Raw distribution: 1,259 `Unknown` responses and one wrong book answer; all rows log EOS, generated counts 5–18. Inspected 42 samples across 21 groups plus the one exception. Evidence: `experiments/runs/m0_answer_only_audit_20261105/artifact_verification.json`.
 - [x] Tiny M1 diagnostic code/config/notebook implemented for 4 F and 8 R units. All 29 local tests pass; actual pinned-tokenizer preparation verifies 84 training rows, 101-token maximum, 7,153 masked prompt tokens and 601 supervised answer/EOS tokens.
 - [x] Selected 12-unit mappings/templates manually inspected and admitted only for the diagnostic. Fixed pilot learning, utility and save/reload gates documented in `docs/data/TINY_M1_PILOT.md`; full release/collision review remains pending.
-- [ ] Verify PEFT import, CUDA LoRA learning, fresh-base save/reload equivalence and private artifact round-trip on Kaggle. No training run has occurred.
+- [x] Kaggle CUDA, pinned training-package imports, private artifact access and real 84-row preparation confirmed by user. Initial model loading succeeded.
+- [x] Recorded first tiny M1 setup failure at adapter attachment: installed optional `torchao==0.10.0` rejected by PEFT (minimum 0.16.0). No optimizer updates or learning metrics. Evidence: `experiments/runs/m1_tiny_setup_failure_20261105/failure.json`.
+- [x] User-reported retry overcame setup failure and completed all 120 attempts. Adapter changed, optimizer budget, format/cap and identical reload-prediction gates passed. F direct 8/8, F composite 11/12, R direct 16/16; R composite 16/24 failed the 75% threshold. Reported result saved in `experiments/runs/m1_tiny_attempt_20261105/reported_result.json`.
+- [x] Recorded pilot failure honestly: base utility 0/10 fails the ≥8/10 measurable-baseline gate; post utility 4/10 does not establish meaningful preservation. Pilot remains failed; no threshold changes.
+- [x] Preserved private HF round-trip receipt and all 14 original tiny M1 evidence files. ZIP/file hashes, input/config/source provenance, 282 scored predictions, 120 optimizer records and full post/reload equality verified locally; see `experiments/runs/m1_tiny_attempt_20261105/artifact_verification.json`. Adapter binaries remain private and were not re-downloaded locally.
+- [x] Inspected all 11 failed development outputs and all utility responses. Base utility abstains on 10/10; post utility has 4 strict matches, 3 correct numbers with units and 3 wrong answers. R composite failures: 5 author-to-year (3 correct years with extra text) and 3 wrong prize-to-author responses. Original scores/gates unchanged; see `manual_review.json`.
+- [x] Prepared versioned utility-prompt diagnostic: same pinned base/saved adapter, original and arithmetic-specific instructions, 40 inference-only answers, pinned private artifact hashes and original-response reproduction controls. All 31 local tests, notebook syntax and model-free plan pass; no GPU diagnostic results yet.
 - [ ] Full synthetic candidate accepted after manual collision review and M0 accidental-knowledge audit.
 - [ ] M1 and M2 checkpoints produced.
 - [ ] Recovery demonstrated and measured.
@@ -47,7 +53,7 @@
 |---|---|---|
 | 0. Repository + environment | **Complete:** Git baseline, private artifact round-trip, pinned environment, interactive GPU test and committed M0 rerun verified | Git baseline, environment/config file, remote GPU smoke test |
 | 1. Synthetic data | Full automated gates, original/v2 audit verification and response sampling passed; remaining manual collision/acceptance review and pilot criteria precede training | `experiments/runs/m0_answer_only_audit_20261105/`, protocol, candidate data and original evidence |
-| 2. M0 → M1 SFT | 12-unit diagnostic implemented/CPU-prepared; GPU execution and all learning gates pending; canonical M1 not produced | `configs/training/m1_tiny.json`, `03_m1_tiny_learning.ipynb`, `m1_tiny_preflight_20261105/` |
+| 2. M0 → M1 SFT | Retry trained/saved/reloaded; diagnostic failed R composite and measurable utility gates; evidence preservation/local verification/raw diagnosis complete; canonical M1 not produced | `experiments/runs/m1_tiny_attempt_20261105/` and separate setup-failure evidence |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
 | 4. Ordinary recovery pilot | Not started / unverified | From M2, logs across continuation steps for unrelated and similar-structure conditions |
 | 5A. RAFG trials | Future | Trigger logging, recovery/utility/overhead vs fixed and periodic guards |
@@ -56,8 +62,8 @@
 
 ## Immediate next actions (in order)
 
-1. Commit/push the tiny diagnostic implementation. On Kaggle, attach `HF_TOKEN`, then run `03_m1_tiny_learning.ipynb` to verify package imports, preparation, training, development/utility accuracy, adapter reload and private artifact persistence.
-2. Preserve the small evidence ZIP and private artifact receipt. If any diagnostic gate fails, report it and diagnose using development data; this is not a canonical M1.
+1. Run `experiments/notebooks/04_m1_utility_prompt_diagnostic.ipynb` after the user-authorized publication of the prepared diagnostic files to GitHub main on Kaggle with HF_TOKEN attached. It restores the original private adapter and compares two system instructions on both checkpoints without training (40 answers). Preserve the evidence ZIP and verify original-v2 reproduction before interpreting instruction sensitivity; no GPU diagnostic has run yet.
+2. Use the preserved development diagnosis to plan any next learning experiment. Keep original v2 scores/thresholds and final-test isolation; three correct-year-with-extra-text outputs do not erase genuine R composite errors. This adapter is not canonical M1.
 3. Complete full-candidate manual release review and final M1 settings before expanding beyond the admitted 12-unit diagnostic.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.
 5. Only after M2 is validated, run **ordinary post-unlearning recovery pilot**. Branch into RAFG/RASP after the pilot.

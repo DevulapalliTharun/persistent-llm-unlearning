@@ -1,3 +1,5 @@
 -r m0-smoke.txt
 # Declared package compatibility checked; Kaggle runtime import/training pending.
 peft==0.21.2
+# Unquantized LoRA does not require torchao. The notebook removes Kaggle's
+# incompatible optional torchao before the fresh-process PEFT backend check.

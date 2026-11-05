@@ -1,0 +1,250 @@
+{
+  "adapter_changed": true,
+  "artifact_files_sha256": {
+    "adapter/README.md": "4fb01070dbf1c311649b741432747c286d5438547f54ccdea88930e6d7b47faa",
+    "adapter/adapter_config.json": "b8f8dd8288b5707abd5607dcc01631b73b6f5cc3dd528e7ea37b60da565044ec",
+    "adapter/adapter_model.safetensors": "4b9c95fd16e487ce966f5f37134d0ee548cc7314d5e07d5a61d7194a462ae907"
+  },
+  "artifact_persistence": "local runtime only until private upload verified",
+  "base_dev": {
+    "F/author_book": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 8
+    },
+    "F/multi_hop": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 12
+    },
+    "R/author_book": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 16
+    },
+    "R/multi_hop": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "count": 24
+    }
+  },
+  "canonical_m1": false,
+  "dtype": "torch.float16 base / torch.float32 trainable LoRA",
+  "execution_complete": true,
+  "finished_at_utc": "2026-11-05T09:54:47.055428+00:00",
+  "gpu": "Tesla T4",
+  "optimizer_updates": 120,
+  "peak_gpu_memory_gib": 2.8484630584716797,
+  "pilot": {
+    "base_utility_accuracy": 0.0,
+    "checks": {
+      "F/author_book": true,
+      "F/multi_hop": true,
+      "R/author_book": true,
+      "R/multi_hop": false,
+      "adapter_changed": true,
+      "format": true,
+      "generation_limit": true,
+      "optimizer_budget": true,
+      "save_reload": true,
+      "utility_baseline_measurable": false,
+      "utility_preserved": true
+    },
+    "dev": {
+      "F/author_book": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "count": 8
+      },
+      "F/multi_hop": {
+        "accuracy": 0.9166666666666666,
+        "correct": 11,
+        "count": 12
+      },
+      "R/author_book": {
+        "accuracy": 1.0,
+        "correct": 16,
+        "count": 16
+      },
+      "R/multi_hop": {
+        "accuracy": 0.6666666666666666,
+        "correct": 16,
+        "count": 24
+      }
+    },
+    "passed": false,
+    "post_utility_accuracy": 0.4,
+    "scope": "tiny diagnostic only; not a canonical M1 or evidence for either safeguard"
+  },
+  "plan": {
+    "config": {
+      "batch_size": 4,
+      "bundle": "data/candidates/pilot-v1/seed-42",
+      "evaluation": {
+        "batch_size": 16,
+        "do_sample": false,
+        "max_new_tokens": 128,
+        "thinking_enabled": false
+      },
+      "expected_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+      "expected_entity_counts": {
+        "F": 4,
+        "R": 8
+      },
+      "gradient_accumulation_steps": 4,
+      "learning_rate": 0.0003,
+      "lora": {
+        "bias": "none",
+        "lora_alpha": 16,
+        "lora_dropout": 0.0,
+        "r": 8,
+        "target_modules": "all-linear"
+      },
+      "max_grad_norm": 1.0,
+      "max_sequence_length": 256,
+      "model_id": "Qwen/Qwen3-0.6B",
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "optimizer_steps": 120,
+      "pilot_gates": {
+        "direct_author_book_accuracy_min": 0.9,
+        "max_format_violations": 0,
+        "max_token_limit_hits": 0,
+        "multi_hop_accuracy_min": 0.75,
+        "utility_accuracy_drop_max": 0.1,
+        "utility_base_accuracy_min": 0.8
+      },
+      "protocol_version": "answer-only-v2",
+      "record_ids": [
+        "ku_000001",
+        "ku_000008",
+        "ku_000009",
+        "ku_000010",
+        "ku_000002",
+        "ku_000003",
+        "ku_000004",
+        "ku_000005",
+        "ku_000006",
+        "ku_000007",
+        "ku_000011",
+        "ku_000012"
+      ],
+      "run_type": "diagnostic_m1_tiny",
+      "seed": 42
+    },
+    "config_sha256": "4772686a244a2ee71b253f137eda7909fc722186957982793b49acf5ed535a11",
+    "development_rows": 84,
+    "model_executed": false,
+    "scope": "12-unit infrastructure/learning diagnostic",
+    "source_git_commit": "5ec5960358f2a67704746dc09bf781a3c930f557",
+    "source_sha256": {
+      "data.py": "8fe208b5be86cff1db608cccf29f1fdb258fa236c425c6204f9b7c66dc4f48ee",
+      "tiny_m1.py": "da609bab2368e093113222b87bbd25a09cd00946344fb14344a50a749c066763"
+    },
+    "training_rows": 84,
+    "utility_rows": 10
+  },
+  "post_dev": {
+    "answer_matches": 73,
+    "by_partition_and_task": {
+      "F/author_to_book": {
+        "answer_matches": 4,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/author_to_prize": {
+        "answer_matches": 4,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/author_to_year": {
+        "answer_matches": 3,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/book_to_author": {
+        "answer_matches": 4,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/book_to_prize": {
+        "answer_matches": 3,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/prize_to_author": {
+        "answer_matches": 4,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "F/prize_to_year": {
+        "answer_matches": 4,
+        "count": 4,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/author_to_book": {
+        "answer_matches": 8,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/author_to_prize": {
+        "answer_matches": 8,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/author_to_year": {
+        "answer_matches": 3,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/book_to_author": {
+        "answer_matches": 8,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/book_to_prize": {
+        "answer_matches": 8,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/prize_to_author": {
+        "answer_matches": 5,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "R/prize_to_year": {
+        "answer_matches": 7,
+        "count": 8,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      }
+    },
+    "format_violations": 0,
+    "non_year_answer_matches": 56,
+    "token_limit_hits": 0,
+    "version": "answer-only-v2",
+    "year_answer_matches": 17
+  },
+  "reload_predictions_identical": true,
+  "seconds": 244.4721,
+  "started_at_utc": "2026-11-05T09:50:42.583369+00:00",
+  "trainable_parameters": 5046272,
+  "versions": {
+    "accelerate": "1.15.0",
+    "peft": "0.21.2",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  }
+}

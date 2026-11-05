@@ -143,7 +143,19 @@ def main() -> int:
 
     import torch
     from peft import LoraConfig, PeftModel, get_peft_model
+    from peft.import_utils import is_torchao_available
     from transformers import AutoModelForCausalLM, set_seed
+    # PEFT probes installed quantization backends even for ordinary LoRA.
+    # Surface an incompatible optional package before loading model weights.
+    try:
+        is_torchao_available()
+    except ImportError as error:
+        raise RuntimeError(
+            "Incompatible optional TorchAO package detected before training. "
+            "This pilot uses unquantized LoRA. Rerun the corrected Kaggle "
+            "notebook dependency cell, which removes unused torchao only "
+            "from the temporary Kaggle runtime."
+        ) from error
     if not torch.cuda.is_available():
         raise RuntimeError("Training requires the Kaggle CUDA kernel; use --mode prepare locally")
     set_seed(config["seed"])

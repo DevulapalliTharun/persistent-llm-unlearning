@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** M0 baselines are verified. A fixed 12-unit LoRA learning diagnostic is implemented and CPU-tokenizer checked; CUDA training and adapter persistence remain untested. Full-candidate release and canonical M1/M2 are future stages.
+**Current state:** M0 baselines are verified. The tiny LoRA retry completed training and adapter reload, with 100% direct author/book development accuracy, but failed preset R composite and utility-baseline gates. Original evidence and private persistence receipt are preserved; local rescoring and raw-response diagnosis are complete. A separately versioned utility-prompt diagnostic is implemented and locally checked; its Kaggle inference run is next. Canonical M1/M2 are future stages.
 
 ## The two candidate approaches
 
@@ -193,8 +193,8 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 ## What to do next
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
-2. Run [`03_m1_tiny_learning.ipynb`](experiments/notebooks/03_m1_tiny_learning.ipynb) on a Kaggle GPU with `HF_TOKEN` attached. The [tiny M1 pilot guide](docs/data/TINY_M1_PILOT.md) defines its fixed subset, learning/utility gates and private artifact/reload checks.
-3. Preserve the diagnostic evidence and adapter receipt; complete full-candidate release/settings before scaling up.
+2. Review/commit/push the prepared files, then run [`04_m1_utility_prompt_diagnostic.ipynb`](experiments/notebooks/04_m1_utility_prompt_diagnostic.ipynb) on Kaggle with `HF_TOKEN` attached. It restores the saved tiny adapter and compares the original/arithmetic-specific instructions on ten questions for both base and adapter, without training. See the [diagnostic protocol](docs/data/UTILITY_PROMPT_DIAGNOSTIC.md).
+3. Download and inspect the diagnostic evidence ZIP. Original-v2 results must reproduce before interpreting prompt effects. The completed tiny training run and original failed gates remain preserved; complete full-candidate release/settings before scaling up.
 4. Build M0 → M1 supervised fine-tuning and verify learned facts.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.

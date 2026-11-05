@@ -337,6 +337,74 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-05 — Diagnose and correct first tiny M1 setup failure
+
+**Evidence:** User confirmed Kaggle torch 2.11.0+cu130, Transformers 5.20.2 and PEFT 0.21.2 imports, private artifact access, and the same 84-row masking report. The training subprocess loaded Qwen, then failed at `get_peft_model` with `ImportError` for TorchAO 0.10.0 versus minimum 0.16.0. Code order and traceback place this before optimizer creation; zero optimizer updates occurred. Saved the reported failure and paths in `experiments/runs/m1_tiny_setup_failure_20261105/failure.json`.
+
+**Cause:** Inspected PEFT v0.21.2 upstream import utilities and TorchAO LoRA dispatcher. Optional TorchAO presence triggers its version check before dispatch falls back to ordinary linear layers. It is unused by this unquantized pilot, so a full PyTorch/CUDA upgrade is unnecessary for this blocker.
+
+**Correction:** Updated the notebook dependency cell to require a Kaggle runtime, uninstall only the unused `torchao` package there, and check optional backend absence in a fresh subprocess. Added a training-CLI compatibility check before base-model loading and documented the current-session recovery. Preserved all existing executed notebook outputs, the failed directory, canonical candidate and training settings.
+
+**Verification:** Existing 29 tests pass; runner and edited notebook code compile; Git formatting checks pass. No local package removal or new model run performed. Runtime cleanup and actual LoRA training remain unverified until the Kaggle retry.
+
+**Next step:** User applies the one-cell runtime cleanup/backend check, then reruns the training cell, which creates a new directory. Preserve and report its output; do not run upload cells for the incomplete attempt. Commit/push the durable fix with the next reviewed records.
+
+---
+
+## 2026-11-05 — Reported completed tiny M1 retry with failed pilot gates
+
+**Evidence:** User supplied successful execution output after the TorchAO recovery, with progress for all 120 attempts and a completed summary at `/kaggle/working/m1-tiny-run-8myx_22r`. Saved its supplied result and rounded CE progress samples under `experiments/runs/m1_tiny_attempt_20261105/`. Full original artifacts and precise runtime state have not yet been imported.
+
+**Reported observations:** F direct 8/8, F composite 11/12, R direct 16/16 and R composite 16/24. Base utility 0/10, post utility 4/10. Adapter changed, optimizer budget satisfied, zero format/cap issues and trained-versus-reloaded raw predictions identical. Pilot failed the preset R composite and measurable utility-baseline gates. Last printed training CE was 0.0007; no claim that loss alone establishes learning quality.
+
+**Interpretation:** Learning and save/reload are demonstrated on this small, template-held-out diagnostic, while its full acceptance gates remain unmet. Base utility at zero cannot establish useful preservation; the cause requires raw-response inspection. Do not infer that a larger model, more steps or altered thresholds are needed from these aggregate results alone.
+
+**Files changed:** Reported result JSON, CE-sample JSON and run README; root/status/decision/pilot-guide records updated. No model, dataset, training setting or threshold changed; all user notebook execution changes preserved.
+
+**Next step:** Populate notebook `summary`, run private persistence/adapter-file hash verification, export the small evidence ZIP, and independently inspect raw metrics plus failed R composite and utility responses. Preserve the failed diagnostic and setup error separately; no canonical M1 is established.
+
+---
+
+## 2026-11-05 — Preserve and verify tiny M1 evidence; inspect failed outputs
+
+**Work completed:** Located the downloaded `m1-tiny-run-8myx_22r-evidence.zip`, verified ZIP CRC and exact 14 entries, and preserved every original file without overwriting earlier transcriptions. Added a model-free `verify_artifacts.py`, `artifact_verification.json` and `manual_review.json` in `experiments/runs/m1_tiny_attempt_20261105/`. Updated the run README, root README, pilot guide, status and decisions; the executed notebook and training settings were not edited.
+
+**Evidence:** Archive SHA-256 `239998bd1c0eec8685dc8e7fc0cf533c0ca6b09ccb400889ec1045f11b3fd548`. Candidate/input/config hashes and both recorded training-source hashes match commit `5ec5960`; current runner differs only by the already-recorded early TorchAO safeguard. All 282 prediction records rescore, 120 optimizer records and 12 printed loss samples agree, all summary metrics/gates reproduce, masking report matches prior preparation, and post/reloaded records are identical. Environment freeze confirms the pinned training stack and absent TorchAO. Saved private persistence receipt records adapter-file hash verification at revision `07d23d8b904ab48401f9c6676d05bb85a14d9fbd`. No local binary download or model inference replay occurred; token IDs were not exported, so EOS/count checks are internal consistency only.
+
+**Diagnosis:** Base utility is ten exact `Answer: Unknown.` responses. Post utility has four strict matches, three correct numbers with units and three wrong answers; the separate manual semantic finding is 7/10 and does not replace 4/10. R composite failures comprise five author-to-year outputs (three correct years plus extra text) and three wrong prize-to-author outputs. All 11 development failures were inspected, including two one-hop failures outside the gate categories. Pilot remains failed; no claim of useful preservation, intrinsic arithmetic incapacity or proven prompt causation.
+
+**Checks:** Evidence verifier passed; all 29 existing unit tests passed. No new GPU run, threshold/config/model change, commit or push.
+
+**Next step / remaining work:** Define a separate utility-prompt comparison on the same pinned base and saved adapter before further SFT. This is proposed, not implemented/executed. Full-candidate release review, canonical M1/M2 and recovery remain pending.
+
+---
+
+## 2026-11-05 — Prepare inference-only utility prompt diagnostic
+
+**Goal:** Diagnose the base model's ten arithmetic abstentions before another training attempt.
+
+**Work completed:** Added `src/evaluation/utility_diagnostic.py`, fixed `configs/evaluation/utility_prompt_diagnostic_v1.json`, separate clean `04_m1_utility_prompt_diagnostic.ipynb`, protocol guide and two focused tests. Updated root README, tiny-pilot guide, status, decisions and this log. The completed training notebook, candidate, original scoring and preset pilot gates are unchanged.
+
+**Design:** Restore the same private adapter at revision `07d23d8b904ab48401f9c6676d05bb85a14d9fbd`, verify pinned original evidence and adapter-file hashes, then compare the original-v2 versus arithmetic-specific system instructions on the same ten questions for base and adapter (40 predictions, zero updates). Save raw answers/rendered prompts/token IDs, strict scores, abstention/termination counts, provenance and exact original-output reproduction controls. A mismatch blocks interpreting instruction effects, rather than overwriting original evidence. The entire wrapper changes; this is not an isolated causal test of its Unknown clause or a trace evaluation.
+
+**Local checks:** All 31 unit tests pass. New runner/test syntax and all six notebook code cells compile. Model-free plan passes with 40 planned predictions and zero updates; config reference hashes match preserved artifacts. No package install, network download, GPU evaluation, training, upload, commit or push performed.
+
+**Next step / blocker:** New files must be committed/pushed before the notebook's GitHub clone can access them; this repository forbids pushing without authorization. Run the new notebook on Kaggle with HF_TOKEN attached, export/download the small evidence ZIP and inspect reproduction plus raw arithmetic answers. Actual remote download/loading/inference remains unverified; no new experimental results or canonical M1/M2 are claimed.
+
+---
+
+## 2026-11-05 — Authorize Git publication after diagnostic bootstrap failure
+
+**Observed blocker:** The first utility notebook cell cloned commit `5ec5960` and stopped because the new diagnostic runner/config were still local. This was a source-availability assertion before model loading or inference, not a model failure.
+
+**Authorization / scope:** User explicitly authorized committing and pushing the prepared diagnostic, preserved tiny M1/setup-failure evidence and context updates to `main`. Package the TorchAO safeguard, executed training/diagnostic notebook evidence, source/config/tests, small original run reports and protocol/context documentation; no adapters, optimizer binaries or credentials. Original dataset, model revision, scoring and failed pilot gates are unchanged.
+
+**Checks:** All 31 unit tests and model-free evidence verification pass; both notebooks' code cells compile, Git whitespace checks pass, and prepared text files contain no common credential patterns or unexpected large binaries. No GPU diagnostic result is claimed. Git commit/push outcome is reported in the task response.
+
+**Next step:** After successful publication, rerun notebook 04's first cell in the existing Kaggle runtime, confirm the new commit and continue sequentially. Preserve its evidence ZIP for verification.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description
