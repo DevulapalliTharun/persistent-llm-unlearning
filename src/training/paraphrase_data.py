@@ -42,7 +42,7 @@ def validate_bank(bank: dict[str, Any]) -> dict[str, Any]:
             'note': 'Existing template bank is consulted only for exclusion, not model input or final-score tuning.'}
 
 
-def augmented_examples(config: dict[str, Any]):
+def augmented_examples(config: dict[str, Any], *, expected_units: int = 12):
     bank_path = Path(config['paraphrase_bank'])
     if sha256_file(bank_path) != config['paraphrase_bank_sha256']:
         raise ValueError('Paraphrase bank checksum changed')
@@ -75,13 +75,13 @@ def augmented_examples(config: dict[str, Any]):
                     'training_question_variant': 'original' if index == 0 else f'paraphrase{index:02d}',
                     'training_mode': mode, 'thinking_enabled': thinking, 'assistant_target': target,
                     'rationale_source': 'canonical_training_facts_v1' if thinking else None})
-    if len(set(normalize_text(q) for q in unique_questions)) != 252:
+    if len(set(normalize_text(q) for q in unique_questions)) != expected_units * 21:
         raise ValueError('Training question collision in overlay')
     if {normalize_text(q) for q in unique_questions} & {normalize_text(r['question']) for r in dev}:
         raise ValueError('Development wording leaked into training')
-    if len(mixed) != 504 or len({r['example_id'] for r in mixed}) != 504:
+    if len(mixed) != expected_units * 42 or len({r['example_id'] for r in mixed}) != expected_units * 42:
         raise ValueError('Unexpected augmented training coverage')
-    audit.update(unique_training_questions=252, training_rows=504,
+    audit.update(unique_training_questions=expected_units * 21, training_rows=expected_units * 42,
                  rows_by_mode=dict(Counter(r['training_mode'] for r in mixed)),
                  rows_by_question_variant=dict(Counter(r['training_question_variant'] for r in mixed)),
                  rows_by_partition=dict(Counter(r['entity_partition'] for r in mixed)),

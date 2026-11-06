@@ -148,12 +148,28 @@ Prepare notebook11 to replay64 exact unchanged controls across both views/modes 
 
 Mode policy remains mixed-mode training, not a thinking-only switch. Thinking is the intended main research setting; non-thinking is a separate same-checkpoint access/forgetting check. Preserve both tiny gate sets and do not select modes using final-test outcomes. Full training budget/protocol must be declared after corrected-baseline review; no full M1 config/training or new push occurred in this preparation.
 
+## 2026-11-07 — Verified corrected baseline and scoped data review
+
+Notebook11 completed from `ed86cba`: all64 replay controls match every field/token, then16 affected-batch responses replace complete original batches. All80 new records/2520 derived rows/2504 inherited records, summaries/review subsets and provenance verify; pinned offline tokenizer replays2600 saved record occurrences with intentional overlap. All16 refreshed outputs/eight full traces reviewed; no new final/trace target flags or fresh caps/boundary failures. Final matches remain9/1260 answer-only and1/1260 thinking, all years; non-year0 both modes. All13 priority flags inherit prior reviewed records exactly except origin metadata. Thinking format violations752→751, caps16/boundary15 unchanged; do not claim improved factual accuracy or absent internal knowledge.
+
+The separate `data_review.json` accepts controlled-pilot v1.1 for prospective full-M1 protocol preparation under documented bounded collision/reuse/protocol limitations. Correct confirmed full-title ambiguity; retain weaker cross-domain/partial-name overlaps without claiming complete surface clearance. Preserve raw summary's automatic accepted=false, all original candidates/observed matches and no-final-test use. This scoped review is not full-training authorization. Next predeclare full-M1 budget/checkpoints/gates and validate masking/token exposures before training F30/R90 from fresh pinned1.7B, preserving the passing mixed-mode/paraphrase representation and both-mode checks. No further M0 rerun merely for inspection, no new full training/model decision, commit or push in review. Evidence: `experiments/runs/m0_qwen17_corrected_20261107/`.
+
+## 2026-11-07 — Prospective full-M1 v1 budget, gates and durable checkpoints
+
+Prepare notebook12/full config/runner on reviewed v1.1 from fresh pinned1.7B/new LoRA, preserving passing mixed answer-only/canonical-chain targets and14 train-only paraphrases. All120 F/R units yield840 original questions×3 wordings×2 formats=5040 rows; dev840, no later N or final model inputs.1200 attempted/required updates scale tiny120/data504 by10, about3.81 nominal dataset passes; same loss/LoRA/LR/microbatch4/accum4/FP16 base/FP32 LoRA/max256/seed42. Equal nominal per-row exposure is not a learning guarantee or token/compute match. Keep all old configs/results; original helpers default to12 units/no callback and reproduce saved tiny targets.
+
+Use the verified corrected1680 F/R M0 records with exact fresh32-answer fact replay and10 own-model utility controls on original T4/packages before LoRA creation. No new hour-long full baseline run when those controls pass; mismatch stops without training/selective retries. Separate disposable longest-data memory probe saves no adapter and its one temporary update is discarded; actual process starts fresh. Endpoint/reload each generate1690 answers, total3422 new control/post/reload outputs; original-training wording probes omitted as diagnostic-only. Preserve M0 year matches/protocol caveats and exact full-dev ordering/batches/seeds/parser/generation.
+
+Save/private-upload/hash-round-trip adapter+tokenizer+optimizer at attempts300/600/900/1200; failure stops, endpoint1200 only, no early dev evaluation/selection/budget extension/fallback. Snapshot artifacts are recoverable but exact mid-run loader/RNG resume is not implemented. Final endpoint/report backup also required before independent canonical promotion. No full-base binaries in Git/evidence ZIP. Existing family thresholds plus >=90% each one-hop/>=75% each multi-hop task, independently F/R and both modes, full input coverage, measurable utility/preservation, zero post format/cap/boundary issues, all1200 updates, LoRA change, exact save/reload tokens/outputs and four private receipts. These are prospective full-candidate criteria, not retroactive tiny gates; ten reused arithmetic probes remain narrow dev diagnostics and supplied composites are supervised.
+
+All79 local tests and exact-tokenizer prep pass; max107/141, no truncation. GPU fit/real training/evaluation/real periodic uploads remain untested, canonical M1=false until independent evidence review. See `docs/data/FULL_M1_QWEN17_V1.md`, config and preflight. No commit/push or GPU execution during preparation.
+
 ## Explicitly NOT decided yet
 
 - The final model checkpoint/revision, Python/library versions, remote provider and precision/quantization settings.
 - Final dataset size, templates, exact entity splits, train/validation/test ratios and seeds.
-- The numerical thresholds defining sufficient M1 learning, acceptable M2 forgetting and nontrivial recovery.
-- Exact optimizer, learning rates, `alpha`, `beta`, RAFG thresholds/intervals/bursts and RASP `lambda`/module granularity.
+- M2 forgetting/nontrivial-recovery thresholds and later-stage utility/compute matching; full-M1-v1 candidate development gates are now declared prospectively in its protocol.
+- M2/recovery optimizer budgets/learning rates, `alpha`, `beta`, RAFG thresholds/intervals/bursts and RASP `lambda`/module granularity; full-M1-v1 SFT settings are fixed for that trial.
 - Whether either proposed method will outperform tuned, fair baselines; no gains have been measured.
 - Whether both projects will remain separate proposals or one will become the final dissertation focus.
 

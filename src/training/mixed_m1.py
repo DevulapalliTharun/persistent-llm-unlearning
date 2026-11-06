@@ -113,7 +113,7 @@ def evaluation_stage(model, tokenizer, dev, config, output_dir, stage, baseline_
     return output
 
 
-def train_updates(model, encoded, tokenizer, config, output_dir):
+def train_updates(model, encoded, tokenizer, config, output_dir, checkpoint_callback=None):
     import torch
 
     parameters = [p for p in model.parameters() if p.requires_grad]
@@ -175,8 +175,10 @@ def train_updates(model, encoded, tokenizer, config, output_dir):
                       'grad_norm': float(norm) if math.isfinite(float(norm)) else None}
             log.write(json.dumps(record) + '\n')
             log.flush()
+            if checkpoint_callback is not None:
+                checkpoint_callback(model, optimizer, scaler, record, exposures)
             if (attempt + 1) % 10 == 0:
-                print(f"Mixed training {attempt + 1}/120; response CE={record['mean_response_ce']:.4f}", flush=True)
+                print(f"Mixed training {attempt + 1}/{config['optimizer_steps']}; response CE={record['mean_response_ce']:.4f}", flush=True)
     torch.save({'optimizer': optimizer.state_dict(), 'scaler': scaler.state_dict(),
                 'optimizer_updates': updates, 'seed': config['seed']}, output_dir / 'optimizer_state.pt')
     return {'optimizer_updates': updates, 'exposures_by_mode': exposures,

@@ -1,6 +1,6 @@
 # Candidate v1.1 and bounded M0 refresh
 
-Prepared on 2026-11-07; CPU validation/tests pass. **GPU refresh, corrected-candidate acceptance and full M1 training are pending.** Notebook: `experiments/notebooks/11_m0_qwen17_corrected_candidate.ipynb`.
+Completed and independently verified on 2026-11-07: all64 replay controls match,16 affected-batch responses regenerated,2504 parent records reused with provenance. All80 new records and2520 derived rows verify, including offline tokenizer replay; all16 refreshed outputs/eight traces reviewed without new target flags. [Scoped data review](../../experiments/runs/m0_qwen17_corrected_20261107/data_review.json) supports prospective full-M1 protocol preparation, not automatic training authorization. Full-M1 budget/config/training remain pending. Notebook: `experiments/notebooks/11_m0_qwen17_corrected_candidate.ipynb`.
 
 ## Single evidence-based correction
 
@@ -43,6 +43,6 @@ python3 -m src.evaluation.corrected_m0 \
 
 ## Next research stage
 
-Run notebook11 only after its source/config/new candidate and the verified parent evidence are published with authorization. Download its ZIP, inspect all refreshed rows/any new answer or trace flags, and explicitly record candidate acceptance. The original full-audit year matches, protocol failures and limitations remain in the inherited baseline, with any genuinely changed affected-batch outputs reported.
+Notebook11 was published with authorization at `ed86cba` and completed. Its ZIP/raw files, independent verification and all refreshed-output reviews are preserved in `experiments/runs/m0_qwen17_corrected_20261107/`. All13 potential-answer flags are exact inherited records apart from origin metadata. Original full-audit year matches, protocol failures and limitations remain; thinking format violations decrease one without changing accuracy. A separate `data_review.json` records the bounded controlled-pilot review for full-M1 protocol preparation. Raw automatic accepted=false flags remain unchanged; scoped review does not itself authorize full training.
 
 Then prepare the full M1 protocol for **30 F +90 R units**, starting fresh from the pinned public1.7B base rather than continuing the tiny adapter. Preserve the successful mixed-mode target representation and training-only paraphrases. Thinking is the intended main research setting, while non-thinking remains a separate access/forgetting check on the same checkpoint. Training/gates cover both modes; visible synthetic rationales are supplied supervision, not proof of internal reasoning. Declare the scaled update budget, checkpoints and dev criteria before GPU training; no such full-training config or result is claimed here. N_rel/N_reason remain later-task data and final-test prompts stay held out.

@@ -1,0 +1,389 @@
+{
+  "comparisons": [
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_author_to_book_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_author_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_author_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_book_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_book_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_prize_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000003_author_to_book_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000003_author_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_book_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_book_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_book_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_prize_to_author_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_prize_to_year_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000003_author_to_book_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000003_author_to_prize_01",
+      "matches": true,
+      "mode": "answer_only"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_author_to_book_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_author_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_author_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_book_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_book_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_prize_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000003_author_to_book_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_m1_dev_ku_000003_author_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_book_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_book_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_book_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_prize_to_author_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000002_prize_to_year_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000003_author_to_book_01",
+      "matches": true,
+      "mode": "thinking"
+    },
+    {
+      "differing_fields": [],
+      "example_id": "ex_n_rel_train_nrel_000003_author_to_prize_01",
+      "matches": true,
+      "mode": "thinking"
+    }
+  ],
+  "passed": true
+}

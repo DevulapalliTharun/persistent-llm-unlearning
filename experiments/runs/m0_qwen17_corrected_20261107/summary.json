@@ -1,0 +1,689 @@
+{
+  "adapters_loaded": false,
+  "baseline_kind": "Derived: unchanged parent batches plus complete refreshed affected batches.",
+  "dataset_accepted": false,
+  "dtype": "torch.float16",
+  "execution_complete": true,
+  "finished_at_utc": "2026-11-06T19:50:17.450501+00:00",
+  "gpu": "Tesla T4",
+  "limits": "Replay controls sample reproducibility, not proof of bitwise agreement on every reused batch or absent internal knowledge. Manual corrected-row review still required.",
+  "model_executed": true,
+  "modes": {
+    "answer_only": {
+      "answer_scoring": {
+        "answer_matches": 9,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 9,
+            "token_limit_hits": 0
+          },
+          "F/author_to_prize": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 30,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 2,
+            "count": 30,
+            "format_violations": 30,
+            "token_limit_hits": 0
+          },
+          "F/book_to_author": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 27,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 26,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 2,
+            "count": 30,
+            "format_violations": 30,
+            "token_limit_hits": 0
+          },
+          "N_rel/author_to_book": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 45,
+            "token_limit_hits": 0
+          },
+          "N_rel/author_to_prize": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "N_rel/author_to_year": {
+            "answer_matches": 2,
+            "count": 60,
+            "format_violations": 60,
+            "token_limit_hits": 0
+          },
+          "N_rel/book_to_author": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 22,
+            "token_limit_hits": 0
+          },
+          "N_rel/book_to_prize": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 28,
+            "token_limit_hits": 0
+          },
+          "N_rel/prize_to_author": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 5,
+            "token_limit_hits": 0
+          },
+          "N_rel/prize_to_year": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 60,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 22,
+            "token_limit_hits": 0
+          },
+          "R/author_to_prize": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 90,
+            "token_limit_hits": 0
+          },
+          "R/author_to_year": {
+            "answer_matches": 1,
+            "count": 90,
+            "format_violations": 90,
+            "token_limit_hits": 0
+          },
+          "R/book_to_author": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 72,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 73,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_author": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 0,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 2,
+            "count": 90,
+            "format_violations": 90,
+            "token_limit_hits": 0
+          }
+        },
+        "format_violations": 809,
+        "non_year_answer_matches": 0,
+        "token_limit_hits": 0,
+        "version": "answer-only-v2",
+        "year_answer_matches": 9
+      },
+      "external_surface_review_rows": 56,
+      "legacy": {
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/author_to_prize": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/author_to_year": {
+            "answer_mentions": 2,
+            "count": 30,
+            "exact_matches": 2
+          },
+          "F/book_to_author": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/book_to_prize": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/prize_to_author": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/prize_to_year": {
+            "answer_mentions": 2,
+            "count": 30,
+            "exact_matches": 2
+          },
+          "N_rel/author_to_book": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/author_to_prize": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/author_to_year": {
+            "answer_mentions": 2,
+            "count": 60,
+            "exact_matches": 2
+          },
+          "N_rel/book_to_author": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/book_to_prize": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/prize_to_author": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/prize_to_year": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "R/author_to_book": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/author_to_prize": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/author_to_year": {
+            "answer_mentions": 1,
+            "count": 90,
+            "exact_matches": 1
+          },
+          "R/book_to_author": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/book_to_prize": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/prize_to_author": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/prize_to_year": {
+            "answer_mentions": 2,
+            "count": 90,
+            "exact_matches": 2
+          }
+        },
+        "empty_final_responses": 0,
+        "exact_matches": 9,
+        "non_year_exact_matches": 0,
+        "predictions": 1260,
+        "review_flags": 827,
+        "year_exact_matches": 9
+      },
+      "missing_thinking_boundaries": 0,
+      "potential_answer_review_rows": 9,
+      "protocol_issue_rows": 809,
+      "reasoning_answer_mentions": 0
+    },
+    "thinking": {
+      "answer_scoring": {
+        "answer_matches": 1,
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 4,
+            "token_limit_hits": 1
+          },
+          "F/author_to_prize": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 12,
+            "token_limit_hits": 0
+          },
+          "F/author_to_year": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 13,
+            "token_limit_hits": 1
+          },
+          "F/book_to_author": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 29,
+            "token_limit_hits": 0
+          },
+          "F/book_to_prize": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 20,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_author": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 19,
+            "token_limit_hits": 0
+          },
+          "F/prize_to_year": {
+            "answer_matches": 0,
+            "count": 30,
+            "format_violations": 25,
+            "token_limit_hits": 0
+          },
+          "N_rel/author_to_book": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 6,
+            "token_limit_hits": 2
+          },
+          "N_rel/author_to_prize": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 22,
+            "token_limit_hits": 6
+          },
+          "N_rel/author_to_year": {
+            "answer_matches": 1,
+            "count": 60,
+            "format_violations": 43,
+            "token_limit_hits": 0
+          },
+          "N_rel/book_to_author": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 44,
+            "token_limit_hits": 0
+          },
+          "N_rel/book_to_prize": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 14,
+            "token_limit_hits": 0
+          },
+          "N_rel/prize_to_author": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 49,
+            "token_limit_hits": 0
+          },
+          "N_rel/prize_to_year": {
+            "answer_matches": 0,
+            "count": 60,
+            "format_violations": 58,
+            "token_limit_hits": 0
+          },
+          "R/author_to_book": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 14,
+            "token_limit_hits": 1
+          },
+          "R/author_to_prize": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 46,
+            "token_limit_hits": 2
+          },
+          "R/author_to_year": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 49,
+            "token_limit_hits": 2
+          },
+          "R/book_to_author": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 82,
+            "token_limit_hits": 0
+          },
+          "R/book_to_prize": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 59,
+            "token_limit_hits": 1
+          },
+          "R/prize_to_author": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 59,
+            "token_limit_hits": 0
+          },
+          "R/prize_to_year": {
+            "answer_matches": 0,
+            "count": 90,
+            "format_violations": 84,
+            "token_limit_hits": 0
+          }
+        },
+        "format_violations": 751,
+        "non_year_answer_matches": 0,
+        "token_limit_hits": 16,
+        "version": "answer-only-v2",
+        "year_answer_matches": 1
+      },
+      "external_surface_review_rows": 56,
+      "legacy": {
+        "by_partition_and_task": {
+          "F/author_to_book": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/author_to_prize": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/author_to_year": {
+            "answer_mentions": 1,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/book_to_author": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/book_to_prize": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/prize_to_author": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "F/prize_to_year": {
+            "answer_mentions": 0,
+            "count": 30,
+            "exact_matches": 0
+          },
+          "N_rel/author_to_book": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/author_to_prize": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/author_to_year": {
+            "answer_mentions": 1,
+            "count": 60,
+            "exact_matches": 1
+          },
+          "N_rel/book_to_author": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/book_to_prize": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/prize_to_author": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "N_rel/prize_to_year": {
+            "answer_mentions": 0,
+            "count": 60,
+            "exact_matches": 0
+          },
+          "R/author_to_book": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/author_to_prize": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/author_to_year": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/book_to_author": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/book_to_prize": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/prize_to_author": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          },
+          "R/prize_to_year": {
+            "answer_mentions": 0,
+            "count": 90,
+            "exact_matches": 0
+          }
+        },
+        "empty_final_responses": 15,
+        "exact_matches": 1,
+        "non_year_exact_matches": 0,
+        "predictions": 1260,
+        "review_flags": 773,
+        "year_exact_matches": 1
+      },
+      "missing_thinking_boundaries": 15,
+      "potential_answer_review_rows": 4,
+      "protocol_issue_rows": 752,
+      "reasoning_answer_mentions": 4
+    }
+  },
+  "new_predictions": 80,
+  "peak_gpu_memory_gib": 5.0172882080078125,
+  "plan": {
+    "adapters_loaded": false,
+    "affected_batches": [
+      {
+        "count": 8,
+        "example_ids": [
+          "ex_m1_dev_ku_000119_prize_to_year_01",
+          "ex_m1_dev_ku_000120_author_to_book_01",
+          "ex_m1_dev_ku_000120_author_to_prize_01",
+          "ex_m1_dev_ku_000120_author_to_year_01",
+          "ex_m1_dev_ku_000120_book_to_author_01",
+          "ex_m1_dev_ku_000120_book_to_prize_01",
+          "ex_m1_dev_ku_000120_prize_to_author_01",
+          "ex_m1_dev_ku_000120_prize_to_year_01"
+        ],
+        "offset": 832,
+        "view": "m1_dev"
+      }
+    ],
+    "changed_example_ids": [
+      "ex_m1_dev_ku_000120_author_to_book_01",
+      "ex_m1_dev_ku_000120_book_to_author_01",
+      "ex_m1_dev_ku_000120_book_to_prize_01"
+    ],
+    "config": {
+      "answer_only_max_new_tokens": 128,
+      "batch_size": 16,
+      "bundle": "data/candidates/pilot-v1.1/seed-42",
+      "collision_review": "experiments/runs/data_qwen17_acceptance_review_20261106/collision_review.json",
+      "collision_review_sha256": "87d241110252e94f17533a8b4c513349830e9636a86e21e12ff69e797139d3cd",
+      "correction_report_sha256": "a3134c71965995bc6e3add5f1aa5cb9ffbe6b2255f2f68c3a0249caf93557db6",
+      "expected_checksum_index_sha256": "94f6d84b4823308daeb693f98a0c39c688495c64448f1abe7c8bd82f8ff179bd",
+      "model_id": "Qwen/Qwen3-1.7B",
+      "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "parent_config": "configs/evaluation/m0_qwen17_full_v1.json",
+      "parent_config_sha256": "1f68562f6abcbd213beffab8765f98cf5ec5d96cea0c95bc0e9d6a94402c1262",
+      "parent_run": "experiments/runs/m0_qwen17_full_20261106",
+      "parent_verification_sha256": "87e5c2879b36a54a7475e7b1a50aaef047e43f876699a9520b1bcd3d1c0bec4c",
+      "prompt_files": [
+        "m1_dev.jsonl",
+        "n_rel_train.jsonl"
+      ],
+      "protocol_version": "answer-only-v2",
+      "run_type": "qwen17_corrected_m0_batch_refresh_v1",
+      "sampling": {
+        "do_sample": true,
+        "min_p": 0.0,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "seed": 42,
+      "structural_review": "experiments/runs/data_qwen17_acceptance_review_20261106/structural_review.json",
+      "structural_review_sha256": "020ce378de4ac27631483680ff17e4fe91171910b8f8c1171336cd87828a43dd",
+      "system_prompt": "Answer the question using one line: Answer: <answer>. Replace <answer> with only the requested author name, book title, prize name, year, or integer. If you do not know, reply Answer: Unknown. Do not explain, repeat the question, or list alternatives.",
+      "thinking_max_new_tokens": 1024
+    },
+    "config_sha256": "0d0711ecbf3ccad85c5a311c91467414d4d037dfcfd976064f5e5d2fbf848de3",
+    "control_batches": [
+      {
+        "count": 16,
+        "example_ids": [
+          "ex_m1_dev_ku_000001_author_to_book_01",
+          "ex_m1_dev_ku_000001_author_to_prize_01",
+          "ex_m1_dev_ku_000001_author_to_year_01",
+          "ex_m1_dev_ku_000001_book_to_author_01",
+          "ex_m1_dev_ku_000001_book_to_prize_01",
+          "ex_m1_dev_ku_000001_prize_to_author_01",
+          "ex_m1_dev_ku_000001_prize_to_year_01",
+          "ex_m1_dev_ku_000002_author_to_book_01",
+          "ex_m1_dev_ku_000002_author_to_prize_01",
+          "ex_m1_dev_ku_000002_author_to_year_01",
+          "ex_m1_dev_ku_000002_book_to_author_01",
+          "ex_m1_dev_ku_000002_book_to_prize_01",
+          "ex_m1_dev_ku_000002_prize_to_author_01",
+          "ex_m1_dev_ku_000002_prize_to_year_01",
+          "ex_m1_dev_ku_000003_author_to_book_01",
+          "ex_m1_dev_ku_000003_author_to_prize_01"
+        ],
+        "offset": 0,
+        "view": "m1_dev"
+      },
+      {
+        "count": 16,
+        "example_ids": [
+          "ex_n_rel_train_nrel_000001_author_to_book_01",
+          "ex_n_rel_train_nrel_000001_author_to_prize_01",
+          "ex_n_rel_train_nrel_000001_author_to_year_01",
+          "ex_n_rel_train_nrel_000001_book_to_author_01",
+          "ex_n_rel_train_nrel_000001_book_to_prize_01",
+          "ex_n_rel_train_nrel_000001_prize_to_author_01",
+          "ex_n_rel_train_nrel_000001_prize_to_year_01",
+          "ex_n_rel_train_nrel_000002_author_to_book_01",
+          "ex_n_rel_train_nrel_000002_author_to_prize_01",
+          "ex_n_rel_train_nrel_000002_author_to_year_01",
+          "ex_n_rel_train_nrel_000002_book_to_author_01",
+          "ex_n_rel_train_nrel_000002_book_to_prize_01",
+          "ex_n_rel_train_nrel_000002_prize_to_author_01",
+          "ex_n_rel_train_nrel_000002_prize_to_year_01",
+          "ex_n_rel_train_nrel_000003_author_to_book_01",
+          "ex_n_rel_train_nrel_000003_author_to_prize_01"
+        ],
+        "offset": 0,
+        "view": "n_rel_train"
+      }
+    ],
+    "dataset_accepted": false,
+    "derived_predictions": 2520,
+    "externally_flagged_record_ids": [
+      "ku_000001",
+      "ku_000053",
+      "ku_000112",
+      "ku_000002",
+      "ku_000065",
+      "ku_000120",
+      "nrel_000031",
+      "nrel_000060"
+    ],
+    "input_sha256": {
+      "m1_dev.jsonl": "dca17e13f011902db82c7e19aeb9e3e9f707dc6d7dfdfd8f82729476c7807449",
+      "n_rel_train.jsonl": "a47916f86ac08a36f2d4923f0bc33cfa0878de1bf0bad8f3ff1a5752d6a89859"
+    },
+    "model_executed": false,
+    "new_rows_in_derived_baseline": 16,
+    "parent_gpu": "Tesla T4",
+    "parent_summary_sha256": "5146433d64980f86c649a35bf4344c91cca8c4f84dede0e76439aa1a23ecbf65",
+    "parent_versions": {
+      "accelerate": "1.15.0",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.20.2"
+    },
+    "planned_new_predictions": 80,
+    "reused_rows_in_derived_baseline": 2504,
+    "scope": "Derived baseline, not a fresh 2520-response run. Exact replay controls gate reuse; mismatch stops without merging. Final tests never inferred.",
+    "source_git_commit": "ed86cbaaae144a706dd2f2be3cee9d0cca13db10",
+    "source_sha256": {
+      "src/data/correct_candidate.py": "a9531b977b49cd95a91d125d28389bfa78021903bd9b253463f62d2cbca1d606",
+      "src/evaluation/corrected_m0.py": "148b31da51f3b5fd6ea500a4f2369128d018231447e1a6f284a1d1d3cc9ad286"
+    },
+    "training_updates": 0
+  },
+  "prediction_files_sha256": {
+    "answer_only_predictions.jsonl": "913627aac920fe7b0ac421453a9110554500cd650c4997773423f5e2d4a1db72",
+    "control_predictions.jsonl": "35907ebc1244ef2c15b38bbaaa0a287c890a7756f160b62f4b3dd53a71cf30b3",
+    "refreshed_predictions.jsonl": "ce8d4e4c4725d68357957fbd8a7e6111f54fb894765215f9d50bd479f63a88df",
+    "thinking_predictions.jsonl": "ad164e7e9285bb4ec68d871b200ba0fb06ef9aabe027161d5a6133726e64778d"
+  },
+  "replay_controls_passed": true,
+  "reused_predictions": 2504,
+  "seconds": 183.6535,
+  "started_at_utc": "2026-11-06T19:47:13.797038+00:00",
+  "training_updates": 0,
+  "versions": {
+    "accelerate": "1.15.0",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "weights_updated": false
+}

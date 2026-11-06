@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** Qwen3-1.7B passes the tiny mixed-mode M1 pilot. Its full v1 M0 audit is verified (2520 non-final outputs; 9 answer-only/1 thinking matches, all years). Candidate v1.1 corrects one independently confirmed title collision while preserving all splits and tiny-pilot facts. Notebook11's bounded corrected-baseline refresh is prepared/CPU checked, not GPU run. Dataset acceptance, full-M1 protocol/training and canonical M2 remain pending.
+**Current state:** Qwen3-1.7B passes the tiny mixed-mode M1 pilot; corrected v1.1 M0/data review is verified. Full-M1 notebook12/config/runner are prepared for30 F+90 R,5040 mixed targets,1200 attempted updates and private checkpoints every300 attempts. All79 local tests and offline-tokenizer masking pass. Full GPU fit/training/evaluation/real new private backups and canonical M1/M2 remain untested/pending.
 
 ## The two candidate approaches
 
@@ -194,8 +194,8 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
-3. Review the [completed full 1.7B M0 audit](experiments/runs/m0_qwen17_full_20261106/README.md) and [v1.1 correction/refresh protocol](docs/data/PILOT_V1_1.md). After authorized publication, run [notebook11](experiments/notebooks/11_m0_qwen17_corrected_candidate.ipynb), download its ZIP and review corrected outputs/replay controls before acceptance and scaled M1. It attempts80 new answers with explicit parent reuse; mismatch stops merging. No corrected GPU result or canonical full M1/M2 is claimed yet.
-4. Build M0 → M1 supervised fine-tuning and verify learned facts.
+3. Review the [prospective full-M1 protocol](docs/data/FULL_M1_QWEN17_V1.md) and [CPU/tokenizer preflight](experiments/runs/m1_full_qwen17_preflight_20261107/README.md). After authorized publication, run [notebook12](experiments/notebooks/12_m1_full_qwen17_learning.ipynb) on Kaggle T4/HF_TOKEN: disposable fit, fresh replay guard, actual1200 attempts, endpoint/reload evaluation and private checkpoints. The [corrected M0 baseline](experiments/runs/m0_qwen17_corrected_20261107/README.md) is already complete.
+4. Preserve/download full-M1 evidence and independently verify declared learning/utility/update/reload/private backup gates before canonical promotion. No full GPU result exists yet.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.
 

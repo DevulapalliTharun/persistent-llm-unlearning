@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "execution_complete": true,
+  "replay_controls_passed": true,
+  "new_records_checked": 80,
+  "derived_records_reconstructed": 2520,
+  "reused_records_checked_against_parent": 2504,
+  "dataset_accepted": false,
+  "note": "Score/token-metadata verification, not model inference or tokenizer-decode replay.",
+  "local_verification_passed": true,
+  "offline_tokenizer_records_replayed": 2600,
+  "source_commit_verified": "ed86cbaaae144a706dd2f2be3cee9d0cca13db10",
+  "mode_counts": {
+    "answer_only": {
+      "answer_matches": 9,
+      "non_year_answer_matches": 0,
+      "format_violations": 809,
+      "token_limit_hits": 0
+    },
+    "thinking": {
+      "answer_matches": 1,
+      "non_year_answer_matches": 0,
+      "format_violations": 751,
+      "token_limit_hits": 16
+    }
+  },
+  "date_ist": "2026-11-07",
+  "archive_filename": "m0-qwen17-corrected-aqe8clfe-evidence.zip",
+  "archive_sha256": "3cd1062dd3fa9c3a42a46665487706de8a3c5348da4f6e1b25bb2306a4988ca8",
+  "archive_crc_passed": true,
+  "archive_original_files": 13,
+  "original_files_sha256": {
+    "answer_only_predictions.jsonl": "913627aac920fe7b0ac421453a9110554500cd650c4997773423f5e2d4a1db72",
+    "artifact_verification.json": "ad37aa7de65ccaa49c9af2722cef218f093cd6183c187b0f73a59f820b921d41",
+    "control_predictions.jsonl": "35907ebc1244ef2c15b38bbaaa0a287c890a7756f160b62f4b3dd53a71cf30b3",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "external_collision_rows_for_review.json": "a65ed5e5e235552757056133938e2a378cea50e13fe339ee27c9ec9e6606adbd",
+    "generation_metadata.json": "4d5103ff770cf5350f074ff7847ea0c89709819f4eb6e77ca040721466ab6897",
+    "plan.json": "40c1a634c3eb0bb40ddd0744a64248436e8ce282e651b6a03607e94f0a41ebee",
+    "potential_answers_for_review.json": "3dc574014322f81cb14a1a8a4d6e9cb6d7c5cb063c9b1c31de37dbfa7577bffe",
+    "protocol_issues_for_review.json": "619b4c24b41573b860898a2b5a2aa17c5a2947770cdad3010c468b714c06e0e0",
+    "refreshed_predictions.jsonl": "ce8d4e4c4725d68357957fbd8a7e6111f54fb894765215f9d50bd479f63a88df",
+    "replay_controls.json": "b4fcbaf14aa80fd0b44f7490ff2ac46094f23e23555fbbf2e77aa74239044bfe",
+    "summary.json": "4f965f428621f17a36fe3329c9540d4ab4576839729cdfa44c71d95ce8db0d38",
+    "thinking_predictions.jsonl": "ad164e7e9285bb4ec68d871b200ba0fb06ef9aabe027161d5a6133726e64778d"
+  }
+}

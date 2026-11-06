@@ -1,13 +1,13 @@
 # Synthetic Relational Dataset Specification
 
-**Status:** Full pilot candidate generated; automated gates passed; manual/M0 acceptance gates pending
+**Status:** Candidate v1.1 structural/token/collision/M0 review complete for controlled-pilot full-M1 protocol preparation; full training protocol/budget pending
 
-The original and v2 M0 audit artifacts are now preserved and verified. The fixed 12-unit selection in `docs/data/TINY_M1_PILOT.md` is admitted only for the bounded learning/infrastructure diagnostic. Full-candidate release and broader collision review remain pending.
+Original/v2/full1.7B/corrected1.7B M0 artifacts are preserved and verified. The fixed12-unit1.7B mixed-mode pilot passed. Candidate v1.1 now passes the bounded data review documented in `experiments/runs/m0_qwen17_corrected_20261107/data_review.json`; this supports prospective full-M1 protocol preparation and does not automatically authorize full training or certify collision-free surfaces.
 **Version:** `v0.1-design`  
 **Pilot seed:** `42`  
 **Purpose:** Controlled M0 → M1 → M2 and post-unlearning recovery experiments
 
-**2026-11-07 acceptance update:** full1.7B M0 audit on unchanged v1 completed and verifies2520 responses; see `experiments/runs/m0_qwen17_full_20261106/`. Separate candidate v1.1 reproducibly corrects the independently confirmed real-book title collision for R ku120; all splits/IDs/other facts and tiny12 train/dev rows are preserved. Final strings change mechanically only, without model scoring. Its bounded derived-baseline refresh is prepared, not GPU run; dataset release stays pending controls/corrected-output review. See `docs/data/PILOT_V1_1.md`. Do not claim universal fictional surfaces or certified absent knowledge.
+**2026-11-07 acceptance update:** full1.7B M0 audit on unchanged v1 completed and verifies2520 responses; see `experiments/runs/m0_qwen17_full_20261106/`. Separate candidate v1.1 reproducibly corrects the independently confirmed real-book title collision for R ku120; all splits/IDs/other facts and tiny12 train/dev rows are preserved. Final strings change mechanically only, without model scoring. Its bounded derived baseline now verifies64 exact controls,16 refreshed outputs and2504 unchanged parent records. All refreshed outputs/eight traces reviewed; no new answer/target-mention flags. Scoped data review is complete for prospective full-M1 protocol preparation; full-training budget/config/authorization remain separate. See `docs/data/PILOT_V1_1.md`. Do not claim universal fictional surfaces or certified absent knowledge.
 
 ## 1. Scope
 

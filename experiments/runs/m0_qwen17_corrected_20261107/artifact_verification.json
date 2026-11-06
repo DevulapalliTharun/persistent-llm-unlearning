@@ -1,0 +1,10 @@
+{
+  "dataset_accepted": false,
+  "derived_records_reconstructed": 2520,
+  "execution_complete": true,
+  "new_records_checked": 80,
+  "note": "Score/token-metadata verification, not model inference or tokenizer-decode replay.",
+  "replay_controls_passed": true,
+  "reused_records_checked_against_parent": 2504,
+  "verified": true
+}

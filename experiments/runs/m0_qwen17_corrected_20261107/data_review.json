@@ -1,0 +1,37 @@
+{
+  "date_ist": "2026-11-07",
+  "dataset_version": "pilot-v1.1",
+  "bundle": "data/candidates/pilot-v1.1/seed-42",
+  "checksum_index_sha256": "94f6d84b4823308daeb693f98a0c39c688495c64448f1abe7c8bd82f8ff179bd",
+  "review_passed": true,
+  "acceptance_scope": "Controlled pilot data accepted for prospective full-M1 protocol preparation, not automatic full-training authorization or universal collision clearance.",
+  "full_m1_training_authorized_by_this_record": false,
+  "automated_run_summary_left_unchanged": true,
+  "evidence": {
+    "structural_and_token_review": "experiments/runs/data_pilot_v1_1_review_20261107/verification.json",
+    "original_collision_review": "experiments/runs/data_qwen17_acceptance_review_20261106/collision_review.json",
+    "original_full_m0_review": "experiments/runs/m0_qwen17_full_20261106/manual_review.json",
+    "corrected_baseline_verification": "experiments/runs/m0_qwen17_corrected_20261107/local_verification.json",
+    "corrected_output_review": "experiments/runs/m0_qwen17_corrected_20261107/manual_review.json"
+  },
+  "collision_policy": "Version-correct the independently confirmed complete real-book title ambiguity. Preserve weaker cross-domain/partial-name overlaps as documented limitations where no complete candidate association is established. No assertion of globally unique surfaces or absent internal model knowledge.",
+  "baseline_policy": "Preserve year matches, raw protocol failures and all denominators. Reuse only byte-identical input batches with explicit source provenance, conditioned on exact replay controls; complete changed batches refreshed.",
+  "gate_observations": {
+    "counts_F_R_Nrel": [
+      30,
+      90,
+      60
+    ],
+    "structural_errors": 0,
+    "same_split_ids_and_other_facts": true,
+    "manual_sample_task_and_partition_coverage_inherited": true,
+    "no_final_model_evaluation": true,
+    "original_and_corrected_candidates_preserved": true,
+    "tiny_m1_previously_passed": true
+  },
+  "next_steps": [
+    "Declare a separate full-M1 training/evaluation config, update/checkpoint budget and gates before training.",
+    "Use a fresh pinned1.7B base, successful mixed answer-only/canonical-chain targets and F/R only; preserve both-mode checks and final-test isolation.",
+    "Full M1 learning, M2 unlearning and recovery still require experiments."
+  ]
+}

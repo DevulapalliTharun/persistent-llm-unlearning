@@ -1,0 +1,141 @@
+{
+  "adapters_loaded": false,
+  "affected_batches": [
+    {
+      "count": 8,
+      "example_ids": [
+        "ex_m1_dev_ku_000119_prize_to_year_01",
+        "ex_m1_dev_ku_000120_author_to_book_01",
+        "ex_m1_dev_ku_000120_author_to_prize_01",
+        "ex_m1_dev_ku_000120_author_to_year_01",
+        "ex_m1_dev_ku_000120_book_to_author_01",
+        "ex_m1_dev_ku_000120_book_to_prize_01",
+        "ex_m1_dev_ku_000120_prize_to_author_01",
+        "ex_m1_dev_ku_000120_prize_to_year_01"
+      ],
+      "offset": 832,
+      "view": "m1_dev"
+    }
+  ],
+  "changed_example_ids": [
+    "ex_m1_dev_ku_000120_author_to_book_01",
+    "ex_m1_dev_ku_000120_book_to_author_01",
+    "ex_m1_dev_ku_000120_book_to_prize_01"
+  ],
+  "config": {
+    "answer_only_max_new_tokens": 128,
+    "batch_size": 16,
+    "bundle": "data/candidates/pilot-v1.1/seed-42",
+    "collision_review": "experiments/runs/data_qwen17_acceptance_review_20261106/collision_review.json",
+    "collision_review_sha256": "87d241110252e94f17533a8b4c513349830e9636a86e21e12ff69e797139d3cd",
+    "correction_report_sha256": "a3134c71965995bc6e3add5f1aa5cb9ffbe6b2255f2f68c3a0249caf93557db6",
+    "expected_checksum_index_sha256": "94f6d84b4823308daeb693f98a0c39c688495c64448f1abe7c8bd82f8ff179bd",
+    "model_id": "Qwen/Qwen3-1.7B",
+    "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "parent_config": "configs/evaluation/m0_qwen17_full_v1.json",
+    "parent_config_sha256": "1f68562f6abcbd213beffab8765f98cf5ec5d96cea0c95bc0e9d6a94402c1262",
+    "parent_run": "experiments/runs/m0_qwen17_full_20261106",
+    "parent_verification_sha256": "87e5c2879b36a54a7475e7b1a50aaef047e43f876699a9520b1bcd3d1c0bec4c",
+    "prompt_files": [
+      "m1_dev.jsonl",
+      "n_rel_train.jsonl"
+    ],
+    "protocol_version": "answer-only-v2",
+    "run_type": "qwen17_corrected_m0_batch_refresh_v1",
+    "sampling": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "seed": 42,
+    "structural_review": "experiments/runs/data_qwen17_acceptance_review_20261106/structural_review.json",
+    "structural_review_sha256": "020ce378de4ac27631483680ff17e4fe91171910b8f8c1171336cd87828a43dd",
+    "system_prompt": "Answer the question using one line: Answer: <answer>. Replace <answer> with only the requested author name, book title, prize name, year, or integer. If you do not know, reply Answer: Unknown. Do not explain, repeat the question, or list alternatives.",
+    "thinking_max_new_tokens": 1024
+  },
+  "config_sha256": "0d0711ecbf3ccad85c5a311c91467414d4d037dfcfd976064f5e5d2fbf848de3",
+  "control_batches": [
+    {
+      "count": 16,
+      "example_ids": [
+        "ex_m1_dev_ku_000001_author_to_book_01",
+        "ex_m1_dev_ku_000001_author_to_prize_01",
+        "ex_m1_dev_ku_000001_author_to_year_01",
+        "ex_m1_dev_ku_000001_book_to_author_01",
+        "ex_m1_dev_ku_000001_book_to_prize_01",
+        "ex_m1_dev_ku_000001_prize_to_author_01",
+        "ex_m1_dev_ku_000001_prize_to_year_01",
+        "ex_m1_dev_ku_000002_author_to_book_01",
+        "ex_m1_dev_ku_000002_author_to_prize_01",
+        "ex_m1_dev_ku_000002_author_to_year_01",
+        "ex_m1_dev_ku_000002_book_to_author_01",
+        "ex_m1_dev_ku_000002_book_to_prize_01",
+        "ex_m1_dev_ku_000002_prize_to_author_01",
+        "ex_m1_dev_ku_000002_prize_to_year_01",
+        "ex_m1_dev_ku_000003_author_to_book_01",
+        "ex_m1_dev_ku_000003_author_to_prize_01"
+      ],
+      "offset": 0,
+      "view": "m1_dev"
+    },
+    {
+      "count": 16,
+      "example_ids": [
+        "ex_n_rel_train_nrel_000001_author_to_book_01",
+        "ex_n_rel_train_nrel_000001_author_to_prize_01",
+        "ex_n_rel_train_nrel_000001_author_to_year_01",
+        "ex_n_rel_train_nrel_000001_book_to_author_01",
+        "ex_n_rel_train_nrel_000001_book_to_prize_01",
+        "ex_n_rel_train_nrel_000001_prize_to_author_01",
+        "ex_n_rel_train_nrel_000001_prize_to_year_01",
+        "ex_n_rel_train_nrel_000002_author_to_book_01",
+        "ex_n_rel_train_nrel_000002_author_to_prize_01",
+        "ex_n_rel_train_nrel_000002_author_to_year_01",
+        "ex_n_rel_train_nrel_000002_book_to_author_01",
+        "ex_n_rel_train_nrel_000002_book_to_prize_01",
+        "ex_n_rel_train_nrel_000002_prize_to_author_01",
+        "ex_n_rel_train_nrel_000002_prize_to_year_01",
+        "ex_n_rel_train_nrel_000003_author_to_book_01",
+        "ex_n_rel_train_nrel_000003_author_to_prize_01"
+      ],
+      "offset": 0,
+      "view": "n_rel_train"
+    }
+  ],
+  "dataset_accepted": false,
+  "derived_predictions": 2520,
+  "externally_flagged_record_ids": [
+    "ku_000001",
+    "ku_000053",
+    "ku_000112",
+    "ku_000002",
+    "ku_000065",
+    "ku_000120",
+    "nrel_000031",
+    "nrel_000060"
+  ],
+  "input_sha256": {
+    "m1_dev.jsonl": "dca17e13f011902db82c7e19aeb9e3e9f707dc6d7dfdfd8f82729476c7807449",
+    "n_rel_train.jsonl": "a47916f86ac08a36f2d4923f0bc33cfa0878de1bf0bad8f3ff1a5752d6a89859"
+  },
+  "model_executed": false,
+  "new_rows_in_derived_baseline": 16,
+  "parent_gpu": "Tesla T4",
+  "parent_summary_sha256": "5146433d64980f86c649a35bf4344c91cca8c4f84dede0e76439aa1a23ecbf65",
+  "parent_versions": {
+    "accelerate": "1.15.0",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "planned_new_predictions": 80,
+  "reused_rows_in_derived_baseline": 2504,
+  "scope": "Derived baseline, not a fresh 2520-response run. Exact replay controls gate reuse; mismatch stops without merging. Final tests never inferred.",
+  "source_git_commit": "ed86cbaaae144a706dd2f2be3cee9d0cca13db10",
+  "source_sha256": {
+    "src/data/correct_candidate.py": "a9531b977b49cd95a91d125d28389bfa78021903bd9b253463f62d2cbca1d606",
+    "src/evaluation/corrected_m0.py": "148b31da51f3b5fd6ea500a4f2369128d018231447e1a6f284a1d1d3cc9ad286"
+  },
+  "training_updates": 0
+}
