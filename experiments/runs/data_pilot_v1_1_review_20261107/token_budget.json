@@ -1,0 +1,5073 @@
+{
+  "passed": true,
+  "tokenizer": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "class": "Qwen2Tokenizer",
+    "thinking_enabled": false
+  },
+  "tolerance_fraction": 0.05,
+  "absolute_difference_tokens": 360,
+  "absolute_difference_fraction": 0.02884615,
+  "n_rel": {
+    "rows": 420,
+    "prompt_tokens": 9943,
+    "answer_tokens": 2537,
+    "total_tokens": 12480,
+    "mean_total_tokens": 29.714286,
+    "row_reports": [
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000002_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 7,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_prize_to_author_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000003_prize_to_year_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000004_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000005_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_author_to_book_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_author_to_prize_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 5,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_author_to_year_01",
+        "prompt_tokens": 27,
+        "answer_tokens": 6,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000006_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 6,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000007_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 6,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000008_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000009_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000010_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_prize_to_author_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000011_prize_to_year_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000012_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_prize_to_author_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000013_prize_to_year_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000014_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000015_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 5,
+        "total_tokens": 26
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000016_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000017_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000018_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000019_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000020_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000021_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000022_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000023_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000024_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000025_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000026_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000027_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000028_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000029_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 7,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000030_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000031_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000032_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 7,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_prize_to_author_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000033_prize_to_year_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 6,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000034_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000035_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000036_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 6,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000037_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000038_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000039_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000040_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000041_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000042_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000043_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000044_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000045_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 8,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 8,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000046_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000047_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 7,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000048_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000049_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000050_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 5,
+        "total_tokens": 26
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000051_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 8,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_book_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_book_to_prize_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 5,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000052_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_author_to_book_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 6,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_author_to_prize_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 7,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_author_to_year_01",
+        "prompt_tokens": 27,
+        "answer_tokens": 6,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 7,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 5,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000053_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 6,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_book_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_book_to_prize_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 7,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000054_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000055_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000056_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_author_to_book_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 5,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_author_to_prize_01",
+        "prompt_tokens": 26,
+        "answer_tokens": 7,
+        "total_tokens": 33
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_author_to_year_01",
+        "prompt_tokens": 29,
+        "answer_tokens": 6,
+        "total_tokens": 35
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_book_to_author_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_book_to_prize_01",
+        "prompt_tokens": 21,
+        "answer_tokens": 7,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_prize_to_author_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 7,
+        "total_tokens": 32
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000057_prize_to_year_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000058_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 5,
+        "total_tokens": 27
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_prize_to_author_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000059_prize_to_year_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_author_to_book_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_author_to_prize_01",
+        "prompt_tokens": 25,
+        "answer_tokens": 6,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_author_to_year_01",
+        "prompt_tokens": 28,
+        "answer_tokens": 6,
+        "total_tokens": 34
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_book_to_author_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_book_to_prize_01",
+        "prompt_tokens": 22,
+        "answer_tokens": 6,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_prize_to_author_01",
+        "prompt_tokens": 24,
+        "answer_tokens": 6,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_rel_train_nrel_000060_prize_to_year_01",
+        "prompt_tokens": 23,
+        "answer_tokens": 6,
+        "total_tokens": 29
+      }
+    ]
+  },
+  "n_reason": {
+    "rows": 420,
+    "prompt_tokens": 10818,
+    "answer_tokens": 2022,
+    "total_tokens": 12840,
+    "mean_total_tokens": 30.571429,
+    "row_reports": [
+      {
+        "example_id": "ex_n_reason_000001",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000002",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000003",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000004",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000005",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000006",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000007",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000008",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000009",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000010",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000011",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000012",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000013",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000014",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000015",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000016",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000017",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000018",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000019",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000020",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000021",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000022",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000023",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000024",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000025",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000026",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000027",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000028",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000029",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000030",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000031",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000032",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000033",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000034",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000035",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000036",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000037",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000038",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000039",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000040",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000041",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000042",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000043",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000044",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000045",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000046",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000047",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000048",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000049",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000050",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000051",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000052",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000053",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000054",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000055",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000056",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000057",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000058",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000059",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000060",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000061",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000062",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000063",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000064",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000065",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000066",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000067",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000068",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000069",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000070",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000071",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000072",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000073",
+        "prompt_tokens": 24,
+        "answer_tokens": 4,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000074",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000075",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000076",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000077",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000078",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000079",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000080",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000081",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000082",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000083",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000084",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000085",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000086",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000087",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000088",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000089",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000090",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000091",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000092",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000093",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000094",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000095",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000096",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000097",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000098",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000099",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000100",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000101",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000102",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000103",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000104",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000105",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000106",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000107",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000108",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000109",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000110",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000111",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000112",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000113",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000114",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000115",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000116",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000117",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000118",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000119",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000120",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000121",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000122",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000123",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000124",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000125",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000126",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000127",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000128",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000129",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000130",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000131",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000132",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000133",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000134",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000135",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000136",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000137",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000138",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000139",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000140",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000141",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000142",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000143",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000144",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000145",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000146",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000147",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000148",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000149",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000150",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000151",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000152",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000153",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000154",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000155",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000156",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000157",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000158",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000159",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000160",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000161",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000162",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000163",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000164",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000165",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000166",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000167",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000168",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000169",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000170",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000171",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000172",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000173",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000174",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000175",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000176",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000177",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000178",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000179",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000180",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000181",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000182",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000183",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000184",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000185",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000186",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000187",
+        "prompt_tokens": 24,
+        "answer_tokens": 4,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000188",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000189",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000190",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000191",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000192",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000193",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000194",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000195",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000196",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000197",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000198",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000199",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000200",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000201",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000202",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000203",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000204",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000205",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000206",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000207",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000208",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000209",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000210",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000211",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000212",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000213",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000214",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000215",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000216",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000217",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000218",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000219",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000220",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000221",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000222",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000223",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000224",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000225",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000226",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000227",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000228",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000229",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000230",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000231",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000232",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000233",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000234",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000235",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000236",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000237",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000238",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000239",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000240",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000241",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000242",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000243",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000244",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000245",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000246",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000247",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000248",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000249",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000250",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000251",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000252",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000253",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000254",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000255",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000256",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000257",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000258",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000259",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000260",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000261",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000262",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000263",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000264",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000265",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000266",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000267",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000268",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000269",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000270",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000271",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000272",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000273",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000274",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000275",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000276",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000277",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000278",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000279",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000280",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000281",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000282",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000283",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000284",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000285",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000286",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000287",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000288",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000289",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000290",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000291",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000292",
+        "prompt_tokens": 25,
+        "answer_tokens": 3,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000293",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000294",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000295",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000296",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000297",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000298",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000299",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000300",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000301",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000302",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000303",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000304",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000305",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000306",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000307",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000308",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000309",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000310",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000311",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000312",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000313",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000314",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000315",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000316",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000317",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000318",
+        "prompt_tokens": 25,
+        "answer_tokens": 3,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000319",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000320",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000321",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000322",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000323",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000324",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000325",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000326",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000327",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000328",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000329",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000330",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000331",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000332",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000333",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000334",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000335",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000336",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000337",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000338",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000339",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000340",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000341",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000342",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000343",
+        "prompt_tokens": 24,
+        "answer_tokens": 4,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000344",
+        "prompt_tokens": 25,
+        "answer_tokens": 3,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000345",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000346",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000347",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000348",
+        "prompt_tokens": 24,
+        "answer_tokens": 4,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000349",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000350",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000351",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000352",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000353",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000354",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000355",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000356",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000357",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000358",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000359",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000360",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000361",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000362",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000363",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000364",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000365",
+        "prompt_tokens": 24,
+        "answer_tokens": 4,
+        "total_tokens": 28
+      },
+      {
+        "example_id": "ex_n_reason_000366",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000367",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000368",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000369",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000370",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000371",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000372",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000373",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000374",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000375",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000376",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000377",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000378",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000379",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000380",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000381",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000382",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000383",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000384",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000385",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000386",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000387",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000388",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000389",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000390",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000391",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000392",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000393",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000394",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000395",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000396",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000397",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000398",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000399",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000400",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000401",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000402",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000403",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000404",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000405",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000406",
+        "prompt_tokens": 26,
+        "answer_tokens": 4,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000407",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000408",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000409",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000410",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000411",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000412",
+        "prompt_tokens": 25,
+        "answer_tokens": 4,
+        "total_tokens": 29
+      },
+      {
+        "example_id": "ex_n_reason_000413",
+        "prompt_tokens": 25,
+        "answer_tokens": 5,
+        "total_tokens": 30
+      },
+      {
+        "example_id": "ex_n_reason_000414",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000415",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000416",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000417",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000418",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000419",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      },
+      {
+        "example_id": "ex_n_reason_000420",
+        "prompt_tokens": 26,
+        "answer_tokens": 5,
+        "total_tokens": 31
+      }
+    ]
+  },
+  "recommendation": "Budgets are within tolerance",
+  "scope": "Preliminary legacy bare continuation token budget; not final mode-specific loss/compute matching.",
+  "model_executed": false
+}

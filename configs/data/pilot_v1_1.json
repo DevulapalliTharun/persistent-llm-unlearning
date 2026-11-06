@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "pilot-v1.1",
+  "manifest_created_at_utc": "2026-11-07T00:00:00Z",
+  "parent_bundle": "data/candidates/pilot-v1/seed-42",
+  "parent_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "master_seed": 42,
+  "template_bank_version": "relational-v1",
+  "counts": {"forget": 30, "retain": 90, "new_relational": 60},
+  "validation": {"near_duplicate_similarity_threshold": 0.92},
+  "tokenizer": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "thinking_enabled": false,
+    "budget_tolerance_fraction": 0.05
+  },
+  "correction": {
+    "record_id": "ku_000120",
+    "field": "book.title",
+    "old_value": "The Silver Citadel",
+    "new_value": "The Veylith Citadel",
+    "reason": "Independent catalogue confirms the old complete title names a real book; remove that title ambiguity, not an M0-score-based exclusion.",
+    "source_url": "https://openlibrary.org/works/OL84773W/Silver_Citadel",
+    "reviewed_date": "2026-11-07",
+    "replacement_search": "Quoted full-title and title-plus-author searches returned unrelated term overlaps, no exact full-title association in inspected results. This is bounded review, not proof of absence."
+  }
+}

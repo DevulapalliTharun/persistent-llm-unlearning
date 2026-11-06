@@ -1,0 +1,115 @@
+{
+  "config": {
+    "correction": {
+      "field": "book.title",
+      "new_value": "The Veylith Citadel",
+      "old_value": "The Silver Citadel",
+      "reason": "Independent catalogue confirms the old complete title names a real book; remove that title ambiguity, not an M0-score-based exclusion.",
+      "record_id": "ku_000120",
+      "replacement_search": "Quoted full-title and title-plus-author searches returned unrelated term overlaps, no exact full-title association in inspected results. This is bounded review, not proof of absence.",
+      "reviewed_date": "2026-11-07",
+      "source_url": "https://openlibrary.org/works/OL84773W/Silver_Citadel"
+    },
+    "counts": {
+      "forget": 30,
+      "new_relational": 60,
+      "retain": 90
+    },
+    "dataset_version": "pilot-v1.1",
+    "manifest_created_at_utc": "2026-11-07T00:00:00Z",
+    "master_seed": 42,
+    "parent_bundle": "data/candidates/pilot-v1/seed-42",
+    "parent_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+    "schema_version": "1.0",
+    "template_bank_version": "relational-v1",
+    "tokenizer": {
+      "budget_tolerance_fraction": 0.05,
+      "model_id": "Qwen/Qwen3-1.7B",
+      "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "thinking_enabled": false
+    },
+    "validation": {
+      "near_duplicate_similarity_threshold": 0.92
+    }
+  },
+  "config_sha256": "b9dddf9a1bf4105628bee47a253a795fc797df1e3dc15bd90dadfe720a4ddfa1",
+  "correction_source_sha256": {
+    "src/data/correct_candidate.py": "a9531b977b49cd95a91d125d28389bfa78021903bd9b253463f62d2cbca1d606",
+    "src/data/synthetic.py": "8c2c6d27918f11c5ed8e9708ac1a43ae1d5fa2887793a9ef9318ffd275946fde"
+  },
+  "counts": {
+    "forget": 30,
+    "new_relational": 60,
+    "retain": 90
+  },
+  "dataset_accepted": false,
+  "dataset_version": "pilot-v1.1",
+  "file_checksums": {
+    "entities/all_m1.jsonl": "3c7872c417b48ea8e95340f86e584f9fe2c167bc24ef7f23ea5c47983f957993",
+    "entities/forget.jsonl": "ef7de254ec768279dbcb70d93510ae5bab72a8e53cd8899fb31efc0628395fec",
+    "entities/new_relational.jsonl": "71489d7282a6a275f3938520444d72e9655c8c9f88aefae3146c7abae1539a8f",
+    "entities/retain.jsonl": "b6b042a0686b895cc1ea874d2a941a2d6acb7898b37b009448897b6cf3961e56",
+    "entities/split_manifest.json": "4d60489c07b8ea0eb63c6d8f94e1052288b604e21873bf868dbd319eda76205e",
+    "prompts/final_test.jsonl": "9d1155566a335da2428811acb4b6c60b2e31d4449b9d4e84791b0e9e8fa127bf",
+    "prompts/m1_dev.jsonl": "dca17e13f011902db82c7e19aeb9e3e9f707dc6d7dfdfd8f82729476c7807449",
+    "prompts/m1_train.jsonl": "d06315dd056c7b24b9e2566d6f6610e7267a0411e7d61f0a5d904d5601612184",
+    "prompts/m2_dev.jsonl": "2fdd60682b840c22f51bcdf291e59e0d608227c5d8a9358f887bd1cc9851d8ef",
+    "prompts/n_reason_train.jsonl": "d1793a9ab3cac8eda561c84e792e4cdb3c90c85f9dd48275e20607bd1668d98e",
+    "prompts/n_rel_train.jsonl": "a47916f86ac08a36f2d4923f0bc33cfa0878de1bf0bad8f3ff1a5752d6a89859",
+    "prompts/rafg_guard_train.jsonl": "702c3d0a11e633b5abb72b66399d5146f8e870daa5661d63ed8b58861fa4dd40",
+    "prompts/rafg_monitor.jsonl": "f9d0985f2cc4e953ecc57a58c6ffa331dfd2bdf9b8e7848e0dc82e0a8c5a8589",
+    "prompts/rasp_score_f.jsonl": "9c890249b8a1365bb2323ac6830bbaf3ed4dde384824b18d1eba1480b5707d65",
+    "prompts/rasp_score_r.jsonl": "35e71bce2dcc9755e28ec3c775c32f30c023fb7d9e7627ac53304ce33e408801",
+    "prompts/unlearn_f_train.jsonl": "111e684486f0bfe98f4f777b4fcaf809b3a9cf35cd7ed9847ef10a827a6ff828",
+    "prompts/unlearn_r_train.jsonl": "c86ec5ac6add63c475b7b058f810720d5c2a8ac3a232d309312176ca95219ef7",
+    "reports/correction.json": "a3134c71965995bc6e3add5f1aa5cb9ffbe6b2255f2f68c3a0249caf93557db6",
+    "reports/manual_review_sample.json": "edc04ab92f77526763131c9226375403850335dda7b5a44d76c759df6eb1298c",
+    "reports/validation.json": "7dc9973798ef5bd89a09bf14c1e2403ecec686c9aa259cbce9d08cf0848a926a"
+  },
+  "generation_command": "python -m src.data.correct_candidate --config configs/data/pilot_v1_1.json --output-dir data/candidates/pilot-v1.1/seed-42",
+  "known_limitations": [
+    "Bounded collision review is not proof of universal fictional surfaces.",
+    "Corrected-candidate M0 baseline/review and explicit acceptance remain pending."
+  ],
+  "manifest_created_at_utc": "2026-11-07T00:00:00Z",
+  "master_seed": 42,
+  "parent_bundle": "data/candidates/pilot-v1/seed-42",
+  "parent_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "schema_version": "1.0",
+  "template_bank_version": "relational-v1",
+  "validation": {
+    "entity_counts": {
+      "forget": 30,
+      "new_relational": 60,
+      "retain": 90
+    },
+    "error_count": 0,
+    "errors": [],
+    "near_duplicate_similarity_threshold": 0.92,
+    "near_duplicates": {
+      "author": [],
+      "book": [],
+      "prize": []
+    },
+    "passed": true,
+    "prompt_counts": {
+      "final_test": 2520,
+      "m1_dev": 840,
+      "m1_train": 840,
+      "m2_dev": 840,
+      "n_reason_train": 420,
+      "n_rel_train": 420,
+      "rafg_guard_train": 60,
+      "rafg_monitor": 150,
+      "rasp_score_f": 60,
+      "rasp_score_r": 180,
+      "unlearn_f_train": 60,
+      "unlearn_r_train": 630
+    },
+    "warning_count": 2,
+    "warnings": [
+      "N_reason and N_rel are row-matched; run the pinned tokenizer-budget audit",
+      "Real-world name/title collision review remains manual"
+    ]
+  }
+}

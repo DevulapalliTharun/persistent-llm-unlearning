@@ -1,0 +1,33 @@
+{
+  "protocol_version": "answer-only-v2",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "bundle": "data/candidates/pilot-v1.1/seed-42",
+  "expected_checksum_index_sha256": "94f6d84b4823308daeb693f98a0c39c688495c64448f1abe7c8bd82f8ff179bd",
+  "prompt_files": [
+    "m1_dev.jsonl",
+    "n_rel_train.jsonl"
+  ],
+  "batch_size": 16,
+  "seed": 42,
+  "system_prompt": "Answer the question using one line: Answer: <answer>. Replace <answer> with only the requested author name, book title, prize name, year, or integer. If you do not know, reply Answer: Unknown. Do not explain, repeat the question, or list alternatives.",
+  "run_type": "qwen17_corrected_m0_batch_refresh_v1",
+  "answer_only_max_new_tokens": 128,
+  "thinking_max_new_tokens": 1024,
+  "sampling": {
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0
+  },
+  "structural_review": "experiments/runs/data_qwen17_acceptance_review_20261106/structural_review.json",
+  "structural_review_sha256": "020ce378de4ac27631483680ff17e4fe91171910b8f8c1171336cd87828a43dd",
+  "collision_review": "experiments/runs/data_qwen17_acceptance_review_20261106/collision_review.json",
+  "collision_review_sha256": "87d241110252e94f17533a8b4c513349830e9636a86e21e12ff69e797139d3cd",
+  "parent_config": "configs/evaluation/m0_qwen17_full_v1.json",
+  "parent_config_sha256": "1f68562f6abcbd213beffab8765f98cf5ec5d96cea0c95bc0e9d6a94402c1262",
+  "parent_run": "experiments/runs/m0_qwen17_full_20261106",
+  "parent_verification_sha256": "87e5c2879b36a54a7475e7b1a50aaef047e43f876699a9520b1bcd3d1c0bec4c",
+  "correction_report_sha256": "a3134c71965995bc6e3add5f1aa5cb9ffbe6b2255f2f68c3a0249caf93557db6"
+}

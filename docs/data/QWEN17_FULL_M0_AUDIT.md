@@ -1,6 +1,6 @@
 # Full candidate M0 audit for Qwen3-1.7B
 
-Status: prepared/model-free validated; no full-audit GPU results yet. The passing twelve-unit tiny M1 pilot supports the model/recipe, but neither full-candidate acceptance nor canonical M1/M2 is complete.
+Status: completed and independently verified on 2026-11-06. All2520 input/score/token records and offline pinned-tokenizer render/decode checks pass; see [run evidence](../../experiments/runs/m0_qwen17_full_20261106/README.md). Answer-only9/1260 and thinking1/1260 final matches are all years; non-year matches0 both modes. Format violations809/752 and thinking caps16/boundary errors15 remain recorded. All13 potential-answer flags were reviewed. The passing twelve-unit tiny M1 pilot supports the model/recipe, but neither full-candidate acceptance nor canonical M1/M2 is complete. Confirmed title ambiguity still needs versioned resolution; no data correction was implemented during result review.
 
 ## Fixed scope
 
@@ -44,4 +44,4 @@ python3 -m src.evaluation.full_m0 --config configs/evaluation/m0_qwen17_full_v1.
   --output-dir /tmp/full-m0-plan-unique --mode plan
 ```
 
-Actual inference uses `--mode audit` on Kaggle. Current local tests/preflight establish input/protocol logic only, not M0 model results.
+Actual inference uses `--mode audit` on Kaggle. That run is now complete; local verification reproduces saved scoring/tokenizer outputs without model-weight inference replay. The fixed preflight remains evidence of preparation, separate from the completed GPU results.

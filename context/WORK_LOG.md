@@ -629,6 +629,60 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-06 — Clear interrupted notebook 10 logs for a fresh rerun
+
+**User instruction:** Rerun the whole notebook and remove old leftover logs/files for that attempt.
+
+**Cleanup:** Cleared all notebook 10 outputs/execution counts and transient execution/widget metadata while preserving every cell's source/type. Deleted the sole unverified interrupted-attempt progress JSON and its now-empty local directory. Removed detailed obsolete interruption counts/path references from current status/log; no partial M0 observations are treated as verified results. Retained a concise cleanup record for provenance.
+
+**Preserved:** Audit runner/config/data and acceptance-review inputs, valid model-free preflight, all earlier completed M0/M1 evidence and private checkpoint receipts. No experiment settings, model weights or dataset records changed. No commit/push performed.
+
+**Checks/limits:** Notebook source/type equality and all six Python cells compile; outputs/counts are clean. Local temporary/download scan found no additional matching full-audit artifacts. The remote Kaggle filesystem is not accessible here and was not deleted; a fresh rerun creates unique directories and does not reuse old outputs. Next run notebook 10 top-to-bottom on the reconnected GPU kernel, then download the completed evidence ZIP. Full audit/dataset acceptance/full M1 remain pending.
+
+---
+
+## 2026-11-06 — Verify completed full Qwen3-1.7B M0 rerun
+
+**Work completed:** Inspected successful notebook10 outputs and the newly downloaded `m0-qwen17-full-55wpqjfh-evidence.zip`. Preserved all nine originals byte-for-byte in `experiments/runs/m0_qwen17_full_20261106/`; added verifier, archive/hash report, scoped manual review and README. Updated root README/full-audit protocol/status/decisions/log. Prior interrupted logs remain removed as requested; newly completed notebook outputs are preserved. Source/config/data and all earlier baselines are unchanged.
+
+**Provenance/checks:** ZIP SHA256 `2cd4e6e534bb4c0d61fec334e8ec7a42755e6e9564111c6e724aaaab99beb75b`; CRC/exact nine entries pass. Source `667a2b836091be7a4c3c7cc4c5a6ae3d9a64b3b0`, pinned1.7B revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`. All2520 inputs/order/seeds/scores/flags/token records, complete grouped summaries, three review selections and source/config/input/review hashes verify. Offline exact-tokenizer replay reproduces every rendered prompt/decoded output without network/weights/inference. No training, adapter or weight updates; no final-test inference.
+
+**Results/review:** Final matches9/1260 answer-only and1/1260 thinking, all years; non-year matches0 in both modes. Format violations809/752, caps0/16, missing thinking boundaries0/15. Four thinking expected-answer mentions are all years. Reviewed all13 potential-answer rows and four flagged traces,112 externally flagged final fields,78 stratified protocol samples and all16 capped-response tails/metadata; not all1562 protocol-issue traces manually read. One extra correct year with wrong prize remains primary false. Repeated default years/invented chains do not establish canonical synthetic knowledge, proven chance or certified absence. Candidate ku120 book-to-author returns John Gardner in both modes, resolving neither the synthetic nor independently catalogued attribution.
+
+**Final checks:** All57 unit tests pass; the offline-tokenizer verifier passes again. All six notebook code cells executed without saved errors and compile. Archive hash/CRC/exact original bytes, credential-pattern scan and Git whitespace checks pass.
+
+**Compute/limits/next:** Fresh-base FP16 Tesla T4,4073.7561 seconds (~68 minutes), peak allocated5.275 GiB. All original large files are audit text, not checkpoints. Dataset accepted=false because confirmed real-book title ambiguity remains unresolved. Next recommend a reproducible minimal version correction based on independent evidence, then affected-input/baseline validation and prospective full-M1 protocol; no correction/new training or commit/push here. Passing tiny1.7B M1 remains separate, full canonical M1/M2 pending. Verification results are recorded in the run folder.
+
+---
+
+## 2026-11-07 — Prepare versioned title correction and bounded baseline refresh
+
+**Goal:** Advance from passing tiny1.7B M1 and verified full v1 M0 toward full M1, resolving the independent title collision without resplitting/regenerating facts or erasing measured matches.
+
+**Work completed:** Added `src/data/correct_candidate.py`, `configs/data/pilot_v1_1.json` and separate `data/candidates/pilot-v1.1/seed-42/`. Dedicated correction pins v1's checksum, retains all IDs/splits/seeds/other facts, changes only ku120 book.title to The Veylith Citadel plus version metadata, and mechanically re-renders reserved prompts for that substitution only. Two independent generated bundles match byte-for-byte; all6600 relational rows follow the explicit substitution. All selected tiny12 facts/train/dev rows and N_rel/N_reason prompts are unchanged. Original candidate, all old source/configs/results, completed notebook10 outputs and private adapters preserved.
+
+**External review:** Reopened the catalogue confirming The Silver Citadel/Anthony Horowitz. Quoted replacement title/title+author/title-context queries returned unrelated term overlaps, not an exact complete-title association in inspected hits. Search-only absence is inconclusive. Config/review/protocol preserve direct source and bounded scope; no other surface changed based on M0 answers. Candidate remains accepted=false pending corrected baseline/output review.
+
+**Refresh implementation:** Added `src/evaluation/corrected_m0.py`, fixed config, clean notebook11, ten focused correction/refresh tests plus two complete evidence-validation tests, protocol and model-free preflight. Original v1 source/config/review/input/9-file verification hashes are checked. Same1.7B pin/T4/FP16/packages/batch shapes/per-view seeds/decoding/parser. First64 controls across both views/modes must reproduce every saved field/token exactly, then regenerate the complete affected8-row development batch in both modes (16). On pass, construct2520 rows from16 new/2504 unchanged parent rows with explicit origin/hash; save controls/raws/reviews/summary and offline reconstruction verifier. On control mismatch stop before merging/affected generation, preserve failure evidence, no retry or relaxed criteria. Derived baseline is not a fresh full run; controls do not prove all unchanged batches replay identically. No adapters/updates/final-test inference or automatic acceptance.
+
+**CPU checks:** All69 tests pass, including correction preconditions, duplicate/title collision rejection, unchanged splits/tiny facts, byte reproducibility/no-overwrite, whole-batch coverage, control mismatch/missing/duplicate detection, failed-control no-merge, stale labels and evidence/provenance/completion tampering. Temporary integration fixtures exercise verifier success/failure only and are not experiment results. Offline pinned tokenizer renders2520 prompts and preliminary N budget rechecks12480/12840 tokens (2.88%, pass), without torch/weights/inference; not final supervised-token matching. Both notebooks' six code cells compile; notebook11 is clean, completed notebook10 outputs remain. Preflight verifies planned80 answers and16/2504 derived/reused counts. Evidence: `experiments/runs/data_pilot_v1_1_review_20261107/` and `experiments/runs/m0_qwen17_corrected_preflight_20261107/`.
+
+**Final checks:** All69 tests pass again after the final failure guard. The preserved full-v1 verifier still passes all2520 records and offline tokenizer replay. Pending56 text files pass credential/model-binary-extension scan, Python/JSON/JSONL validation and Git whitespace checks. The two roughly10-MB parent audit JSON/JSONL files are legitimate reviewed raw text, not checkpoints. Preflight source hashes were refreshed after implementation changes.
+
+**Mode/next/limits:** Keep successful mixed answer-only/canonical-chain training; thinking is intended main research setting, non-thinking separate same-checkpoint access/forgetting check. Updated root/project/status/decisions/data-spec/protocol/log. GPU refresh not executed, no corrected scores claimed, no full-training config/budget or canonical M1/M2, no commit/push. Publish prepared files and verified parent evidence with user authorization, run notebook11/download ZIP, review corrected outputs and explicit acceptance, then prospectively freeze full-M1 recipe/budget/gates on30 F+90 R. If controls mismatch, inspect and prepare full corrected audit rather than selective retries.
+
+---
+
+## 2026-11-07 — Authorize publication of candidate v1.1 and notebook11
+
+**Authorization/scope:** User explicitly approved committing/pushing the prepared title correction/new candidate, notebook11/refresh runner/config/tests/protocol/preflight/review evidence and the verified completed full-v1 M0 artifacts/executed notebook10 needed as parent evidence, with context updates. Main remains the shared research baseline; no old candidate/control/config is replaced. No model/optimizer binaries, credentials, corrected GPU results or full M1 training included.
+
+**Validation:** All69 local tests pass. Model-free refresh plan verifies80 planned GPU answers (64 exact controls then16 affected-batch answers),2504 unchanged parent records and full source/config/input/review provenance. Preserved parent verifier still reproduces all2520 scores/token records, with pinned offline tokenizer replay verified during preparation. Notebook11's six code cells compile and are unexecuted; notebook10's completed outputs remain. Credential/model-binary-extension/structured-text and Git whitespace checks pass; the two roughly10-MB parent audit files are verified text evidence, not model checkpoints.
+
+**Next/limits:** Commit/push outcome is reported in the task response. Run notebook11 sequentially on Kaggle after confirming the new source commit; download evidence even if replay controls differ. No corrected baseline/acceptance/full M1/M2 or GPU execution is claimed in publication.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

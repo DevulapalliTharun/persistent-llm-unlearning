@@ -1,0 +1,1033 @@
+{
+  "date_ist": "2026-11-06",
+  "scope": {
+    "priority_rows_reviewed": 13,
+    "protocol_rows_total": 1562,
+    "protocol_first_middle_samples_reviewed": 78,
+    "capped_row_metadata_and_tails_reviewed": 16,
+    "external_collision_final_fields_reviewed": 112,
+    "not_claimed": "All1562 full protocol-issue traces were not read manually. All2520 rows were mechanically rescored/tokenizer-replayed."
+  },
+  "primary_scores_unchanged": true,
+  "priority_reviews": [
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000019_prize_to_year_01",
+      "record_id": "ku_000019",
+      "task_type": "prize_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Brel Quell",
+        "book": "The Copper Yearbook",
+        "prize": "Umber Lantern Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000023_author_to_year_01",
+      "record_id": "ku_000023",
+      "task_type": "author_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Orin Quell",
+        "book": "The Amber Isle",
+        "prize": "Radiant Lantern Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000062_author_to_year_01",
+      "record_id": "ku_000062",
+      "task_type": "author_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Galen Lume",
+        "book": "The Glass Refrain",
+        "prize": "Umber Quill Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000062_prize_to_year_01",
+      "record_id": "ku_000062",
+      "task_type": "prize_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Galen Lume",
+        "book": "The Glass Refrain",
+        "prize": "Umber Quill Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000090_prize_to_year_01",
+      "record_id": "ku_000090",
+      "task_type": "prize_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Aven Alder",
+        "book": "The Umbral Valley",
+        "prize": "Harbor Meteor Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000092_author_to_year_01",
+      "record_id": "ku_000092",
+      "task_type": "author_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Jora Mirel",
+        "book": "The Crimson Yearbook",
+        "prize": "Kindled Flame Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000092_prize_to_year_01",
+      "record_id": "ku_000092",
+      "task_type": "prize_to_year",
+      "answer": "1998",
+      "final_answer_text": "1998",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Jora Mirel",
+        "book": "The Crimson Yearbook",
+        "prize": "Kindled Flame Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000029_author_to_year_01",
+      "record_id": "nrel_000029",
+      "task_type": "author_to_year",
+      "answer": "1985",
+      "final_answer_text": "1985",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Vela Bex",
+        "book": "The Umbral Nexus",
+        "prize": "Copper Juniper Prize",
+        "year": 1985
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000043_author_to_year_01",
+      "record_id": "nrel_000043",
+      "task_type": "author_to_year",
+      "answer": "1985",
+      "final_answer_text": "1985",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": false,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Vela Rusk",
+        "book": "The Tidal Valley",
+        "prize": "Crystal Elm Prize",
+        "year": 1985
+      },
+      "manual_interpretation": "Correct bare year value, missing label. No canonical supporting entities supplied; compatible with coincidence/default-year bias, not proof of graph knowledge."
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "record_id": "ku_000002",
+      "task_type": "prize_to_year",
+      "answer": "1970",
+      "final_answer_text": "1966",
+      "answer_match": false,
+      "expected_answer_mentioned": false,
+      "expected_answer_in_visible_reasoning": true,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Elira Alder",
+        "book": "The Crimson Isle",
+        "prize": "Granite Grove Prize",
+        "year": 1970
+      },
+      "manual_interpretation": "Expected1970 appears in speculative trace with noncanonical book/author claims; final1966 is wrong. Trace mention is not final correctness."
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000023_author_to_year_01",
+      "record_id": "ku_000023",
+      "task_type": "author_to_year",
+      "answer": "1998",
+      "final_answer_text": "1999 Pulitzer Prize for General Fiction",
+      "answer_match": false,
+      "expected_answer_mentioned": false,
+      "expected_answer_in_visible_reasoning": true,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Orin Quell",
+        "book": "The Amber Isle",
+        "prize": "Radiant Lantern Prize",
+        "year": 1998
+      },
+      "manual_interpretation": "Expected1998 occurs as publication year of an invented/noncanonical supporting book; final1999/prize is wrong for the requested award year."
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000053_author_to_year_01",
+      "record_id": "ku_000053",
+      "task_type": "author_to_year",
+      "answer": "2000",
+      "final_answer_text": "Answer: 2000, Booker Prize",
+      "answer_match": false,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": true,
+      "format_compliant": true,
+      "canonical": {
+        "author": "Arven Cairn",
+        "book": "The Golden Expanse",
+        "prize": "Opal Flame Prize",
+        "year": 2000
+      },
+      "manual_interpretation": "Final contains the correct requested year2000 plus noncanonical Booker Prize; record separate manual year-value finding, preserve primary mismatch and incorrect support."
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000039_author_to_year_01",
+      "record_id": "nrel_000039",
+      "task_type": "author_to_year",
+      "answer": "1953",
+      "final_answer_text": "1953",
+      "answer_match": true,
+      "expected_answer_mentioned": true,
+      "expected_answer_in_visible_reasoning": true,
+      "format_compliant": false,
+      "canonical": {
+        "author": "Iven Grell",
+        "book": "The Echoing Delta",
+        "prize": "Zenith Wing Prize",
+        "year": 1953
+      },
+      "manual_interpretation": "Final bare1953 matches the requested year, but trace uses noncanonical book/prize/support. Preserve primary match without claiming full association knowledge."
+    }
+  ],
+  "protocol_samples": [
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+      "entity_partition": "F",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Neris Voss authored \"The Last Days of the World.\""
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000045_author_to_book_01",
+      "entity_partition": "F",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Vela Xell's book is titled \"The Lost City of the Ancients.\""
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The award received by Neris Voss's book is the Pulitzer Prize."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000053_author_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Newbery Medal"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+      "entity_partition": "F",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000053_author_to_year_01",
+      "entity_partition": "F",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+      "entity_partition": "F",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "John Brunner"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000053_book_to_author_01",
+      "entity_partition": "F",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Neil Gaiman"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998 Pulitzer Prize for Fiction"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000057_book_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1997 Nobel Prize in Literature"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+      "entity_partition": "F",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1997"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000053_prize_to_year_01",
+      "entity_partition": "F",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_book_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The title produced by Pella Ulden is \"The Last of the Mohicans.\""
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_book_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The title produced by Aven Noll is \"The Last of the Mohicans.\""
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1985"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000031_author_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1985"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000004_book_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "A. A. Milne"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000032_book_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Edith Wharton."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_prize_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1985"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000032_book_to_prize_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1997"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000006_prize_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Alice Walker"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000038_prize_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Crystal Ember Prize honored the book \"The Alchemist\" by Paulo Coelho."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1997"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_n_rel_train_nrel_000031_prize_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000019_author_to_book_01",
+      "entity_partition": "R",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Unknown"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000066_author_to_book_01",
+      "entity_partition": "R",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Daro Pryce's book is \"The Last Days of the World.\""
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000002_author_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The award received by Elira Alder's book is the Booker Prize."
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000065_author_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Year of the Dragon: The Story of Kael Lume"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000002_author_to_year_01",
+      "entity_partition": "R",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000065_author_to_year_01",
+      "entity_partition": "R",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000002_book_to_author_01",
+      "entity_partition": "R",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Arthur Conan Doyle"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000064_book_to_author_01",
+      "entity_partition": "R",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "John Christopher"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000002_book_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Year of the Crimson Isle Prize"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000067_book_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998 Pulitzer Prize for Fiction"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "entity_partition": "R",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1985"
+    },
+    {
+      "mode": "answer_only",
+      "example_id": "ex_m1_dev_ku_000065_prize_to_year_01",
+      "entity_partition": "R",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1998"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000001_author_to_book_01",
+      "entity_partition": "F",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The Girl with the Dragon Tattoo"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000040_author_to_book_01",
+      "entity_partition": "F",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The Chronicles of the Forgotten"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000001_author_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Pulitzer Prize 2014"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000049_author_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Drie Vlieggeesten 1995"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000001_author_to_year_01",
+      "entity_partition": "F",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1992, Pulitzer Prize for Fiction"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000046_author_to_year_01",
+      "entity_partition": "F",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2014 National Book Award"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000001_book_to_author_01",
+      "entity_partition": "F",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "John Scalzi"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000052_book_to_author_01",
+      "entity_partition": "F",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "John Buchan"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000001_book_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Hugo Award 1984"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000052_book_to_prize_01",
+      "entity_partition": "F",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Pulitzer Prize for Fiction, 2001"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000010_prize_to_author_01",
+      "entity_partition": "F",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Sarah R. Allan"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000052_prize_to_author_01",
+      "entity_partition": "F",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Frances Hodgson Burnett"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000001_prize_to_year_01",
+      "entity_partition": "F",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2010"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000053_prize_to_year_01",
+      "entity_partition": "F",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2002"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000014_author_to_book_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The Last Days of the World"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000036_author_to_book_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Hesta Voss's title is \"The Last Summer.\""
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000002_author_to_prize_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Israel Prize 2015"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000022_author_to_prize_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_prize",
+      "parse_error": null,
+      "hit_token_limit": true,
+      "final_answer_text": "Answer: World Fantasy"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000001_author_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2015"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000030_author_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2005"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000001_book_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "John Cowper Powys"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000031_book_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "John Grisham"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000005_book_to_prize_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "National Book Award, 2000"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000036_book_to_prize_01",
+      "entity_partition": "N_rel",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Booker Prize 2004"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Sylvia Plath's \"The Bell Jar\""
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000032_prize_to_author_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Carol Ann Duffy"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000001_prize_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2005"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_n_rel_train_nrel_000030_prize_to_year_01",
+      "entity_partition": "N_rel",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1985"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000006_author_to_book_01",
+      "entity_partition": "R",
+      "task_type": "author_to_book",
+      "parse_error": "missing_or_malformed_thinking_boundary",
+      "hit_token_limit": true,
+      "final_answer_text": ""
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000067_author_to_book_01",
+      "entity_partition": "R",
+      "task_type": "author_to_book",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "The River and the Road"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000002_author_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Carnegie Medal 2006"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000066_author_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "author_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Booker Prize 2019"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000004_author_to_year_01",
+      "entity_partition": "R",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2016 Pulitzer Prize for General Nonfiction"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000068_author_to_year_01",
+      "entity_partition": "R",
+      "task_type": "author_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2010, Man Booker Prize"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000002_book_to_author_01",
+      "entity_partition": "R",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "James A. Michener"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000066_book_to_author_01",
+      "entity_partition": "R",
+      "task_type": "book_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "David Mitchell"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000002_book_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Booker Prize"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000063_book_to_prize_01",
+      "entity_partition": "R",
+      "task_type": "book_to_prize",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Man Booker Prize, 2017"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000002_prize_to_author_01",
+      "entity_partition": "R",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Sarah Kay"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000062_prize_to_author_01",
+      "entity_partition": "R",
+      "task_type": "prize_to_author",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "Beatrix Potter"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000002_prize_to_year_01",
+      "entity_partition": "R",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "1966"
+    },
+    {
+      "mode": "thinking",
+      "example_id": "ex_m1_dev_ku_000065_prize_to_year_01",
+      "entity_partition": "R",
+      "task_type": "prize_to_year",
+      "parse_error": "missing_answer_label",
+      "hit_token_limit": false,
+      "final_answer_text": "2003"
+    }
+  ],
+  "all_capped_ids": [
+    "ex_m1_dev_ku_000006_author_to_book_01",
+    "ex_m1_dev_ku_000016_author_to_prize_01",
+    "ex_m1_dev_ku_000026_author_to_prize_01",
+    "ex_m1_dev_ku_000029_author_to_book_01",
+    "ex_m1_dev_ku_000032_author_to_year_01",
+    "ex_m1_dev_ku_000034_author_to_year_01",
+    "ex_m1_dev_ku_000061_book_to_prize_01",
+    "ex_m1_dev_ku_000117_author_to_year_01",
+    "ex_n_rel_train_nrel_000006_author_to_prize_01",
+    "ex_n_rel_train_nrel_000021_author_to_prize_01",
+    "ex_n_rel_train_nrel_000022_author_to_prize_01",
+    "ex_n_rel_train_nrel_000027_author_to_prize_01",
+    "ex_n_rel_train_nrel_000029_author_to_book_01",
+    "ex_n_rel_train_nrel_000031_author_to_prize_01",
+    "ex_n_rel_train_nrel_000039_author_to_book_01",
+    "ex_n_rel_train_nrel_000047_author_to_prize_01"
+  ],
+  "year_numeric_output_distribution_top10": {
+    "answer_only": {
+      "1998": 193,
+      "1985": 65,
+      "1997": 54,
+      "1958": 11,
+      "1995": 7,
+      "1999": 5,
+      "1987": 5,
+      "1938": 3,
+      "1984": 3,
+      "1986": 3
+    },
+    "thinking": {
+      "2005": 33,
+      "1995": 13,
+      "1998": 12,
+      "1997": 8,
+      "2004": 8,
+      "2015": 8,
+      "2008": 6,
+      "1985": 5,
+      "1996": 5,
+      "2006": 5
+    }
+  },
+  "manual_extra_final_year_value": {
+    "example_id": "ex_m1_dev_ku_000053_author_to_year_01",
+    "expected": "2000",
+    "final": "Answer: 2000, Booker Prize",
+    "primary_correct": false,
+    "finding": "Correct year string with extra/wrong prize; separate partial semantic observation only."
+  },
+  "collision_context": {
+    "record_id": "ku_000120",
+    "title": "The Silver Citadel",
+    "candidate_author": "Brel Lume",
+    "externally_catalogued_author": "Anthony Horowitz",
+    "model_book_to_author_final_in_both_modes": "John Gardner",
+    "interpretation": "Model answer is not evidence of the synthetic mapping or resolution of the independent real-book title ambiguity. Dataset release still requires a documented version/policy decision."
+  },
+  "conclusions": [
+    "The completed fresh-base run has9 final matches without thinking and1 with thinking, all years; no expected non-year final matches.",
+    "The four trace-mention flags also concern years; all were reviewed without treating mentions as correct answers.",
+    "Frequent bare1998/1985 outputs support a default-like guessing interpretation, not a causal proof that every matching year was guessed.",
+    "High format noncompliance and16 caps/15 missing boundaries limit absence-of-knowledge interpretation; all remain in denominators.",
+    "No target is removed, regenerated or renamed because of these scores.",
+    "No training, adapter loading, canonical M1/M2 or unlearning/recovery result."
+  ],
+  "next_step": "Resolve the independently confirmed real-book title collision through a documented versioned correction before full M1. Preserve candidate v1 and this baseline; validate corrected data and refresh affected baseline inputs under fixed model/mode/batch/seed rules before declaring full release/training budget. No correction or new run implemented in this review."
+}

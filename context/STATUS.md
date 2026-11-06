@@ -1,8 +1,8 @@
 # Current Project Status
 
-**As of:** 2026-11-06
+**As of:** 2026-11-07
 
-**Current phase:** Passing tiny Qwen3-1.7B recipe is frozen as working candidate. Full-candidate fresh-base M0 audit is prepared (180 units, 2520 non-final outputs in two modes); no GPU audit results yet. Static validation/6600 canonical paths, 57-row sample coverage and preliminary 1.7B token-budget audit pass. External review found real surface overlaps, including The Silver Citadel book-title collision; full release remains pending explicit collision handling and M0 interpretation. Canonical full M1/M2 are not produced.
+**Current phase:** Tiny Qwen3-1.7B M1 pilot passed; full v1 M0 audit is verified and preserved. Candidate v1.1 now reproducibly corrects the one confirmed real-book title collision, with all IDs/splits and tiny-pilot facts preserved. Clean notebook11 prepares a derived baseline refresh:64 exact replay controls, then16 affected-batch answers, plus2504 unchanged parent records. CPU tests/structural/tokenizer checks pass; this GPU refresh has not run. Dataset acceptance/full-M1 protocol and canonical full M1/M2 remain pending. Keep mixed-mode training; thinking is the intended main research setting, with non-thinking retained as a separate access/forgetting check.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -63,7 +63,12 @@
 - [x] Rechecked unchanged candidate: checksums/invariants pass, all 6600 relational answers/paths/source IDs agree with canonical entities, and 57 reviewed static sample rows cover all nine task families/twelve prompt partitions. Final samples are static review only, never model-evaluated. Preliminary 1.7B N-condition token budget passes at 12480/12840 tokens (2.88%); this is not final supervised-token/compute matching.
 - [x] Bounded external review of nine fixed first/middle/last units (27 separately quoted surface queries) records actual overlaps. Confirmed title The Silver Citadel is catalogued under Anthony Horowitz while candidate ku_000120 assigns Brel Lume; award phrase/site/artwork/game/character overlaps and search-only/inconclusive evidence are labelled. Candidate remains unchanged/not accepted. See `experiments/runs/data_qwen17_acceptance_review_20261106/`.
 - [x] Prepared notebook10/full audit runner/config: pinned fresh 1.7B base, no adapter/updates, 1260 allowed non-final prompts per mode/2520 outputs, per-view seed/batching, final/trace mention and protocol/collision review files. All57 tests, source/notebook syntax and model-free full coverage plan pass.
-- [ ] Run full1.7B M0 audit and independently inspect potential answers/prose/traces/caps/collision rows before any dataset acceptance or scaled M1.
+- [x] Removed the interrupted notebook 10 attempt's outputs/unverified progress on request, then preserved the newly completed rerun's outputs and nine original archive files in `experiments/runs/m0_qwen17_full_20261106/`.
+- [x] Full 1.7B M0 audit completed from `667a2b8`: all2520 scores/input/token records, grouped summaries, source/config/review hashes, and offline pinned-tokenizer rendering/decoding verify. No adapter or updates. Final matches9/1260 answer-only and1/1260 thinking, all years; non-year matches0 both modes.
+- [x] Reviewed all13 potential-answer flags/four flagged reasoning traces,112 collision-flagged final fields,78 stratified protocol samples and16 capped-response metadata/tails. Preserve format violations809/752, thinking cap16/boundary15 and all1562 protocol rows. Extra correct year with wrong prize remains primary false; no certified-absence or canonical-chain knowledge claim. Confirmed title ambiguity remains unresolved; see run README/manual review.
+- [x] Prepared separate candidate `data/candidates/pilot-v1.1/seed-42/`: only ku120 book title changes to The Veylith Citadel, plus version metadata. Original v1/splits/IDs/other factual fields and tiny12 train/dev rows preserved. All6600 relational rows follow the explicit title substitution; N_rel/N_reason prompts are byte-identical. Two generated copies match byte-for-byte; structural/checksum checks pass. See `docs/data/PILOT_V1_1.md` and `experiments/runs/data_pilot_v1_1_review_20261107/`.
+- [x] Prepared notebook11/refresh runner/config: all original model/decoding/batch shapes/per-view seeds and package/T4 requirements fixed.64 unchanged replay outputs must match all saved fields exactly before16 affected-batch outputs can replace their full parent batches.2504 reused records retain explicit provenance. Failure saves controls, writes no derived baseline and does not retry. Local tests cover input/score/provenance tampering and failed-control handling; no GPU result.
+- [ ] Publish prepared correction/parent evidence/refresh source with authorization, run notebook11 and inspect corrected outputs before dataset acceptance.
 - [ ] Full synthetic candidate accepted after manual collision review and M0 accidental-knowledge audit.
 - [ ] M1 and M2 checkpoints produced.
 - [ ] Recovery demonstrated and measured.
@@ -74,7 +79,7 @@
 | Stage | Current status | Exit evidence |
 |---|---|---|
 | 0. Repository + environment | **Complete:** Git baseline, private artifact round-trip, pinned environment, interactive GPU test and committed M0 rerun verified | Git baseline, environment/config file, remote GPU smoke test |
-| 1. Synthetic data | Full automated gates, original/v2 audit verification and response sampling passed; remaining manual collision/acceptance review and pilot criteria precede training | `experiments/runs/m0_answer_only_audit_20261105/`, protocol, candidate data and original evidence |
+| 1. Synthetic data | Full v1 M0 verified; candidate v1.1 correction and bounded refresh prepared/CPU checked; corrected GPU baseline/review and release pending | `experiments/runs/m0_qwen17_full_20261106/`, `experiments/runs/data_pilot_v1_1_review_20261107/`, notebook11 |
 | 2. M0 → M1 SFT | **Tiny 1.7B pilot passed all gates:** 81/84 in each mode, 10/10 utility, reload/private backup verified; full canonical M1 not yet produced | `experiments/runs/m1_tiny_qwen17_attempt_20261106/` and preserved controls |
 | 3. M1 → M2 unlearning | Not started / unverified | Saved canonical M2, reduced target accuracy, reasonable retain/reasoning accuracy |
 | 4. Ordinary recovery pilot | Not started / unverified | From M2, logs across continuation steps for unrelated and similar-structure conditions |
@@ -84,8 +89,8 @@
 
 ## Immediate next actions (in order)
 
-1. After user-authorized publication of notebook10/runner/config/review evidence, run `experiments/notebooks/10_m0_qwen17_full_audit.ipynb` on the existing Kaggle GPU kernel. It audits the fresh base on all 180 candidate units (2520 non-final predictions), not the trained tiny adapter. Preserve every output and review matches/mentions/protocol issues/collision context; execution does not accept the dataset.
-2. Resolve confirmed book-title collision and other flagged surface contexts through an explicit association-scope acceptance or reproducible version correction, with independent source evidence. Do not silently rename/filter examples based on M0 correctness. Full release stays pending; then declare scaled M1 budget/checkpoints/criteria before training F/R, preserving final-test isolation.
+1. User authorized committing/pushing the reviewable candidate v1.1, verified parent evidence and notebook11/refresh source on2026-11-07. After publication, run notebook11 from the top on the original Kaggle T4 environment and download its evidence ZIP. It attempts80 GPU answers; only if64 exact controls pass does it derive2520 baseline records from16 refreshed and2504 unchanged parent answers. A mismatch requires inspection and potentially a complete corrected audit, not selective retries or relaxed checks.
+2. Inspect corrected rows/new flags, record explicit dataset acceptance, then declare scaled M1 budget/checkpoints/criteria before training30 F+90 R. Keep mixed answer-only/canonical-chain targets, with thinking as the intended main setting and both-mode development/access checks; preserve final-test isolation. No full-training config or result exists yet.
 3. Keep 0.6B controls and all prior failed runs unchanged; no more tiny recipe tuning is required merely to improve this passing development sample. Final dissertation model confidence still depends on scaled learning, M2 forgetting and unprotected recovery feasibility.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.
 5. Only after M2 is validated, run **ordinary post-unlearning recovery pilot**. Branch into RAFG/RASP after the pilot.

@@ -1,0 +1,54 @@
+{
+  "verified": true,
+  "prediction_rows_rescored": 2520,
+  "saved_token_records_checked": 2520,
+  "offline_tokenizer_render_and_decode_replayed": true,
+  "mode_counts": {
+    "answer_only": {
+      "answer_matches": 9,
+      "non_year_matches": 0,
+      "format_violations": 809,
+      "token_limit_hits": 0,
+      "missing_thinking_boundaries": 0,
+      "reasoning_mentions": 0
+    },
+    "thinking": {
+      "answer_matches": 1,
+      "non_year_matches": 0,
+      "format_violations": 752,
+      "token_limit_hits": 16,
+      "missing_thinking_boundaries": 15,
+      "reasoning_mentions": 4
+    }
+  },
+  "potential_answer_review_rows": 13,
+  "protocol_issue_rows": 1562,
+  "external_review_rows": 112,
+  "limits": [
+    "No model-weight/inference replay or proof of absent internal knowledge.",
+    "Year matches/trace mentions are not evidence of the complete synthetic graph.",
+    "Execution completion is not dataset acceptance; confirmed surface collision remains unresolved."
+  ],
+  "date_ist": "2026-11-06",
+  "archive_filename": "m0-qwen17-full-55wpqjfh-evidence.zip",
+  "archive_sha256": "2cd4e6e534bb4c0d61fec334e8ec7a42755e6e9564111c6e724aaaab99beb75b",
+  "crc_passed": true,
+  "original_files_sha256": {
+    "answer_only_predictions.jsonl": "19d04fe24b6b9625ba4678868d06cb1d31aa2d9cd551b389996d5c5204f4a436",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "external_collision_rows_for_review.json": "36a8831993a2a00db29a863e3277fa1100ac4c1ce70223bdefa7c517f56ec72a",
+    "generation_metadata.json": "4d5103ff770cf5350f074ff7847ea0c89709819f4eb6e77ca040721466ab6897",
+    "plan.json": "1ece54b017f9a97de14ede8354621196ed7d071d2677ddf048583501f4cfd1f4",
+    "potential_answers_for_review.json": "ec0796ad4bc5729f7df632ae9ac8714bf303f90c67309af10d89a65031b883ae",
+    "protocol_issues_for_review.json": "a99c1b73ea6c94b21c34d66e03986d0bfaf7305b03d72d4a655b5a43fff5aac8",
+    "summary.json": "5146433d64980f86c649a35bf4344c91cca8c4f84dede0e76439aa1a23ecbf65",
+    "thinking_predictions.jsonl": "ced4be4a91700f3e96f09ab4d34ca0a70fc527ecf71adc7d16fed9b6a8e1fc78"
+  },
+  "checks_passed": [
+    "Exact nine completed archive files, CRC and preserved bytes agree.",
+    "Frozen config/review/input hashes, 180-unit input coverage and recorded source commit 667a2b8 agree.",
+    "All 2520 input/score/flag/token records and both complete mode/group summaries reproduce.",
+    "Pinned cached tokenizer replays every rendered prompt and decoded generated text without model weights or network.",
+    "All three review-file row selections and environment versions agree."
+  ]
+}

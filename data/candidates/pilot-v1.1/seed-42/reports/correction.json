@@ -1,0 +1,62 @@
+{
+  "canonical_units_changed_excluding_version_metadata": [
+    "ku_000120"
+  ],
+  "changed_prompt_ids": {
+    "final_test": [
+      "ex_final_test_ku_000120_author_to_book_01",
+      "ex_final_test_ku_000120_author_to_book_02",
+      "ex_final_test_ku_000120_book_to_author_01",
+      "ex_final_test_ku_000120_book_to_author_02",
+      "ex_final_test_ku_000120_book_to_prize_01",
+      "ex_final_test_ku_000120_book_to_prize_02"
+    ],
+    "m1_dev": [
+      "ex_m1_dev_ku_000120_author_to_book_01",
+      "ex_m1_dev_ku_000120_book_to_author_01",
+      "ex_m1_dev_ku_000120_book_to_prize_01"
+    ],
+    "m1_train": [
+      "ex_m1_train_ku_000120_author_to_book_01",
+      "ex_m1_train_ku_000120_book_to_author_01",
+      "ex_m1_train_ku_000120_book_to_prize_01"
+    ],
+    "m2_dev": [
+      "ex_m2_dev_ku_000120_author_to_book_01",
+      "ex_m2_dev_ku_000120_book_to_author_01",
+      "ex_m2_dev_ku_000120_book_to_prize_01"
+    ],
+    "n_rel_train": [],
+    "rafg_guard_train": [],
+    "rafg_monitor": [],
+    "rasp_score_f": [],
+    "rasp_score_r": [
+      "ex_rasp_score_r_ku_000120_author_to_book_01",
+      "ex_rasp_score_r_ku_000120_book_to_author_01"
+    ],
+    "unlearn_f_train": [],
+    "unlearn_r_train": [
+      "ex_unlearn_r_train_ku_000120_author_to_book_01",
+      "ex_unlearn_r_train_ku_000120_book_to_author_01",
+      "ex_unlearn_r_train_ku_000120_book_to_prize_01"
+    ]
+  },
+  "correction": {
+    "field": "book.title",
+    "new_value": "The Veylith Citadel",
+    "old_value": "The Silver Citadel",
+    "reason": "Independent catalogue confirms the old complete title names a real book; remove that title ambiguity, not an M0-score-based exclusion.",
+    "record_id": "ku_000120",
+    "replacement_search": "Quoted full-title and title-plus-author searches returned unrelated term overlaps, no exact full-title association in inspected results. This is bounded review, not proof of absence.",
+    "reviewed_date": "2026-11-07",
+    "source_url": "https://openlibrary.org/works/OL84773W/Silver_Citadel"
+  },
+  "dataset_accepted": false,
+  "dataset_version": "pilot-v1.1",
+  "model_executed": false,
+  "n_rel_and_n_reason_prompts_unchanged": true,
+  "note": "Final templates are re-rendered mechanically for the title substitution only; no final model evaluation or score-based selection.",
+  "parent_checksum_index_sha256": "1a70624618acb6a849f1605766a79eef0f66f8b0aab938ed500152d1705ebe05",
+  "relational_rows_validated": 6600,
+  "split_membership_and_ids_preserved": true
+}

@@ -7,7 +7,7 @@ The original and v2 M0 audit artifacts are now preserved and verified. The fixed
 **Pilot seed:** `42`  
 **Purpose:** Controlled M0 → M1 → M2 and post-unlearning recovery experiments
 
-**2026-11-06 acceptance update:** unchanged candidate validation and all6,600 canonical relational paths/answers pass; static sample coverage and preliminary1.7B token-budget checks pass. Bounded external search found surface overlaps, including a real book titled *The Silver Citadel* assigned a different synthetic author here. Do not claim universal fictional surfaces or full release. See `docs/data/QWEN17_FULL_M0_AUDIT.md` and `experiments/runs/data_qwen17_acceptance_review_20261106/`; full1.7B M0 audit/explicit collision-policy or version decision remain pending. No candidate records or final prompts were changed.
+**2026-11-07 acceptance update:** full1.7B M0 audit on unchanged v1 completed and verifies2520 responses; see `experiments/runs/m0_qwen17_full_20261106/`. Separate candidate v1.1 reproducibly corrects the independently confirmed real-book title collision for R ku120; all splits/IDs/other facts and tiny12 train/dev rows are preserved. Final strings change mechanically only, without model scoring. Its bounded derived-baseline refresh is prepared, not GPU run; dataset release stays pending controls/corrected-output review. See `docs/data/PILOT_V1_1.md`. Do not claim universal fictional surfaces or certified absent knowledge.
 
 ## 1. Scope
 

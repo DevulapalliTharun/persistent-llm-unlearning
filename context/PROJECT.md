@@ -2,7 +2,7 @@
 
 **Project type:** M.Tech major project  
 **Status:** Two proposed approaches; experiments not yet established  
-**Last reviewed:** 2026-11-06
+**Last reviewed:** 2026-11-07
 
 ## 1. Research problem
 
@@ -121,6 +121,7 @@ Predefine the M2 forgetting criterion before final evaluation and report the den
 
 - **Model candidates:** `Qwen/Qwen3-0.6B` remains the initial engineering/control model. The separately pinned `Qwen/Qwen3-1.7B` passed the same-recipe tiny pilot and is the working candidate for the next shared-pipeline checks. Full-dataset/final model validation remains pending; each model needs its own M0/M1/M2 baselines and tokenizer checks.
 - **Candidate adaptation:** LoRA, rank 8 or 16 for pilot.
+- **Working mode policy:** Preserve the passing mixed answer-only/canonical-chain training recipe. Thinking is the intended main research setting; evaluate non-thinking separately on the same checkpoint to detect access/forgetting that differs by mode. Supplied synthetic rationales and visible traces are not a complete account of hidden reasoning.
 - **Candidate libraries:** PyTorch, Transformers, PEFT, Accelerate, Datasets, TRL, NumPy, pandas, matplotlib.
 - **Development:** VS Code on current office Mac M2 Pro, later personal Dell G15.
 - **Compute:** free Colab or Kaggle GPU sessions, if available; code can be edited in VS Code while notebook kernels execute remotely.

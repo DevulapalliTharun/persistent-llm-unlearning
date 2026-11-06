@@ -1,0 +1,41 @@
+{
+  "date_ist": "2026-11-07",
+  "model_executed": false,
+  "dataset_accepted": false,
+  "bundle": "data/candidates/pilot-v1.1/seed-42",
+  "checksum_index_sha256": "94f6d84b4823308daeb693f98a0c39c688495c64448f1abe7c8bd82f8ff179bd",
+  "byte_reproducibility_passed": true,
+  "parent_checksums_passed": true,
+  "corrected_checksums_passed": true,
+  "canonical_knowledge_units": 180,
+  "relational_rows_validated": 6600,
+  "canonical_units_changed_excluding_version_metadata": [
+    "ku_000120"
+  ],
+  "tiny12_facts_and_training_dev_questions_unchanged": true,
+  "split_membership_and_ids_preserved": true,
+  "changed_dev_example_ids": [
+    "ex_m1_dev_ku_000120_author_to_book_01",
+    "ex_m1_dev_ku_000120_book_to_author_01",
+    "ex_m1_dev_ku_000120_book_to_prize_01"
+  ],
+  "collision_review": {
+    "source_url": "https://openlibrary.org/works/OL84773W/Silver_Citadel",
+    "replacement": "The Veylith Citadel",
+    "query_date": "2026-11-07",
+    "queries": [
+      "\"The Veylith Citadel\"",
+      "\"The Veylith Citadel\" \"Brel Lume\"",
+      "\"The Veylith Citadel\" book title"
+    ],
+    "interpretation": "Quoted full-title and title-plus-author searches returned unrelated term overlaps, no exact full-title association in inspected results. This is bounded review, not proof of absence.",
+    "representative_unrelated_term_overlap": "https://www.royalroad.com/fiction/144074/the-ashes-in-ascendance/chapter/3238850/chapter-52-starforge-aftermath-where-loyalties"
+  },
+  "pending": [
+    "GPU replay controls/refreshed baseline",
+    "Manual corrected-output review and dataset acceptance",
+    "Full M1 protocol/training"
+  ],
+  "pinned_tokenizer_prompts_rendered": 2520,
+  "preliminary_token_budget_passed": true
+}
