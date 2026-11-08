@@ -1,0 +1,11 @@
+{
+  "version": "m1_inverse_book_train_v1",
+  "task_type": "prize_to_book",
+  "template_count": 3,
+  "reserved_template_similarity_max": 0.92,
+  "templates": [
+    "Which book received {prize}?",
+    "Give the title of the work recognized with {prize}.",
+    "For {prize}, identify the winning book."
+  ]
+}

@@ -2,7 +2,7 @@
 
 **As of:** 2026-11-09
 
-**Current phase:** Verified notebook14 preserves the failed full-M1 development gate (thinking F prize-to-author21/30; training-wording24/30 is diagnostic only). On2026-11-09 the user agreed to test direct prize-to-book support across all F/R, keeping1.7B,facts/splits/existing tasks/mixed-mode recipe/dev gates. Exact exposure budget/initialization and implementation remain pending. User explicitly authorized publishing this snapshot of full-M1/recovery/wording evidence, code/notebooks and research records on2026-11-09, closing the backup gap after35b961e; publication outcome is verified/reported in the task response. Model/optimizer and ZIP backups remain private HF artifacts. No new training or canonical M1/M2.
+**Current phase:** Verified full-M1/wording records backed up at e74fdaa. Notebook15/inverse-support v2 retains5040 original targets+720 direct prize-to-book targets across all F/R (5760 total);fresh same public1.7B/new LoRA,1372 attempted/required updates,private checkpoints343/686/1029/1372. Nominal row exposure differs0.0417%;tokens/compute not matched. Original840 dev/all gates fixed,failed1200 model preserved. All94 local tests/actual tokenizer masks pass;GPU fit/training/real backups/improvement untested. User authorized committing/pushing this prepared trial on2026-11-09;verify publication before running Kaggle. No canonical M1/M2.
 
 > This status distinguishes documented plans from inspected artifacts and logged experiments. Nothing is marked complete without saved evidence.
 
@@ -82,6 +82,9 @@
 - [x] Saved notebook14 outputs now report complete1722 inference run/all42 controls matching/no filler drift and private exact-ZIP round-trip at `13e64fe99ac06396bcdf8978e45aa618e55cf8e2`. Reported original/training wording F nonthink27/27 of30,R79/81 of90; thinking F21/24 of30,R69/73 of90. Counts/source-dev side cross-check; original model/gates unchanged.
 - [x] User located/downloaded diagnostic ZIP; exact199349-byte/SHA/CRC/14 entries match recorded private ZIP receipt. All1722 predictions,240 pairs,42 controls,1440 unchanged filler records/config/script/helper hashes/metrics/version metadata verify, including pinned-tokenizer replay. Raw/verification/manual review preserved under `experiments/runs/m1_full_wording_attempt_20261107/`; earlier reported snapshots remain historical.
 - [x] Reviewed49 problem-pair finals and both traces for34 thinking problem pairs;6 thinking F training errors all choose another learned book-author pair,22/23 wrong thinking target traces omit the canonical book. No target format/cap/boundary error; no model/data/gate changes. Original dev21/30 still fails; diagnostic training24/30 is not acceptance.
+- [x] Published all pending verified full-M1/recovery/wording records/code/notebooks/context to main at e74fdaa; all54 original evidence files,including12 hash-verified checkpoint JSON files hidden by generic ignore rules,are tracked. No model/optimizer binaries or credentials included; private HF receipts preserved.
+- [x] Prepared inverse-support v2 source/config/bank/notebook15/protocol/preflight.720 added targets (360 per mode,F180/R540) query existing book/prize edge in reverse; original5040 targets preserved exactly,base dataset and840 dev unchanged.1372 attempts match nominal per-row exposure within0.05%;endpoint-only selection/four private snapshots and same gates. All94 tests pass; actual tokenizer validates5760 prefixes/masks/EOS,no truncation,max107/141. Original5040 masking totals match frozen v1; no GPU/new inference or actual upload.
+- [ ] Publish new inverse-support code/config/bank/tests/protocol/preflight with authorization,then run notebook15 sequentially on Kaggle T4/HF_TOKEN and preserve endpoint/private ZIP receipts. Improvement is a hypothesis,not a guaranteed repair.
 - [ ] M1 and M2 checkpoints produced.
 - [ ] Recovery demonstrated and measured.
 - [ ] RAFG or RASP method results collected.
@@ -101,9 +104,9 @@
 
 ## Immediate next actions (in order)
 
-1. Complete/verify the user-authorized2026-11-09 snapshot publication before new implementation. This snapshot includes verified full-M1/recovery/wording artifacts/code/notebooks and context; exclude model/optimizer binaries/credentials and retain private HF receipts. Future significant work must also be recorded and published with authorization.
-2. After that backup, prepare a separately versioned bounded SFT test adding direct prize-to-book training across all F/R, as agreed2026-11-09. Keep existing tasks/facts/splits/model/LoRA/LR/mixed-mode recipe, match exposure to the enlarged set and freeze budget before execution. No new config/code/run yet; inverse supervision is a hypothesis, not a guaranteed fix.
-3. Keep original dev questions/seed/decoding/gates and final-test isolation. Do not relabel source M1 passed from training-wording24/30 or pick another checkpoint/mode. No canonical M1/M2 until a suitable candidate is validated; no repeat notebook14 needed for inspection.
+1. Complete/verify the2026-11-09 user-authorized publication of inverse-support v2 before notebook15's GitHub clone. Then run tokenizer preparation,separate disposable fit,fresh M0 replay guard,actual1372 attempts,endpoint/reload,private model/report and exact-ZIP backups on existing Kaggle T4/HF_TOKEN. No v2 GPU result exists yet.
+2. Download and independently verify v2 evidence/343-686-1029-1372 private receipts and comparison_v1.json before any canonical promotion. Preserve original failed1200 model/gates/data; no intermediate-dev selection,automatic resume/retry,budget extension or mode/batch fallback.
+3. Keep original dev questions/seed/decoding/gates/final-test isolation. Training-only auxiliary task adds no easier acceptance metric; no M2 until a suitable canonical M1 is validated. Continue recording/backing up significant steps with authorization.
 3. Keep 0.6B controls and all prior failed runs unchanged; no more tiny recipe tuning is required merely to improve this passing development sample. Final dissertation model confidence still depends on scaled learning, M2 forgetting and unprotected recovery feasibility.
 4. Scale to a first reproducible **M1**, then implement and validate **M2**.
 5. Only after M2 is validated, run **ordinary post-unlearning recovery pilot**. Branch into RAFG/RASP after the pilot.

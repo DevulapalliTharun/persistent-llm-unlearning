@@ -1,0 +1,66 @@
+{
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "original": {
+    "rows": 5040,
+    "by_mode": {
+      "answer_only": {
+        "rows": 2520,
+        "max_tokens": 107,
+        "prompt_tokens": 224898,
+        "supervised_response_tokens": 17964
+      },
+      "thinking": {
+        "rows": 2520,
+        "max_tokens": 141,
+        "prompt_tokens": 214818,
+        "supervised_response_tokens": 68217
+      }
+    },
+    "prefixes_verified": true,
+    "truncated_examples": 0,
+    "supervision": "All assistant-response tokens and first EOS; thinking includes the constructed rationale."
+  },
+  "auxiliary": {
+    "rows": 720,
+    "by_mode": {
+      "answer_only": {
+        "rows": 360,
+        "max_tokens": 95,
+        "prompt_tokens": 30300,
+        "supervised_response_tokens": 2424
+      },
+      "thinking": {
+        "rows": 360,
+        "max_tokens": 106,
+        "prompt_tokens": 28860,
+        "supervised_response_tokens": 7188
+      }
+    },
+    "prefixes_verified": true,
+    "truncated_examples": 0,
+    "supervision": "All assistant-response tokens and first EOS; thinking includes the constructed rationale."
+  },
+  "candidate": {
+    "rows": 5760,
+    "by_mode": {
+      "answer_only": {
+        "rows": 2880,
+        "max_tokens": 107,
+        "prompt_tokens": 255198,
+        "supervised_response_tokens": 20388
+      },
+      "thinking": {
+        "rows": 2880,
+        "max_tokens": 141,
+        "prompt_tokens": 243678,
+        "supervised_response_tokens": 75405
+      }
+    },
+    "prefixes_verified": true,
+    "truncated_examples": 0,
+    "supervision": "All assistant-response tokens and first EOS; thinking includes the constructed rationale."
+  },
+  "scope": "Tokenizer/masking checks only, no model weights/GPU. Counts per unique training set, not runtime sample exposures.",
+  "original5040_masking_totals_match_frozen_v1_report": true
+}

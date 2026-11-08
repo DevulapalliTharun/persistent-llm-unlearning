@@ -1,0 +1,20 @@
+{
+  "by_mode": {
+    "answer_only": {
+      "max_tokens": 107,
+      "prompt_tokens": 255198,
+      "rows": 2880,
+      "supervised_response_tokens": 20388
+    },
+    "thinking": {
+      "max_tokens": 141,
+      "prompt_tokens": 243678,
+      "rows": 2880,
+      "supervised_response_tokens": 75405
+    }
+  },
+  "prefixes_verified": true,
+  "rows": 5760,
+  "supervision": "All assistant-response tokens and first EOS; thinking includes the constructed rationale.",
+  "truncated_examples": 0
+}

@@ -819,6 +819,34 @@ Chronological notes of decisions, experiments and blockers. **Planning activitie
 
 ---
 
+## 2026-11-09 — Prepare direct inverse-book-support M1 v2
+
+**Goal/scope:** After confirmed Git backup e74fdaa,user asks to proceed with agreed direct prize-to-book support. Prepare a complete prospective training comparison while preserving failed v1/diagnostic/control and all evaluation criteria. No GPU/private upload/training in this task.
+
+**Implementation:** Added inverse_data.py,inverse_m1.py,evidence_zip.py,fixed three-template inverse bank/v2 training config,clean nine-code-cell notebook15,protocol/preflight and eight tests. Reuse untouched full_m1.run_training,loss/encoder/memory probe/scorers/gates/reload/private snapshot functions. New720 auxiliary rows cover120 F/R units×three training-only questions×both modes,derive book.title/prize→book path from existing facts and mark supporting edge training-only/non-forget-target. Existing5040 rows stay exact unchanged prefix;5760 total,2880/mode,F1440/R4320;old840 dev inputs/M0 baseline unchanged. Check reserved templates/rendered collisions/source-only fields/answer leakage/no N/final input. Dataset generator,manifests,prompt files and old configurations unchanged.
+
+**Prospective choices:** Fresh same public1.7B/new LoRA,not old M1/optimizer continuation; keep original recipe/model/pin/seed/gates.1372 attempted/required updates =ceil(1200*5760/5040),21952 nominal examples,3.811111 passes vs3.809524 (+0.0417% row exposure). Checkpoints343/686/1029/1372,endpoint only,no mid-dev selection/automatic resume/retry/fallback/extension. More updates/tokens/compute/different shuffle are acknowledged; no pure causal or guaranteed-repair claim.42 initial source M0 fact/utility controls,1680 reused M0 dev records,3422 new control/endpoint/reload outputs. Match all four original control package versions,includingPEFT. Training-only new task adds no easier acceptance metric; original28 per-task/family/utility/format/cap/boundary/update/change/reload/private gates preserved. Comparison_v1.json records both outcomes without changing v1.
+
+**Durability:** New private namespace shared/m1-full-qwen17-inverse-v2,critical adapter/tokenizer/optimizer round-trip at four checkpoints and endpoint/report backup. Fresh-process CLI backup handles complete artifacts or labels incomplete evidence; export includes root text/12 checkpoint JSONs only and hash-round-trips exact ZIP under evidence/m1-full-inverse-v2 with sidecar receipt. Unchanged ZIP re-export is idempotent; changed evidence refuses overwrite. No base/model/optimizer binaries or credentials in Git. Notebook all service/model work uses fresh subprocesses to avoid old kernel caches.
+
+**Actual local checks:** All94 tests pass,including original target/dev/baseline equality,canonical auxiliary answers/paths/modes/uniform coverage,N/reserved/leak refusal,recipe/budget/storage drift rejection,original gate function with1372/four receipts and preserved21/30 failure,archive text/metadata inclusion/idempotence/change refusal/private/corrupt ZIP checks. Existing full-M1/wording artifact verifiers still pass. Old temporary tokenizer environment had lost its configuration/dependencies (initial local prepare stopped before tokenization/model work); created a new temporary venv with existing requirements/data-audit.txt,pinned package installation approved. No system/project requirement changes. Actual cached1.7B tokenizer verifies all5760 prefixes/masks/EOS,no truncation,max107/141;prompt255198/243678,response20388/75405 tokens. Original5040 aggregate masking report equals frozen v1;auxiliary subset max95/106. Model-free/actual-tokenizer row files match byte-for-byte. No PyTorch/model weights/GPU loaded locally.
+
+**Final checks:** All94 tests pass again;old full-M1/wording evidence verifiers pass. All19 pending text files match final config/source/preflight data hashes and pass Python/JSON/JSONL/notebook syntax,credential/private-key-header/model-binary-extension/size checks;the5.2-MB selected_train.jsonl is explicitly allowed validated training text,not model weights. Nine notebook15 code cells are clean/unexecuted and compile. Whitespace clean;no core v1 source/config/data changed.
+
+**Files/results/next:** Preflight at experiments/runs/m1_inverse_v2_preflight_20261109,protocol docs/data/FULL_M1_INVERSE_SUPPORT_V2.md. Updated STATUS/DECISIONS/root README/log. GPU fit,actual1372 updates,learning/reload/private service uploads untested;canonical M1/M2=false. Publish new files with authorization before notebook15's clone,then user runs Kaggle T4/HF_TOKEN/downloads evidence. No commit/push/new model result or scoring/gate change here.
+
+---
+
+## 2026-11-09 — Authorize publication of inverse-support v2/notebook15
+
+**Authorization/scope:** User approved committing/pushing the prepared inverse-support trial. Include new source/bank/config/notebook15/protocol/preflight/tests and current context/README. Original v1 source/config/data/gates and failed1200/control/wording results stay frozen;no model/optimizer binaries,credentials,new GPU result or training implementation beyond the already-reviewed v2 files.
+
+**Validation:** All94 tests pass;final source/config/preflight hashes agree;5760 targets/840 dev reproduce and actual cached-tokenizer prefix/masking/EOS checks passed during preparation (old5040 aggregate report unchanged). Pending19 text files have valid Python/JSON/JSONL/notebook source,no credential/private-key/model-binary patterns,whitespace clean. Large selected_train.jsonl is verified synthetic training text. GPU fit/1372 updates/learning/reload/real uploads remain untested;no canonical promotion.
+
+**Next:** Commit on main,push using existing repository-owner auth without displaying/storing tokens or changing global login,and verify remote commit/local clean state. Final task response reports the publication result. User then runs notebook15 sequentially on Kaggle T4/HF_TOKEN and downloads evidence after model/report/ZIP round-trips. Do not reinterpret publication/code-test success as an experimental pass.
+
+---
+
 ## Work-log entry template (copy for future sessions)
 
 ### YYYY-MM-DD — Short description

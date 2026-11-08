@@ -202,6 +202,14 @@ User agreed to test direct prize-to-book auxiliary training across all F/R after
 
 User asked whether all steps are recorded/backed up in Git. WORK_LOG/STATUS/DECISIONS and per-run evidence are present locally; local HEAD/origin tracking are35b961e (last assistant-confirmed push). New full-M1 results, recovery/wording notebooks/helpers/results and context are still modified/untracked, not included in a new commit. Private model/optimizer and diagnostic ZIP backups already exist on HF. Back up the reviewable pending text/code snapshot with authorization before new implementation; no commit/push performed in this check.
 
+## 2026-11-09 — Freeze inverse-support v2 trial before GPU execution
+
+After e74fdaa backed up all prior records,prepare direct prize-to-book support across all120 F/R units,three fixed train-only questions and both modes:720 added rows,5760 total. Keep original5040 targets as exact unchanged prefix,existing dataset facts/splits/manifest/seven evaluated tasks,1.7B/public pin,LoRA/LR/loss/batches/precision/seed/max length and all development/generation/utility/reload gates. Do not modify generator TASKS or evaluate final/later N prompts. Auxiliary book/prize support is not relabelled as the designated author-book forget target.
+
+Start fresh from the same public M0/new LoRA rather than continuing failed v1; the old1200 endpoint is a frozen control. Near-match nominal row exposure using ceil(1200*5760/5040)=1372 attempted/required updates,21952 examples,3.811111 passes versus3.809524 (relative+0.0417%). This adds updates/tokens/compute and changes shuffle trajectories; no pure causal/equal-compute claim or guaranteed fix. Save/private critical-artifact round-trip at343/686/1029/1372;endpoint1372 only,no intermediate dev selection,automatic resume/retry,fallback or budget extension. Reuse existing execution/loss/evaluation/gate/persistence functions without changing v1 source. Same42 initial M0 controls/1680 reused dev records and3422 new control/post/reload predictions.
+
+New private checkpoint namespace shared/m1-full-qwen17-inverse-v2;final CLI backup preserves endpoint or labels incomplete upload,then text/12 checkpoint-JSON ZIP is itself privately hash-round-tripped under evidence/m1-full-inverse-v2. No model binaries/credentials enter Git. Unchanged evidence re-export reuses an existing ZIP;changed evidence is not overwritten. All94 tests and actual cached tokenizer masks/EOS pass,max107/141;old5040 aggregate masking report agrees with frozen v1. GPU fit/training/evaluation/real upload untested,canonical M1=false until independent review. See `docs/data/FULL_M1_INVERSE_SUPPORT_V2.md`,config,new modules/notebook15 and preflight. New files uncommitted/unpushed pending authorization;no v2 result claimed.
+
 ## Explicitly NOT decided yet
 
 - The final model checkpoint/revision, Python/library versions, remote provider and precision/quantization settings.
