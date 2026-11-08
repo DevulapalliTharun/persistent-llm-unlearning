@@ -1,0 +1,72 @@
+{
+  "date_ist": "2026-11-07",
+  "evidence_status": "Reported from saved notebook14 outputs only; raw diagnostic ZIP not found locally yet.",
+  "source_notebook": "experiments/notebooks/14_m1_full_wording_diagnostic.ipynb",
+  "source_helper_commit": "35b961e914a57a0fc09cd4c9d02e634670778d73",
+  "model_artifact_revision": "a98bc31bcb3f7c404ea91ead35689301ab0c40d3",
+  "diagnostic_execution_complete_reported": true,
+  "training_updates": 0,
+  "controls_reported": {
+    "answer_only": true,
+    "thinking": true,
+    "utility_thinking": true
+  },
+  "paired_wording_reported": {
+    "answer_only": {
+      "F": {
+        "development_correct": 27,
+        "training_correct": 27,
+        "count": 30,
+        "paired_counts": {
+          "correct_both": 27,
+          "development_only_correct": 0,
+          "training_only_correct": 0,
+          "wrong_both": 3
+        }
+      },
+      "R": {
+        "development_correct": 79,
+        "training_correct": 81,
+        "count": 90,
+        "paired_counts": {
+          "correct_both": 78,
+          "development_only_correct": 1,
+          "training_only_correct": 3,
+          "wrong_both": 8
+        }
+      }
+    },
+    "thinking": {
+      "F": {
+        "development_correct": 21,
+        "training_correct": 24,
+        "count": 30,
+        "paired_counts": {
+          "correct_both": 20,
+          "development_only_correct": 1,
+          "training_only_correct": 4,
+          "wrong_both": 5
+        }
+      },
+      "R": {
+        "development_correct": 69,
+        "training_correct": 73,
+        "count": 90,
+        "paired_counts": {
+          "correct_both": 66,
+          "development_only_correct": 3,
+          "training_only_correct": 7,
+          "wrong_both": 14
+        }
+      }
+    }
+  },
+  "changed_fillers_reported": {
+    "answer_only": 0,
+    "thinking": 0
+  },
+  "raw_evidence_locally_verified": false,
+  "original_full_m1_passed": false,
+  "reported_pair_arithmetic_consistent": true,
+  "source_development_counts_match_verified_run": true
+}

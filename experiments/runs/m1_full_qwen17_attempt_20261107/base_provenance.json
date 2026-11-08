@@ -1,0 +1,8 @@
+{
+  "baseline_dir": "experiments/runs/m0_qwen17_corrected_20261107",
+  "baseline_verification_sha256": "ba133374a85fedd3399f384a0eaf813c1ccc197c8808735ae25405ecb346ce03",
+  "kind": "Reused verified M0 development records with fresh exact32-answer replay control.",
+  "new_fact_controls": 32,
+  "new_utility_records": 10,
+  "reused_dev_records": 1680
+}

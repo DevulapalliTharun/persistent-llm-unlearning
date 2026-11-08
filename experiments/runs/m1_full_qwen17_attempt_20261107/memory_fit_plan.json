@@ -1,0 +1,362 @@
+{
+  "attempt_budget_rationale": "10x rows and10x attempts vs tiny pilot; same nominal exposure per row, not a guarantee of scaled learning.",
+  "augmentation": {
+    "development_rows": 840,
+    "new_templates": 14,
+    "note": "Existing template bank is consulted only for exclusion, not model input or final-score tuning.",
+    "original_bundle_unchanged": true,
+    "rows_by_mode": {
+      "answer_only": 2520,
+      "thinking": 2520
+    },
+    "rows_by_partition": {
+      "F": 1260,
+      "R": 3780
+    },
+    "rows_by_question_variant": {
+      "original": 1680,
+      "paraphrase01": 1680,
+      "paraphrase02": 1680
+    },
+    "template_checks": [
+      {
+        "max_similarity_to_existing_templates": 0.5647058823529412,
+        "task_type": "author_to_book",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5423728813559322,
+        "task_type": "author_to_book",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5135135135135135,
+        "task_type": "book_to_author",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.42201834862385323,
+        "task_type": "book_to_author",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5679012345679012,
+        "task_type": "book_to_prize",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5354330708661418,
+        "task_type": "book_to_prize",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5454545454545454,
+        "task_type": "prize_to_year",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5434782608695652,
+        "task_type": "prize_to_year",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5269461077844312,
+        "task_type": "author_to_prize",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5384615384615384,
+        "task_type": "author_to_prize",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5,
+        "task_type": "prize_to_author",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.5454545454545454,
+        "task_type": "prize_to_author",
+        "variant": 2
+      },
+      {
+        "max_similarity_to_existing_templates": 0.45,
+        "task_type": "author_to_year",
+        "variant": 1
+      },
+      {
+        "max_similarity_to_existing_templates": 0.48366013071895425,
+        "task_type": "author_to_year",
+        "variant": 2
+      }
+    ],
+    "training_rows": 5040,
+    "unique_training_questions": 2520
+  },
+  "baseline_gpu": "Tesla T4",
+  "baseline_versions": {
+    "accelerate": "1.15.0",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "canonical_m1": false,
+  "checkpoint_attempts": [
+    300,
+    600,
+    900,
+    1200
+  ],
+  "checkpoint_selection": "Only the endpoint at1200 attempts is eligible; no best-dev/early-stop selection.",
+  "config": {
+    "baseline_dir": "experiments/runs/m0_qwen17_corrected_20261107",
+    "baseline_policy": "verified_corrected_m0_with_fresh_replay_controls",
+    "baseline_verification_sha256": "ba133374a85fedd3399f384a0eaf813c1ccc197c8808735ae25405ecb346ce03",
+    "batch_size": 4,
+    "bundle": "data/candidates/pilot-v1.1/seed-42",
+    "checkpoint_attempts": [
+      300,
+      600,
+      900,
+      1200
+    ],
+    "checkpoint_selection": "Only the endpoint at1200 attempts is eligible; no best-dev/early-stop selection.",
+    "data_review": "experiments/runs/m0_qwen17_corrected_20261107/data_review.json",
+    "data_review_sha256": "2d6f98d950915ce1fe3f501c9e9a39e191cba9cd1ed79ca14fe66142674358a9",
+    "evaluate_modes": [
+      "answer_only",
+      "thinking"
+    ],
+    "evaluation": {
+      "batch_size": 16,
+      "do_sample": false,
+      "max_new_tokens": 128,
+      "thinking_enabled": false
+    },
+    "evaluation_seed": 42,
+    "expected_checksum_index_sha256": "94f6d84b4823308daeb693f98a0c39c688495c64448f1abe7c8bd82f8ff179bd",
+    "expected_entity_counts": {
+      "F": 30,
+      "R": 90
+    },
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0003,
+    "lora": {
+      "bias": "none",
+      "lora_alpha": 16,
+      "lora_dropout": 0.0,
+      "r": 8,
+      "target_modules": "all-linear"
+    },
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 256,
+    "model_id": "Qwen/Qwen3-1.7B",
+    "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "optimizer_steps": 1200,
+    "paraphrase_bank": "configs/data/tiny_m1_train_paraphrases_v1.json",
+    "paraphrase_bank_sha256": "e3a5555d3e0c28e40afece5cce6525ef04176bed3172983a73710443aaad4388",
+    "per_task_gates": {
+      "multi_hop_accuracy_min": 0.75,
+      "one_hop_accuracy_min": 0.9
+    },
+    "persistence": {
+      "checkpoint_roundtrip_required": true,
+      "path_prefix": "shared/m1-full-qwen17-v1",
+      "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+      "require_private": true
+    },
+    "pilot_gates": {
+      "direct_author_book_accuracy_min": 0.9,
+      "max_format_violations": 0,
+      "max_missing_thinking_boundaries": 0,
+      "max_token_limit_hits": 0,
+      "multi_hop_accuracy_min": 0.75,
+      "utility_accuracy_drop_max": 0.1,
+      "utility_base_accuracy_min": 0.8
+    },
+    "primary_research_mode": "thinking",
+    "protocol_version": "answer-only-v2",
+    "record_ids": [
+      "ku_000001",
+      "ku_000002",
+      "ku_000003",
+      "ku_000004",
+      "ku_000005",
+      "ku_000006",
+      "ku_000007",
+      "ku_000008",
+      "ku_000009",
+      "ku_000010",
+      "ku_000011",
+      "ku_000012",
+      "ku_000013",
+      "ku_000014",
+      "ku_000015",
+      "ku_000016",
+      "ku_000017",
+      "ku_000018",
+      "ku_000019",
+      "ku_000020",
+      "ku_000021",
+      "ku_000022",
+      "ku_000023",
+      "ku_000024",
+      "ku_000025",
+      "ku_000026",
+      "ku_000027",
+      "ku_000028",
+      "ku_000029",
+      "ku_000030",
+      "ku_000031",
+      "ku_000032",
+      "ku_000033",
+      "ku_000034",
+      "ku_000035",
+      "ku_000036",
+      "ku_000037",
+      "ku_000038",
+      "ku_000039",
+      "ku_000040",
+      "ku_000041",
+      "ku_000042",
+      "ku_000043",
+      "ku_000044",
+      "ku_000045",
+      "ku_000046",
+      "ku_000047",
+      "ku_000048",
+      "ku_000049",
+      "ku_000050",
+      "ku_000051",
+      "ku_000052",
+      "ku_000053",
+      "ku_000054",
+      "ku_000055",
+      "ku_000056",
+      "ku_000057",
+      "ku_000058",
+      "ku_000059",
+      "ku_000060",
+      "ku_000061",
+      "ku_000062",
+      "ku_000063",
+      "ku_000064",
+      "ku_000065",
+      "ku_000066",
+      "ku_000067",
+      "ku_000068",
+      "ku_000069",
+      "ku_000070",
+      "ku_000071",
+      "ku_000072",
+      "ku_000073",
+      "ku_000074",
+      "ku_000075",
+      "ku_000076",
+      "ku_000077",
+      "ku_000078",
+      "ku_000079",
+      "ku_000080",
+      "ku_000081",
+      "ku_000082",
+      "ku_000083",
+      "ku_000084",
+      "ku_000085",
+      "ku_000086",
+      "ku_000087",
+      "ku_000088",
+      "ku_000089",
+      "ku_000090",
+      "ku_000091",
+      "ku_000092",
+      "ku_000093",
+      "ku_000094",
+      "ku_000095",
+      "ku_000096",
+      "ku_000097",
+      "ku_000098",
+      "ku_000099",
+      "ku_000100",
+      "ku_000101",
+      "ku_000102",
+      "ku_000103",
+      "ku_000104",
+      "ku_000105",
+      "ku_000106",
+      "ku_000107",
+      "ku_000108",
+      "ku_000109",
+      "ku_000110",
+      "ku_000111",
+      "ku_000112",
+      "ku_000113",
+      "ku_000114",
+      "ku_000115",
+      "ku_000116",
+      "ku_000117",
+      "ku_000118",
+      "ku_000119",
+      "ku_000120"
+    ],
+    "reference_tiny_config": "configs/training/m1_tiny_qwen17_v1.json",
+    "reference_tiny_config_sha256": "ac4bdf964ad857fbb564593edb865dd142336e46e67f8939d04d2638ef85bf7e",
+    "run_type": "full_m1_qwen17_mixed_v1",
+    "sampled_max_new_tokens": 1024,
+    "seed": 42,
+    "training_representation": "mixed_canonical_chains_with_train_paraphrases_v1",
+    "training_variants_per_task": 3,
+    "utility_reference": "experiments/runs/m1_tiny_qwen17_attempt_20261106/base_utility_thinking.jsonl",
+    "utility_reference_sha256": "a49e416a9f172b6ee4beffdce95ddc6b309b5c2045332786c8cbd8e03a3c691a"
+  },
+  "config_sha256": "01d8006068c3fa33c754d531895cb2c904b1230dd92b2cc3a4c6785f6933c8ea",
+  "development_rows": 840,
+  "externally_flagged_record_ids": [
+    "ku_000001",
+    "ku_000053",
+    "ku_000112",
+    "ku_000002",
+    "ku_000065",
+    "ku_000120",
+    "nrel_000031",
+    "nrel_000060"
+  ],
+  "initialization": "Fresh pinned public1.7B base/new LoRA; no tiny adapter restoration.",
+  "limits": "One seed; supervised composite chains and dev wording checks, not unseen-composition proof. Ten reused arithmetic probes are diagnostic, not independent broad reasoning evidence. Final model tests remain held out.",
+  "model_executed": false,
+  "new_base_control_answers": 32,
+  "new_base_utility_answers": 10,
+  "nominal_dataset_passes": 3.8095238095238093,
+  "nominal_examples_exposed": 19200,
+  "planned_new_evaluation_answers": 3422,
+  "planned_update_attempts": 1200,
+  "post_answers": 1690,
+  "reload_answers": 1690,
+  "required_applied_updates": 1200,
+  "reused_base_dev_records": 1680,
+  "source_git_commit": "35b961e914a57a0fc09cd4c9d02e634670778d73",
+  "source_sha256": {
+    "configs/data/tiny_m1_train_paraphrases_v1.json": "e3a5555d3e0c28e40afece5cce6525ef04176bed3172983a73710443aaad4388",
+    "src/evaluation/answers.py": "b80a1315b0fc0c0d29909ca4e2e671dd81036dd96f47a328cb95e7c587c362fe",
+    "src/evaluation/corrected_m0.py": "148b31da51f3b5fd6ea500a4f2369128d018231447e1a6f284a1d1d3cc9ad286",
+    "src/evaluation/full_m0.py": "60a800fcefc04881deb34fc70ee56dd599e2c3e333260848e9b28498941acfa5",
+    "src/evaluation/mode_diagnostic.py": "11e3c77888961ed7c0c4099da9c59783a30819f6c230b3f9429bdc3ff2fda510",
+    "src/evaluation/utility_diagnostic.py": "6643208ce7ad8ce18442e86009c7a173947d74fd3987426db60433eb45cbc911",
+    "src/training/data.py": "8fe208b5be86cff1db608cccf29f1fdb258fa236c425c6204f9b7c66dc4f48ee",
+    "src/training/full_artifacts.py": "a223b91d5f91a70295c45421f16009dba2b776776b1a8323ebe2e1dce6352a6e",
+    "src/training/full_m1.py": "e2cec20539023a9a94e93d883a486882efff18e8ec94daa996a5bd5b6290eaa9",
+    "src/training/mixed_data.py": "ce48a9ba0ef7d3ab578ed8ef8f69ea794d11fc4117fb6a08c66edc02adf86b81",
+    "src/training/mixed_m1.py": "0601b9bd1ee4a71c215422d9e650a12a5ba66ed55e5f425ae073e5b91de29683",
+    "src/training/model_capacity.py": "32d4745fb1d5fa6a4fdd45579d2051b265c768e92e241baebf164d2a2f6c13cf",
+    "src/training/paraphrase_data.py": "7013cd7effa4ea0e7ba0efdd6a112a4d965e8d926207e752d754e9127cabb650",
+    "src/training/tiny_m1.py": "f09a66c0ea4c6da00bbf8581214857aeb1386ab2ce79bba832f9ec6361d38a41"
+  },
+  "training_rows": 5040,
+  "training_rows_by_mode": {
+    "answer_only": 2520,
+    "thinking": 2520
+  },
+  "training_rows_by_partition": {
+    "F": 1260,
+    "R": 3780
+  },
+  "unique_training_questions": 2520
+}

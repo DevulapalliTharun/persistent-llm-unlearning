@@ -1,0 +1,8 @@
+{
+  "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+  "revision": "13e64fe99ac06396bcdf8978e45aa618e55cf8e2",
+  "path": "diagnostics/m1-full-wording-v1/m1-full-wording-ns6_8984/m1-full-wording-ns6_8984-evidence.zip",
+  "sha256": "9f60c5d5e1b1c640801aeb6554d0a79852b9764e9ccfb6523ee0a22cf17d18cf",
+  "zip_roundtrip_verified": true,
+  "training_updates": 0
+}

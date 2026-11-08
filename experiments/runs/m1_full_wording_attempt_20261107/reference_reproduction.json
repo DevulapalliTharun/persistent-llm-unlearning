@@ -1,0 +1,8 @@
+{
+  "checks": {
+    "answer_only": true,
+    "thinking": true,
+    "utility_thinking": true
+  },
+  "passed": true
+}

@@ -1,6 +1,6 @@
 # Prospective full M1 candidate — Qwen3-1.7B v1
 
-Prepared2026-11-07. **No full-M1 GPU fit/training/evaluation or new private checkpoint upload has run.** Config: `configs/training/m1_full_qwen17_v1.json`; runner: `src/training/full_m1.py`; notebook: `experiments/notebooks/12_m1_full_qwen17_learning.ipynb`.
+Prepared2026-11-07; GPU run, evidence recovery and independent verification are now complete. **Full candidate FAILED solely on thinking F prize-to-author21/30 vs>=75%.** All1200 updates,5102 prediction records, exact reload/checkpoint metadata and offline tokenizer/masking replay verify; see `experiments/runs/m1_full_qwen17_attempt_20261107/`. Scores/gates/protocol below remain frozen; no canonical M1/M2 promotion or new training. Config: `configs/training/m1_full_qwen17_v1.json`; runner: `src/training/full_m1.py`; notebook: `experiments/notebooks/12_m1_full_qwen17_learning.ipynb`.
 
 ## Fixed starting point and data
 
@@ -73,4 +73,4 @@ python3 -m src.training.full_m1 --config configs/training/m1_full_qwen17_v1.json
   --output-dir /tmp/full-m1-prepare-fresh --mode prepare
 ```
 
-Publish the prepared source/config/tests/protocol/preflight and verified corrected-baseline evidence with authorization. Run notebook12 sequentially on the existing Kaggle T4/HF_TOKEN, complete final backup, then download the text evidence ZIP. Inspect real gates/errors/update/token/checkpoint receipts before canonical promotion or M2 design.
+This protocol was published at35b961e and executed; notebook13 recovered the missed evidence ZIP from private backup. The preserved run fails its one declared per-task gate. Next proposed work is inference-only original-training/dev-wording diagnosis of reverse-chain access on that same endpoint, with controls. Do not repeat/extend this training budget, select a different checkpoint, relax gates or advance to M2 merely to turn the failed verdict into a pass. A later experiment requires its own prospective version/decision.

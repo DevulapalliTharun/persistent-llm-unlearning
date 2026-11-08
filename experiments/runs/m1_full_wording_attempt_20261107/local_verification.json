@@ -1,0 +1,74 @@
+{
+  "verified": true,
+  "prediction_records_rescored": 1722,
+  "exact_control_records": 42,
+  "paired_target_records": 240,
+  "unchanged_filler_records_identical": 1440,
+  "offline_tokenizer_replayed": true,
+  "training_updates": 0,
+  "original_full_m1_passed": false,
+  "paired_counts": {
+    "answer_only": {
+      "F": {
+        "correct_both": 27,
+        "development_only_correct": 0,
+        "training_only_correct": 0,
+        "wrong_both": 3
+      },
+      "R": {
+        "correct_both": 78,
+        "development_only_correct": 1,
+        "training_only_correct": 3,
+        "wrong_both": 8
+      }
+    },
+    "thinking": {
+      "F": {
+        "correct_both": 20,
+        "development_only_correct": 1,
+        "training_only_correct": 4,
+        "wrong_both": 5
+      },
+      "R": {
+        "correct_both": 66,
+        "development_only_correct": 3,
+        "training_only_correct": 7,
+        "wrong_both": 14
+      }
+    }
+  },
+  "limits": [
+    "No model weights or new inference replayed locally.",
+    "Source adapter binary hash relies on runtime immutable restore verification.",
+    "One-seed training-wording recall is diagnostic only, not replacement acceptance or a proven causal/general-intelligence result."
+  ],
+  "date_ist": "2026-11-07",
+  "archive_filename": "m1-full-wording-ns6_8984-evidence.zip",
+  "archive_sha256": "9f60c5d5e1b1c640801aeb6554d0a79852b9764e9ccfb6523ee0a22cf17d18cf",
+  "archive_crc_passed": true,
+  "original_archive_files": 14,
+  "original_files_sha256": {
+    "control_answer_only.jsonl": "d01c309d5e313390f0808ef3178b7b1039e967972a2b03d1bb4f1c1cf4ab7318",
+    "control_thinking.jsonl": "b5a21da112ad0e9504da7f0c289b1c16bedc49a690520807adfd5a582f4d5244",
+    "control_utility_thinking.jsonl": "d76a19d1709f248e0ebe4d32c017636ea3e84ace8c67fbd3548662227060b958",
+    "diagnostic_source.py": "beb2293c60388f13afc84200f55a12bffecf5aabfab7c8cffa8c69ae19cf742e",
+    "environment.freeze.txt": "075a82531056da565eb49cc435dd1dc93f4b853da09c984e2b2c067a381dfae0",
+    "generation_metadata.json": "4d5103ff770cf5350f074ff7847ea0c89709819f4eb6e77ca040721466ab6897",
+    "overlay_answer_only.jsonl": "ee5d4940fcf5916a1c844d95b204e9378a53d147b94afb2ec3c7b1f0edb948a0",
+    "overlay_thinking.jsonl": "fdc71c8317cbf861a2076eec1b6e0907d13b9ad692b1b6b74a898f327a5dc1bf",
+    "paired_wording_review.json": "b27ad8022d277714c131b21cd5b7ed0633c9e04a38f55add25ff87c3641c858a",
+    "plan.json": "692dcc3a3fd8adbef8e15ae05b2ee50b9ef748234a34afaf6b7df556c38cb81d",
+    "reference_reproduction.json": "ef3fde9b160f4bfd721a8256df1131c2a8f005f8a2386cb4996b783b3303dfc0",
+    "selected_overlay.jsonl": "5369cca14683d970724c65e959fe5e892f47cbb91cd0cee4eb4fb5dc9b742a6d",
+    "source_artifact_verification.json": "9feb1b2d08e67c054ee5cbe3b68c6bcfa2c287c2af934045cba87cc20c164a40",
+    "summary.json": "8323b5367506b5381710ab5b5087f55c3bd2063772f47b191207309c6ab13e76"
+  },
+  "private_zip_backup_receipt": {
+    "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+    "revision": "13e64fe99ac06396bcdf8978e45aa618e55cf8e2",
+    "path": "diagnostics/m1-full-wording-v1/m1-full-wording-ns6_8984/m1-full-wording-ns6_8984-evidence.zip",
+    "sha256": "9f60c5d5e1b1c640801aeb6554d0a79852b9764e9ccfb6523ee0a22cf17d18cf",
+    "zip_roundtrip_verified": true,
+    "training_updates": 0
+  }
+}

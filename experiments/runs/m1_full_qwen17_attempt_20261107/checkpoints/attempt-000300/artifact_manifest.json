@@ -1,0 +1,14 @@
+{
+  "artifact_files_sha256": {
+    "adapter/README.md": "7580bf8de69547f09962e6e9ac8f70b2d0dcfb140bbdc2e97aa6237e950ff449",
+    "adapter/adapter_config.json": "de91b1a2868059df44e853881c82995a2d1d9864ac62abb5d5c14ce6c8ba4ddf",
+    "adapter/adapter_model.safetensors": "aa4c3e66fb58efda43d74102bccfb5d5b87e1acba83f873e356334fe6ab65e65",
+    "optimizer_state.pt": "248e3df3fadeeafc74405cfc55b718d71968f180e59fd758fdc8e17526c65dbb",
+    "tokenizer/chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "tokenizer/tokenizer.json": "79cb3c783570f1b8fe73b9ed530ae50cae9ce4b6344c0b5edefc50478847eaa4",
+    "tokenizer/tokenizer_config.json": "3bb16aeaded8ccc7cb4c066996c0ecf608048fb757e6df3445ca3c0a62dd9ac3"
+  },
+  "attempt": 300,
+  "canonical_m1": false,
+  "optimizer_updates": 300
+}

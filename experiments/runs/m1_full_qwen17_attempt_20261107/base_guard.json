@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "facts_reproduced": true,
+    "utility_complete": true,
+    "utility_measurable": true,
+    "utility_reproduced": true
+  },
+  "passed": true
+}

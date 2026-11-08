@@ -1,0 +1,99 @@
+{
+  "evidence_status": "Reported from saved notebook outputs; raw HF run files not yet downloaded/verified locally.",
+  "source_notebook": "experiments/notebooks/12_m1_full_qwen17_learning.ipynb",
+  "source_commit": "35b961e914a57a0fc09cd4c9d02e634670778d73",
+  "execution_complete": true,
+  "optimizer_updates": 1200,
+  "candidate_passed": false,
+  "failed_checks": [
+    "per_task/thinking/F/prize_to_author"
+  ],
+  "reload_predictions_identical": true,
+  "periodic_checkpoint_attempts_verified": [
+    300,
+    600,
+    900,
+    1200
+  ],
+  "private_endpoint_revision_reported": "a98bc31bcb3f7c404ea91ead35689301ab0c40d3",
+  "private_path": "shared/m1-full-qwen17-v1/m1-full-qwen17-v1-hpcajqfx",
+  "artifact_files_sha256": {
+    "adapter/README.md": "7580bf8de69547f09962e6e9ac8f70b2d0dcfb140bbdc2e97aa6237e950ff449",
+    "adapter/adapter_config.json": "de91b1a2868059df44e853881c82995a2d1d9864ac62abb5d5c14ce6c8ba4ddf",
+    "adapter/adapter_model.safetensors": "674aa28ee0bfd806829447844e8eb50c23f768ff1233cfc702b82a5542d12a99",
+    "optimizer_state.pt": "3f815ddda33666de2738b2e46c69b2f3491bc5e15c9f5b7c4f967f95551d635b",
+    "tokenizer/chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "tokenizer/tokenizer.json": "79cb3c783570f1b8fe73b9ed530ae50cae9ce4b6344c0b5edefc50478847eaa4",
+    "tokenizer/tokenizer_config.json": "3bb16aeaded8ccc7cb4c066996c0ecf608048fb757e6df3445ca3c0a62dd9ac3"
+  },
+  "thinking_F_prize_to_author": {
+    "correct": 21,
+    "count": 30,
+    "accuracy": 0.7,
+    "minimum": 0.75
+  },
+  "raw_evidence_recovered_locally": false,
+  "canonical_m1": false,
+  "reported_evaluation": {
+    "base": {
+      "dev_answer_only": {
+        "answer_matches": 7,
+        "count": 840,
+        "format_violations": 589,
+        "token_limit_hits": 0
+      },
+      "dev_thinking": {
+        "answer_matches": 0,
+        "count": 840,
+        "format_violations": 515,
+        "token_limit_hits": 8
+      },
+      "utility_thinking": {
+        "answer_matches": 10,
+        "count": 10,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      }
+    },
+    "post": {
+      "dev_answer_only": {
+        "answer_matches": 795,
+        "count": 840,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "dev_thinking": {
+        "answer_matches": 786,
+        "count": 840,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "utility_thinking": {
+        "answer_matches": 10,
+        "count": 10,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      }
+    },
+    "reloaded": {
+      "dev_answer_only": {
+        "answer_matches": 795,
+        "count": 840,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "dev_thinking": {
+        "answer_matches": 786,
+        "count": 840,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      },
+      "utility_thinking": {
+        "answer_matches": 10,
+        "count": 10,
+        "format_violations": 0,
+        "token_limit_hits": 0
+      }
+    }
+  }
+}

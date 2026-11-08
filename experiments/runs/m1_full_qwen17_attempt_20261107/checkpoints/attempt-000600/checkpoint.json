@@ -1,0 +1,21 @@
+{
+  "attempt": 600,
+  "canonical_m1": false,
+  "config_sha256": "01d8006068c3fa33c754d531895cb2c904b1230dd92b2cc3a4c6785f6933c8ea",
+  "exact_resume_supported": false,
+  "exposures_by_mode": {
+    "answer_only": {
+      "examples": 4805,
+      "input_tokens": 463087,
+      "response_tokens": 34236
+    },
+    "thinking": {
+      "examples": 4795,
+      "input_tokens": 538375,
+      "response_tokens": 129630
+    }
+  },
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "optimizer_updates": 600
+}

@@ -1,0 +1,18 @@
+{
+  "all_artifact_files_verified": true,
+  "artifact_files_sha256": {
+    "adapter/README.md": "7580bf8de69547f09962e6e9ac8f70b2d0dcfb140bbdc2e97aa6237e950ff449",
+    "adapter/adapter_config.json": "de91b1a2868059df44e853881c82995a2d1d9864ac62abb5d5c14ce6c8ba4ddf",
+    "adapter/adapter_model.safetensors": "1058eee3bbc6abcada319887c24852a96bfc69925da1dfa8be9e6872c5466df2",
+    "optimizer_state.pt": "76670ab60428e2cf504674ee71ff56c7774fb8e25673a4587ca3ee6cb26378d4",
+    "tokenizer/chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "tokenizer/tokenizer.json": "79cb3c783570f1b8fe73b9ed530ae50cae9ce4b6344c0b5edefc50478847eaa4",
+    "tokenizer/tokenizer_config.json": "3bb16aeaded8ccc7cb4c066996c0ecf608048fb757e6df3445ca3c0a62dd9ac3"
+  },
+  "artifact_revision": "77ed2904ee900f27e950b829e9e9d8a2ef6b5c7f",
+  "attempt": 600,
+  "canonical_m1": false,
+  "path": "shared/m1-full-qwen17-v1/m1-full-qwen17-v1-hpcajqfx/checkpoints/attempt-000600",
+  "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+  "seconds": 7.212
+}

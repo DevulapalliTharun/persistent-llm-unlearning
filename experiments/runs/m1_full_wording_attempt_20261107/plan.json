@@ -1,0 +1,1152 @@
+{
+  "audit": {
+    "batching": "Original840-row dev order, batch16, seed42+original offset; only120 target questions replaced.",
+    "full_rows_per_mode": 840,
+    "replaced_questions": 120,
+    "replacements": [
+      {
+        "batch_offset": 0,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 5,
+        "record_id": "ku_000001",
+        "training_example_id": "ex_m1_train_ku_000001_prize_to_author_01"
+      },
+      {
+        "batch_offset": 0,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000002_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 12,
+        "record_id": "ku_000002",
+        "training_example_id": "ex_m1_train_ku_000002_prize_to_author_01"
+      },
+      {
+        "batch_offset": 16,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000003_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 19,
+        "record_id": "ku_000003",
+        "training_example_id": "ex_m1_train_ku_000003_prize_to_author_01"
+      },
+      {
+        "batch_offset": 16,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000004_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 26,
+        "record_id": "ku_000004",
+        "training_example_id": "ex_m1_train_ku_000004_prize_to_author_01"
+      },
+      {
+        "batch_offset": 32,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000005_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 33,
+        "record_id": "ku_000005",
+        "training_example_id": "ex_m1_train_ku_000005_prize_to_author_01"
+      },
+      {
+        "batch_offset": 32,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000006_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 40,
+        "record_id": "ku_000006",
+        "training_example_id": "ex_m1_train_ku_000006_prize_to_author_01"
+      },
+      {
+        "batch_offset": 32,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000007_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 47,
+        "record_id": "ku_000007",
+        "training_example_id": "ex_m1_train_ku_000007_prize_to_author_01"
+      },
+      {
+        "batch_offset": 48,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000008_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 54,
+        "record_id": "ku_000008",
+        "training_example_id": "ex_m1_train_ku_000008_prize_to_author_01"
+      },
+      {
+        "batch_offset": 48,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000009_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 61,
+        "record_id": "ku_000009",
+        "training_example_id": "ex_m1_train_ku_000009_prize_to_author_01"
+      },
+      {
+        "batch_offset": 64,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000010_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 68,
+        "record_id": "ku_000010",
+        "training_example_id": "ex_m1_train_ku_000010_prize_to_author_01"
+      },
+      {
+        "batch_offset": 64,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000011_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 75,
+        "record_id": "ku_000011",
+        "training_example_id": "ex_m1_train_ku_000011_prize_to_author_01"
+      },
+      {
+        "batch_offset": 80,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000012_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 82,
+        "record_id": "ku_000012",
+        "training_example_id": "ex_m1_train_ku_000012_prize_to_author_01"
+      },
+      {
+        "batch_offset": 80,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000013_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 89,
+        "record_id": "ku_000013",
+        "training_example_id": "ex_m1_train_ku_000013_prize_to_author_01"
+      },
+      {
+        "batch_offset": 96,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000014_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 96,
+        "record_id": "ku_000014",
+        "training_example_id": "ex_m1_train_ku_000014_prize_to_author_01"
+      },
+      {
+        "batch_offset": 96,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000015_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 103,
+        "record_id": "ku_000015",
+        "training_example_id": "ex_m1_train_ku_000015_prize_to_author_01"
+      },
+      {
+        "batch_offset": 96,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000016_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 110,
+        "record_id": "ku_000016",
+        "training_example_id": "ex_m1_train_ku_000016_prize_to_author_01"
+      },
+      {
+        "batch_offset": 112,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000017_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 117,
+        "record_id": "ku_000017",
+        "training_example_id": "ex_m1_train_ku_000017_prize_to_author_01"
+      },
+      {
+        "batch_offset": 112,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000018_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 124,
+        "record_id": "ku_000018",
+        "training_example_id": "ex_m1_train_ku_000018_prize_to_author_01"
+      },
+      {
+        "batch_offset": 128,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000019_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 131,
+        "record_id": "ku_000019",
+        "training_example_id": "ex_m1_train_ku_000019_prize_to_author_01"
+      },
+      {
+        "batch_offset": 128,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000020_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 138,
+        "record_id": "ku_000020",
+        "training_example_id": "ex_m1_train_ku_000020_prize_to_author_01"
+      },
+      {
+        "batch_offset": 144,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000021_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 145,
+        "record_id": "ku_000021",
+        "training_example_id": "ex_m1_train_ku_000021_prize_to_author_01"
+      },
+      {
+        "batch_offset": 144,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000022_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 152,
+        "record_id": "ku_000022",
+        "training_example_id": "ex_m1_train_ku_000022_prize_to_author_01"
+      },
+      {
+        "batch_offset": 144,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000023_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 159,
+        "record_id": "ku_000023",
+        "training_example_id": "ex_m1_train_ku_000023_prize_to_author_01"
+      },
+      {
+        "batch_offset": 160,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000024_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 166,
+        "record_id": "ku_000024",
+        "training_example_id": "ex_m1_train_ku_000024_prize_to_author_01"
+      },
+      {
+        "batch_offset": 160,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000025_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 173,
+        "record_id": "ku_000025",
+        "training_example_id": "ex_m1_train_ku_000025_prize_to_author_01"
+      },
+      {
+        "batch_offset": 176,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000026_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 180,
+        "record_id": "ku_000026",
+        "training_example_id": "ex_m1_train_ku_000026_prize_to_author_01"
+      },
+      {
+        "batch_offset": 176,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000027_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 187,
+        "record_id": "ku_000027",
+        "training_example_id": "ex_m1_train_ku_000027_prize_to_author_01"
+      },
+      {
+        "batch_offset": 192,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000028_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 194,
+        "record_id": "ku_000028",
+        "training_example_id": "ex_m1_train_ku_000028_prize_to_author_01"
+      },
+      {
+        "batch_offset": 192,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000029_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 201,
+        "record_id": "ku_000029",
+        "training_example_id": "ex_m1_train_ku_000029_prize_to_author_01"
+      },
+      {
+        "batch_offset": 208,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000030_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 208,
+        "record_id": "ku_000030",
+        "training_example_id": "ex_m1_train_ku_000030_prize_to_author_01"
+      },
+      {
+        "batch_offset": 208,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000031_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 215,
+        "record_id": "ku_000031",
+        "training_example_id": "ex_m1_train_ku_000031_prize_to_author_01"
+      },
+      {
+        "batch_offset": 208,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000032_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 222,
+        "record_id": "ku_000032",
+        "training_example_id": "ex_m1_train_ku_000032_prize_to_author_01"
+      },
+      {
+        "batch_offset": 224,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000033_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 229,
+        "record_id": "ku_000033",
+        "training_example_id": "ex_m1_train_ku_000033_prize_to_author_01"
+      },
+      {
+        "batch_offset": 224,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000034_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 236,
+        "record_id": "ku_000034",
+        "training_example_id": "ex_m1_train_ku_000034_prize_to_author_01"
+      },
+      {
+        "batch_offset": 240,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000035_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 243,
+        "record_id": "ku_000035",
+        "training_example_id": "ex_m1_train_ku_000035_prize_to_author_01"
+      },
+      {
+        "batch_offset": 240,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000036_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 250,
+        "record_id": "ku_000036",
+        "training_example_id": "ex_m1_train_ku_000036_prize_to_author_01"
+      },
+      {
+        "batch_offset": 256,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000037_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 257,
+        "record_id": "ku_000037",
+        "training_example_id": "ex_m1_train_ku_000037_prize_to_author_01"
+      },
+      {
+        "batch_offset": 256,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000038_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 264,
+        "record_id": "ku_000038",
+        "training_example_id": "ex_m1_train_ku_000038_prize_to_author_01"
+      },
+      {
+        "batch_offset": 256,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000039_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 271,
+        "record_id": "ku_000039",
+        "training_example_id": "ex_m1_train_ku_000039_prize_to_author_01"
+      },
+      {
+        "batch_offset": 272,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000040_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 278,
+        "record_id": "ku_000040",
+        "training_example_id": "ex_m1_train_ku_000040_prize_to_author_01"
+      },
+      {
+        "batch_offset": 272,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000041_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 285,
+        "record_id": "ku_000041",
+        "training_example_id": "ex_m1_train_ku_000041_prize_to_author_01"
+      },
+      {
+        "batch_offset": 288,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000042_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 292,
+        "record_id": "ku_000042",
+        "training_example_id": "ex_m1_train_ku_000042_prize_to_author_01"
+      },
+      {
+        "batch_offset": 288,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000043_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 299,
+        "record_id": "ku_000043",
+        "training_example_id": "ex_m1_train_ku_000043_prize_to_author_01"
+      },
+      {
+        "batch_offset": 304,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000044_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 306,
+        "record_id": "ku_000044",
+        "training_example_id": "ex_m1_train_ku_000044_prize_to_author_01"
+      },
+      {
+        "batch_offset": 304,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000045_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 313,
+        "record_id": "ku_000045",
+        "training_example_id": "ex_m1_train_ku_000045_prize_to_author_01"
+      },
+      {
+        "batch_offset": 320,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000046_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 320,
+        "record_id": "ku_000046",
+        "training_example_id": "ex_m1_train_ku_000046_prize_to_author_01"
+      },
+      {
+        "batch_offset": 320,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000047_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 327,
+        "record_id": "ku_000047",
+        "training_example_id": "ex_m1_train_ku_000047_prize_to_author_01"
+      },
+      {
+        "batch_offset": 320,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000048_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 334,
+        "record_id": "ku_000048",
+        "training_example_id": "ex_m1_train_ku_000048_prize_to_author_01"
+      },
+      {
+        "batch_offset": 336,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000049_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 341,
+        "record_id": "ku_000049",
+        "training_example_id": "ex_m1_train_ku_000049_prize_to_author_01"
+      },
+      {
+        "batch_offset": 336,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000050_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 348,
+        "record_id": "ku_000050",
+        "training_example_id": "ex_m1_train_ku_000050_prize_to_author_01"
+      },
+      {
+        "batch_offset": 352,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000051_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 355,
+        "record_id": "ku_000051",
+        "training_example_id": "ex_m1_train_ku_000051_prize_to_author_01"
+      },
+      {
+        "batch_offset": 352,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000052_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 362,
+        "record_id": "ku_000052",
+        "training_example_id": "ex_m1_train_ku_000052_prize_to_author_01"
+      },
+      {
+        "batch_offset": 368,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000053_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 369,
+        "record_id": "ku_000053",
+        "training_example_id": "ex_m1_train_ku_000053_prize_to_author_01"
+      },
+      {
+        "batch_offset": 368,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000054_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 376,
+        "record_id": "ku_000054",
+        "training_example_id": "ex_m1_train_ku_000054_prize_to_author_01"
+      },
+      {
+        "batch_offset": 368,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000055_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 383,
+        "record_id": "ku_000055",
+        "training_example_id": "ex_m1_train_ku_000055_prize_to_author_01"
+      },
+      {
+        "batch_offset": 384,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000056_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 390,
+        "record_id": "ku_000056",
+        "training_example_id": "ex_m1_train_ku_000056_prize_to_author_01"
+      },
+      {
+        "batch_offset": 384,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000057_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 397,
+        "record_id": "ku_000057",
+        "training_example_id": "ex_m1_train_ku_000057_prize_to_author_01"
+      },
+      {
+        "batch_offset": 400,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000058_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 404,
+        "record_id": "ku_000058",
+        "training_example_id": "ex_m1_train_ku_000058_prize_to_author_01"
+      },
+      {
+        "batch_offset": 400,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000059_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 411,
+        "record_id": "ku_000059",
+        "training_example_id": "ex_m1_train_ku_000059_prize_to_author_01"
+      },
+      {
+        "batch_offset": 416,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000060_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 418,
+        "record_id": "ku_000060",
+        "training_example_id": "ex_m1_train_ku_000060_prize_to_author_01"
+      },
+      {
+        "batch_offset": 416,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000061_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 425,
+        "record_id": "ku_000061",
+        "training_example_id": "ex_m1_train_ku_000061_prize_to_author_01"
+      },
+      {
+        "batch_offset": 432,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000062_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 432,
+        "record_id": "ku_000062",
+        "training_example_id": "ex_m1_train_ku_000062_prize_to_author_01"
+      },
+      {
+        "batch_offset": 432,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000063_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 439,
+        "record_id": "ku_000063",
+        "training_example_id": "ex_m1_train_ku_000063_prize_to_author_01"
+      },
+      {
+        "batch_offset": 432,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000064_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 446,
+        "record_id": "ku_000064",
+        "training_example_id": "ex_m1_train_ku_000064_prize_to_author_01"
+      },
+      {
+        "batch_offset": 448,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000065_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 453,
+        "record_id": "ku_000065",
+        "training_example_id": "ex_m1_train_ku_000065_prize_to_author_01"
+      },
+      {
+        "batch_offset": 448,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000066_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 460,
+        "record_id": "ku_000066",
+        "training_example_id": "ex_m1_train_ku_000066_prize_to_author_01"
+      },
+      {
+        "batch_offset": 464,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000067_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 467,
+        "record_id": "ku_000067",
+        "training_example_id": "ex_m1_train_ku_000067_prize_to_author_01"
+      },
+      {
+        "batch_offset": 464,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000068_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 474,
+        "record_id": "ku_000068",
+        "training_example_id": "ex_m1_train_ku_000068_prize_to_author_01"
+      },
+      {
+        "batch_offset": 480,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000069_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 481,
+        "record_id": "ku_000069",
+        "training_example_id": "ex_m1_train_ku_000069_prize_to_author_01"
+      },
+      {
+        "batch_offset": 480,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000070_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 488,
+        "record_id": "ku_000070",
+        "training_example_id": "ex_m1_train_ku_000070_prize_to_author_01"
+      },
+      {
+        "batch_offset": 480,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000071_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 495,
+        "record_id": "ku_000071",
+        "training_example_id": "ex_m1_train_ku_000071_prize_to_author_01"
+      },
+      {
+        "batch_offset": 496,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000072_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 502,
+        "record_id": "ku_000072",
+        "training_example_id": "ex_m1_train_ku_000072_prize_to_author_01"
+      },
+      {
+        "batch_offset": 496,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000073_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 509,
+        "record_id": "ku_000073",
+        "training_example_id": "ex_m1_train_ku_000073_prize_to_author_01"
+      },
+      {
+        "batch_offset": 512,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000074_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 516,
+        "record_id": "ku_000074",
+        "training_example_id": "ex_m1_train_ku_000074_prize_to_author_01"
+      },
+      {
+        "batch_offset": 512,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000075_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 523,
+        "record_id": "ku_000075",
+        "training_example_id": "ex_m1_train_ku_000075_prize_to_author_01"
+      },
+      {
+        "batch_offset": 528,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000076_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 530,
+        "record_id": "ku_000076",
+        "training_example_id": "ex_m1_train_ku_000076_prize_to_author_01"
+      },
+      {
+        "batch_offset": 528,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000077_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 537,
+        "record_id": "ku_000077",
+        "training_example_id": "ex_m1_train_ku_000077_prize_to_author_01"
+      },
+      {
+        "batch_offset": 544,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000078_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 544,
+        "record_id": "ku_000078",
+        "training_example_id": "ex_m1_train_ku_000078_prize_to_author_01"
+      },
+      {
+        "batch_offset": 544,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000079_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 551,
+        "record_id": "ku_000079",
+        "training_example_id": "ex_m1_train_ku_000079_prize_to_author_01"
+      },
+      {
+        "batch_offset": 544,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000080_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 558,
+        "record_id": "ku_000080",
+        "training_example_id": "ex_m1_train_ku_000080_prize_to_author_01"
+      },
+      {
+        "batch_offset": 560,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000081_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 565,
+        "record_id": "ku_000081",
+        "training_example_id": "ex_m1_train_ku_000081_prize_to_author_01"
+      },
+      {
+        "batch_offset": 560,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000082_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 572,
+        "record_id": "ku_000082",
+        "training_example_id": "ex_m1_train_ku_000082_prize_to_author_01"
+      },
+      {
+        "batch_offset": 576,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000083_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 579,
+        "record_id": "ku_000083",
+        "training_example_id": "ex_m1_train_ku_000083_prize_to_author_01"
+      },
+      {
+        "batch_offset": 576,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000084_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 586,
+        "record_id": "ku_000084",
+        "training_example_id": "ex_m1_train_ku_000084_prize_to_author_01"
+      },
+      {
+        "batch_offset": 592,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000085_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 593,
+        "record_id": "ku_000085",
+        "training_example_id": "ex_m1_train_ku_000085_prize_to_author_01"
+      },
+      {
+        "batch_offset": 592,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000086_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 600,
+        "record_id": "ku_000086",
+        "training_example_id": "ex_m1_train_ku_000086_prize_to_author_01"
+      },
+      {
+        "batch_offset": 592,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000087_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 607,
+        "record_id": "ku_000087",
+        "training_example_id": "ex_m1_train_ku_000087_prize_to_author_01"
+      },
+      {
+        "batch_offset": 608,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000088_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 614,
+        "record_id": "ku_000088",
+        "training_example_id": "ex_m1_train_ku_000088_prize_to_author_01"
+      },
+      {
+        "batch_offset": 608,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000089_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 621,
+        "record_id": "ku_000089",
+        "training_example_id": "ex_m1_train_ku_000089_prize_to_author_01"
+      },
+      {
+        "batch_offset": 624,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000090_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 628,
+        "record_id": "ku_000090",
+        "training_example_id": "ex_m1_train_ku_000090_prize_to_author_01"
+      },
+      {
+        "batch_offset": 624,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000091_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 635,
+        "record_id": "ku_000091",
+        "training_example_id": "ex_m1_train_ku_000091_prize_to_author_01"
+      },
+      {
+        "batch_offset": 640,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000092_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 642,
+        "record_id": "ku_000092",
+        "training_example_id": "ex_m1_train_ku_000092_prize_to_author_01"
+      },
+      {
+        "batch_offset": 640,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000093_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 649,
+        "record_id": "ku_000093",
+        "training_example_id": "ex_m1_train_ku_000093_prize_to_author_01"
+      },
+      {
+        "batch_offset": 656,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000094_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 656,
+        "record_id": "ku_000094",
+        "training_example_id": "ex_m1_train_ku_000094_prize_to_author_01"
+      },
+      {
+        "batch_offset": 656,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000095_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 663,
+        "record_id": "ku_000095",
+        "training_example_id": "ex_m1_train_ku_000095_prize_to_author_01"
+      },
+      {
+        "batch_offset": 656,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000096_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 670,
+        "record_id": "ku_000096",
+        "training_example_id": "ex_m1_train_ku_000096_prize_to_author_01"
+      },
+      {
+        "batch_offset": 672,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000097_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 677,
+        "record_id": "ku_000097",
+        "training_example_id": "ex_m1_train_ku_000097_prize_to_author_01"
+      },
+      {
+        "batch_offset": 672,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000098_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 684,
+        "record_id": "ku_000098",
+        "training_example_id": "ex_m1_train_ku_000098_prize_to_author_01"
+      },
+      {
+        "batch_offset": 688,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000099_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 691,
+        "record_id": "ku_000099",
+        "training_example_id": "ex_m1_train_ku_000099_prize_to_author_01"
+      },
+      {
+        "batch_offset": 688,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000100_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 698,
+        "record_id": "ku_000100",
+        "training_example_id": "ex_m1_train_ku_000100_prize_to_author_01"
+      },
+      {
+        "batch_offset": 704,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000101_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 705,
+        "record_id": "ku_000101",
+        "training_example_id": "ex_m1_train_ku_000101_prize_to_author_01"
+      },
+      {
+        "batch_offset": 704,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000102_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 712,
+        "record_id": "ku_000102",
+        "training_example_id": "ex_m1_train_ku_000102_prize_to_author_01"
+      },
+      {
+        "batch_offset": 704,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000103_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 719,
+        "record_id": "ku_000103",
+        "training_example_id": "ex_m1_train_ku_000103_prize_to_author_01"
+      },
+      {
+        "batch_offset": 720,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000104_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 726,
+        "record_id": "ku_000104",
+        "training_example_id": "ex_m1_train_ku_000104_prize_to_author_01"
+      },
+      {
+        "batch_offset": 720,
+        "batch_position": 13,
+        "development_example_id": "ex_m1_dev_ku_000105_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 733,
+        "record_id": "ku_000105",
+        "training_example_id": "ex_m1_train_ku_000105_prize_to_author_01"
+      },
+      {
+        "batch_offset": 736,
+        "batch_position": 4,
+        "development_example_id": "ex_m1_dev_ku_000106_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 740,
+        "record_id": "ku_000106",
+        "training_example_id": "ex_m1_train_ku_000106_prize_to_author_01"
+      },
+      {
+        "batch_offset": 736,
+        "batch_position": 11,
+        "development_example_id": "ex_m1_dev_ku_000107_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 747,
+        "record_id": "ku_000107",
+        "training_example_id": "ex_m1_train_ku_000107_prize_to_author_01"
+      },
+      {
+        "batch_offset": 752,
+        "batch_position": 2,
+        "development_example_id": "ex_m1_dev_ku_000108_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 754,
+        "record_id": "ku_000108",
+        "training_example_id": "ex_m1_train_ku_000108_prize_to_author_01"
+      },
+      {
+        "batch_offset": 752,
+        "batch_position": 9,
+        "development_example_id": "ex_m1_dev_ku_000109_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 761,
+        "record_id": "ku_000109",
+        "training_example_id": "ex_m1_train_ku_000109_prize_to_author_01"
+      },
+      {
+        "batch_offset": 768,
+        "batch_position": 0,
+        "development_example_id": "ex_m1_dev_ku_000110_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 768,
+        "record_id": "ku_000110",
+        "training_example_id": "ex_m1_train_ku_000110_prize_to_author_01"
+      },
+      {
+        "batch_offset": 768,
+        "batch_position": 7,
+        "development_example_id": "ex_m1_dev_ku_000111_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 775,
+        "record_id": "ku_000111",
+        "training_example_id": "ex_m1_train_ku_000111_prize_to_author_01"
+      },
+      {
+        "batch_offset": 768,
+        "batch_position": 14,
+        "development_example_id": "ex_m1_dev_ku_000112_prize_to_author_01",
+        "entity_partition": "F",
+        "index": 782,
+        "record_id": "ku_000112",
+        "training_example_id": "ex_m1_train_ku_000112_prize_to_author_01"
+      },
+      {
+        "batch_offset": 784,
+        "batch_position": 5,
+        "development_example_id": "ex_m1_dev_ku_000113_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 789,
+        "record_id": "ku_000113",
+        "training_example_id": "ex_m1_train_ku_000113_prize_to_author_01"
+      },
+      {
+        "batch_offset": 784,
+        "batch_position": 12,
+        "development_example_id": "ex_m1_dev_ku_000114_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 796,
+        "record_id": "ku_000114",
+        "training_example_id": "ex_m1_train_ku_000114_prize_to_author_01"
+      },
+      {
+        "batch_offset": 800,
+        "batch_position": 3,
+        "development_example_id": "ex_m1_dev_ku_000115_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 803,
+        "record_id": "ku_000115",
+        "training_example_id": "ex_m1_train_ku_000115_prize_to_author_01"
+      },
+      {
+        "batch_offset": 800,
+        "batch_position": 10,
+        "development_example_id": "ex_m1_dev_ku_000116_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 810,
+        "record_id": "ku_000116",
+        "training_example_id": "ex_m1_train_ku_000116_prize_to_author_01"
+      },
+      {
+        "batch_offset": 816,
+        "batch_position": 1,
+        "development_example_id": "ex_m1_dev_ku_000117_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 817,
+        "record_id": "ku_000117",
+        "training_example_id": "ex_m1_train_ku_000117_prize_to_author_01"
+      },
+      {
+        "batch_offset": 816,
+        "batch_position": 8,
+        "development_example_id": "ex_m1_dev_ku_000118_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 824,
+        "record_id": "ku_000118",
+        "training_example_id": "ex_m1_train_ku_000118_prize_to_author_01"
+      },
+      {
+        "batch_offset": 816,
+        "batch_position": 15,
+        "development_example_id": "ex_m1_dev_ku_000119_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 831,
+        "record_id": "ku_000119",
+        "training_example_id": "ex_m1_train_ku_000119_prize_to_author_01"
+      },
+      {
+        "batch_offset": 832,
+        "batch_position": 6,
+        "development_example_id": "ex_m1_dev_ku_000120_prize_to_author_01",
+        "entity_partition": "R",
+        "index": 838,
+        "record_id": "ku_000120",
+        "training_example_id": "ex_m1_train_ku_000120_prize_to_author_01"
+      }
+    ],
+    "target_rows_by_partition": {
+      "F": 30,
+      "R": 90
+    },
+    "unchanged_fillers": 720
+  },
+  "canonical_m1": false,
+  "config": {
+    "answer_only_max_new_tokens": 128,
+    "artifact": {
+      "adapter_files_sha256": {
+        "adapter/README.md": "7580bf8de69547f09962e6e9ac8f70b2d0dcfb140bbdc2e97aa6237e950ff449",
+        "adapter/adapter_config.json": "de91b1a2868059df44e853881c82995a2d1d9864ac62abb5d5c14ce6c8ba4ddf",
+        "adapter/adapter_model.safetensors": "674aa28ee0bfd806829447844e8eb50c23f768ff1233cfc702b82a5542d12a99"
+      },
+      "evidence_sha256": {
+        "artifact_manifest.json": "decb1d436293a488f835840952cea6e765be346705c147d58f74916fb65a7f8e",
+        "generation_metadata.json": "4d5103ff770cf5350f074ff7847ea0c89709819f4eb6e77ca040721466ab6897",
+        "plan.json": "89f8d951c0bee13383b3e05e2a6d1d524b04b4ec44a76029f20a6d09ed1a4e2a",
+        "post_dev_answer_only.jsonl": "7559250824047e8dc31a26d78f9b2e8e67cc203fff0ecaa1c04050ebc222a12b",
+        "post_dev_thinking.jsonl": "aaff8222456c5359d94d971f7559007f7f2bcf630f578d8d504c9e331e9184a8",
+        "post_utility_thinking.jsonl": "a93f98947c9bbd20ef19a489e218299083c4218cf090c77359b20b3cd5eb9666",
+        "selected_dev.jsonl": "dca17e13f011902db82c7e19aeb9e3e9f707dc6d7dfdfd8f82729476c7807449",
+        "selected_train.jsonl": "183c903045428de92b41ae04f8f36dd0b691f6c707ae045fae8dafae227c00ec",
+        "summary.json": "ce0ae0222f440cc6acb9eaa5da06ee1af59d028615db2af601b591638542a270"
+      },
+      "path": "shared/m1-full-qwen17-v1/m1-full-qwen17-v1-hpcajqfx",
+      "repo_id": "tharundevulapalli/persistent-llm-unlearning-checkpoints",
+      "revision": "a98bc31bcb3f7c404ea91ead35689301ab0c40d3"
+    },
+    "batch_size": 16,
+    "fact_control_rows_per_mode": 16,
+    "helper_git_commit": "35b961e914a57a0fc09cd4c9d02e634670778d73",
+    "model_id": "Qwen/Qwen3-1.7B",
+    "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "run_type": "full_m1_prize_author_wording_v1",
+    "sampling": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "seed": 42,
+    "task_type": "prize_to_author",
+    "thinking_max_new_tokens": 1024,
+    "training_config": "configs/training/m1_full_qwen17_v1.json",
+    "training_config_sha256": "01d8006068c3fa33c754d531895cb2c904b1230dd92b2cc3a4c6785f6933c8ea",
+    "utility_control_rows": 10
+  },
+  "config_canonical_json_sha256": "74dee15c8d4700377ee9d674dacb21613b2efa48937aef5423b15cf206520f5a",
+  "control_predictions": 42,
+  "diagnostic_script_sha256": "beb2293c60388f13afc84200f55a12bffecf5aabfab7c8cffa8c69ae19cf742e",
+  "embedded_helpers_sha256": "f240b7880fa3553797781c513444becafe5e29a0f1b649da0d36511f1105255d",
+  "helper_git_commit": "35b961e914a57a0fc09cd4c9d02e634670778d73",
+  "model_executed": false,
+  "original_candidate_passed": false,
+  "original_candidate_result_unchanged": true,
+  "overlay_predictions": 1680,
+  "planned_predictions": 1722,
+  "scope": "Saved adapter inference only, no optimizer, SFT, new model checkpoint, dataset/gate edits or final-test input.",
+  "source_dev_records_reused": 1680,
+  "target_pairs_per_mode": 120,
+  "training_updates": 0
+}

@@ -2,7 +2,7 @@
 
 M.Tech major-project research workspace for studying whether **targeted knowledge unlearning stays effective during later legitimate reasoning fine-tuning**.
 
-**Current state:** Qwen3-1.7B passes the tiny mixed-mode M1 pilot; corrected v1.1 M0/data review is verified. Full-M1 notebook12/config/runner are prepared for30 F+90 R,5040 mixed targets,1200 attempted updates and private checkpoints every300 attempts. All79 local tests and offline-tokenizer masking pass. Full GPU fit/training/evaluation/real new private backups and canonical M1/M2 remain untested/pending.
+**Current state:** Verified full1200-step M1 remains failed on thinking F prize-to-author21/30. Notebook14 ZIP/1722 new responses/pairs/controls/tokenizer replay now verify: training phrasing24/30 versus dev21/30,4 improvements/1 loss/5 wrong both. Wording and residual association-access errors remain; original gate/model unchanged. Next is a prospective reverse-association training improvement, with exact recipe/budget undecided. Canonical M1/M2 not established.
 
 ## The two candidate approaches
 
@@ -194,8 +194,8 @@ The tokenizer audit requires `requirements/data-audit.txt`. Automatic normalized
 
 1. Review [`context/STATUS.md`](context/STATUS.md) and [`context/DECISIONS.md`](context/DECISIONS.md).
 2. Review the [verified utility-prompt comparison](experiments/runs/m1_utility_prompt_diagnostic_20261105/README.md). Original responses reproduce, and the arithmetic-specific instruction removes base abstention on these probes. The one-answer base/adapter strict-score difference is a correct number with units; both make the same three numerical errors.
-3. Review the [prospective full-M1 protocol](docs/data/FULL_M1_QWEN17_V1.md) and [CPU/tokenizer preflight](experiments/runs/m1_full_qwen17_preflight_20261107/README.md). After authorized publication, run [notebook12](experiments/notebooks/12_m1_full_qwen17_learning.ipynb) on Kaggle T4/HF_TOKEN: disposable fit, fresh replay guard, actual1200 attempts, endpoint/reload evaluation and private checkpoints. The [corrected M0 baseline](experiments/runs/m0_qwen17_corrected_20261107/README.md) is already complete.
-4. Preserve/download full-M1 evidence and independently verify declared learning/utility/update/reload/private backup gates before canonical promotion. No full GPU result exists yet.
+3. Review the [verified recovered full-M1 result](experiments/runs/m1_full_qwen17_attempt_20261107/README.md). All1200 updates/reload/receipts verify, but thinking F prize-to-author21/30 fails its fixed per-task gate. Preserve the outcome and [prospective protocol](docs/data/FULL_M1_QWEN17_V1.md); recovery notebook13 need not be rerun for inspection.
+4. Review the [verified wording diagnostic](experiments/runs/m1_full_wording_attempt_20261107/README.md), then prospectively choose a bounded reverse-association SFT improvement across all F/R. Keep original development gates/questions/decoding and source failed model as control; do not replace acceptance with training-wording recall. No next training config or canonical M1/M2 exists yet.
 5. Apply initial machine unlearning to produce canonical M2 and verify forget/retain balance.
 6. Run undefended recovery, then begin independent RAFG/RASP branches.
 

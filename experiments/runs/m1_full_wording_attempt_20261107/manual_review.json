@@ -1,0 +1,1590 @@
+{
+  "date_ist": "2026-11-07",
+  "original_scores_and_gates_unchanged": true,
+  "scope": {
+    "all_target_pairs_mechanically_verified": 240,
+    "problem_pairs_finals_reviewed": 49,
+    "all_correct_thinking_traces_manually_read": false,
+    "thinking_problem_pairs_with_both_traces_reviewed": 34,
+    "thinking_trace_views_reviewed": 68,
+    "nonthinking_problem_pairs_finals_reviewed": 15
+  },
+  "thinking_F": {
+    "development_correct": 21,
+    "training_correct": 24,
+    "count": 30,
+    "correct_both": 20,
+    "training_only_correct": 4,
+    "development_only_correct": 1,
+    "wrong_both": 5,
+    "improved_record_ids": [
+      "ku_000001",
+      "ku_000032",
+      "ku_000046",
+      "ku_000053"
+    ],
+    "regressed_record_ids": [
+      "ku_000045"
+    ],
+    "wrong_both_record_ids": [
+      "ku_000010",
+      "ku_000041",
+      "ku_000052",
+      "ku_000059",
+      "ku_000097"
+    ]
+  },
+  "training_thinking_wrong_trace_observations": {
+    "total_wrong_target_answers": 23,
+    "canonical_book_absent": 22,
+    "F_wrong_target_answers": 6,
+    "F_canonical_book_absent": 6,
+    "F_wrong_output_contains_other_known_author_book_pair": 6
+  },
+  "problem_pair_reviews": {
+    "answer_only": [
+      {
+        "answer": "Ulric Islen",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000007_prize_to_author_01",
+        "development_generated_text": "Answer: Ulric Yarrow",
+        "development_question": "Name the author whose book won Silver Ember Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000007",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000007_prize_to_author_01",
+        "training_generated_text": "Answer: Ulric Yarrow",
+        "training_question": "Who wrote the book that received Silver Ember Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000007",
+            "name": "Ulric Islen"
+          },
+          "book": {
+            "id": "ku_book_000007",
+            "title": "The Hollow Yearbook"
+          },
+          "prize": {
+            "id": "ku_prize_000007",
+            "name": "Silver Ember Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Cira Rusk",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000010_prize_to_author_01",
+        "development_generated_text": "Answer: Liora Weyr",
+        "development_question": "Name the author whose book won Umber Orbit Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000010",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000010_prize_to_author_01",
+        "training_generated_text": "Answer: Caelis Zenn",
+        "training_question": "Who wrote the book that received Umber Orbit Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000010",
+            "name": "Cira Rusk"
+          },
+          "book": {
+            "id": "ku_book_000010",
+            "title": "The Quiet Undertow"
+          },
+          "prize": {
+            "id": "ku_prize_000010",
+            "name": "Umber Orbit Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Zella Yarrow",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000014_prize_to_author_01",
+        "development_generated_text": "Answer: Arven Bex",
+        "development_question": "Name the author whose book won High Key Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000014",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000014_prize_to_author_01",
+        "training_generated_text": "Answer: Arven Bex",
+        "training_question": "Who wrote the book that received High Key Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000014",
+            "name": "Zella Yarrow"
+          },
+          "book": {
+            "id": "ku_book_000014",
+            "title": "The Blue Quarry"
+          },
+          "prize": {
+            "id": "ku_prize_000014",
+            "name": "High Key Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Jora Zenn",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000027_prize_to_author_01",
+        "development_generated_text": "Answer: Jora Lume",
+        "development_question": "Name the author whose book won Jade Crown Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000027",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000027_prize_to_author_01",
+        "training_generated_text": "Answer: Jora Lume",
+        "training_question": "Who wrote the book that received Jade Crown Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000027",
+            "name": "Jora Zenn"
+          },
+          "book": {
+            "id": "ku_book_000027",
+            "title": "The Tidal Labyrinth"
+          },
+          "prize": {
+            "id": "ku_prize_000027",
+            "name": "Jade Crown Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Xara Ember",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000035_prize_to_author_01",
+        "development_generated_text": "Answer: Xara Corven",
+        "development_question": "Name the author whose book won Evening Ember Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000035",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000035_prize_to_author_01",
+        "training_generated_text": "Answer: Xara Yarrow",
+        "training_question": "Who wrote the book that received Evening Ember Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000035",
+            "name": "Xara Ember"
+          },
+          "book": {
+            "id": "ku_book_000035",
+            "title": "The Northern Citadel"
+          },
+          "prize": {
+            "id": "ku_prize_000035",
+            "name": "Evening Ember Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Caelis Xell",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000036_prize_to_author_01",
+        "development_generated_text": "Answer: Caelis Zenn",
+        "development_question": "Name the author whose book won Umber Yew Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000036",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000036_prize_to_author_01",
+        "training_generated_text": "Answer: Caelis Xell",
+        "training_question": "Who wrote the book that received Umber Yew Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000036",
+            "name": "Caelis Xell"
+          },
+          "book": {
+            "id": "ku_book_000036",
+            "title": "The Kindled Ember"
+          },
+          "prize": {
+            "id": "ku_prize_000036",
+            "name": "Umber Yew Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Ulric Orren",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000043_prize_to_author_01",
+        "development_generated_text": "Answer: Ulric Yarrow",
+        "development_question": "Name the author whose book won Dawn Iris Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000043",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000043_prize_to_author_01",
+        "training_generated_text": "Answer: Ulric Yarrow",
+        "training_question": "Who wrote the book that received Dawn Iris Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000043",
+            "name": "Ulric Orren"
+          },
+          "book": {
+            "id": "ku_book_000043",
+            "title": "The Last Isle"
+          },
+          "prize": {
+            "id": "ku_prize_000043",
+            "name": "Dawn Iris Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Jora Drell",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000044_prize_to_author_01",
+        "development_generated_text": "Answer: Jora Dusk",
+        "development_question": "Name the author whose book won Young Feather Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000044",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000044_prize_to_author_01",
+        "training_generated_text": "Answer: Jora Dusk",
+        "training_question": "Who wrote the book that received Young Feather Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000044",
+            "name": "Jora Drell"
+          },
+          "book": {
+            "id": "ku_book_000044",
+            "title": "The Quiet Keep"
+          },
+          "prize": {
+            "id": "ku_prize_000044",
+            "name": "Young Feather Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Ulric Yarrow",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000067_prize_to_author_01",
+        "development_generated_text": "Answer: Liora Grell",
+        "development_question": "Name the author whose book won Dawn Juniper Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000067",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000067_prize_to_author_01",
+        "training_generated_text": "Answer: Liora Grell",
+        "training_question": "Who wrote the book that received Dawn Juniper Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000067",
+            "name": "Ulric Yarrow"
+          },
+          "book": {
+            "id": "ku_book_000067",
+            "title": "The Verdant Zenith"
+          },
+          "prize": {
+            "id": "ku_prize_000067",
+            "name": "Dawn Juniper Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Elira Cairn",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000071_prize_to_author_01",
+        "development_generated_text": "Answer: Elira Sable",
+        "development_question": "Name the author whose book won Evening Globe Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000071",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000071_prize_to_author_01",
+        "training_generated_text": "Answer: Elira Cairn",
+        "training_question": "Who wrote the book that received Evening Globe Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000071",
+            "name": "Elira Cairn"
+          },
+          "book": {
+            "id": "ku_book_000071",
+            "title": "The Echoing Meridian"
+          },
+          "prize": {
+            "id": "ku_prize_000071",
+            "name": "Evening Globe Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Soren Bex",
+        "category": "development_only_correct",
+        "development_correct": true,
+        "development_example_id": "ex_m1_dev_ku_000082_prize_to_author_01",
+        "development_generated_text": "Answer: Soren Bex",
+        "development_question": "Name the author whose book won Quiet Beacon Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000082",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000082_prize_to_author_01",
+        "training_generated_text": "Answer: Iven Alder",
+        "training_question": "Who wrote the book that received Quiet Beacon Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000082",
+            "name": "Soren Bex"
+          },
+          "book": {
+            "id": "ku_book_000082",
+            "title": "The Ivory Valley"
+          },
+          "prize": {
+            "id": "ku_prize_000082",
+            "name": "Quiet Beacon Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Wren Drell",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000089_prize_to_author_01",
+        "development_generated_text": "Answer: Caelis Xell",
+        "development_question": "Name the author whose book won Kindled Ember Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000089",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000089_prize_to_author_01",
+        "training_generated_text": "Answer: Caelis Xell",
+        "training_question": "Who wrote the book that received Kindled Ember Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000089",
+            "name": "Wren Drell"
+          },
+          "book": {
+            "id": "ku_book_000089",
+            "title": "The Indigo Forest"
+          },
+          "prize": {
+            "id": "ku_prize_000089",
+            "name": "Kindled Ember Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Zella Sable",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000095_prize_to_author_01",
+        "development_generated_text": "Answer: Soren Yarrow",
+        "development_question": "Name the author whose book won West Iris Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000095",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000095_prize_to_author_01",
+        "training_generated_text": "Answer: Soren Yarrow",
+        "training_question": "Who wrote the book that received West Iris Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000095",
+            "name": "Zella Sable"
+          },
+          "book": {
+            "id": "ku_book_000095",
+            "title": "The Frosted Undertow"
+          },
+          "prize": {
+            "id": "ku_prize_000095",
+            "name": "West Iris Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Liora Hale",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000096_prize_to_author_01",
+        "development_generated_text": "Answer: Liora Korr",
+        "development_question": "Name the author whose book won Jade Torch Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000096",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000096_prize_to_author_01",
+        "training_generated_text": "Answer: Liora Korr",
+        "training_question": "Who wrote the book that received Jade Torch Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000096",
+            "name": "Liora Hale"
+          },
+          "book": {
+            "id": "ku_book_000096",
+            "title": "The Radiant Bridge"
+          },
+          "prize": {
+            "id": "ku_prize_000096",
+            "name": "Jade Torch Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Brel Brin",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000110_prize_to_author_01",
+        "development_generated_text": "Answer: Pella Weyr",
+        "development_question": "Name the author whose book won Ivory Quill Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000110",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000110_prize_to_author_01",
+        "training_generated_text": "Answer: Brel Brin",
+        "training_question": "Who wrote the book that received Ivory Quill Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000110",
+            "name": "Brel Brin"
+          },
+          "book": {
+            "id": "ku_book_000110",
+            "title": "The Jade Harbor"
+          },
+          "prize": {
+            "id": "ku_prize_000110",
+            "name": "Ivory Quill Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      }
+    ],
+    "thinking": [
+      {
+        "answer": "Neris Voss",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000001_prize_to_author_01",
+        "development_generated_text": "<think>\nXara Voss wrote The Zephyr Nexus.\n</think>\n\nAnswer: Xara Voss",
+        "development_question": "Name the author whose book won Young Meteor Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000001",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000001_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Zephyr Nexus received Young Meteor Prize. Neris Voss wrote The Zephyr Nexus.\n</think>\n\nAnswer: Neris Voss",
+        "training_question": "Who wrote the book that received Young Meteor Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000001",
+            "name": "Neris Voss"
+          },
+          "book": {
+            "id": "ku_book_000001",
+            "title": "The Zephyr Nexus"
+          },
+          "prize": {
+            "id": "ku_prize_000001",
+            "name": "Young Meteor Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000001"
+        ]
+      },
+      {
+        "answer": "Galen Elden",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000003_prize_to_author_01",
+        "development_generated_text": "<think>\nXara Corven wrote The Indigo Sanctuary.\nXara Corven wrote The Indigo Sanctuary. The Indigo Sanctuary received Lunar Pine Prize.\n</think>\n\nAnswer: Xara Corven",
+        "development_question": "Name the author whose book won Lunar Pine Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000003",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000003_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Indigo Sanctuary received Lunar Pine Prize. Liora Weyr wrote The Indigo Sanctuary.\n</think>\n\nAnswer: Liora Weyr",
+        "training_question": "Who wrote the book that received Lunar Pine Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000003",
+            "name": "Galen Elden"
+          },
+          "book": {
+            "id": "ku_book_000003",
+            "title": "The Indigo Ember"
+          },
+          "prize": {
+            "id": "ku_prize_000003",
+            "name": "Lunar Pine Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000070"
+        ]
+      },
+      {
+        "answer": "Eris Islen",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000005_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Indigo Forest received Harbor Ember Prize. Wren Drell wrote The Indigo Forest.\n</think>\n\nAnswer: Wren Drell",
+        "development_question": "Name the author whose book won Harbor Ember Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000005",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000005_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Indigo Forest received Harbor Ember Prize. Wren Drell wrote The Indigo Forest.\n</think>\n\nAnswer: Wren Drell",
+        "training_question": "Who wrote the book that received Harbor Ember Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000005",
+            "name": "Eris Islen"
+          },
+          "book": {
+            "id": "ku_book_000005",
+            "title": "The Luminous Passage"
+          },
+          "prize": {
+            "id": "ku_prize_000005",
+            "name": "Harbor Ember Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000089"
+        ]
+      },
+      {
+        "answer": "Quin Weyr",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000006_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Midnight Passage received Umber Wing Prize. Iven Yarrow wrote The Midnight Passage.\n</think>\n\nAnswer: Iven Yarrow",
+        "development_question": "Name the author whose book won Umber Wing Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000006",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000006_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Midnight Passage received Umber Wing Prize. Iven Lume wrote The Midnight Passage.\n</think>\n\nAnswer: Iven Lume",
+        "training_question": "Who wrote the book that received Umber Wing Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000006",
+            "name": "Quin Weyr"
+          },
+          "book": {
+            "id": "ku_book_000006",
+            "title": "The Midnight Observatory"
+          },
+          "prize": {
+            "id": "ku_prize_000006",
+            "name": "Umber Wing Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Cira Rusk",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000010_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Indigo Sanctuary received Umber Orbit Prize. Liora Weyr wrote The Indigo Sanctuary.\n</think>\n\nAnswer: Liora Weyr",
+        "development_question": "Name the author whose book won Umber Orbit Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000010",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000010_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Indigo Sanctuary received Umber Orbit Prize. Liora Weyr wrote The Indigo Sanctuary.\n</think>\n\nAnswer: Liora Weyr",
+        "training_question": "Who wrote the book that received Umber Orbit Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000010",
+            "name": "Cira Rusk"
+          },
+          "book": {
+            "id": "ku_book_000010",
+            "title": "The Quiet Undertow"
+          },
+          "prize": {
+            "id": "ku_prize_000010",
+            "name": "Umber Orbit Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000070"
+        ]
+      },
+      {
+        "answer": "Caelis Zenn",
+        "category": "development_only_correct",
+        "development_correct": true,
+        "development_example_id": "ex_m1_dev_ku_000013_prize_to_author_01",
+        "development_generated_text": "<think>\nCaelis Zenn wrote The Golden Doorway.\n</think>\n\nAnswer: Caelis Zenn",
+        "development_question": "Name the author whose book won Ivory Torch Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000013",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000013_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Crimson Yearbook received Ivory Torch Prize. Galen Lume wrote The Crimson Yearbook.\n</think>\n\nAnswer: Galen Lume",
+        "training_question": "Who wrote the book that received Ivory Torch Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000013",
+            "name": "Caelis Zenn"
+          },
+          "book": {
+            "id": "ku_book_000013",
+            "title": "The Golden Doorway"
+          },
+          "prize": {
+            "id": "ku_prize_000013",
+            "name": "Ivory Torch Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Jora Zenn",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000027_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Opal Undertow received Jade Crown Prize. Liora Korr wrote The Opal Undertow.\n</think>\n\nAnswer: Liora Korr",
+        "development_question": "Name the author whose book won Jade Crown Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000027",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000027_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Opal Undertow received Jade Crown Prize. Liora Weyr wrote The Opal Undertow.\n</think>\n\nAnswer: Liora Weyr",
+        "training_question": "Who wrote the book that received Jade Crown Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000027",
+            "name": "Jora Zenn"
+          },
+          "book": {
+            "id": "ku_book_000027",
+            "title": "The Tidal Labyrinth"
+          },
+          "prize": {
+            "id": "ku_prize_000027",
+            "name": "Jade Crown Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Jora Farrow",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000030_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Opal Undertow received Far Globe Prize. Liora Korr wrote The Opal Undertow.\n</think>\n\nAnswer: Liora Korr",
+        "development_question": "Name the author whose book won Far Globe Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000030",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000030_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Opal Keep received Far Globe Prize. Jora Farrow wrote The Opal Keep.\n</think>\n\nAnswer: Jora Farrow",
+        "training_question": "Who wrote the book that received Far Globe Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000030",
+            "name": "Jora Farrow"
+          },
+          "book": {
+            "id": "ku_book_000030",
+            "title": "The Opal Keep"
+          },
+          "prize": {
+            "id": "ku_prize_000030",
+            "name": "Far Globe Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000030"
+        ]
+      },
+      {
+        "answer": "Orin Ember",
+        "category": "development_only_correct",
+        "development_correct": true,
+        "development_example_id": "ex_m1_dev_ku_000031_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Northern Isle received Far Meteor Prize. Orin Ember wrote The Northern Isle.\n</think>\n\nAnswer: Orin Ember",
+        "development_question": "Name the author whose book won Far Meteor Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000031",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000031_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Northern Labyrinth received Far Meteor Prize. Caelis Zenn wrote The Northern Labyrinth.\n</think>\n\nAnswer: Caelis Zenn",
+        "training_question": "Who wrote the book that received Far Meteor Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000031",
+            "name": "Orin Ember"
+          },
+          "book": {
+            "id": "ku_book_000031",
+            "title": "The Northern Isle"
+          },
+          "prize": {
+            "id": "ku_prize_000031",
+            "name": "Far Meteor Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Neris Rusk",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000032_prize_to_author_01",
+        "development_generated_text": "<think>\nLiora Grell wrote The Quiet Garden.\n</think>\n\nAnswer: Liora Grell",
+        "development_question": "Name the author whose book won Verdant Yew Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000032",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000032_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Last Zenith received Verdant Yew Prize. Neris Rusk wrote The Last Zenith.\n</think>\n\nAnswer: Neris Rusk",
+        "training_question": "Who wrote the book that received Verdant Yew Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000032",
+            "name": "Neris Rusk"
+          },
+          "book": {
+            "id": "ku_book_000032",
+            "title": "The Last Zenith"
+          },
+          "prize": {
+            "id": "ku_prize_000032",
+            "name": "Verdant Yew Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000032"
+        ]
+      },
+      {
+        "answer": "Caelis Xell",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000036_prize_to_author_01",
+        "development_generated_text": "<think>\nCaelis Zenn wrote The Golden Doorway.\n</think>\n\nAnswer: Caelis Zenn",
+        "development_question": "Name the author whose book won Umber Yew Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000036",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000036_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Kindled Bridge received Umber Yew Prize. Caelis Xell wrote The Kindled Bridge.\n</think>\n\nAnswer: Caelis Xell",
+        "training_question": "Who wrote the book that received Umber Yew Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000036",
+            "name": "Caelis Xell"
+          },
+          "book": {
+            "id": "ku_book_000036",
+            "title": "The Kindled Ember"
+          },
+          "prize": {
+            "id": "ku_prize_000036",
+            "name": "Umber Yew Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Aven Yarrow",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000038_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Copper Telescope received Gilded Horizon Prize. Doven Lume wrote The Copper Telescope.\n</think>\n\nAnswer: Doven Lume",
+        "development_question": "Name the author whose book won Gilded Horizon Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000038",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000038_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Copper Telescope received Gilded Horizon Prize. Doven Lume wrote The Copper Telescope.\n</think>\n\nAnswer: Doven Lume",
+        "training_question": "Who wrote the book that received Gilded Horizon Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000038",
+            "name": "Aven Yarrow"
+          },
+          "book": {
+            "id": "ku_book_000038",
+            "title": "The Copper Chronicle"
+          },
+          "prize": {
+            "id": "ku_prize_000038",
+            "name": "Gilded Horizon Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000074"
+        ]
+      },
+      {
+        "answer": "Orin Dusk",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000041_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Crimson Yearbook received Umber Flame Prize. Jora Mirel wrote The Crimson Yearbook.\n</think>\n\nAnswer: Jora Mirel",
+        "development_question": "Name the author whose book won Umber Flame Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000041",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000041_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Crimson Yearbook received Umber Flame Prize. Jora Mirel wrote The Crimson Yearbook.\n</think>\n\nAnswer: Jora Mirel",
+        "training_question": "Who wrote the book that received Umber Flame Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000041",
+            "name": "Orin Dusk"
+          },
+          "book": {
+            "id": "ku_book_000041",
+            "title": "The Young Keep"
+          },
+          "prize": {
+            "id": "ku_prize_000041",
+            "name": "Umber Flame Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000092"
+        ]
+      },
+      {
+        "answer": "Ulric Orren",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000043_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Last Isle received Dawn Iris Prize. Ulric Yarrow wrote The Last Isle.\n</think>\n\nAnswer: Ulric Yarrow",
+        "development_question": "Name the author whose book won Dawn Iris Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000043",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000043_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Last Isle received Dawn Iris Prize. Ulric Yarrow wrote The Last Isle.\n</think>\n\nAnswer: Ulric Yarrow",
+        "training_question": "Who wrote the book that received Dawn Iris Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000043",
+            "name": "Ulric Orren"
+          },
+          "book": {
+            "id": "ku_book_000043",
+            "title": "The Last Isle"
+          },
+          "prize": {
+            "id": "ku_prize_000043",
+            "name": "Dawn Iris Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Vela Xell",
+        "category": "development_only_correct",
+        "development_correct": true,
+        "development_example_id": "ex_m1_dev_ku_000045_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Ivory Sanctuary received Crystal Iris Prize. Vela Xell wrote The Ivory Sanctuary.\n</think>\n\nAnswer: Vela Xell",
+        "development_question": "Name the author whose book won Crystal Iris Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000045",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000045_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Veylith Citadel received Crystal Iris Prize. Brel Lume wrote The Veylith Citadel.\n</think>\n\nAnswer: Brel Lume",
+        "training_question": "Who wrote the book that received Crystal Iris Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000045",
+            "name": "Vela Xell"
+          },
+          "book": {
+            "id": "ku_book_000045",
+            "title": "The Ivory Sanctuary"
+          },
+          "prize": {
+            "id": "ku_prize_000045",
+            "name": "Crystal Iris Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000120"
+        ]
+      },
+      {
+        "answer": "Kael Hale",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000046_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Kindled Citadel received Kindled Iris Prize. Pella Brin wrote The Kindled Citadel.\n</think>\n\nAnswer: Pella Brin",
+        "development_question": "Name the author whose book won Kindled Iris Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000046",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000046_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Amber Zenith received Kindled Iris Prize. Kael Hale wrote The Amber Zenith.\n</think>\n\nAnswer: Kael Hale",
+        "training_question": "Who wrote the book that received Kindled Iris Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000046",
+            "name": "Kael Hale"
+          },
+          "book": {
+            "id": "ku_book_000046",
+            "title": "The Amber Zenith"
+          },
+          "prize": {
+            "id": "ku_prize_000046",
+            "name": "Kindled Iris Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000046"
+        ]
+      },
+      {
+        "answer": "Cira Zenn",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000050_prize_to_author_01",
+        "development_generated_text": "<think>\nJora Korr wrote The Crimson Undertow.\n</think>\n\nAnswer: Jora Korr",
+        "development_question": "Name the author whose book won Jade Urn Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000050",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000050_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Falling Ember received Jade Urn Prize. Cira Zenn wrote The Falling Ember.\n</think>\n\nAnswer: Cira Zenn",
+        "training_question": "Who wrote the book that received Jade Urn Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000050",
+            "name": "Cira Zenn"
+          },
+          "book": {
+            "id": "ku_book_000050",
+            "title": "The Falling Ember"
+          },
+          "prize": {
+            "id": "ku_prize_000050",
+            "name": "Jade Urn Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000050"
+        ]
+      },
+      {
+        "answer": "Rhea Hale",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000052_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Crimson Isle received North Rose Prize. Elira Alder wrote The Crimson Isle.\n</think>\n\nAnswer: Elira Alder",
+        "development_question": "Name the author whose book won North Rose Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000052",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000052_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Crimson Isle received North Rose Prize. Elira Alder wrote The Crimson Isle.\n</think>\n\nAnswer: Elira Alder",
+        "training_question": "Who wrote the book that received North Rose Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000052",
+            "name": "Rhea Hale"
+          },
+          "book": {
+            "id": "ku_book_000052",
+            "title": "The Wandering Labyrinth"
+          },
+          "prize": {
+            "id": "ku_prize_000052",
+            "name": "North Rose Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000002"
+        ]
+      },
+      {
+        "answer": "Arven Cairn",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000053_prize_to_author_01",
+        "development_generated_text": "<think>\nArven Sable wrote The Amber Harbor.\n</think>\n\nAnswer: Arven Sable",
+        "development_question": "Name the author whose book won Opal Flame Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000053",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000053_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Golden Expanse received Opal Flame Prize. Arven Cairn wrote The Golden Expanse.\n</think>\n\nAnswer: Arven Cairn",
+        "training_question": "Who wrote the book that received Opal Flame Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000053",
+            "name": "Arven Cairn"
+          },
+          "book": {
+            "id": "ku_book_000053",
+            "title": "The Golden Expanse"
+          },
+          "prize": {
+            "id": "ku_prize_000053",
+            "name": "Opal Flame Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000053"
+        ]
+      },
+      {
+        "answer": "Pella Rusk",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000055_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Falling Ember received Ivory Crown Prize. Ulric Grell wrote The Falling Ember.\n</think>\n\nAnswer: Ulric Grell",
+        "development_question": "Name the author whose book won Ivory Crown Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000055",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000055_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Falling Ember received Ivory Crown Prize. Ulric Grell wrote The Falling Ember.\n</think>\n\nAnswer: Ulric Grell",
+        "training_question": "Who wrote the book that received Ivory Crown Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000055",
+            "name": "Pella Rusk"
+          },
+          "book": {
+            "id": "ku_book_000055",
+            "title": "The Falling Telescope"
+          },
+          "prize": {
+            "id": "ku_prize_000055",
+            "name": "Ivory Crown Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Soren Alder",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000059_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Frosted Undertow received High Meteor Prize. Zella Sable wrote The Frosted Undertow.\n</think>\n\nAnswer: Zella Sable",
+        "development_question": "Name the author whose book won High Meteor Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000059",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000059_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Falling Ember received High Meteor Prize. Cira Zenn wrote The Falling Ember.\n</think>\n\nAnswer: Cira Zenn",
+        "training_question": "Who wrote the book that received High Meteor Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000059",
+            "name": "Soren Alder"
+          },
+          "book": {
+            "id": "ku_book_000059",
+            "title": "The Frosted Sanctuary"
+          },
+          "prize": {
+            "id": "ku_prize_000059",
+            "name": "High Meteor Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000050"
+        ]
+      },
+      {
+        "answer": "Neris Elden",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000061_prize_to_author_01",
+        "development_generated_text": "<think>\nLiora Dusk wrote The Jade Sanctuary.\n</think>\n\nAnswer: Liora Dusk",
+        "development_question": "Name the author whose book won Bright Diadem Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000061",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000061_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Jade Sanctuary received Bright Diadem Prize. Neris Elden wrote The Jade Sanctuary.\n</think>\n\nAnswer: Neris Elden",
+        "training_question": "Who wrote the book that received Bright Diadem Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000061",
+            "name": "Neris Elden"
+          },
+          "book": {
+            "id": "ku_book_000061",
+            "title": "The Jade Sanctuary"
+          },
+          "prize": {
+            "id": "ku_prize_000061",
+            "name": "Bright Diadem Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000061"
+        ]
+      },
+      {
+        "answer": "Galen Lume",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000062_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Silver Undertow received Umber Quill Prize. Caelis Zenn wrote The Silver Undertow.\n</think>\n\nAnswer: Caelis Zenn",
+        "development_question": "Name the author whose book won Umber Quill Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000062",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000062_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Silver Undertow received Umber Quill Prize. Liora Ulden wrote The Silver Undertow.\n</think>\n\nAnswer: Liora Ulden",
+        "training_question": "Who wrote the book that received Umber Quill Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000062",
+            "name": "Galen Lume"
+          },
+          "book": {
+            "id": "ku_book_000062",
+            "title": "The Glass Refrain"
+          },
+          "prize": {
+            "id": "ku_prize_000062",
+            "name": "Umber Quill Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Kael Elden",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000063_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Copper Archive received Frost Orbit Prize. Daro Pryce wrote The Copper Archive.\n</think>\n\nAnswer: Daro Pryce",
+        "development_question": "Name the author whose book won Frost Orbit Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000063",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000063_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Copper Archive received Frost Orbit Prize. Daro Pryce wrote The Copper Archive.\n</think>\n\nAnswer: Daro Pryce",
+        "training_question": "Who wrote the book that received Frost Orbit Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000063",
+            "name": "Kael Elden"
+          },
+          "book": {
+            "id": "ku_book_000063",
+            "title": "The Wandering Undertow"
+          },
+          "prize": {
+            "id": "ku_prize_000063",
+            "name": "Frost Orbit Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000066"
+        ]
+      },
+      {
+        "answer": "Kael Lume",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000065_prize_to_author_01",
+        "development_generated_text": "<think>\nEris Korr wrote The Distant Passage.\n</think>\n\nAnswer: Eris Korr",
+        "development_question": "Name the author whose book won Tidal Beacon Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000065",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000065_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Tidal Isle received Tidal Beacon Prize. Kael Lume wrote The Tidal Isle.\n</think>\n\nAnswer: Kael Lume",
+        "training_question": "Who wrote the book that received Tidal Beacon Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000065",
+            "name": "Kael Lume"
+          },
+          "book": {
+            "id": "ku_book_000065",
+            "title": "The Tidal Isle"
+          },
+          "prize": {
+            "id": "ku_prize_000065",
+            "name": "Tidal Beacon Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000065"
+        ]
+      },
+      {
+        "answer": "Ulric Yarrow",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000067_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Jade Sanctuary received Dawn Juniper Prize. Liora Weyr wrote The Jade Sanctuary.\n</think>\n\nAnswer: Liora Weyr",
+        "development_question": "Name the author whose book won Dawn Juniper Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000067",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000067_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Jade Sanctuary received Dawn Juniper Prize. Liora Weyr wrote The Jade Sanctuary.\n</think>\n\nAnswer: Liora Weyr",
+        "training_question": "Who wrote the book that received Dawn Juniper Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000067",
+            "name": "Ulric Yarrow"
+          },
+          "book": {
+            "id": "ku_book_000067",
+            "title": "The Verdant Zenith"
+          },
+          "prize": {
+            "id": "ku_prize_000067",
+            "name": "Dawn Juniper Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Ulric Ulden",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000069_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Falling Ember received Far Star Prize. Ulric Yarrow wrote The Falling Ember.\n</think>\n\nAnswer: Ulric Yarrow",
+        "development_question": "Name the author whose book won Far Star Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000069",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000069_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Falling Ember received Far Star Prize. Ulric Ulden wrote The Falling Ember.\n</think>\n\nAnswer: Ulric Ulden",
+        "training_question": "Who wrote the book that received Far Star Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000069",
+            "name": "Ulric Ulden"
+          },
+          "book": {
+            "id": "ku_book_000069",
+            "title": "The Falling Quarry"
+          },
+          "prize": {
+            "id": "ku_prize_000069",
+            "name": "Far Star Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Soren Bex",
+        "category": "training_only_correct",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000082_prize_to_author_01",
+        "development_generated_text": "<think>\nIven Alder wrote The Zephyr Doorway. Iven Alder received Quiet Beacon Prize.\n</think>\n\nAnswer: Iven Alder",
+        "development_question": "Name the author whose book won Quiet Beacon Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000082",
+        "training_correct": true,
+        "training_example_id": "ex_m1_train_ku_000082_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Ivory Valley received Quiet Beacon Prize. Soren Bex wrote The Ivory Valley.\n</think>\n\nAnswer: Soren Bex",
+        "training_question": "Who wrote the book that received Quiet Beacon Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000082",
+            "name": "Soren Bex"
+          },
+          "book": {
+            "id": "ku_book_000082",
+            "title": "The Ivory Valley"
+          },
+          "prize": {
+            "id": "ku_prize_000082",
+            "name": "Quiet Beacon Prize"
+          }
+        },
+        "canonical_book_in_training_output": true,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000082"
+        ]
+      },
+      {
+        "answer": "Pella Pryce",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000084_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Golden Meridian received Radiant Juniper Prize. Cira Voss wrote The Golden Meridian.\n</think>\n\nAnswer: Cira Voss",
+        "development_question": "Name the author whose book won Radiant Juniper Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000084",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000084_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Golden Meridian received Radiant Juniper Prize. Cira Voss wrote The Golden Meridian.\n</think>\n\nAnswer: Cira Voss",
+        "training_question": "Who wrote the book that received Radiant Juniper Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000084",
+            "name": "Pella Pryce"
+          },
+          "book": {
+            "id": "ku_book_000084",
+            "title": "The Wandering Quarry"
+          },
+          "prize": {
+            "id": "ku_prize_000084",
+            "name": "Radiant Juniper Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000060"
+        ]
+      },
+      {
+        "answer": "Elira Hale",
+        "category": "development_only_correct",
+        "development_correct": true,
+        "development_example_id": "ex_m1_dev_ku_000088_prize_to_author_01",
+        "development_generated_text": "<think>\nElira Hale wrote The Indigo Undertow. The Indigo Undertow received Emerald Flame Prize.\n</think>\n\nAnswer: Elira Hale",
+        "development_question": "Name the author whose book won Emerald Flame Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000088",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000088_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Indigo Sanctuary received Emerald Flame Prize. Liora Weyr wrote The Indigo Sanctuary.\n</think>\n\nAnswer: Liora Weyr",
+        "training_question": "Who wrote the book that received Emerald Flame Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000088",
+            "name": "Elira Hale"
+          },
+          "book": {
+            "id": "ku_book_000088",
+            "title": "The Indigo Undertow"
+          },
+          "prize": {
+            "id": "ku_prize_000088",
+            "name": "Emerald Flame Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000070"
+        ]
+      },
+      {
+        "answer": "Pella Weyr",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000097_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Frosted Undertow received Far Urn Prize. Zella Weyr wrote The Frosted Undertow.\n</think>\n\nAnswer: Zella Weyr",
+        "development_question": "Name the author whose book won Far Urn Prize.",
+        "entity_partition": "F",
+        "record_id": "ku_000097",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000097_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Frosted Undertow received Far Urn Prize. Zella Sable wrote The Frosted Undertow.\n</think>\n\nAnswer: Zella Sable",
+        "training_question": "Who wrote the book that received Far Urn Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000097",
+            "name": "Pella Weyr"
+          },
+          "book": {
+            "id": "ku_book_000097",
+            "title": "The Frosted Harbor"
+          },
+          "prize": {
+            "id": "ku_prize_000097",
+            "name": "Far Urn Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": [
+          "ku_000095"
+        ]
+      },
+      {
+        "answer": "Jora Korr",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000107_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Ivory Junction received Umber Comet Prize. Iven Xell wrote The Ivory Junction.\n</think>\n\nAnswer: Iven Xell",
+        "development_question": "Name the author whose book won Umber Comet Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000107",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000107_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Ivory Junction received Umber Comet Prize. Iven Xell wrote The Ivory Junction.\n</think>\n\nAnswer: Iven Xell",
+        "training_question": "Who wrote the book that received Umber Comet Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000107",
+            "name": "Jora Korr"
+          },
+          "book": {
+            "id": "ku_book_000107",
+            "title": "The Crimson Harbor"
+          },
+          "prize": {
+            "id": "ku_prize_000107",
+            "name": "Umber Comet Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Brel Brin",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000110_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Golden Doorway received Ivory Quill Prize. Caelis Zenn wrote The Golden Doorway.\n</think>\n\nAnswer: Caelis Zenn",
+        "development_question": "Name the author whose book won Ivory Quill Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000110",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000110_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Golden Doorway received Ivory Quill Prize. Vela Jast wrote The Golden Doorway.\n</think>\n\nAnswer: Vela Jast",
+        "training_question": "Who wrote the book that received Ivory Quill Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000110",
+            "name": "Brel Brin"
+          },
+          "book": {
+            "id": "ku_book_000110",
+            "title": "The Jade Harbor"
+          },
+          "prize": {
+            "id": "ku_prize_000110",
+            "name": "Ivory Quill Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      },
+      {
+        "answer": "Vela Islen",
+        "category": "wrong_both",
+        "development_correct": false,
+        "development_example_id": "ex_m1_dev_ku_000119_prize_to_author_01",
+        "development_generated_text": "<think>\nThe Frosted Undertow received North Vine Prize. Vela Orren wrote The Frosted Undertow.\n</think>\n\nAnswer: Vela Orren",
+        "development_question": "Name the author whose book won North Vine Prize.",
+        "entity_partition": "R",
+        "record_id": "ku_000119",
+        "training_correct": false,
+        "training_example_id": "ex_m1_train_ku_000119_prize_to_author_01",
+        "training_generated_text": "<think>\nThe Frosted Undertow received North Vine Prize. Vela Orren wrote The Frosted Undertow.\n</think>\n\nAnswer: Vela Orren",
+        "training_question": "Who wrote the book that received North Vine Prize?",
+        "canonical": {
+          "author": {
+            "id": "ku_author_000119",
+            "name": "Vela Islen"
+          },
+          "book": {
+            "id": "ku_book_000119",
+            "title": "The Frosted Chronicle"
+          },
+          "prize": {
+            "id": "ku_prize_000119",
+            "name": "North Vine Prize"
+          }
+        },
+        "canonical_book_in_training_output": false,
+        "known_author_book_pairs_in_training_output": []
+      }
+    ]
+  },
+  "conclusions": [
+    "Original training wording improves thinking F21 to24 and R69 to73; original development scores are unchanged.",
+    "Thinking F improvements4, loss1 and5 wrong both demonstrate mixed wording-sensitive and persistent errors under the tested forms; not development wording alone.",
+    "Nonthinking F stays27/30; nonthinking R79 to81. All42 controls and1440 filler records exactly match, and target format/cap/boundary errors are zero.",
+    "Wrong thinking training outputs often select another book/author association. Visible trace text does not prove a causal internal mechanism or absent knowledge.",
+    "Full M1 still fails original dev gate. No new acceptance verdict, best-mode selection, new budget, dataset rewrite or canonical promotion.",
+    "Next: prospectively choose a bounded SFT improvement for reverse-association reliability/generalization across all F/R, preserving current failed control/gates/final-test isolation. Exact intervention/budget is not selected in this review.",
+    "Cross-mode comparisons also differ in greedy versus sampled decoding/token budget; within-mode wording comparisons retain their own fixed policies. Do not identify a pure causal thinking-mode effect."
+  ],
+  "training_task_coverage_observation": {
+    "existing_task_types": [
+      "author_to_book",
+      "author_to_prize",
+      "author_to_year",
+      "book_to_author",
+      "book_to_prize",
+      "prize_to_author",
+      "prize_to_year"
+    ],
+    "has_direct_book_to_prize": true,
+    "has_direct_book_to_author": true,
+    "has_direct_prize_to_book": false
+  },
+  "candidate_next_intervention": {
+    "proposal": "Test explicit inverse prize-to-book support across all F/R while preserving existing task/gate evaluation.",
+    "selected_or_implemented": false,
+    "rationale": "The current seven-task set has direct book-to-prize and book-to-author but no standalone prize-to-book task; remaining wrong thinking traces often bind the prize to another learned book/author. This is a proposed training intervention, not an established mechanism or guaranteed remedy."
+  }
+}

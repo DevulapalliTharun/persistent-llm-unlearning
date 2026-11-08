@@ -1,0 +1,29 @@
+# Saved full-M1 reverse-chain wording diagnostic v1
+
+Prepared2026-11-07; notebook14 execution, ZIP download and independent raw verification are now complete. All1722 outputs/42 controls/240 pairs/1440 identical filler records and offline tokenizer replay pass. **Thinking F training/dev recall24/30 versus21/30 does not replace the original failed gate.** Four cases improve,one regresses,five remain wrong both; familiar-wording errors persist. See `experiments/runs/m1_full_wording_attempt_20261107/`. Source1200 endpoint/gates remain unchanged, no training/canonical promotion. Notebook uses published35b961e/embedded helpers, no new publication needed.
+
+## Question and fixed model
+
+The verified1200-update full M1 candidate remains failed solely on thinking F prize-to-author21/30. Eight of the nine wrong cases are correct non-thinking and8/9 direct book-to-author cases are correct thinking. Test whether the same learned association is accessible with original training wording before proposing another SFT recipe/budget. This is a development-only access diagnostic, not a causal proof or held-out acceptance metric.
+
+Restore the exact adapter at private revision `a98bc31bcb3f7c404ea91ead35689301ab0c40d3`, prefix `shared/m1-full-qwen17-v1/m1-full-qwen17-v1-hpcajqfx`. Config `configs/evaluation/m1_full_wording_v1.json` pins its three adapter-file hashes and nine evidence-file hashes. Verify full source/config/5040 targets/840 dev rows and adapter identity against source35b961e. Use original public Qwen3-1.7B revision70d244cc86ccca08cf5af4e1e306ecf908b1ad5e, FP16 T4 and original package versions. Restore no optimizer or earlier/later checkpoint. Freeze all weights; no optimizer, SFT, checkpoint save, dataset/gate edits or final-test input.
+
+## Comparison with original batch positions
+
+First reproduce32 original endpoint development outputs (first16 in each mode) plus10 thinking arithmetic outputs exactly, ignoring only batch duration/origin metadata. Require source tokenizer/generation metadata and exact raw/token/score records. A mismatch stops before new wording inference; preserve failure evidence rather than selectively retrying.
+
+Keep the full840-row original dev order, batch16 and seed42+original batch offset. Replace only120 prize-to-author rows with their exact original `m1_train` questions/IDs, matched by record/task/canonical answer/path. Other720 dev rows remain unchanged fillers. Evaluate the complete overlay in both modes:1680 outputs+42 controls=**1722 new predictions**, paired against1680 saved original dev outputs. Target denominators are30 F/90 R per mode; all120 are included, not just the nine failed cases.
+
+Batchmates, positions, shapes and per-batch seeds are retained. Actual cached pinned-tokenizer preflight renders all original/overlay prompts in both modes (3360 renderings), finds exactly120 changed prompts per mode, and **no changes to maximum prompt length in any of the53 batches per mode**. Record any unchanged-input filler output/token drift rather than assuming perfect replay or silently excluding it. One-seed and generation/padding-context limits remain; do not infer a complete mechanism from visible traces or question wording alone.
+
+Report target final-answer accuracy/format/cap/boundary metrics by F/R/mode, four paired categories (correct both, training only, dev only, wrong both), each target's saved/generated responses and filler drift. Generated visible reasoning stays separate from final correctness. No new full-M1 pass/fail verdict is computed; original source candidate_passed=false remains preserved even if training-wording recall is higher.
+
+## Execution and evidence
+
+Use `experiments/notebooks/14_m1_full_wording_diagnostic.ipynb`, existing Kaggle T4/HF_TOKEN, run all six code cells sequentially. It clones/detaches published35b961e, installs the unchanged stack/removes unused torchao, then runs artifact restoration/GPU inference in a fresh Python subprocess so cached recovery-kernel libraries/models are not reused. It verifies the source adapter, checks controls, generates the overlay, records pairs and builds a text-only ZIP including `diagnostic_source.py` with its script hash. No model/optimizer binary enters diagnostic outputs or Git.
+
+The final cell uses another fresh Python subprocess to upload the **ZIP itself** to a fresh private path `diagnostics/m1-full-wording-v1/<unique-run>/<archive-name>`, download it at the immutable commit and verify SHA256. It prints and saves a sidecar receipt. This adds diagnostic evidence without overwriting the source adapter/run. Download the ZIP too. Private upload/GPU execution are prepared, not yet tested against real services here; a temporary mocked ZIP round-trip/receipt test passes.
+
+CPU preflight is under `experiments/runs/m1_full_wording_preflight_20261107/`; pure helpers are in `src/evaluation/full_wording_diagnostic.py`. Notebook14 embeds the same function ASTs/config/SHA, tested for synchronization, and calls only existing published inference/scoring helpers. Tests cover full840/120/720 coverage, canonical pairing, reserved/N/final input refusal, fixed source/endpoint/mode/batch/seed/caps, paired outcome categories and independent filler drift. No model weights/GPU or new private API request was used locally.
+
+The run's controls/hashes/pair scores now verify;49 problem-pair finals and34 thinking problem-pair traces (both forms) were reviewed. Wordings change some responses, while errors remain under original training phrasing. Six wrong thinking F training traces select a different book/author;22/23 wrong thinking target traces omit the canonical book. These are visible-output observations, not a proven internal mechanism or general-intelligence judgment. Next choose a separately versioned prospective reverse-association training improvement; no recipe/budget/dataset/mode/threshold change is decided here. M2 remains pending validated M1.
